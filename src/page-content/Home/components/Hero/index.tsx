@@ -1,7 +1,7 @@
 import { colors } from "../../../../const/colors";
 import { styled } from "@mui/material/styles"
 import darkLighBookCover from './Book.png';
-import {ContainedButton} from '../Button/ContainedButton'
+import {MainButton} from '../Button/MainButton'
 
 export const HeroSection = () => {
     return (
@@ -12,7 +12,7 @@ export const HeroSection = () => {
                         <H2>Welcome to Pages</H2>
                         <H1>Books are uniquely portable magic</H1>
                         <P>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</P>
-                        <ContainedButton />
+                        <MainButton/>
                     </FlexItem>
 
                     <img src={darkLighBookCover} style={{width: '45%'}} alt="the dark light book cover" />
@@ -75,6 +75,7 @@ const P = styled('p')`
     text-align: left;
     margin-block-start: 0;
     margin-block-end: 0;
+    color: #B4C7E7;
 `;
 
 
