@@ -1,49 +1,44 @@
 import { colors } from "../../../../const/colors";
 import { styled } from "@mui/material/styles"
-import darkLighBookCover from './Book.png';
+import darkLightBookCover from './Book.png';
 import {MainButton} from '../Button/MainButton'
+// import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 
 export const HeroSection = () => {
     return (
-        <Section style={{backgroundColor: colors.main, color: colors.white}}>
-            <Container>
-                <FlexContainer>
-                    <FlexItem>
-                        <H2>Welcome to Pages</H2>
-                        <H1>Books are uniquely portable magic</H1>
-                        <P>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</P>
+        <StyledSection>
+            <StyledContainer>
+                <Stack flexDirection='row'>
+                    <Stack>
+                        <StyledH2>Welcome to Pages</StyledH2>
+                        <StyledH1>Books are uniquely portable magic</StyledH1>
+                        <StyledP>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</StyledP>
                         <MainButton/>
-                    </FlexItem>
-
-                    <img src={darkLighBookCover} style={{width: '45%'}} alt="the dark light book cover" />
-                </FlexContainer>
-            </Container>
-        </Section>
+                    </Stack>
+                    <Box width='45%'><img src={darkLightBookCover} style={{width: '100%'}} alt="the dark light book cover" /></Box>
+                </Stack>
+            </StyledContainer>
+        </StyledSection>
     )
 }
 
-const Section = styled('section')`
+const StyledSection = styled('section')`
     padding-top: 185px;
     padding-bottom: 115px;
+    background-color: ${colors.main};
+    color: ${colors.white};
 `;
 
-const Container = styled('div')`
+const StyledContainer = styled('div')`
     width: 100vw;
     max-width: 67vw;
     margin: 0 auto;
     padding: 0 10px;
 `;
 
-const FlexContainer = styled('div')`
-    display: flex;
-    align-items: center;
-`;
-
-const FlexItem = styled('div')`
-    margin-right: 95px;
-`;
-
-const H2 = styled('h2')`
+const StyledH2 = styled('h2')`
     font-family: Cardo;
     font-size: 1.5em;
     font-style: italic;
@@ -55,7 +50,7 @@ const H2 = styled('h2')`
     margin-block-end: 0;
 `;
 
-const H1 = styled('h1')`
+const StyledH1 = styled('h1')`
     font-family: Cardo;
     font-size: 3.2em;
     font-weight: 700;
@@ -66,7 +61,7 @@ const H1 = styled('h1')`
     margin-block-end: 0;
 `;
 
-const P = styled('p')`
+const StyledP = styled('p')`
     font-family: Inter;
     font-size: 0.85em;
     font-weight: 400;
