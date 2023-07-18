@@ -1,5 +1,3 @@
-import { styled } from "@mui/material/styles"
-import { colors } from "../../const/colors"
 import { HeroSection } from "./components/Hero"
 
 export const Home = () => {
@@ -9,13 +7,3 @@ export const Home = () => {
         </main>
     )
 }
-
-
-
-
-
-/* <Test>Im tomato</Test>
-const Test = styled('div')`
-    color: tomato;
-`; */
-

@@ -1,25 +1,32 @@
-import { colors } from "../../../../const/colors";
-import { styled } from "@mui/material/styles"
+import { MAIN, WHITE } from '../../../../design-system/colors'
+import { HEADING_H1, PARAGRAPH } from '../../../../design-system/typography'
+import { styled } from "@mui/material/styles";
+import { MainButton } from '../../../../design-system/Button/MainButton';
 import darkLightBookCover from './Book.png';
-import {MainButton} from '../Button/MainButton'
-// import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import Container from '@mui/material/Container';
+
+// import Typography from '@mui/material/Typography';
 
 export const HeroSection = () => {
     return (
         <StyledSection>
-            <StyledContainer>
-                <Stack flexDirection='row'>
-                    <Stack>
+            <Container maxWidth="md">
+                <Stack flexDirection='row' alignItems='center'>
+                    <Stack width='55%' paddingRight='90px'>
                         <StyledH2>Welcome to Pages</StyledH2>
-                        <StyledH1>Books are uniquely portable magic</StyledH1>
-                        <StyledP>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</StyledP>
-                        <MainButton/>
+                        <HEADING_H1>Books are uniquely portable magic</HEADING_H1>
+                        <PARAGRAPH>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</PARAGRAPH>
+                        <Stack flexDirection='row'>
+                            <MainButton/>
+                            <MainButton/>
+                        </Stack>
+                        
                     </Stack>
                     <Box width='45%'><img src={darkLightBookCover} style={{width: '100%'}} alt="the dark light book cover" /></Box>
                 </Stack>
-            </StyledContainer>
+            </Container>
         </StyledSection>
     )
 }
@@ -27,36 +34,19 @@ export const HeroSection = () => {
 const StyledSection = styled('section')`
     padding-top: 185px;
     padding-bottom: 115px;
-    background-color: ${colors.main};
-    color: ${colors.white};
-`;
-
-const StyledContainer = styled('div')`
-    width: 100vw;
-    max-width: 67vw;
-    margin: 0 auto;
-    padding: 0 10px;
+    background-color: ${MAIN};
+    color: ${WHITE};
 `;
 
 const StyledH2 = styled('h2')`
     font-family: Cardo;
-    font-size: 1.5em;
+    font-size: 24px;
     font-style: italic;
     font-weight: 400;
     /* line-height: 37px; */
     letter-spacing: -0.02em;
-    text-align: left;
-    margin-block-start: 0;
-    margin-block-end: 0;
-`;
+    /* text-align: left; */
 
-const StyledH1 = styled('h1')`
-    font-family: Cardo;
-    font-size: 3.2em;
-    font-weight: 700;
-    /* line-height: 72px; */
-    letter-spacing: -0.02em;
-    text-align: left;
     margin-block-start: 0;
     margin-block-end: 0;
 `;
