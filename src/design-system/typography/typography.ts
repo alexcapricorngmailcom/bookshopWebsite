@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles"
 // margin-block-end: 0;
 
 export const HEADING_H1 = styled('h1')`
-    font-family: Cardo;
+    font-family: Cardo, serif;
     font-size: 65px;
     font-weight: 700;
     /* line-height: 84px; */
@@ -12,7 +12,7 @@ export const HEADING_H1 = styled('h1')`
 `;
 
 export const HEADING_H2 = styled('h2')`
-    font-family: Cardo;
+    font-family: Cardo, serif;
     font-size: 55px;
     font-weight: 700;
     /* line-height: 71px; */
@@ -20,7 +20,7 @@ export const HEADING_H2 = styled('h2')`
 `;
 
 export const HEADING_H3 = styled('h3')`
-    font-family: Cardo;
+    font-family: Cardo, serif;
     font-size: 45px;
     font-weight: 700;
     /* line-height: 58px; */
@@ -28,7 +28,7 @@ export const HEADING_H3 = styled('h3')`
 `;
 
 export const HEADING_H4 = styled('h4')`
-    font-family: Cardo;
+    font-family: Cardo, serif;
     font-size: 32px;
     font-weight: 700;
     /* line-height: 42px; */
@@ -36,7 +36,7 @@ export const HEADING_H4 = styled('h4')`
 `;
 
 export const HEADING_H5 = styled('h5')`
-    font-family: Cardo;
+    font-family: Cardo, serif;
     font-size: 24px;
     font-weight: 700;
     /* line-height: 31px; */
@@ -44,7 +44,7 @@ export const HEADING_H5 = styled('h5')`
 `;
 
 export const HEADING_H6 = styled('h6')`
-    font-family: Cardo;
+    font-family: Cardo, serif;
     font-size: 22px;
     font-weight: 700;
     /* line-height: 29px; */
@@ -52,7 +52,7 @@ export const HEADING_H6 = styled('h6')`
 `;
 
 export const PARAGRAPH = styled('p')`
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 19px;
     font-weight: 400;
     /* line-height: 32px; */

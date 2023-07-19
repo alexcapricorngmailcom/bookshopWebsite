@@ -1,0 +1,38 @@
+/* Cardo family */
+
+@font-face {
+    src: url('./fonts/Cardo/Cardo-Regular.ttf') format('truetype');
+    font-family: "Cardo";
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url('./fonts/Cardo/Cardo-Italic.ttf') format('truetype');
+    font-family: "Cardo";
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url('./fonts/Cardo/Cardo-Bold.ttf') format('truetype');
+    font-family: "Cardo";
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Inter family */
+
+@font-face {
+    src: url('./fonts/Inter/Inter-Regular.ttf') format('truetype');
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    src: url('./fonts/Inter/Inter-Medium.ttf') format('truetype');
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+}
