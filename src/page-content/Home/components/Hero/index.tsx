@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import darkLightBookCover from './Book.png';
+import darkLightBookCover from './assets/Book.png';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
@@ -8,7 +8,6 @@ import { BUTTON } from '../../../../design-system/buttons/';
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors'
 import { HEADING_H1, HEADING_H5, PARAGRAPH } from '../../../../design-system/typography'
 import { LINE_34PX } from '../../../../design-system/geometry/lines'
-import { SQUARE_65PX } from '../../../../design-system/geometry/squares'
 import { CIRCLE_16PX } from "../../../../design-system/geometry/circles";
 
 
@@ -17,7 +16,7 @@ import { CIRCLE_16PX } from "../../../../design-system/geometry/circles";
 export const HeroSection = () => {
     return (
         <StyledSection>
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
                 <Stack flexDirection='row' alignItems='center'>
                     <Stack width='55%' paddingRight='90px'>
                         <Stack flexDirection='row' alignItems='center'>
@@ -30,15 +29,15 @@ export const HeroSection = () => {
                             <BUTTON>Order Today</BUTTON>
                             <Stack alignItems='center'>
                                 <Box position='relative'>
-                                    <StyledButton>Read Free Demo</StyledButton>
-                                    <StyledLine_34px></StyledLine_34px>
+                                    <StyledButton>Read Free Demo<StyledLine_34px /></StyledButton>
+                                    
                                 </Box>
                             </Stack>
                         </Stack>
                         <Stack flexDirection='row' justifyContent='space-between'>
                             <Box>
                                 <Stack flexDirection='row' alignItems='center'>
-                                    <CIRCLE_16PX></CIRCLE_16PX>
+                                    <CIRCLE_16PX />
                                     <HEADING_H5>Pages:</HEADING_H5>
                                 </Stack>
                                 <PARAGRAPH>586pages</PARAGRAPH>

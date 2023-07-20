@@ -1,14 +1,17 @@
 import { styled } from "@mui/material/styles"
 
-// margin-block-start: 0;
-// margin-block-end: 0;
-
 export const HEADING_H1 = styled('h1')`
     font-family: Cardo, serif;
-    font-size: 65px;
+    font-size: 64px;
     font-weight: 700;
     /* line-height: 84px; */
     letter-spacing: -0.015em;
+    @media (max-width: 900px) {
+        font-size: 56px;
+    }
+    @media (max-width: 600px) {
+        font-size: 48px;
+    }
 `;
 
 export const HEADING_H2 = styled('h2')`
