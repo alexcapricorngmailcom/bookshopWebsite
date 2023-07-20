@@ -1,10 +1,8 @@
 import { styled } from "@mui/material/styles";
 import darkLightBookCover from './assets/Book.png';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-
 
 import { ButtonAction } from '../../../../design-system/Button/';
 import { MAIN, WHITE } from '../../../../design-system/colors'
@@ -16,34 +14,34 @@ export const HeroSection = () => {
     return (
         <StyledSection>
             <Container maxWidth="lg">
-                <Stack flexDirection='row' alignItems='center'>
-                    <Stack width='55%' paddingRight='90px'>
+                <Grid container spacing={12} alignItems='center'>
+                    <Grid item md={6} sm={12}>
                         <Stack flexDirection='row' alignItems='center'>
                             <LineSmall />
                             <HeadingH5>Welcome to Pages</HeadingH5>
                         </Stack>
-                        <HeadingH1>Books are uniquely portable magic</HeadingH1>
+                        <HeadingH1 sx={{lineHeight: '110%'}}>Books are uniquely portable magic</HeadingH1>
                         <Paragraph>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' marginTop='50px'>
-                            <ButtonAction size={'small'}>Order Today</ButtonAction>
-                            <ButtonAction size={'small'} outlined={true} borderwidth={true}>Read Free Demo<StyledButtonLine /></ButtonAction>
+                            <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
+                            <ButtonAction size={'small'} outlined borderWidth onClick={() =>{}}>Read Free Demo</ButtonAction>
                         </Stack>
                         <Grid container marginTop='50px'>
-                            <Grid item md={4}>
+                            <Grid item md={4} sm={4}>
                                 <Stack flexDirection='row' alignItems='center'>
                                     <CircleSmall />
                                     <HeadingH5>Pages:</HeadingH5>
                                 </Stack>
                                 <Paragraph>586pages</Paragraph>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={4} sm={4}>
                                 <Stack flexDirection='row' alignItems='center'>
                                     <CircleSmall />
                                     <HeadingH5>Length:</HeadingH5>
                                 </Stack>
                                 <Paragraph>10 Hours</Paragraph>
                             </Grid>
-                            <Grid item md={4}>
+                            <Grid item md={4} sm={4}>
                                 <Stack flexDirection='row' alignItems='center'>
                                     <CircleSmall />
                                     <HeadingH5>Ratings:</HeadingH5>
@@ -51,9 +49,11 @@ export const HeroSection = () => {
                                 <Paragraph>4.5/5 (305 ratings)</Paragraph>
                             </Grid>
                         </Grid>
-                    </Stack>
-                    <Box width='45%'><img src={darkLightBookCover} style={{width: '100%'}} alt="the dark light book cover" /></Box>
-                </Stack>
+                    </Grid>
+                    <Grid item md={6} sm={12}>
+                        <img src={darkLightBookCover} style={{width: '100%'}} alt="the dark light book cover" />
+                    </Grid>
+                </Grid>
             </Container>
         </StyledSection>
     )
@@ -72,5 +72,3 @@ const StyledButtonLine = styled('div')`
     background-color: ${WHITE};
     margin: 0 auto;
 `;
-
-// вопрос по отступам стайлед компонента

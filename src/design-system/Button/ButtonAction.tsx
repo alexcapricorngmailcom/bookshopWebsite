@@ -2,24 +2,18 @@ import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import { styled } from '@mui/material/styles';
 import { MAIN, SECONDARY, WHITE } from '../colors'
 
-export const ButtonAction = ({ size, borderwidth, onClick, outlined, children }: ButtonActionProps) => {
+// TODO rewrite to styled mui button with 3 variants
+
+export const ButtonAction = ({ size, borderWidth, onClick, outlined, children }: ButtonActionProps) => {
     return (
     <StyledButton 
         outlined={outlined ? 'outlined' : undefined} 
         size={size} 
-        borderwidth={borderwidth ? 'borderwidth' : undefined} 
+        borderwidth={borderWidth ? 'borderwidth' : undefined} 
         onClick={onClick}>
-    {children}
+        {children}
     </StyledButton>
     );
-};
-
-type ButtonActionProps = {
-    size: 'small' | 'large';
-    borderwidth?: boolean; 
-    onClick?: () => void;
-    outlined?: boolean;
-    children: ReactNode;
 };
 
 const StyledButton = styled('button')<ButtonProps>`
@@ -35,9 +29,13 @@ const StyledButton = styled('button')<ButtonProps>`
     transition: 0.2s;
     cursor: pointer;
 
+    /* TODO do it only for text buttons or better use separate prop for it! */
+    text-decoration: underline;
+    text-underline-offset: 10px;
+
     background-color: ${props => (props.outlined ? 'transparent' : SECONDARY)};
     border: 1px solid ${props => (props.outlined ? SECONDARY : 'transparent')};
-    border-width: ${props => (props.borderwidth ? '0px' : '4px')};
+    border-width: ${props => (props.borderwidth ?  '0px' : '1px')};
     color: ${props => (props.outlined ? WHITE : MAIN )};
 
     &:hover, &:active {
@@ -46,6 +44,14 @@ const StyledButton = styled('button')<ButtonProps>`
         color: ${props => (props.outlined ? SECONDARY : MAIN )};
     }
 `;
+
+type ButtonActionProps = {
+    size: 'small' | 'large';
+    borderWidth?: boolean; 
+    onClick: () => void;
+    outlined?: boolean;
+    children: ReactNode;
+};
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     outlined: string | undefined;
