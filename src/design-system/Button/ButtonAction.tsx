@@ -4,12 +4,11 @@ import { MAIN, SECONDARY, WHITE } from '../colors'
 
 // TODO rewrite to styled mui button with 3 variants
 
-export const ButtonAction = ({ size, borderWidth, onClick, outlined, children }: ButtonActionProps) => {
+export const ButtonAction = ({ size, onClick, outlined, children }: ButtonActionProps) => {
     return (
     <StyledButton 
         outlined={outlined ? 'outlined' : undefined} 
-        size={size} 
-        borderwidth={borderWidth ? 'borderwidth' : undefined} 
+        size={size}
         onClick={onClick}>
         {children}
     </StyledButton>
@@ -30,24 +29,21 @@ const StyledButton = styled('button')<ButtonProps>`
     cursor: pointer;
 
     /* TODO do it only for text buttons or better use separate prop for it! */
-    text-decoration: underline;
-    text-underline-offset: 10px;
+    /* text-decoration: underline;
+    text-underline-offset: 10px; */
 
     background-color: ${props => (props.outlined ? 'transparent' : SECONDARY)};
     border: 1px solid ${props => (props.outlined ? SECONDARY : 'transparent')};
-    border-width: ${props => (props.borderwidth ?  '0px' : '1px')};
-    color: ${props => (props.outlined ? WHITE : MAIN )};
+
+    color: ${props => (props.outlined ? SECONDARY : MAIN )};
 
     &:hover, &:active {
-        background-color: ${props => (props.outlined ? 'transparent' : WHITE)};
-        border: 1px solid ${props => (props.outlined ? 'none' : WHITE)};
-        color: ${props => (props.outlined ? SECONDARY : MAIN )};
+        
     }
 `;
 
 type ButtonActionProps = {
     size: 'small' | 'large';
-    borderWidth?: boolean; 
     onClick: () => void;
     outlined?: boolean;
     children: ReactNode;
@@ -56,5 +52,4 @@ type ButtonActionProps = {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     outlined: string | undefined;
     size: string | undefined;
-    borderwidth: string | undefined;
 }

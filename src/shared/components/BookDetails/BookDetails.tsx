@@ -9,11 +9,11 @@ export const BookDetails = ({title, paragraph}: BookDetailsProps) => {
         <>
             <Stack flexDirection='row' alignItems='center'>
                 <CircleSmall />
-                <HeadingH5 sx={{marginLeft: '13px', color: WHITE}}> 
+                <HeadingH5 sx={{marginLeft: '13px'}}> 
                     {title}
                 </HeadingH5>
             </Stack>
-            <Paragraph>
+            <Paragraph sx={{marginLeft: '29px'}}>
                 {paragraph}
             </Paragraph>
         </>

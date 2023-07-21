@@ -1,19 +1,20 @@
-import { styled } from "@mui/material/styles";
-import theDarkLightLarge from './assets/theDarkLightLarge.png';
-import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
 
+
+import theDarkLightLarge from './assets/theDarkLightLarge.png';
 import { ButtonAction } from '../../../../design-system/Button/';
 import { MAIN, WHITE } from '../../../../design-system/colors'
 import { HeadingH1, HeadingH5, Paragraph } from '../../../../design-system/typography'
 import { LineSmall } from '../../../../design-system/geometry/lines'
-import { BookDetails } from "../../../../shared/components/BookDetails";
+import { BookDetails } from '../../../../shared/components/BookDetails';
 
 export const HeroSection = () => {
     return (
         <StyledSection>
-            <Container maxWidth="lg">
+            <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <Grid item md={6} sm={12}>
                         <Stack flexDirection='row' alignItems='center'>
@@ -24,11 +25,11 @@ export const HeroSection = () => {
                         <Paragraph sx={{marginTop: '32px', color: '#B4C7E7'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' marginTop='50px'>
                             <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
-                            <ButtonAction size={'small'} outlined borderWidth onClick={() =>{}}>Read Free Demo</ButtonAction>
+                            <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction>
                         </Stack>
                         <Grid container marginTop='50px'>
                             <Grid item md={4} sm={4}>
-                                <BookDetails 
+                                <BookDetails
                                     title={'Pages:'}
                                     paragraph={'586pages'}
                                 />
