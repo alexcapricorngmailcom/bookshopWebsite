@@ -1,4 +1,5 @@
 import { styled } from "@mui/material/styles"
+import { MAIN } from "../colors";
 
 export const HeadingH1 = styled('h1')`
     font-family: Cardo, serif;
@@ -6,6 +7,7 @@ export const HeadingH1 = styled('h1')`
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.015em;
+    color: ${MAIN};
 
     @media (max-width: 900px) {
         font-size: 56px;
@@ -18,6 +20,7 @@ export const HeadingH2 = styled('h2')`
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.015em;
+    color: ${MAIN};
 `;
 
 export const HeadingH3 = styled('h3')`
@@ -26,6 +29,7 @@ export const HeadingH3 = styled('h3')`
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.015em;
+    color: ${MAIN};
 `;
 
 export const HeadingH4 = styled('h4')`
@@ -34,6 +38,7 @@ export const HeadingH4 = styled('h4')`
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.015em;
+    color: ${MAIN};
 `;
 
 export const HeadingH5 = styled('h5')`
@@ -42,6 +47,7 @@ export const HeadingH5 = styled('h5')`
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.015em;
+    color: ${MAIN};
 `;
 
 export const HeadingH6 = styled('h6')`
@@ -50,6 +56,7 @@ export const HeadingH6 = styled('h6')`
     font-weight: 700;
     line-height: 130%;
     letter-spacing: -0.015em;
+    color: ${MAIN};
 `;
 
 export const Paragraph = styled('p')`
@@ -58,4 +65,5 @@ export const Paragraph = styled('p')`
     font-weight: 400;
     line-height: 170%;
     letter-spacing: -0.01em;
+    color: #969AA0;
 `;
