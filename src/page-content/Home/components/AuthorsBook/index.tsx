@@ -20,7 +20,7 @@ export const AuthorsBook = () => {
                     <HeadingH3>Author’s Book Includes</HeadingH3>
                     <LineLarge sx={{marginTop:'22px'}} />
                     <Grid container spacing={6} marginTop='22px'>
-                        <Grid item md={6} sm={12}>
+                        <Grid item lg={6}>
                             <Grid container spacing={4} alignItems='center'>
                                 <Grid item md={6} sm={6} xs={12}>
                                     <img src={atomicOneSmall} style={{width: '100%'}} alt="atomic one’s book cover" />
@@ -48,7 +48,7 @@ export const AuthorsBook = () => {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item md={6} sm={12}>
+                        <Grid item lg={6}>
                             <Grid container spacing={4} alignItems='center'>
                                 <Grid item md={6} sm={6} xs={12}>
                                     <img src={theDarkLightSmall} style={{width: '100%'}} alt="the dark light book cover" />
