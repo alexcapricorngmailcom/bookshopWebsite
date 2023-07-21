@@ -23,7 +23,9 @@ export const AuthorsBook = () => {
                         <Grid item lg={6}>
                             <Grid container spacing={4} alignItems='center'>
                                 <Grid item md={6} sm={6} xs={12}>
-                                    <img src={atomicOneSmall} style={{width: '100%'}} alt="atomic one’s book cover" />
+                                    <Box sx={{filter: 'drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1))'}}>
+                                        <img src={atomicOneSmall} style={{width: '100%'}} alt="atomic one’s book cover" />
+                                    </Box>
                                 </Grid>
                                 <Grid item md={6} sm={6} xs={12}>
                                     <HeadingH4>Atomic One’s</HeadingH4>
@@ -51,7 +53,9 @@ export const AuthorsBook = () => {
                         <Grid item lg={6}>
                             <Grid container spacing={4} alignItems='center'>
                                 <Grid item md={6} sm={6} xs={12}>
-                                    <img src={theDarkLightSmall} style={{width: '100%'}} alt="the dark light book cover" />
+                                    <Box sx={{filter: 'drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1))'}}>
+                                        <img src={theDarkLightSmall} style={{width: '100%'}} alt="the dark light book cover" />
+                                    </Box>
                                 </Grid>
                                 <Grid item md={6} sm={6} xs={12}>
                                     <HeadingH4>The Dark Light</HeadingH4>
