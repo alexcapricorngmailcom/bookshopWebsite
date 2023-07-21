@@ -13,7 +13,7 @@ export const BookDetails = ({title, paragraph}: BookDetailsProps) => {
                     {title}
                 </HeadingH5>
             </Stack>
-            <Paragraph sx={{marginLeft: '29px'}}>
+            <Paragraph sx={{paddingLeft: '29px'}}>
                 {paragraph}
             </Paragraph>
         </>
