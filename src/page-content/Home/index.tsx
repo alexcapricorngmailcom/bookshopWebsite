@@ -3,6 +3,7 @@ import { AuthorsBook } from "./components/AuthorsBook"
 import { About } from "./components/About"
 import { TrustedBy } from "./components/TrustedBy"
 import { Callout } from "./components/Callout"
+import { WhatWillYouLearn } from "./components/WhatWillYouLearn"
 
 
 export const Home = () => {
@@ -13,6 +14,7 @@ export const Home = () => {
             <About />
             <TrustedBy />
             <Callout />
+            <WhatWillYouLearn />
         </main>
     )
 }
