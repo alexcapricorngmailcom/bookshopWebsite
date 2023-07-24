@@ -2,15 +2,15 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 
 import amazenCorp from './assets/amazenCorp.png'
 import meganBooks from './assets/meganBooks.png'
 import losBooks from './assets/losBooks.png'
 import urbanLib from './assets/UrbanLib.png'
 import { WHITE } from '../../../../design-system/colors';
-import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
+import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
+import { TrustedByItem } from '../../../../shared/components/TrustedByItem';
 
 export const TrustedBy = () => {
     return (
@@ -21,24 +21,16 @@ export const TrustedBy = () => {
                     <LineLarge sx={{marginTop:'22px'}} />
                     <Grid container marginTop='40px'>
                         <Grid item lg={3} textAlign='center'>
-                            <img src={amazenCorp} alt="amazen corp logo" />
-                            <HeadingH5 sx={{marginTop: '20px'}}>Amazen Corp</HeadingH5>
-                            <Paragraph sx={{marginTop: '10px'}}>A long established fact that a who looking at its layout.</Paragraph>
+                            <TrustedByItem imgName={amazenCorp} alt={'amazen corp logo'} title={'Amazen Corp'} paragraph ={'A long established fact that a who looking at its layout.'}/>
                         </Grid>
                         <Grid item lg={3} textAlign='center'>
-                            <img src={meganBooks} alt="megan books logo" />
-                            <HeadingH5 sx={{marginTop: '20px'}}>Megan Books</HeadingH5>
-                            <Paragraph sx={{marginTop: '10px'}}>A long established fact that a who looking at its layout.</Paragraph>
+                            <TrustedByItem imgName={meganBooks} alt={'megan books logo'} title={'Megan Books'} paragraph ={'A long established fact that a who looking at its layout.'}/>
                         </Grid>
                         <Grid item lg={3} textAlign='center'>
-                            <img src={losBooks} alt="los books logo" />
-                            <HeadingH5 sx={{marginTop: '20px'}}>Los Books</HeadingH5>
-                            <Paragraph sx={{marginTop: '10px'}}>A long established fact that a who looking at its layout.</Paragraph>
+                            <TrustedByItem imgName={losBooks} alt={'los books logo'} title={'Los Books'} paragraph ={'A long established fact that a who looking at its layout.'}/>
                         </Grid>
                         <Grid item lg={3} textAlign='center'>
-                            <img src={urbanLib} alt="urban lib logo" />
-                            <HeadingH5 sx={{marginTop: '20px'}}>Urban Lib</HeadingH5>
-                            <Paragraph sx={{marginTop: '10px'}}>A long established fact that a who looking at its layout.</Paragraph>
+                            <TrustedByItem imgName={urbanLib} alt={'urban lib logo'} title={'Urban Lib'} paragraph ={'A long established fact that a who looking at its layout.'}/>
                         </Grid>
                     </Grid>
                 </Stack>
