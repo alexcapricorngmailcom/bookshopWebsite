@@ -1,7 +1,7 @@
+import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
 
 
 import theDarkLightLarge from './assets/theDarkLightLarge.png';
@@ -22,7 +22,7 @@ export const HeroSection = () => {
                             <HeadingH5 sx={{marginLeft: '15px', color: WHITE}}>Welcome to Pages</HeadingH5>
                         </Stack>
                         <HeadingH1 sx={{marginTop: '16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</HeadingH1>
-                        <Paragraph sx={{marginTop: '32px', color: '#B4C7E7'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</Paragraph>
+                        <Paragraph sx={{marginTop: '32px', color: '#B4C7E7'}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' marginTop='50px'>
                             <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
                             <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction>

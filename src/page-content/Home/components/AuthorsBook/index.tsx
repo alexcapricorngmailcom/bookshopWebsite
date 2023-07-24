@@ -6,8 +6,8 @@ import Box from '@mui/material/Box';
 
 import atomicOneSmall from './assets/atomicOneSmall.png'
 import theDarkLightSmall from './assets/theDarkLightSmall.png'
-import { MAIN, WHITE } from '../../../../design-system/colors';
-import { HeadingH5, HeadingH3, HeadingH4, Paragraph } from '../../../../design-system/typography';
+import { WHITE } from '../../../../design-system/colors';
+import { HeadingH3, HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { BookDetails } from '../../../../shared/components/BookDetails';
 import { ButtonAction } from '../../../../design-system/Button';
