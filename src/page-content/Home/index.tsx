@@ -5,6 +5,7 @@ import { TrustedBy } from "./components/TrustedBy"
 import { Callout } from "./components/Callout"
 import { WhatWillYouLearn } from "./components/WhatWillYouLearn"
 import { TheChapter } from "./components/TheChapter"
+import { Testimonial } from "./components/Testimonial"
 
 
 export const Home = () => {
@@ -16,7 +17,8 @@ export const Home = () => {
             <TrustedBy />
             <Callout />
             <WhatWillYouLearn />
-            <TheChapter/>
+            <TheChapter />
+            <Testimonial />
         </main>
     )
 }

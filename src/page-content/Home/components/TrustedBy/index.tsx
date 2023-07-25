@@ -52,7 +52,7 @@ export const TrustedBy = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 145px;
+    padding-bottom: 145px;
     background-color: ${WHITE};
 `;
