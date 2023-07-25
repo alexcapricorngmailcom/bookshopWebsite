@@ -22,25 +22,33 @@ export const WhatWillYouLearn = () => {
                             <Grid container rowSpacing={3} columnSpacing={4}>
                                 <Grid item lg={6} md={6} sm={6}>
                                     <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge></CircleLarge>
+                                        <CircleLarge>
+                                            <HeadingH5>01</HeadingH5>
+                                        </CircleLarge>
                                         <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
                                     </Box>
                                 </Grid>
                                 <Grid item lg={6} md={6} sm={6}>
                                     <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge></CircleLarge>
+                                        <CircleLarge>
+                                            <HeadingH5>02</HeadingH5>
+                                        </CircleLarge>
                                         <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
                                     </Box>
                                 </Grid>
                                 <Grid item lg={6} md={6} sm={6}>
                                     <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge></CircleLarge>
+                                        <CircleLarge>
+                                            <HeadingH5>03</HeadingH5>
+                                        </CircleLarge>
                                         <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
                                     </Box>
                                 </Grid>
                                 <Grid item lg={6} md={6} sm={6}>
                                     <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge></CircleLarge>
+                                        <CircleLarge>
+                                            <HeadingH5>04</HeadingH5>
+                                        </CircleLarge>
                                         <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
                                     </Box>
                                 </Grid>
