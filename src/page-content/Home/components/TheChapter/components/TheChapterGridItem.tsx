@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 
 import { WHITE } from "../../../../../design-system/colors";
 import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
-import { TheCapterBookDetails } from "./TheCapterBookDetails";
+import { TheChapterBookDetails } from "../components";
 
-export const TheCapterGridItem = ({title, paragraph}: TheCapterGridItemProps) => {
+export const TheChapterGridItem = ({title, paragraph}: TheChapterGridItemProps) => {
     return (
         <Grid item lg={6} md={6} sm={6}>
             <StyledBox>
@@ -14,13 +14,13 @@ export const TheCapterGridItem = ({title, paragraph}: TheCapterGridItemProps) =>
                 <Paragraph sx={{mt:'14px'}}>{paragraph}</Paragraph>
                 <Grid container mt='25px'>
                     <Grid item md={6} sm={6}>
-                        <TheCapterBookDetails
+                        <TheChapterBookDetails
                             title={'Pages:'}
                             paragraph={'85 pages'}
                         />
                     </Grid>
                     <Grid item md={6} sm={6}>
-                        <TheCapterBookDetails 
+                        <TheChapterBookDetails 
                             title={'Length:'}
                             paragraph={'1 h 15 mins'}
                         />
@@ -31,7 +31,7 @@ export const TheCapterGridItem = ({title, paragraph}: TheCapterGridItemProps) =>
     );
 }
 
-type TheCapterGridItemProps = {
+type TheChapterGridItemProps = {
     title: string;
     paragraph: string;
 };

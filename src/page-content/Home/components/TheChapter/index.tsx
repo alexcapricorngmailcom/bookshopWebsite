@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import { BACKGROUND, MAIN } from '../../../../design-system/colors';
 import { HeadingH3, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TheCapterGridItem } from './components/TheCapterGridItem';
+import { TheChapterGridItem } from './components/';
 import { ButtonAction } from '../../../../design-system/Button';
 
 //TODO check button width after button will update
@@ -20,19 +20,19 @@ export const TheChapter = () => {
                     <HeadingH3>The Chapter Includes</HeadingH3>
                     <LineLarge sx={{marginTop:'22px'}} />
                     <Grid container rowSpacing={4} columnSpacing={4} mt={'16px'}>
-                        <TheCapterGridItem
+                        <TheChapterGridItem
                             title='Chapter-01 Get Started Intro'
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />
-                        <TheCapterGridItem
+                        <TheChapterGridItem
                             title='Chapter-02 Create a Massive Content'
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />
-                        <TheCapterGridItem
+                        <TheChapterGridItem
                             title='Chapter-03 Maintaining the Creative Arcs'
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />
-                        <TheCapterGridItem
+                        <TheChapterGridItem
                             title='Chapter-04 The Conclusion'
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />

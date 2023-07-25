@@ -21,25 +21,25 @@ export const TrustedBy = () => {
                     <LineLarge sx={{marginTop:'22px'}} />
                     <Grid container marginTop='0px' spacing={5}>
                         <TrustedByGridItem 
-                            imgName={amazenCorp} 
+                            img={amazenCorp} 
                             alt='amazen corp logo' 
                             title='Amazen Corp'
                             paragraph='A long established fact that a who looking at its layout.'
                         />
                         <TrustedByGridItem 
-                            imgName={meganBooks} 
+                            img={meganBooks} 
                             alt='megan books logo' 
                             title='Megan Books' 
                             paragraph='A long established fact that a who looking at its layout.'
                         />
                         <TrustedByGridItem 
-                            imgName={losBooks} 
+                            img={losBooks} 
                             alt='los books logo' 
                             title='Los Books' 
                             paragraph='A long established fact that a who looking at its layout.'
                         />
                         <TrustedByGridItem 
-                            imgName={urbanLib} 
+                            img={urbanLib} 
                             alt='urban lib logo'
                             title='Urban Lib'
                             paragraph='A long established fact that a who looking at its layout.'

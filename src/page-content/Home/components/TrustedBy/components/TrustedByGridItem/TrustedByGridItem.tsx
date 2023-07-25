@@ -4,11 +4,11 @@ import Box from "@mui/material/Box";
 import { HeadingH5, Paragraph } from "../../../../../../design-system/typography";
 
 
-export const TrustedByGridItem = ({imgName, alt, title, paragraph}: BookDetailsProps) => {
+export const TrustedByGridItem = ({img, alt, title, paragraph}: BookDetailsProps) => {
     return (
         <Grid item lg={3} sm={6} xs={12} textAlign='center'>
             <Box width='100%' height='90px'>
-                <img src={imgName} alt={alt} style={{width:'100%', height:'100%', objectFit:'contain'}}/>
+                <img src={img} alt={alt} style={{width:'100%', height:'100%', objectFit:'contain'}}/>
             </Box>
             <HeadingH5 sx={{marginTop: '20px'}}>{title}</HeadingH5>
             <Paragraph sx={{marginTop: '10px'}}>{paragraph}</Paragraph>
@@ -17,7 +17,7 @@ export const TrustedByGridItem = ({imgName, alt, title, paragraph}: BookDetailsP
 }
 
 type BookDetailsProps = {
-    imgName: string;
+    img: string;
     alt: string;
     title: string;
     paragraph: string;
