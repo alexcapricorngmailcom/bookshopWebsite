@@ -17,10 +17,10 @@ export const About = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
-                    <Grid item lg={6}> 
+                    <Grid item md={6} sm={12}> 
                         <img src={aboutAuthor} style={{width: '100%'}} alt="about author" />
                     </Grid>
-                    <Grid item lg={6}> 
+                    <Grid item md={6} sm={12}> 
                         <HeadingH3>About Author</HeadingH3>
                         <LineLarge sx={{marginTop:'22px'}} />
                         <Paragraph sx={{marginTop: '22px'}}>All the Lorem generators on the Internet tend to repeated predefined chunks as necessary, making this the first true value generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</Paragraph>
