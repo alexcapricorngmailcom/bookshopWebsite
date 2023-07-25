@@ -6,6 +6,7 @@ import { Callout } from "./components/Callout"
 import { WhatWillYouLearn } from "./components/WhatWillYouLearn"
 import { TheChapter } from "./components/TheChapter"
 import { Testimonial } from "./components/Testimonial"
+import { Blog } from "./components/Blog"
 
 
 export const Home = () => {
@@ -19,6 +20,7 @@ export const Home = () => {
             <WhatWillYouLearn />
             <TheChapter />
             <Testimonial />
+            <Blog />
         </main>
     )
 }
