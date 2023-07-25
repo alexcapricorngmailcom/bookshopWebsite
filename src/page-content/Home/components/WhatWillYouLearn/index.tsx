@@ -17,23 +17,32 @@ export const WhatWillYouLearn = () => {
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3>What will you learn?</HeadingH3>
                     <LineLarge sx={{marginTop:'22px'}} />
-                    <Grid container spacing={6} marginTop='50px'>
+                    <Grid container spacing={6} alignItems='center' marginTop='0px'>
                         <Grid item lg={6}>
-                            <Grid container rowSpacing={1} columnSpacing={1}>
-                                <Grid item lg={6}>
+                            <Grid container rowSpacing={3} columnSpacing={4}>
+                                <Grid item lg={6} md={6} sm={6}>
                                     <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
                                         <CircleLarge></CircleLarge>
                                         <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
                                     </Box>
                                 </Grid>
-                                <Grid item lg={6}>
-                                    1
+                                <Grid item lg={6} md={6} sm={6}>
+                                    <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
+                                        <CircleLarge></CircleLarge>
+                                        <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
+                                    </Box>
                                 </Grid>
-                                <Grid item lg={6}>
-                                    1
+                                <Grid item lg={6} md={6} sm={6}>
+                                    <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
+                                        <CircleLarge></CircleLarge>
+                                        <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
+                                    </Box>
                                 </Grid>
-                                <Grid item lg={6}>
-                                    1
+                                <Grid item lg={6} md={6} sm={6}>
+                                    <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
+                                        <CircleLarge></CircleLarge>
+                                        <HeadingH5 sx={{marginTop:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
+                                    </Box>
                                 </Grid>
                             </Grid>
                         </Grid>
