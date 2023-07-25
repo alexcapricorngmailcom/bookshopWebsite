@@ -2,12 +2,15 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
-import { BACKGROUND } from '../../../../design-system/colors';
-import { HeadingH3 } from '../../../../design-system/typography';
+import { BACKGROUND, MAIN } from '../../../../design-system/colors';
+import { HeadingH3, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { TheCapterGridItem } from './components/TheCapterGridItem';
+import { ButtonAction } from '../../../../design-system/Button';
 
+//TODO check button width after button will update
 
 export const TheChapter = () => {
     return (
@@ -34,6 +37,11 @@ export const TheChapter = () => {
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />
                     </Grid>
+                    <Box sx={{mt: '80px'}}>
+                        <ButtonAction size='large' onClick={() => {}}>Start a 15-Days Free Trail</ButtonAction>
+                    </Box>
+                    <Paragraph sx={{mt:'30px'}}>Short description about each chapter</Paragraph>
+                    <Paragraph><a href="#" style={{textDecoration: 'underline', textUnderlineOffset: '5px', color: MAIN}}>Have any questions?</a> Contact us</Paragraph>
                 </Stack>
             </Container>
         </StyledSection>
