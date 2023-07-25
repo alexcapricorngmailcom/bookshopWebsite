@@ -1,0 +1,43 @@
+import { styled } from '@mui/material/styles';
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+
+import { WHITE } from "../../../../../design-system/colors";
+import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
+import { TheCapterBookDetails } from "./TheCapterBookDetails";
+
+export const TheCapterGridItem = ({title, paragraph}: TheCapterGridItemProps) => {
+    return (
+        <Grid item lg={6} md={6} sm={6}>
+            <StyledBox>
+                <HeadingH5>{title}</HeadingH5>
+                <Paragraph sx={{mt:'14px'}}>{paragraph}</Paragraph>
+                <Grid container mt='25px'>
+                    <Grid item md={6} sm={6}>
+                        <TheCapterBookDetails
+                            title={'Pages:'}
+                            paragraph={'85 pages'}
+                        />
+                    </Grid>
+                    <Grid item md={6} sm={6}>
+                        <TheCapterBookDetails 
+                            title={'Length:'}
+                            paragraph={'1 h 15 mins'}
+                        />
+                    </Grid>
+                </Grid>
+            </StyledBox>
+        </Grid>
+    );
+}
+
+type TheCapterGridItemProps = {
+    title: string;
+    paragraph: string;
+};
+
+const StyledBox = styled(Box)`
+    padding: 30px;
+    background-color: ${WHITE};
+    filter: drop-shadow(0 35px 25px rgba(4, 11, 20, 0.05));
+`;

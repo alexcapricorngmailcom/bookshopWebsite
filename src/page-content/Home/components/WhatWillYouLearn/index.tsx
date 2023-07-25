@@ -19,7 +19,7 @@ export const WhatWillYouLearn = () => {
                     <LineLarge sx={{marginTop:'22px'}} />
                     <Grid container spacing={6} alignItems='center' marginTop='0px'>
                         <Grid item lg={6}>
-                            <Grid container rowSpacing={3} columnSpacing={4}>
+                            <Grid container rowSpacing={4} columnSpacing={4}>
                                 <Grid item lg={6} md={6} sm={6}>
                                     <Box sx={{padding: '40px 30px', backgroundColor: BACKGROUND}}>
                                         <CircleLarge>
