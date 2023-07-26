@@ -3,10 +3,12 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
-import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
+import { BLACK, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { ButtonAction } from '../../../../design-system/Button';
+
+// TODO recognize about input width
 
 export const ReadFreeChapter = () => {
     return (
@@ -17,10 +19,12 @@ export const ReadFreeChapter = () => {
                         <HeadingH3>What will you learn?</HeadingH3>
                         <LineLarge sx={{marginTop:'22px', backgroundColor: MAIN}} />
                         <Paragraph sx={{marginTop:'22px', textAlign:'center', color: MAIN}}>Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.</Paragraph>
-                        <Stack flexDirection='row'>
+                        <StyledInputSectionStack>
                             <StyledInput type="text" placeholder='Your Email id...' />
-                            <ButtonAction size='large' onClick={() => {}}>Subscribe</ButtonAction>
-                        </Stack>
+                            <Box sx={{ml:'10px'}}>
+                                <ButtonAction size='large' onClick={() => {}}>Subscribe</ButtonAction>
+                            </Box>
+                        </StyledInputSectionStack>
                     </Stack>
                 </Box>
             </Container>
@@ -34,6 +38,27 @@ const StyledSection = styled('section')`
     background-color: ${WHITE};
 `;
 
-const StyledInput = styled('input')`
+const StyledInputSectionStack = styled(Stack)`
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    margin-top: 40px;
 `;
+
+const StyledInput = styled('input')`
+    width: 55%;
+    border: none;
+    padding: 10px 20px;
+
+    font-family: Inter, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: ${BLACK};
+
+    &::placeholder {
+        color: #969AA0;
+    }
+`;
+    
