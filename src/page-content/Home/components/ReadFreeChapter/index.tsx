@@ -22,7 +22,7 @@ export const ReadFreeChapter = () => {
                         <StyledInputSectionStack>
                             <StyledInput type="text" placeholder='Your Email id...' />
                             <Box sx={{ml:'10px'}}>
-                                <ButtonAction size='large' onClick={() => {}}>Subscribe</ButtonAction>
+                                <ButtonAction size='small' onClick={() => {}}>Subscribe</ButtonAction>
                             </Box>
                         </StyledInputSectionStack>
                     </Stack>
@@ -46,7 +46,7 @@ const StyledInputSectionStack = styled(Stack)`
 `;
 
 const StyledInput = styled('input')`
-    width: 55%;
+    width: 67%;
     border: none;
     padding: 10px 20px;
 
