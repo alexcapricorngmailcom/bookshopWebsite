@@ -16,7 +16,7 @@ export const ReadFreeChapter = () => {
             <Container maxWidth='lg'>
                 <Box sx={{padding:'120px 230px',backgroundColor:SECONDARY}}>
                     <Stack flexDirection='column' alignItems='center'>
-                        <HeadingH3>What will you learn?</HeadingH3>
+                        <HeadingH3>Read a free chapter</HeadingH3>
                         <LineLarge sx={{marginTop:'22px', backgroundColor: MAIN}} />
                         <Paragraph sx={{marginTop:'22px', textAlign:'center', color: MAIN}}>Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.</Paragraph>
                         <StyledInputSectionStack>
