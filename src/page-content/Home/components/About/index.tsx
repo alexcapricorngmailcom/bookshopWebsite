@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
 import aboutAuthor from './assets/aboutAuthor.png'
 import authorsQrcode from './assets/authorsQrcode.svg'
@@ -46,10 +47,10 @@ export const About = () => {
                             </Grid>
                             <Grid item lg={7.5}>
                                 <HeadingH6 sx={{color:SECONDARY}}>John Abraham, Ph.d</HeadingH6>
-                                <Box marginTop='10px'>
-                                    <a href='mailto:johnabraham@gmail.com'><Paragraph sx={{color: '#B4C7E7'}}>Mail: johnabraham@gmail.com</Paragraph></a>
-                                    <a href='tel: +21235459000'><Paragraph sx={{color: '#B4C7E7'}}>Phone: (+2) 123 545 9000</Paragraph> </a>
-                                </Box>
+                                <Stack mt='10px'>
+                                    <StyledLink href="mailto:johnabraham@gmail.com">Mail: johnabraham@gmail.com</StyledLink>
+                                    <StyledLink href="tel: +21235459000">Phone: (+2) 123 545 9000</StyledLink>
+                                </Stack>
                             </Grid>   
                         </StyledGridContainer>
                     </Grid>
@@ -80,4 +81,17 @@ const StyledStack = styled(Stack)`
     justify-content: center;
     align-items: center;
     background-color: ${WHITE};
+`;
+
+const StyledLink = styled(Link)`
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    color: #B4C7E7;
+
+    &:hover, &:active {
+        text-decoration: underline;
+    }
 `;

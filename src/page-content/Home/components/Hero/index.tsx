@@ -27,19 +27,19 @@ export const HeroSection = () => {
                             <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction>
                         </Stack>
                         <Grid container marginTop='50px'>
-                            <Grid item md={4} sm={4}>
+                            <Grid item md={3.5} sm={3.5}>
                                 <BookDetails
                                     title={'Pages:'}
                                     paragraph={'586pages'}
                                 />
                             </Grid>
-                            <Grid item md={4} sm={4}>
+                            <Grid item md={3.5} sm={3.5}>
                                 <BookDetails 
                                     title={'Length:'}
                                     paragraph={'10 Hours'}
                                 />
                             </Grid>
-                            <Grid item md={4} sm={4}>
+                            <Grid item md={5} sm={5}>
                                 <BookDetails 
                                     title={'Ratings:'}
                                     paragraph={'4.5/5 (305 ratings)'}
