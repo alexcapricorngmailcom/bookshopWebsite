@@ -19,7 +19,8 @@ export const Callout = () => {
                         <LineLarge sx={{marginTop: '20px'}} />
                         <Paragraph sx={{marginTop: '20px', color: '#B4C7E7'}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Box marginTop='30px'>
-                            <ButtonAction size={'small'} outlined onClick={() =>{}}>Order Today</ButtonAction>
+                            <ButtonAction>Order Today</ButtonAction> 
+                            {/* <ButtonAction size={'small'} outlined onClick={() =>{}}>Order Today</ButtonAction> */}
                         </Box>
                     </Grid>
                     <Grid item md={6} sm={12}>

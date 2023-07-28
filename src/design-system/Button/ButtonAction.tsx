@@ -1,55 +1,19 @@
-import React, { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { styled } from '@mui/material/styles';
-import { MAIN, SECONDARY, WHITE } from '../colors'
+import Button from '@mui/material/Button';
 
-// TODO rewrite to styled mui button with 3 variants
-
-export const ButtonAction = ({ size, onClick, outlined, children }: ButtonActionProps) => {
+export const ButtonAction = ({children}:ButtonActionProps) => {
     return (
-    <StyledButton 
-        outlined={outlined ? 'outlined' : undefined} 
-        size={size}
-        onClick={onClick}>
-        {children}
-    </StyledButton>
+        <StyledButton variant='contained'>
+            {children}
+        </StyledButton>
     );
-};
+}
 
-const StyledButton = styled('button')<ButtonProps>`
-    width: ${props => (props.size === 'small' ? '220px' : '300px')};
-    height: 65px;
-    padding: 10px;
-    font-family: inherit;
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    transition: 0.2s;
-    cursor: pointer;
-
-    /* TODO do it only for text buttons or better use separate prop for it! */
-    /* text-decoration: underline;
-    text-underline-offset: 10px; */
-
-    background-color: ${props => (props.outlined ? 'transparent' : SECONDARY)};
-    border: 1px solid ${props => (props.outlined ? SECONDARY : 'transparent')};
-
-    color: ${props => (props.outlined ? SECONDARY : MAIN )};
-
-    &:hover, &:active {
-        
-    }
+const StyledButton = styled(Button)`
+    font-size: 20px;
 `;
 
 type ButtonActionProps = {
-    size: 'small' | 'large';
-    onClick: () => void;
-    outlined?: boolean;
-    children: ReactNode;
-};
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    outlined: string | undefined;
-    size: string | undefined;
+    children: ReactNode
 }

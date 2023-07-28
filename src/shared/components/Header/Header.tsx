@@ -40,7 +40,7 @@ export const Header = () => {
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
                         </StyledBadge>
                         <Box ml='30px'>
-                            <ButtonAction size="small" onClick={() =>{}}>Order Today</ButtonAction>
+                            <ButtonAction>Order Today</ButtonAction>
                         </Box>
                     </Stack>
                 </StyledNav>
@@ -96,14 +96,14 @@ const StyledHeaderNavLink = styled(Link)`
     }
 `;
 
-const StyledBadge = styled(Badge)({
-    marginLeft: '30px',
+const StyledBadge = styled(Badge)`
+    margin-Left: 30px;
 
-    "& .MuiBadge-badge": {
-        color: MAIN,
-        backgroundColor: SECONDARY,
-        fontFamily: 'Inter, sans-serif',
-        fontSize: '12px',
-        fontWeight: '700'
+    & .MuiBadge-badge {
+        color: ${MAIN};
+        background-color: ${SECONDARY};
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
     }
-  });
+`;

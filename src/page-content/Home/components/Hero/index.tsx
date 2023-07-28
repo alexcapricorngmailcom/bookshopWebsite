@@ -23,8 +23,10 @@ export const HeroSection = () => {
                         <HeadingH1 sx={{marginTop: '16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</HeadingH1>
                         <Paragraph sx={{marginTop: '32px', color: '#B4C7E7'}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' marginTop='50px'>
-                            <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
-                            <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction>
+                            <ButtonAction>Order Today</ButtonAction> 
+                            <ButtonAction>Read Free Demo</ButtonAction>
+                            {/* <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
+                            <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction> */}
                         </Stack>
                         <Grid container marginTop='50px'>
                             <Grid item md={3.5} sm={3.5}>
