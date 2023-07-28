@@ -36,3 +36,10 @@
     font-style: normal;
     font-weight: 500;
 }
+
+@font-face {
+    src: url('./fonts/Inter/Inter-Bold.ttf') format('truetype');
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+}

@@ -32,7 +32,7 @@ const StyledButton = styled('button')<ButtonProps>`
     /* text-decoration: underline;
     text-underline-offset: 10px; */
 
-    background-color: ${props => (props.outlined ? 'transparent' : MAIN)};
+    background-color: ${props => (props.outlined ? 'transparent' : SECONDARY)};
     border: 1px solid ${props => (props.outlined ? SECONDARY : 'transparent')};
 
     color: ${props => (props.outlined ? SECONDARY : MAIN )};

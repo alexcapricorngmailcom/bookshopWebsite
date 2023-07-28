@@ -5,13 +5,13 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-import logoPages from './assets/logoPages.png'
-import logoFacebook from './assets/logoFacebook.png'
-import logoTwitter from './assets/logoTwitter.png'
-import logoLinkedIn from './assets/logoLinkedIn.png'
-import logoInstagram from './assets/logoInstagram.png'
+import logoPages from './assets/logoPages.svg'
+import logoFacebook from './assets/logoFacebook.svg'
+import logoTwitter from './assets/logoTwitter.svg'
+import logoLinkedIn from './assets/logoLinkedIn.svg'
+import logoInstagram from './assets/logoInstagram.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
-import { HeadingH5 } from '../../../design-system/typography';
+import { HeadingH5, Paragraph } from '../../../design-system/typography';
 
 export const Footer = () => {
     return(
@@ -21,10 +21,10 @@ export const Footer = () => {
                     <Box width='35%'>
                         <Link href='#'><img src={logoPages} alt="pages logo" /></Link>
                         <StyledBoxLogo>
-                            <Link href='https://uk-ua.facebook.com/'><img src={logoFacebook} alt="Facebook logo" /></Link>
-                            <Link href='https://twitter.com/'><img src={logoTwitter} alt="Twitter logo" /></Link>
-                            <Link href='https://ua.linkedin.com/'><img src={logoLinkedIn} alt="LinkedIn logo" /></Link>
-                            <Link href='https://www.instagram.com/'><img src={logoInstagram} alt="Instagram logo" /></Link>
+                            <Link href='https://uk-ua.facebook.com/' target='_blank'><img src={logoFacebook} alt="Facebook logo" /></Link>
+                            <Link href='https://twitter.com/' target='_blank'><img src={logoTwitter} alt="Twitter logo" /></Link>
+                            <Link href='https://ua.linkedin.com/' target='_blank'><img src={logoLinkedIn} alt="LinkedIn logo" /></Link>
+                            <Link href='https://www.instagram.com/' target='_blank'><img src={logoInstagram} alt="Instagram logo" /></Link>
                         </StyledBoxLogo>
                     </Box>
                     <Stack flexDirection='row' justifyContent='space-between' width='65%'>
@@ -91,7 +91,7 @@ export const Footer = () => {
                             
                             <Stack flexDirection='row' alignItems='flex-start' mt='40px'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Address: </HeadingH5>
-                                <StyledFooterTextLink href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7">24A Kingston St, <br /> Los Vegas NC 28202, <br /> USA</StyledFooterTextLink>
+                                <StyledFooterTextLink href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank'>24A Kingston St, <br /> Los Vegas NC 28202, <br /> USA</StyledFooterTextLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Mail:</HeadingH5>
@@ -104,6 +104,13 @@ export const Footer = () => {
                         </Box>
                     </Stack>
                 </Stack>
+                <StyledBox></StyledBox>
+                <Paragraph sx={{mt: "25px", textAlign: 'center'}}>
+                    <Paragraph sx={{display:'inline', color: '#B4C7E7'}}>&#169; Drafted by </Paragraph>  
+                    <Paragraph sx={{display:'inline', color:WHITE}}>Victorflow </Paragraph> 
+                    <Paragraph sx={{display:'inline', color: '#B4C7E7'}}>- Powered by </Paragraph>  
+                    <Paragraph sx={{display:'inline', color:WHITE}}>Webflow</Paragraph>
+                </Paragraph>
 
             </Container>
         </StyledSection>
@@ -134,8 +141,15 @@ const StyledFooterTextLink = styled(Link)`
     letter-spacing: -0.01em;
     text-decoration: none;
     color: #B4C7E7;
-
+    
     &:hover, &:active {
         text-decoration: underline;
     }
+`;
+
+const StyledBox = styled(Box)`
+    width: 100%;
+    height: 1px;
+    margin-top: 75px;
+    background-color: ${WHITE};
 `;

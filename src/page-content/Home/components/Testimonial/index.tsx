@@ -47,7 +47,7 @@ export const Testimonial = () => {
                                                 alt='testimonial user 1'
                                                 userName='Martin Philips'
                                                 title='“ Awesome Impact ”'
-                                                paragraph='All the Lorem Ipsum generators on the Internet tend to repeat willings predefined chunks value.'
+                                                paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                             />
                                         </Box>
                                         <Box padding='15px'>
@@ -56,7 +56,7 @@ export const Testimonial = () => {
                                                     alt='testimonial user 2'
                                                     userName='James Anderson'
                                                     title='“ Mind Blowing Words ”'
-                                                    paragraph='All the Lorem Ipsum generators on the Internet tend to repeat willings predefined chunks value.'
+                                                    paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                                 />
                                             </Box>
                                 </Stack>
@@ -67,7 +67,7 @@ export const Testimonial = () => {
                                             alt='testimonial user 3'
                                             userName='Christina Louis'
                                             title='“ Great Books Collections ”'
-                                            paragraph='All the Lorem Ipsum generators on the Internet tend to repeat willings predefined chunks value.'
+                                            paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                         />
                                     </Box> 
                                 </Box>
