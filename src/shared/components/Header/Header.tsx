@@ -40,7 +40,7 @@ export const Header = () => {
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
                         </StyledBadge>
                         <Box ml='30px'>
-                            <ButtonAction variant="outlined">Order Today</ButtonAction>
+                            <ButtonAction variant="contained">Order Today</ButtonAction>
                         </Box>
                     </Stack>
                 </StyledNav>

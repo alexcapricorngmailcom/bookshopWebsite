@@ -45,7 +45,7 @@ export const AuthorsBook = () => {
                                         </Grid>
                                     </Grid>
                                     <Box marginTop='30px'>
-                                    <ButtonAction>Order Today</ButtonAction>
+                                    <ButtonAction variant='outlined'>Order Today</ButtonAction>
                                         {/* <ButtonAction size={'small'} outlined onClick={() =>{}}>Order Today</ButtonAction> */}
                                     </Box>
                                 </Grid>
@@ -76,7 +76,7 @@ export const AuthorsBook = () => {
                                         </Grid>
                                     </Grid>
                                     <Box marginTop='30px'>
-                                        <ButtonAction>Order Today</ButtonAction>
+                                        <ButtonAction variant='outlined'>Order Today</ButtonAction>
                                         {/* <ButtonAction size={'small'} outlined onClick={() =>{}}>Order Today</ButtonAction> */}
                                     </Box>
                                 </Grid>

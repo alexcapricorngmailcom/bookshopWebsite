@@ -24,7 +24,7 @@ export const HeroSection = () => {
                         <Paragraph sx={{marginTop: '32px', color: '#B4C7E7'}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' marginTop='50px'>
                             <ButtonAction>Order Today</ButtonAction> 
-                            <ButtonAction>Read Free Demo</ButtonAction>
+                            <ButtonAction variant='text'>Read Free Demo</ButtonAction>
                             {/* <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
                             <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction> */}
                         </Stack>
@@ -62,11 +62,4 @@ const StyledSection = styled('section')`
     padding-top: 185px;
     padding-bottom: 115px;
     background-color: ${MAIN};
-`;
-
-const StyledButtonLine = styled('div')`
-    width: 80%;
-    height: 1px;
-    background-color: ${WHITE};
-    margin: 0 auto;
 `;
