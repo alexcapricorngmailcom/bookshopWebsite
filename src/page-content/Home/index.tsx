@@ -1,4 +1,3 @@
-import { Header } from "../../shared/components/Header"
 import { HeroSection } from "./components/Hero"
 import { AuthorsBook } from "./components/AuthorsBook"
 import { About } from "./components/About"
@@ -9,29 +8,20 @@ import { TheChapter } from "./components/TheChapter"
 import { Testimonial } from "./components/Testimonial"
 import { Blog } from "./components/Blog"
 import { ReadFreeChapter } from "./components/ReadFreeChapter"
-import { Footer } from "../../shared/components/Footer"
 
 export const Home = () => {
     return (
-        <>  
-            <header>
-                <Header />
-            </header>
-            <main>
-                <HeroSection />
-                <AuthorsBook />
-                <About />
-                <TrustedBy />
-                <Callout />
-                <WhatWillYouLearn />
-                <TheChapter />
-                <Testimonial />
-                <Blog />
-                <ReadFreeChapter />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </>
+        <main>
+            <HeroSection />
+            <AuthorsBook />
+            <About />
+            <TrustedBy />
+            <Callout />
+            <WhatWillYouLearn />
+            <TheChapter />
+            <Testimonial />
+            <Blog />
+            <ReadFreeChapter />
+        </main>
     )
 }
