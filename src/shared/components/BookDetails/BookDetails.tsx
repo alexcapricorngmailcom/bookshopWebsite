@@ -24,5 +24,4 @@ type BookDetailsProps = {
     title: string;
     paragraph: string;
     color?: string;
-
 };
