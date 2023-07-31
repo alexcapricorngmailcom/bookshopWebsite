@@ -32,20 +32,23 @@ export const HeroSection = () => {
                         <Grid container marginTop='50px'>
                             <Grid item md={3.5} sm={3.5}>
                                 <BookDetails
-                                    title={'Pages:'}
-                                    paragraph={'586pages'}
+                                    title='Pages:'
+                                    paragraph='586pages'
+                                    color='#ffffff'
                                 />
                             </Grid>
                             <Grid item md={3.5} sm={3.5}>
                                 <BookDetails 
-                                    title={'Length:'}
-                                    paragraph={'10 Hours'}
+                                    title='Length:'
+                                    paragraph='10 Hours'
+                                    color='#ffffff'
                                 />
                             </Grid>
                             <Grid item md={5} sm={5}>
                                 <BookDetails 
-                                    title={'Ratings:'}
-                                    paragraph={'4.5/5 (305 ratings)'}
+                                    title='Ratings:'
+                                    paragraph='4.5/5 (305 ratings)'
+                                    color='#ffffff'
                                 />
                             </Grid>
                         </Grid>
