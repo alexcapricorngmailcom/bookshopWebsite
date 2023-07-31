@@ -36,11 +36,10 @@ export const Header = () => {
                             <StyledHeaderNavLink href="#">Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
-                            <></>
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
                         </StyledBadge>
                         <Box ml='30px'>
-                            <ButtonAction variant="contained">Order Today</ButtonAction>
+                            <ButtonAction size="small" width ='160px' height="50px" variant="contained">Order Today</ButtonAction>
                         </Box>
                     </Stack>
                 </StyledNav>
@@ -105,5 +104,6 @@ const StyledBadge = styled(Badge)`
         font-family: Inter, sans-serif;
         font-size: 12px;
         font-weight: 700;
+        cursor: pointer;
     }
 `;

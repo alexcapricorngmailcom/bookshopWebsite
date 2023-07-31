@@ -2,9 +2,10 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 
 import theDarkLightLarge from './assets/theDarkLightLarge.png';
-import { ButtonAction } from '../../../../design-system/Button/';
+import { ButtonAction } from '../../../../design-system/Button';
 import { MAIN, WHITE } from '../../../../design-system/colors'
 import { HeadingH1, HeadingH5, Paragraph } from '../../../../design-system/typography'
 import { LineSmall } from '../../../../design-system/geometry/lines'
@@ -24,7 +25,7 @@ export const HeroSection = () => {
                         <Paragraph sx={{marginTop: '32px', color: '#B4C7E7'}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' marginTop='50px'>
                             <ButtonAction>Order Today</ButtonAction> 
-                            <ButtonAction variant='text'>Read Free Demo</ButtonAction>
+                            <ButtonAction variant='text'><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>
                             {/* <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
                             <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction> */}
                         </Stack>

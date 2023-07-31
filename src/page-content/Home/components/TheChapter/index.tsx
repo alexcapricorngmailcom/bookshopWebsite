@@ -38,7 +38,7 @@ export const TheChapter = () => {
                         />
                     </Grid>
                     <Box sx={{mt: '80px'}}>
-                        <ButtonAction>Start a 15-Days Free Trail</ButtonAction>
+                        <ButtonAction size='large'>Start a 15-Days Free Trail</ButtonAction>
                         {/* <ButtonAction size='large' onClick={() => {}}>Start a 15-Days Free Trail</ButtonAction> */}
                     </Box>
                     <Paragraph sx={{mt:'30px'}}>Short description about each chapter</Paragraph>

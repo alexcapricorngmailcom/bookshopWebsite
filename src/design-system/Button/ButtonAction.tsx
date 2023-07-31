@@ -4,10 +4,10 @@ import Button, {ButtonProps} from '@mui/material/Button';
 import { MAIN, SECONDARY, WHITE } from '../colors';
 import Box from '@mui/material/Box';
 
-export const ButtonAction = ({variant = 'contained', children}:ButtonActionProps) => {
+export const ButtonAction = ({size ='small', width, height = '65px', variant = 'contained', children}:ButtonActionProps) => {
     return (
         <Box>
-            <StyledButton variant={variant}>
+            <StyledButton size={size} width={width} height={height} variant={variant}>
                 {children}
             </StyledButton>
         </Box>
@@ -15,9 +15,14 @@ export const ButtonAction = ({variant = 'contained', children}:ButtonActionProps
 }
 
 const StyledButton = styled(Button)<StyledButtonProps>`
-    width: 200px;
-    height: 65px;
-    padding: 20px 10px;
+    width: ${props => {
+        if (props.size === 'small') return '220px';
+        if (props.size === 'medium') return '250px';
+        if (props.size === 'large') return '300px';
+    }};
+    width: ${props => (props.width)};
+    height: ${props => (props.height)};
+    padding: 10px;
     border-radius: 0;
     box-shadow: none;
     text-transform: none;
@@ -27,44 +32,84 @@ const StyledButton = styled(Button)<StyledButtonProps>`
     line-height: 130%;
     letter-spacing: -0.015em;
 
-    background-color: ${props => {
-        if (props.variant === 'contained') {
-            return SECONDARY;
-        } else {
-            return 'transparent';
-        }
-    }};
+    // text
+    color: ${props => (props.variant === 'text') ? WHITE : MAIN};
 
-    color: ${props => {
-        if (props.variant === 'text') {
-            return WHITE;
-        } else {
-            return MAIN;
-        }
-    }};
+    // contained
+    background-color: ${props => (props.variant === 'contained') ? SECONDARY : 'transparent'};
 
+    // outlined
     border-color: ${props => {
         if (props.variant === 'outlined') {
             return SECONDARY;
         }
     }};
 
-    &:hover, &:active {
-        background-color: ${props => {
-        if (props.variant === 'contained') {
-            return WHITE;
-        } else {
-            return 'transparent';
-        }
+    //mixed contained/medium
+    color: ${props => {
+            if (props.variant === 'contained' && props.size === 'medium') return WHITE;
     }};
-    }
+
+    background-color: ${props => {
+            if (props.variant === 'contained' && props.size === 'medium') return MAIN;
+    }};
+
+    &:hover, &:active {
+
+        // text
+        color: ${props => {
+            if (props.variant === 'text') {
+                return SECONDARY;
+            }
+        }};
+
+        // contained
+        background-color: ${props => (props.variant === 'contained') ? WHITE : 'transparent'};
+
+        box-shadow: ${props => { 
+            if (props.variant === 'contained') return 'none'; 
+        }};
+
+        // contained
+        background-color: ${props => {
+            if (props.variant === 'outlined') return SECONDARY;
+        }};
+
+        border-color: ${props => {
+            if (props.variant === 'outlined') return SECONDARY;
+        }};
+
+        //mixed contained/medium
+        color: ${props => {
+                if (props.variant === 'contained' && props.size === 'medium') return WHITE;
+        }};
+
+        background-color: ${props => {
+                if (props.variant === 'contained' && props.size === 'medium') return MAIN;
+        }};
+        
+
+        //mixed contained/large
+        color: ${props => {
+                if (props.variant === 'contained' && props.size === 'large') return WHITE;
+        }};
+
+        background-color: ${props => {
+                if (props.variant === 'contained' && props.size === 'large') return MAIN;
+        }};
+    }   
+
 `;
 
 type ButtonActionProps = {
+    size?: 'small' | 'medium' | 'large';
+    width?: string | undefined;
+    height?: string | undefined;
     variant?: "text" | "outlined" | "contained";
     children: ReactNode;
 }
 
 interface StyledButtonProps extends ButtonProps {
-    // variant?: "text" | "outlined" | "contained" | undefined;
+    width: string | undefined;
+    height: string | undefined;
 }
