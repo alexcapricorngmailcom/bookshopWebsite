@@ -7,6 +7,7 @@ import logo404 from './assets/Logo404.svg'
 import backgroundImg from './assets/Error404.png'
 import { HeadingH3, Paragraph } from '../../../../design-system/typography'
 import { ButtonAction } from '../../../../design-system/Button';
+import {Link} from 'react-router-dom'
 
 export const PageNotFound = () => {
     return (
@@ -17,7 +18,7 @@ export const PageNotFound = () => {
                     <HeadingH3 sx={{mt:'35px'}}>Page not Found!!!</HeadingH3>
                     <StyledParagraph>The page you are looking for doesn't exist. Please try searching for some other page, or return to the website's homepage to find what you're looking for.</StyledParagraph>
                     <Box sx={{mt:'40px'}}>
-                        <ButtonAction size='large'>Back to Home</ButtonAction>
+                        <ButtonAction size='large' component={Link} to='/'>Back to Home</ButtonAction>
                     </Box>
                 </Stack>
             </Container>
