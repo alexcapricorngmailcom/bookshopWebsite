@@ -32,10 +32,10 @@ export const Header = () => {
                     </Stack>
                     <Stack flexDirection='row' alignItems='center'>
                         <StyledHeaderNavLinkBox>
-                            <Link component={RouterLink} to="/">Home</Link>
-                            <StyledHeaderNavLink href="#">Pages</StyledHeaderNavLink>
-                            <Link component={RouterLink} to='/about'>About</Link>
-                            <StyledHeaderNavLink href="#">Contact</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to=''>Pages</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to=''>Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
@@ -79,7 +79,7 @@ const StyledHeaderNavLinkBox = styled(Box)`
     }
 `;
 
-const StyledHeaderNavLink = styled(Link)`
+const StyledHeaderNavLink = styled(RouterLink)`
     font-family: Inter, sans-serif;
     font-size: 17px;
     font-weight: 500;
