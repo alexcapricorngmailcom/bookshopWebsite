@@ -15,7 +15,7 @@ import { ButtonAction } from "../../../design-system/Button";
 
 export const Header = () => {
     return(
-        <StyledSection>
+        <StyledHeader>
             <Container maxWidth='lg'>
                 <StyledNav>
                     <Stack flexDirection='row' alignItems='center'>
@@ -44,11 +44,11 @@ export const Header = () => {
                     </Stack>
                 </StyledNav>
             </Container>
-        </StyledSection>
+        </StyledHeader>
     );
 }
 
-const StyledSection = styled('section')`
+const StyledHeader = styled('header')`
     position: absolute;
     top: 40px;
     left: 0;

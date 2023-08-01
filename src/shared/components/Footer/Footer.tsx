@@ -15,7 +15,7 @@ import { HeadingH5, Paragraph } from '../../../design-system/typography';
 
 export const Footer = () => {
     return(
-        <StyledSection>
+        <StyledFooter>
             <Container maxWidth='lg'>
                 <Stack flexDirection='row' justifyContent='space-between' width='100%'>
                     <Box width='35%'>
@@ -113,12 +113,12 @@ export const Footer = () => {
                 </Paragraph>
 
             </Container>
-        </StyledSection>
+        </StyledFooter>
         
     );
 }
 
-const StyledSection = styled('section')`
+const StyledFooter = styled('footer')`
     padding-top: 85px;
     padding-bottom: 25px;
     background-color: ${MAIN};
