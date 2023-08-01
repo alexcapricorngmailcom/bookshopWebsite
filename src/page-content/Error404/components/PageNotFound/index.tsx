@@ -26,10 +26,10 @@ export const PageNotFound = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-bottom: 150px;
-    padding-top: 150px;
+    padding-bottom: 300px;
+    padding-top: 300px;
     background-image: url(${backgroundImg});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 `;
 
