@@ -6,7 +6,7 @@ import { MAIN, WHITE } from '../../../../design-system/colors'
 import { HeadingH1, Paragraph } from '../../../../design-system/typography'
 import { LineLarge } from '../../../../design-system/geometry/lines'
 
-export const HeroSection = () => {
+export const Hero = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>

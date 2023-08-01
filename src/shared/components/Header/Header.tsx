@@ -5,6 +5,8 @@ import Stack from "@mui/material/Stack";
 import Link from '@mui/material/Link';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link as RouterLink } from 'react-router-dom'
+
 
 import logoPages from './assets/logoPages.svg'
 import logoFacebook from './assets/logoFacebook.svg'
@@ -30,9 +32,9 @@ export const Header = () => {
                     </Stack>
                     <Stack flexDirection='row' alignItems='center'>
                         <StyledHeaderNavLinkBox>
-                            <StyledHeaderNavLink href="#">Home</StyledHeaderNavLink>
+                            <Link component={RouterLink} to="/">Home</Link>
                             <StyledHeaderNavLink href="#">Pages</StyledHeaderNavLink>
-                            <StyledHeaderNavLink href="#">About</StyledHeaderNavLink>
+                            <Link component={RouterLink} to='/about'>About</Link>
                             <StyledHeaderNavLink href="#">Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
