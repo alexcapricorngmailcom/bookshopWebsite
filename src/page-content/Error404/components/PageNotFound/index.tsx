@@ -17,7 +17,7 @@ export const PageNotFound = () => {
                     <HeadingH3 sx={{mt:'35px'}}>Page not Found!!!</HeadingH3>
                     <StyledParagraph>The page you are looking for doesn't exist. Please try searching for some other page, or return to the website's homepage to find what you're looking for.</StyledParagraph>
                     <Box sx={{mt:'40px'}}>
-                        <ButtonAction>Back to Home</ButtonAction>
+                        <ButtonAction size='large'>Back to Home</ButtonAction>
                     </Box>
                 </Stack>
             </Container>
