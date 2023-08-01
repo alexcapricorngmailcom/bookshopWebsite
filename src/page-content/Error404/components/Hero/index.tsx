@@ -11,7 +11,7 @@ export const Hero = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack alignItems='center'>
-                    <HeadingH1 sx={{color: WHITE}}>About the Author</HeadingH1>
+                    <HeadingH1 sx={{color: WHITE}}>Page Error</HeadingH1>
                     <LineLarge sx={{marginTop: '32px'}} />
                     <StyledParagraph>There are many variations of passages of Lorem available, have suffered alteration in some form.</StyledParagraph>
                 </Stack>

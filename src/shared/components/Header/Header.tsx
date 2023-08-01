@@ -33,9 +33,9 @@ export const Header = () => {
                     <Stack flexDirection='row' alignItems='center'>
                         <StyledHeaderNavLinkBox>
                             <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to=''>Pages</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to='/pages'>Pages</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to=''>Contact</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to='/contacts'>Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
