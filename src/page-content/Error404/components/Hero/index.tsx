@@ -22,7 +22,7 @@ export const Hero = () => {
 
 const StyledSection = styled('section')`
     padding-top: 225px;
-    padding-bottom: 250px;
+    padding-bottom: 125px;
     background-color: ${MAIN};
 `;
 

@@ -15,7 +15,9 @@ export const AboutTheAuthor = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack>
-                    <img src={aboutTheAuthor} alt="about the author" style={{width:'100%', height: '100%'}} />
+                    <Box sx={{filter: 'drop-shadow(0 35px 45px rgba(4, 11, 20, 0.15))'}}>
+                        <img src={aboutTheAuthor} alt="about the author" style={{width:'100%', height: '100%'}} />
+                    </Box>
     
                     <Grid container spacing={10} alignItems='center' sx={{mt:'0px'}}>
                         <Grid item md={5.5} sm={12}>
