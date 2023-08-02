@@ -1,5 +1,4 @@
-import { Route } from 'react-router-dom';
-import { Routes } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 
 import { Header } from "./shared/components/Header";
 import { Home } from "./page-content/Home";
