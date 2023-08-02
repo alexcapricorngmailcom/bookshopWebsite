@@ -16,7 +16,7 @@ export const AboutTheAuthor = () => {
             <Container maxWidth='lg'>
                 <Stack>
                     <Box sx={{filter: 'drop-shadow(0 35px 45px rgba(4, 11, 20, 0.15))'}}>
-                        <img src={aboutTheAuthor} alt="about the author" style={{width:'100%', height: '100%'}} />
+                        <img src={aboutTheAuthor} style={{width: '100%', height: '100%'}} alt="about the author" />
                     </Box>
     
                     <Grid container spacing={10} alignItems='center' sx={{mt:'0px'}}>
