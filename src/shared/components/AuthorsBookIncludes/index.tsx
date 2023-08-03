@@ -1,4 +1,3 @@
-import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -6,15 +5,14 @@ import Box from '@mui/material/Box';
 
 import atomicOneSmall from './assets/atomicOneSmall.png'
 import theDarkLightSmall from './assets/theDarkLightSmall.png'
-import { WHITE } from '../../../../design-system/colors';
-import { HeadingH3, HeadingH4, Paragraph } from '../../../../design-system/typography';
-import { LineLarge } from '../../../../design-system/geometry/lines';
-import { BookDetails } from '../../../../shared/components/BookDetails';
-import { ButtonAction } from '../../../../design-system/Button';
+
+import { HeadingH3, HeadingH4, Paragraph } from '../../../design-system/typography';
+import { LineLarge } from '../../../design-system/geometry/lines';
+import { BookDetails } from '../../../shared/components/BookDetails';
+import { ButtonAction } from '../../../design-system/Button';
 
 export const AuthorsBookIncludes = () => {
     return (
-        <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3>Author’s Book Includes</HeadingH3>
@@ -85,12 +83,5 @@ export const AuthorsBookIncludes = () => {
                     </Grid>
                 </Stack>
             </Container>
-        </StyledSection>
     );
 }
-
-const StyledSection = styled('section')`
-    padding-top: 145px;
-    padding-bottom: 145px;
-    background-color: ${WHITE};
-`;

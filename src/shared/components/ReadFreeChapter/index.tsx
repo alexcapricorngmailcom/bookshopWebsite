@@ -3,14 +3,13 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-import { MAIN, SECONDARY, WHITE, BLACK } from '../../../../design-system/colors';
-import { HeadingH3, Paragraph } from '../../../../design-system/typography';
-import { LineLarge } from '../../../../design-system/geometry/lines';
-import { ButtonAction } from '../../../../design-system/Button';
+import { MAIN, SECONDARY, BLACK } from '../../../design-system/colors';
+import { HeadingH3, Paragraph } from '../../../design-system/typography';
+import { LineLarge } from '../../../design-system/geometry/lines';
+import { ButtonAction } from '../../../design-system/Button';
 
 export const ReadFreeChapter = () => {
     return (
-        <StyledSection>
             <Container maxWidth='lg'>
                 <Box sx={{padding:'120px 230px',backgroundColor:SECONDARY}}>
                     <Stack flexDirection='column' alignItems='center'>
@@ -27,15 +26,8 @@ export const ReadFreeChapter = () => {
                     </Stack>
                 </Box>
             </Container>
-        </StyledSection>
     );
 }
-
-const StyledSection = styled('section')`
-    padding-top: 145px;
-    padding-bottom: 145px;
-    background-color: ${WHITE};
-`;
 
 const StyledInputSectionStack = styled(Stack)`
     flex-direction: row;
