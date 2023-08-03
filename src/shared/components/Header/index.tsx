@@ -7,7 +7,6 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link as RouterLink } from 'react-router-dom'
 
-
 import logoPages from './assets/logoPages.svg'
 import logoFacebook from './assets/logoFacebook.svg'
 import logoTwitter from './assets/logoTwitter.svg'
@@ -35,7 +34,7 @@ export const Header = () => {
                             <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/pages'>Pages</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/contacts'>Contact</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to='/contact'>Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />

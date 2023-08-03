@@ -10,55 +10,53 @@ import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typog
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { SquareLarge } from '../../../../design-system/geometry/squares';
 
-export const MyStory = () => {
+export const KeepInTouch = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <Grid item md={6} sm={12}> 
-                        <HeadingH3>My Story</HeadingH3>
+                        <HeadingH3>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <Paragraph sx={{mt:'22px'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</Paragraph>
+                        <Paragraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</Paragraph>
                         <Stack sx={{mt:'40px'}}>
-                            <Stack flexDirection='row'>
+                            <Stack flexDirection='row' >
                                 <Box sx={{pl:'35px', pr:'35px'}}>
                                     <SquareLarge>
                                         <HeadingH5>01</HeadingH5>
                                     </SquareLarge>
                                 </Box>
                                 <Box>
-                                    <HeadingH5 sx={{lineHeight:'95%'}}>Great Author Awards - 1996 & 2000</HeadingH5>
-                                    <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
+                                    <HeadingH5>Visit Us :</HeadingH5>
+                                    <Paragraph sx={{mt:'0px'}}>No: 09a, Downtown, San Dieago, USA.</Paragraph>
                                 </Box>
                             </Stack>
-                            <Stack flexDirection='row' sx={{mt:'35px'}}>
+                            <Stack flexDirection='row' sx={{mt:'22px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
                                     <SquareLarge>
                                         <HeadingH5>02</HeadingH5>
                                     </SquareLarge>
                                 </Box>
                                 <Box>
-                                    <HeadingH5 sx={{lineHeight:'95%'}}>10 times NYT &#174; Best Seller</HeadingH5>
-                                    <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
+                                    <HeadingH5>Drop Us :</HeadingH5>
+                                    <Paragraph sx={{mt:'0px'}}>support@pages.com</Paragraph>
                                 </Box>
                             </Stack>
-                            <Stack flexDirection='row' sx={{mt:'35px'}}>
+                            <Stack flexDirection='row' sx={{mt:'22px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
                                     <SquareLarge>
                                         <HeadingH5>03</HeadingH5>
                                     </SquareLarge>
                                 </Box>
                                 <Box>
-                                    <HeadingH5 sx={{lineHeight:'95%'}}>Writer of Hack Productivity</HeadingH5>
-                                    <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
+                                    <HeadingH5>Call Us :</HeadingH5>
+                                    <Paragraph sx={{mt:'0px'}}>Call: 1-800-123-9999</Paragraph>
                                 </Box>
                             </Stack>
                         </Stack>
                     </Grid>
                     <Grid item md={6} sm={12}>
-                        <Box sx={{filter: 'drop-shadow(0 35px 45px rgba(4, 11, 20, 0.15))'}}>
-                            <img src={myStory} style={{width: '100%', height: '100%'}} alt="about author" />
-                        </Box>
+                        
                     </Grid>
                 </Grid>
             </Container>
