@@ -10,8 +10,8 @@ import logoFacebook from './assets/logoFacebook.svg'
 import logoTwitter from './assets/logoTwitter.svg'
 import logoLinkedIn from './assets/logoLinkedIn.svg'
 import logoInstagram from './assets/logoInstagram.svg'
-import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
-import { HeadingH5, Paragraph } from '../../../../design-system/typography';
+import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
+import { HeadingH5, Paragraph } from '../../../design-system/typography';
 
 export const Footer = () => {
     return(

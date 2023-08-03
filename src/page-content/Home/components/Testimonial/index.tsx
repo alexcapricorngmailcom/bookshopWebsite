@@ -13,7 +13,8 @@ import testimonialUser3 from './assets/testimonialUser3.png'
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH6, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TestimonialArticle } from './components'
+import { TestimonialArticle } from './components';
+
 
 // TODO What a hell is going on with HeadingH6
 

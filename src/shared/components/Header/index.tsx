@@ -12,8 +12,8 @@ import logoPages from './assets/logoPages.svg'
 import logoFacebook from './assets/logoFacebook.svg'
 import logoTwitter from './assets/logoTwitter.svg'
 import logoLinkedIn from './assets/logoLinkedIn.svg'
-import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
-import { ButtonAction } from "../../../../design-system/Button";
+import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
+import { ButtonAction } from "../../../design-system/Button";
 
 export const Header = () => {
     return(
