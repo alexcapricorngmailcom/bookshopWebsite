@@ -3,10 +3,9 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 
 import myStory from './assets/myStory.png'
-import { MAIN, WHITE } from '../../../../design-system/colors';
+import { WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { SquareLarge } from '../../../../design-system/geometry/squares';
@@ -28,7 +27,7 @@ export const MyStory = () => {
                                     </SquareLarge>
                                 </Box>
                                 <Box>
-                                    <HeadingH5 sx={{lineHeight:'90%'}}>Great Author Awards - 1996 & 2000</HeadingH5>
+                                    <HeadingH5 sx={{lineHeight:'95%'}}>Great Author Awards - 1996 & 2000</HeadingH5>
                                     <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
@@ -39,7 +38,7 @@ export const MyStory = () => {
                                     </SquareLarge>
                                 </Box>
                                 <Box>
-                                    <HeadingH5 sx={{lineHeight:'90%'}}>10 times NYT &#174; Best Seller</HeadingH5>
+                                    <HeadingH5 sx={{lineHeight:'95%'}}>10 times NYT &#174; Best Seller</HeadingH5>
                                     <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
@@ -50,14 +49,16 @@ export const MyStory = () => {
                                     </SquareLarge>
                                 </Box>
                                 <Box>
-                                    <HeadingH5 sx={{lineHeight:'90%'}}>Writer of Hack Productivity</HeadingH5>
+                                    <HeadingH5 sx={{lineHeight:'95%'}}>Writer of Hack Productivity</HeadingH5>
                                     <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
                         </Stack>
                     </Grid>
-                    <Grid item md={6} sm={12}> 
-                        <img src={myStory} style={{width: '100%', height: '100%'}} alt="about author" />
+                    <Grid item md={6} sm={12}>
+                        <Box sx={{filter: 'drop-shadow(0 35px 45px rgba(4, 11, 20, 0.15))'}}>
+                            <img src={myStory} style={{width: '100%', height: '100%'}} alt="about author" />
+                        </Box>
                     </Grid>
                 </Grid>
             </Container>
