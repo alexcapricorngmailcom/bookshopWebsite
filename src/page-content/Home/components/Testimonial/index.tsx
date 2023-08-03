@@ -13,7 +13,9 @@ import testimonialUser3 from './assets/testimonialUser3.png'
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH6, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TestimonialArticle } from './components';
+import { TestimonialArticle } from './components'
+
+// TODO What a hell is going on with HeadingH6
 
 export const Testimonial = () => {
     return (
@@ -33,14 +35,13 @@ export const Testimonial = () => {
                                     precision={0.5} 
                                     readOnly 
                                 />
-                                {/* TODO What a hell is going on with HeadingH6 */}
                                 <HeadingH6 sx={{mt:'0px !important', ml:'10px !important'}}>(4.8/5)</HeadingH6>
                             </Stack>
                             <Paragraph sx={{mt:'10px', color: MAIN}}>Overall Customer Ratings</Paragraph>
                         </Grid>
-                        <Grid item lg={7.5} m='-15px'>
+                        <Grid item lg={7.5} margin='-15px'>
                             <Stack flexDirection='row' alignItems='center' width='100%'>
-                                <Stack width='50%' justifyContent='space-between'>
+                                <Stack justifyContent='space-between' width='50%'>
                                         <Box padding='15px'>
                                             <TestimonialArticle 
                                                 img={testimonialUser1}
@@ -84,4 +85,3 @@ const StyledSection = styled('section')`
     padding-bottom: 145px;
     background-color: ${WHITE};
 `;
-

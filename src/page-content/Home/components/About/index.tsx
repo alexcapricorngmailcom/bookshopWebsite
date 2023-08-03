@@ -4,12 +4,11 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
 import aboutAuthor from './assets/aboutAuthor.png'
 import authorsQrcode from './assets/authorsQrcode.svg'
-import { BACKGROUND, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
+import { MAIN, SECONDARY, BACKGROUND, PARAGRAPH_SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH2, HeadingH3, HeadingH6, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 
@@ -19,13 +18,13 @@ export const About = () => {
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <Grid item md={6} sm={12}> 
-                        <img src={aboutAuthor} style={{width: '100%'}} alt="about author" />
+                        <img src={aboutAuthor} style={{width: '100%', height: '100%'}} alt="about author" />
                     </Grid>
                     <Grid item md={6} sm={12}> 
                         <HeadingH3>About Author</HeadingH3>
-                        <LineLarge sx={{marginTop:'22px'}} />
-                        <Paragraph sx={{marginTop: '22px'}}>All the Lorem generators on the Internet tend to repeated predefined chunks as necessary, making this the first true value generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</Paragraph>
-                        <Grid container marginTop='20px'>
+                        <LineLarge sx={{mt:'22px'}} />
+                        <Paragraph sx={{mt: '22px'}}>All the Lorem generators on the Internet tend to repeated predefined chunks as necessary, making this the first true value generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</Paragraph>
+                        <Grid container mt='20px'>
                             <Grid item lg={4}>
                                 <HeadingH2>02</HeadingH2>
                                 <Paragraph>Books Published</Paragraph>
@@ -42,7 +41,7 @@ export const About = () => {
                         <StyledGridContainer container>                   
                             <Grid item lg={4.5}>
                                     <StyledStack>
-                                            <img src={authorsQrcode} alt="" />
+                                            <img src={authorsQrcode} alt="author's qr code" />
                                     </StyledStack>                                
                             </Grid>
                             <Grid item lg={7.5}>
@@ -89,7 +88,7 @@ const StyledLink = styled(Link)`
     font-weight: 400;
     line-height: 170%;
     letter-spacing: -0.01em;
-    color: #B4C7E7;
+    color: ${PARAGRAPH_SECONDARY};
 
     &:hover, &:active {
         text-decoration: underline;

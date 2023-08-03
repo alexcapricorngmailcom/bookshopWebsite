@@ -1,9 +1,11 @@
+import { styled } from '@mui/material/styles';
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import Link from "@mui/material/Link";
 
-import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
-import { MAIN, WHITE } from "../../../../../design-system/colors";
+import { HeadingH5, Paragraph } from "../../../../../../design-system/typography";
+import { MAIN, WHITE } from "../../../../../../design-system/colors";
 
 export const BlogGridItem = ({title, paragraph, author, img, alt}:BlogGridItemProps) => {
     return(
@@ -14,9 +16,9 @@ export const BlogGridItem = ({title, paragraph, author, img, alt}:BlogGridItemPr
                 </Box>
                 <Box padding='27px'>
                     <HeadingH5>{title}</HeadingH5>
-                    <Paragraph sx={{mt: '14px'}}>{paragraph}</Paragraph>
+                    <Paragraph sx={{mt:'14px'}}>{paragraph}</Paragraph>
                     <Stack sx={{flexDirection:'row', justifyContent:'space-between', mt:'27px'}}>
-                        <a href="#"><Paragraph sx={{fontSize:'18px', textDecoration: 'underline', textUnderlineOffset: '5px', color: MAIN}}>Read more</Paragraph></a>
+                        <Link href="#" underline="none"><StyledParagraphLink sx={{}}>Read more</StyledParagraphLink></Link>
                         <Paragraph sx={{fontSize:'18px', color: MAIN}}>{author}</Paragraph>
                     </Stack>
                 </Box>
@@ -32,3 +34,15 @@ type BlogGridItemProps = {
     img: string | undefined
     alt: string
 }
+
+const StyledParagraphLink = styled(Paragraph)`
+    font-size: 18px; 
+    text-decoration: underline; 
+    text-underline-offset: 5px; 
+    color: ${MAIN};
+
+    &:hover {
+        text-decoration: none; 
+    }
+
+`;

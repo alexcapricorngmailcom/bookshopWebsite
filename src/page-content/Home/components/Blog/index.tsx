@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 
 import blogImg1 from './assets/blogImg1.png'
 import blogImg2 from './assets/blogImg2.png'
@@ -11,14 +11,13 @@ import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { BlogGridItem } from './components';
 
-
 export const Blog = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3>Articles & Resources</HeadingH3>
-                    <LineLarge sx={{marginTop:'22px'}} />
+                    <LineLarge sx={{mt:'22px'}} />
                     <Grid container spacing={4} mt='16px'>
                         <BlogGridItem
                             title='The energy efficiency offers hydrotherapy or swim'

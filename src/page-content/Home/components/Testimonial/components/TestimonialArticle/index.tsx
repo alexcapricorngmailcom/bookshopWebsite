@@ -5,8 +5,8 @@ import Rating from '@mui/material/Rating';
 import CircleIcon from '@mui/icons-material/Circle';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
-import { HeadingH5, HeadingH6, Paragraph } from "../../../../../design-system/typography"
-import { MAIN, SECONDARY, WHITE } from '../../../../../design-system/colors';
+import { HeadingH5, HeadingH6, Paragraph } from "../../../../../../design-system/typography"
+import { MAIN, SECONDARY, PARAGRAPH_SECONDARY, WHITE } from '../../../../../../design-system/colors';
 
 export const TestimonialArticle = ({img, alt, userName, title, paragraph}:TestimonialArticleProps) => {
     return(
@@ -30,7 +30,7 @@ export const TestimonialArticle = ({img, alt, userName, title, paragraph}:Testim
                 </Box>
             </Stack>
             <HeadingH6 sx={{mt:'22px', color: WHITE}}>{title}</HeadingH6>
-            <Paragraph sx={{mt:'12px', color: '#B4C7E7'}}>{paragraph}</Paragraph>
+            <Paragraph sx={{mt:'12px', color: PARAGRAPH_SECONDARY}}>{paragraph}</Paragraph>
         </article>
     );
 }

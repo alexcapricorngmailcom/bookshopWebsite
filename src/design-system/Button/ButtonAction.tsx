@@ -81,13 +81,12 @@ const StyledButton = styled(Button)<StyledButtonProps>`
 
         //mixed contained/medium
         color: ${props => {
-                if (props.variant === 'contained' && props.size === 'medium') return WHITE;
+                if (props.variant === 'contained' && props.size === 'medium') return SECONDARY;
         }};
 
         background-color: ${props => {
                 if (props.variant === 'contained' && props.size === 'medium') return MAIN;
         }};
-        
 
         //mixed contained/large
         color: ${props => {

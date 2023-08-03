@@ -1,14 +1,12 @@
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 
-import { BLACK, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
+import { MAIN, SECONDARY, WHITE, BLACK } from '../../../../design-system/colors';
 import { HeadingH3, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { ButtonAction } from '../../../../design-system/Button';
-
-// TODO recognize about input width
 
 export const ReadFreeChapter = () => {
     return (
@@ -17,8 +15,8 @@ export const ReadFreeChapter = () => {
                 <Box sx={{padding:'120px 230px',backgroundColor:SECONDARY}}>
                     <Stack flexDirection='column' alignItems='center'>
                         <HeadingH3>Read a free chapter</HeadingH3>
-                        <LineLarge sx={{marginTop:'22px', backgroundColor: MAIN}} />
-                        <Paragraph sx={{marginTop:'22px', textAlign:'center', color: MAIN}}>Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.</Paragraph>
+                        <LineLarge sx={{mt:'22px', backgroundColor: MAIN}} />
+                        <Paragraph sx={{mt:'22px', textAlign:'center', color: MAIN}}>Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.</Paragraph>
                         <StyledInputSectionStack>
                             <StyledInput type="text" placeholder='Your Email id...' />
                             <Box sx={{ml:'10px'}}>
@@ -61,5 +59,4 @@ const StyledInput = styled('input')`
     &::placeholder {
         color: #969AA0;
     }
-`;
-    
+`;    

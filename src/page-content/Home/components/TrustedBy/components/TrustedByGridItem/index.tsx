@@ -10,8 +10,8 @@ export const TrustedByGridItem = ({img, alt, title, paragraph}: BookDetailsProps
             <Box width='100%' height='90px'>
                 <img src={img} alt={alt} style={{width:'100%', height:'100%', objectFit:'contain'}}/>
             </Box>
-            <HeadingH5 sx={{marginTop: '20px'}}>{title}</HeadingH5>
-            <Paragraph sx={{marginTop: '10px'}}>{paragraph}</Paragraph>
+            <HeadingH5 sx={{mt:'20px'}}>{title}</HeadingH5>
+            <Paragraph sx={{mt:'10px'}}>{paragraph}</Paragraph>
         </Grid>
     );
 }

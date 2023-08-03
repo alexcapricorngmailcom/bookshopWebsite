@@ -10,7 +10,7 @@ import urbanLib from './assets/urbanLib.png'
 import { WHITE } from '../../../../design-system/colors';
 import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TrustedByGridItem } from './components/TrustedByGridItem';
+import { TrustedByGridItem } from './components';
 
 export const TrustedBy = () => {
     return (
@@ -18,8 +18,8 @@ export const TrustedBy = () => {
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3>Trusted by the Best</HeadingH3>
-                    <LineLarge sx={{marginTop:'22px'}} />
-                    <Grid container marginTop='0px' spacing={5}>
+                    <LineLarge sx={{mt:'22px'}} />
+                    <Grid container spacing={5} mt='0px'>
                         <TrustedByGridItem 
                             img={amazenCorp} 
                             alt='amazen corp logo' 
