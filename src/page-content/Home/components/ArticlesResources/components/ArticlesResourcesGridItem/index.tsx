@@ -7,7 +7,7 @@ import Link from "@mui/material/Link";
 import { HeadingH5, Paragraph } from "../../../../../../design-system/typography";
 import { MAIN, WHITE } from "../../../../../../design-system/colors";
 
-export const BlogGridItem = ({title, paragraph, author, img, alt}:BlogGridItemProps) => {
+export const ArticlesResourcesGridItem = ({title, paragraph, author, img, alt}:BlogGridItemProps) => {
     return(
         <Grid item lg={4}>
             <article style={{filter: 'drop-shadow(0 35px 25px rgba(4, 11, 20, 0.05))', backgroundColor: WHITE}}>

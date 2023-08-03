@@ -1,26 +1,26 @@
-import { HeroSection } from "./components/Hero"
-import { AuthorsBook } from "./components/AuthorsBook"
-import { About } from "./components/About"
-import { TrustedBy } from "./components/TrustedBy"
-import { Callout } from "./components/Callout"
+import { Hero } from "./components/Hero"
+import { AuthorsBookIncludes } from "./components/AuthorsBookIncludes"
+import { AboutAuthor } from "./components/AboutAuthor"
+import { TrustedByTheBest } from "./components/TrustedByTheBest"
+import { GetBookCopyToday } from "./components/GetBookCopyToday"
 import { WhatWillYouLearn } from "./components/WhatWillYouLearn"
-import { TheChapter } from "./components/TheChapter"
-import { Testimonial } from "./components/Testimonial"
-import { Blog } from "./components/Blog"
+import { TheChapterIncludes } from "./components/TheChapterIncludes"
+import { WhatReadersSay } from "./components/WhatReadersSay"
+import { ArticlesResources } from "./components/ArticlesResources"
 import { ReadFreeChapter } from "./components/ReadFreeChapter"
 
 export const Home = () => {
     return (
         <main>
-            <HeroSection />
-            <AuthorsBook />
-            <About />
-            <TrustedBy />
-            <Callout />
+            <Hero />
+            <AuthorsBookIncludes />
+            <AboutAuthor />
+            <TrustedByTheBest />
+            <GetBookCopyToday />
             <WhatWillYouLearn />
-            <TheChapter />
-            <Testimonial />
-            <Blog />
+            <TheChapterIncludes />
+            <WhatReadersSay />
+            <ArticlesResources />
             <ReadFreeChapter />
         </main>
     )

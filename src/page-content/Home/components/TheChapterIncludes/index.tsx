@@ -11,7 +11,7 @@ import { LineLarge } from '../../../../design-system/geometry/lines';
 import { TheChapterGridItem } from './components';
 import { ButtonAction } from '../../../../design-system/Button';
 
-export const TheChapter = () => {
+export const TheChapterIncludes = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>

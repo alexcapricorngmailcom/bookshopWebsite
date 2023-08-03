@@ -3,13 +3,13 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
-import calloutImg from './assets/calloutImg.png'
+import getBookCopyToday from './assets/getBookCopyToday.png'
 import { ButtonAction } from '../../../../design-system/Button';
 import { MAIN, PARAGRAPH_SECONDARY, WHITE } from '../../../../design-system/colors'
 import { HeadingH3, Paragraph } from '../../../../design-system/typography'
 import { LineLarge } from '../../../../design-system/geometry/lines'
 
-export const Callout = () => {
+export const GetBookCopyToday = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
@@ -24,7 +24,7 @@ export const Callout = () => {
                         </Box>
                     </Grid>
                     <Grid item md={6} sm={12}>
-                        <img src={calloutImg} style={{width:'100%', height:'100%'}} alt="callout image" />
+                        <img src={getBookCopyToday} style={{width:'100%', height:'100%'}} alt="callout image" />
                     </Grid>
                 </Grid>
             </Container>

@@ -12,7 +12,7 @@ import { MAIN, SECONDARY, BACKGROUND, PARAGRAPH_SECONDARY, WHITE } from '../../.
 import { HeadingH2, HeadingH3, HeadingH6, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 
-export const About = () => {
+export const AboutAuthor = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>

@@ -8,7 +8,7 @@ import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import { HeadingH5, HeadingH6, Paragraph } from "../../../../../../design-system/typography"
 import { MAIN, SECONDARY, PARAGRAPH_SECONDARY, WHITE } from '../../../../../../design-system/colors';
 
-export const TestimonialArticle = ({img, alt, userName, title, paragraph}:TestimonialArticleProps) => {
+export const WhatReadersSayArticle = ({img, alt, userName, title, paragraph}:TestimonialArticleProps) => {
     return(
         <article style={{padding:'30px', backgroundColor: MAIN}}>
             <Stack flexDirection='row' alignItems='center'>

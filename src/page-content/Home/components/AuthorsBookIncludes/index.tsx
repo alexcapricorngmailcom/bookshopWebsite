@@ -12,7 +12,7 @@ import { LineLarge } from '../../../../design-system/geometry/lines';
 import { BookDetails } from '../../../../shared/components/BookDetails';
 import { ButtonAction } from '../../../../design-system/Button';
 
-export const AuthorsBook = () => {
+export const AuthorsBookIncludes = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>

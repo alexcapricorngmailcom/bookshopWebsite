@@ -12,7 +12,7 @@ import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { TrustedByGridItem } from './components';
 
-export const TrustedBy = () => {
+export const TrustedByTheBest = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>

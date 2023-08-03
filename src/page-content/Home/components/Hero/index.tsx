@@ -13,7 +13,7 @@ import { ButtonAction } from '../../../../design-system/Button';
 
 // TODO props color fff
 
-export const HeroSection = () => {
+export const Hero = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>

@@ -7,18 +7,18 @@ import Rating from '@mui/material/Rating';
 import CircleIcon from '@mui/icons-material/Circle';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
-import testimonialUser1 from './assets/testimonialUser1.png'
-import testimonialUser2 from './assets/testimonialUser2.png'
-import testimonialUser3 from './assets/testimonialUser3.png'
+import whatReadersSayUser1 from './assets/whatReadersSayUser1.png'
+import whatReadersSayUser2 from './assets/whatReadersSayUser2.png'
+import whatReadersSayUser3 from './assets/whatReadersSayUser3.png'
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH6, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TestimonialArticle } from './components';
+import { WhatReadersSayArticle } from './components/WhatReadersSayArticle';
 
 
 // TODO What a hell is going on with HeadingH6
 
-export const Testimonial = () => {
+export const WhatReadersSay = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
@@ -44,8 +44,8 @@ export const Testimonial = () => {
                             <Stack flexDirection='row' alignItems='center' width='100%'>
                                 <Stack justifyContent='space-between' width='50%'>
                                         <Box padding='15px'>
-                                            <TestimonialArticle 
-                                                img={testimonialUser1}
+                                            <WhatReadersSayArticle
+                                                img={whatReadersSayUser1}
                                                 alt='testimonial user 1'
                                                 userName='Martin Philips'
                                                 title='“ Awesome Impact ”'
@@ -53,8 +53,8 @@ export const Testimonial = () => {
                                             />
                                         </Box>
                                         <Box padding='15px'>
-                                            <TestimonialArticle 
-                                                    img={testimonialUser2}
+                                            <WhatReadersSayArticle 
+                                                    img={whatReadersSayUser2}
                                                     alt='testimonial user 2'
                                                     userName='James Anderson'
                                                     title='“ Mind Blowing Words ”'
@@ -64,8 +64,8 @@ export const Testimonial = () => {
                                 </Stack>
                                 <Box width='50%'>
                                     <Box padding='15px'>
-                                        <TestimonialArticle 
-                                            img={testimonialUser3}
+                                        <WhatReadersSayArticle 
+                                            img={whatReadersSayUser3}
                                             alt='testimonial user 3'
                                             userName='Christina Louis'
                                             title='“ Great Books Collections ”'
