@@ -3,8 +3,8 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import { Form } from '../../../../design-system/Form';
 
-import myStory from './assets/myStory.png'
 import { WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
@@ -56,7 +56,7 @@ export const KeepInTouch = () => {
                         </Stack>
                     </Grid>
                     <Grid item md={6} sm={12}>
-                        
+                        <Form />
                     </Grid>
                 </Grid>
             </Container>
