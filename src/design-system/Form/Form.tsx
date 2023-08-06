@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import userIcon from './assets/user.svg'
 import emailIcon from './assets/mail.svg'
@@ -34,16 +35,7 @@ export const Form = () => {
                     <StyledImg src={textareaIcon} alt="textarea icon" />
                 </Box>
                 <Stack flexDirection='row' alignItems='center' mt='10px'>
-                    <Checkbox sx={{
-                        color: '#969AA0',
-                        '&.Mui-checked': {
-                        color: '#969AA0',
-                        },
-                        padding: '0px',
-                        pr:'15px',
-                        }}
-                    />
-                    <Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>
+                    <FormControlLabel control={<StyledCheckbox />} label={<Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>} />
                 </Stack>
                 <Box sx={{mt:'15px'}}>
                     <ButtonAction size='large' width='100%'>Send Message</ButtonAction>
@@ -91,4 +83,12 @@ const StyledImg = styled('img')`
     top: 20px;
     left: 20px;
 
-`;  
+`;
+
+const StyledCheckbox = styled(Checkbox)`
+    color: #969AA0;
+
+    &.Mui-checked {
+        color: #969AA0
+    }
+`;

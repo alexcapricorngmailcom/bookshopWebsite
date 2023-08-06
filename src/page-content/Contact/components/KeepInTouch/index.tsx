@@ -3,12 +3,15 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import { Form } from '../../../../design-system/Form';
 
-import { WHITE } from '../../../../design-system/colors';
+import { ReactComponent as HomeIcon } from './assets/homeIcon.svg'
+import { ReactComponent as EmailIcon } from './assets/emailIcon.svg'
+import { ReactComponent as PhoneIcon } from './assets/phoneIcon.svg'
+import { MAIN, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { SquareLarge } from '../../../../design-system/geometry/squares';
+import { Form } from '../../../../design-system/Form';
 
 export const KeepInTouch = () => {
     return (
@@ -18,23 +21,23 @@ export const KeepInTouch = () => {
                     <Grid item md={6} sm={12}> 
                         <HeadingH3>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <Paragraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</Paragraph>
+                        <Paragraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</Paragraph>
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row' >
                                 <Box sx={{pl:'35px', pr:'35px'}}>
                                     <SquareLarge>
-                                        <HeadingH5>01</HeadingH5>
+                                        <HomeIcon stroke={MAIN} />
                                     </SquareLarge>
                                 </Box>
                                 <Box>
                                     <HeadingH5>Visit Us :</HeadingH5>
-                                    <Paragraph sx={{mt:'0px'}}>No: 09a, Downtown, San Dieago, USA.</Paragraph>
+                                    <Paragraph sx={{mt:'0px'}}>No: 09a, Downtown, San Diego, USA.</Paragraph>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'22px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
                                     <SquareLarge>
-                                        <HeadingH5>02</HeadingH5>
+                                        <EmailIcon stroke={MAIN} />
                                     </SquareLarge>
                                 </Box>
                                 <Box>
@@ -45,7 +48,7 @@ export const KeepInTouch = () => {
                             <Stack flexDirection='row' sx={{mt:'22px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
                                     <SquareLarge>
-                                        <HeadingH5>03</HeadingH5>
+                                        <PhoneIcon stroke={MAIN} />
                                     </SquareLarge>
                                 </Box>
                                 <Box>
