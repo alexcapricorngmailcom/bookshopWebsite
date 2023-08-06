@@ -7,12 +7,13 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link as RouterLink } from 'react-router-dom'
 
-import logoPages from './assets/logoPages.svg'
-import logoFacebook from './assets/logoFacebook.svg'
-import logoTwitter from './assets/logoTwitter.svg'
-import logoLinkedIn from './assets/logoLinkedIn.svg'
+import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
+import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
+import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/TwitterIcon.svg'
+import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/LinkedInIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
+import { SquareMedium } from "../../../design-system/geometry/squares";
 
 export const Header = () => {
     return(
@@ -21,12 +22,26 @@ export const Header = () => {
                 <StyledNav>
                     <Stack flexDirection='row' alignItems='center'>
                         <Box>
-                            <Link href='#'><img src={logoPages} alt="pages logo" /></Link>
+                            <Link href='#'>
+                                <PagesIcon fill={MAIN}/>
+                            </Link>
                         </Box>
                         <StyledLogoItemBox>
-                            <Link href='https://uk-ua.facebook.com/' target='_blank'><img src={logoFacebook} alt="Facebook logo" /></Link>
-                            <Link href='https://twitter.com/' target='_blank'><img src={logoTwitter} alt="Twitter logo" /></Link>
-                            <Link href='https://ua.linkedin.com/' target='_blank'><img src={logoLinkedIn} alt="LinkedIn logo" /></Link>
+                                <Link href='https://uk-ua.facebook.com/' target='_blank'>
+                                    <SquareMedium>
+                                        <StyledFacebookIcon />
+                                    </SquareMedium>
+                                </Link>
+                                <Link href='https://twitter.com/' target='_blank'>
+                                    <SquareMedium>
+                                        <StyledTwitterIcon />
+                                    </SquareMedium>
+                                </Link>
+                                <Link href='https://ua.linkedin.com/' target='_blank'>
+                                    <SquareMedium>
+                                        <StyledLinkedInIcon />
+                                    </SquareMedium>
+                                </Link>
                         </StyledLogoItemBox>
                     </Stack>
                     <Stack flexDirection='row' alignItems='center'>
@@ -64,16 +79,16 @@ const StyledNav = styled('nav')`
 `;
 
 const StyledLogoItemBox = styled(Box)`
+    display: flex;
     margin-left: 30px;
 
-    & > a + a {
+    a + a {
         margin-left: 10px;
     }
 `;
 
 const StyledHeaderNavLinkBox = styled(Box)`
-
-    & > a + a {
+    a + a {
         margin-left: 30px;
     }
 `;
@@ -108,3 +123,28 @@ const StyledBadge = styled(Badge)`
         cursor: pointer;
     }
 `;
+
+const StyledFacebookIcon = styled(FacebookIcon)`
+    fill: ${MAIN};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledTwitterIcon = styled(TwitterIcon)`
+    fill: ${MAIN};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledLinkedInIcon = styled(LinkedInIcon)`
+    fill: ${MAIN};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+

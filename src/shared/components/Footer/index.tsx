@@ -5,13 +5,14 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-import logoPages from './assets/logoPages.svg'
-import logoFacebook from './assets/logoFacebook.svg'
-import logoTwitter from './assets/logoTwitter.svg'
-import logoLinkedIn from './assets/logoLinkedIn.svg'
-import logoInstagram from './assets/logoInstagram.svg'
+import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
+import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
+import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/TwitterIcon.svg'
+import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/LinkedInIcon.svg'
+import { ReactComponent as InstagramIcon } from '../../../shared/assets/icons/InstagramIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { HeadingH5, Paragraph } from '../../../design-system/typography';
+import { SquareMediumOutlined } from '../../../design-system/geometry/squares';
 
 export const Footer = () => {
     return(
@@ -19,12 +20,30 @@ export const Footer = () => {
             <Container maxWidth='lg'>
                 <Stack flexDirection='row' justifyContent='space-between' width='100%'>
                     <Box width='35%'>
-                        <Link href='#'><img src={logoPages} alt="pages logo" /></Link>
+                        <Link href='#'>
+                            <PagesIcon fill={MAIN}/>
+                        </Link>
                         <StyledBoxLogo>
-                            <Link href='https://uk-ua.facebook.com/' target='_blank'><img src={logoFacebook} alt="Facebook logo" /></Link>
-                            <Link href='https://twitter.com/' target='_blank'><img src={logoTwitter} alt="Twitter logo" /></Link>
-                            <Link href='https://ua.linkedin.com/' target='_blank'><img src={logoLinkedIn} alt="LinkedIn logo" /></Link>
-                            <Link href='https://www.instagram.com/' target='_blank'><img src={logoInstagram} alt="Instagram logo" /></Link>
+                            <Link href='https://uk-ua.facebook.com/' target='_blank'>
+                                <SquareMediumOutlined>
+                                    <StyledFacebookIcon />
+                                </SquareMediumOutlined>
+                            </Link>
+                            <Link href='https://twitter.com/' target='_blank'>
+                                <SquareMediumOutlined>
+                                    <StyledTwitterIcon />
+                                </SquareMediumOutlined>
+                            </Link>
+                            <Link href='https://ua.linkedin.com/' target='_blank'>
+                                <SquareMediumOutlined>
+                                    <StyledLinkedInIcon />
+                                </SquareMediumOutlined>
+                            </Link>
+                            <Link href='https://www.instagram.com/' target='_blank'>
+                                <SquareMediumOutlined>
+                                    <StyledInstagramIcon/>
+                                </SquareMediumOutlined>
+                            </Link>
                         </StyledBoxLogo>
                     </Box>
                     <Stack flexDirection='row' justifyContent='space-between' width='65%'>
@@ -125,6 +144,7 @@ const StyledFooter = styled('footer')`
 `;
 
 const StyledBoxLogo = styled(Box)`
+    display: flex;
     margin-top: 30px;
 
     & > a + a {
@@ -152,4 +172,36 @@ const StyledBox = styled(Box)`
     height: 1px;
     margin-top: 75px;
     background-color: ${WHITE};
+`;
+
+const StyledFacebookIcon = styled(FacebookIcon)`
+    fill: ${WHITE};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledTwitterIcon = styled(TwitterIcon)`
+    fill: ${WHITE};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledLinkedInIcon = styled(LinkedInIcon)`
+    fill: ${WHITE};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledInstagramIcon = styled(InstagramIcon)`
+    fill: ${WHITE};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
 `;

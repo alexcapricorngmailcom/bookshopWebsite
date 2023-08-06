@@ -3,9 +3,13 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
+import { ReactComponent as FacebookIcon } from '../../../../shared/assets/icons/FacebookIcon.svg'
+import { ReactComponent as TwitterIcon } from '../../../../shared/assets/icons/TwitterIcon.svg'
+import { ReactComponent as LinkedInIcon } from '../../../../shared/assets/icons/LinkedInIcon.svg'
 import aboutTheAuthor from './assets/aboutTheAuthor.png'
-import { BACKGROUND, WHITE } from '../../../../design-system/colors';
+import { MAIN, SECONDARY, BACKGROUND, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { ButtonAction } from '../../../../design-system/Button';
@@ -35,7 +39,18 @@ export const AboutTheAuthor = () => {
                                         <Paragraph>English</Paragraph>
                                         <Paragraph>Historiography</Paragraph>
                                         <Paragraph>1991</Paragraph>
-                                        <Paragraph>Social media</Paragraph>
+
+                                        <StyledBoxIcons>
+                                            <Link href='https://uk-ua.facebook.com/' target='_blank'>
+                                                <StyledFacebookIcon />
+                                            </Link>
+                                            <Link href='https://twitter.com/' target='_blank'>
+                                                <StyledTwitterIcon />
+                                            </Link>
+                                            <Link href='https://ua.linkedin.com/' target='_blank'>
+                                                <StyledLinkedInIcon />
+                                            </Link>
+                                        </StyledBoxIcons>
                                     </StyledBox>
                                 </Stack>
                             </StyledBackgroundBox>
@@ -70,5 +85,38 @@ const StyledBackgroundBox = styled(Grid)`
 const StyledBox = styled(Box)`
     h5 + h5, p + p {
         margin-top: 20px;
+    }
+`;
+
+const StyledBoxIcons = styled(Box)`
+    flex-direction: row;
+    margin-top: 20px;
+
+    a + a {
+        margin-left: 25px;
+    }
+`;
+
+const StyledFacebookIcon = styled(FacebookIcon)`
+    fill: ${MAIN};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledTwitterIcon = styled(TwitterIcon)`
+    fill: ${MAIN};
+
+    &:hover {
+        fill: ${SECONDARY};
+    }
+`;
+
+const StyledLinkedInIcon = styled(LinkedInIcon)`
+    fill: ${MAIN};
+
+    &:hover {
+        fill: ${SECONDARY};
     }
 `;
