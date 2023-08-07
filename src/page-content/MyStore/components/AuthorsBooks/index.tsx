@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link as RouterLink } from 'react-router-dom'
 
 import atomicOneSmall from '../../../../shared/assets/img/atomicOneSmall.png'
 import theDarkLightSmall from '../../../../shared/assets/img/theDarkLightSmall.png'
@@ -21,128 +22,118 @@ export const AuthorsBooks = () => {
             <Container maxWidth='lg'>
                 <StyledStackList>
                     <StyledBoxListColumn>
-                        <Box>
+                        <RouterLink to={'/storeItem1'}>
                             <StyledStackImg>
                                 <StyledBoxBookCoverImg>
                                     <img src={atomicOneSmall} alt="atomic one’s book cover" />
                                 </StyledBoxBookCoverImg>
                             </StyledStackImg>
-                            <HeadingH4 sx={{mt:'20px'}}>Atomic One’s</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                            <Box sx={{mt:'20px'}}>
-                                <BookDetails title='Printed Book'/>
-                            </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                        </RouterLink>
+                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s</HeadingH4>
+                        <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
+                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
+                        <Box sx={{mt:'20px'}}>
+                            <BookDetails title='Printed Book'/>
+                        </Box>
+                        <Box sx={{mt:'30px'}}>
+                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                         </Box>
                     </StyledBoxListColumn>
                     
                     <StyledBoxListColumn>
-                        <Box>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                                </StyledBoxBookCoverImg>
-                                <StyledBoxBookIcon>
-                                    <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                                </StyledBoxBookIcon>
-                            </StyledStackImg>
-                            <HeadingH4 sx={{mt:'20px'}}>Atomic One’s (Audio)</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                            <Box sx={{mt:'20px'}}>
-                                <BookDetails title='Audiobook'/>
-                            </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                        <StyledStackImg>
+                            <StyledBoxBookCoverImg>
+                                <img src={atomicOneSmall} alt="atomic one’s book cover" />
+                            </StyledBoxBookCoverImg>
+                            <StyledBoxBookIcon>
+                                <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                            </StyledBoxBookIcon>
+                        </StyledStackImg>
+                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s (Audio)</HeadingH4>
+                        <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
+                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
+                        <Box sx={{mt:'20px'}}>
+                            <BookDetails title='Audiobook'/>
+                        </Box>
+                        <Box sx={{mt:'30px'}}>
+                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                         </Box>
                     </StyledBoxListColumn>
                     
                     <StyledBoxListColumn>
-                        <Box>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                                </StyledBoxBookCoverImg>
-                                <StyledBoxBookIcon>
-                                    <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                                </StyledBoxBookIcon>
-                            </StyledStackImg>
-                            <HeadingH4 sx={{mt:'20px'}}>Atomic One’s + DVD</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                            <Box sx={{mt:'20px'}}>
-                                <BookDetails title='Printed Book + Audiobook'/>
-                            </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                        <StyledStackImg>
+                            <StyledBoxBookCoverImg>
+                                <img src={atomicOneSmall} alt="atomic one’s book cover" />
+                            </StyledBoxBookCoverImg>
+                            <StyledBoxBookIcon>
+                                <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                            </StyledBoxBookIcon>
+                        </StyledStackImg>
+                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s + DVD</HeadingH4>
+                        <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
+                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
+                        <Box sx={{mt:'20px'}}>
+                            <BookDetails title='Printed Book + Audiobook'/>
+                        </Box>
+                        <Box sx={{mt:'30px'}}>
+                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                         </Box>
                     </StyledBoxListColumn>
 
                     <StyledBoxListColumn>
-                        <Box>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={theDarkLightSmall} alt="the dark light book cover" />
-                                </StyledBoxBookCoverImg>
-                            </StyledStackImg>
-                            <HeadingH4 sx={{mt:'20px'}}>The Dark Light</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                            <Box sx={{mt:'20px'}}>
-                                <BookDetails title='Printed Book'/>
-                            </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                        <StyledStackImg>
+                            <StyledBoxBookCoverImg>
+                                <img src={theDarkLightSmall} alt="the dark light book cover" />
+                            </StyledBoxBookCoverImg>
+                        </StyledStackImg>
+                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light</HeadingH4>
+                        <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
+                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
+                        <Box sx={{mt:'20px'}}>
+                            <BookDetails title='Printed Book'/>
+                        </Box>
+                        <Box sx={{mt:'30px'}}>
+                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                         </Box>
                     </StyledBoxListColumn>
                     
                     <StyledBoxListColumn>
-                        <Box>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={theDarkLightSmall} alt="the dark light book cover" />
-                                </StyledBoxBookCoverImg>
-                                <StyledBoxBookIcon>
-                                    <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                                </StyledBoxBookIcon>
-                            </StyledStackImg>
-                            <HeadingH4 sx={{mt:'20px'}}>The Dark Light (Audio)</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                            <Box sx={{mt:'20px'}}>
-                                <BookDetails title='Audiobook'/>
-                            </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                        <StyledStackImg>
+                            <StyledBoxBookCoverImg>
+                                <img src={theDarkLightSmall} alt="the dark light book cover" />
+                            </StyledBoxBookCoverImg>
+                            <StyledBoxBookIcon>
+                                <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                            </StyledBoxBookIcon>
+                        </StyledStackImg>
+                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light (Audio)</HeadingH4>
+                        <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
+                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
+                        <Box sx={{mt:'20px'}}>
+                            <BookDetails title='Audiobook'/>
+                        </Box>
+                        <Box sx={{mt:'30px'}}>
+                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                         </Box>
                     </StyledBoxListColumn>
                     
                     <StyledBoxListColumn>
-                        <Box>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={theDarkLightSmall} alt="the dark light book cover" />
-                                </StyledBoxBookCoverImg>
-                                <StyledBoxBookIcon>
-                                    <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                                </StyledBoxBookIcon>
-                            </StyledStackImg>
-                            <HeadingH4 sx={{mt:'20px'}}>The Dark Light + DVD</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                            <Box sx={{mt:'20px'}}>
-                                <BookDetails title='Printed Book + Audiobook'/>
-                            </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                        <StyledStackImg>
+                            <StyledBoxBookCoverImg>
+                                <img src={theDarkLightSmall} alt="the dark light book cover" />
+                            </StyledBoxBookCoverImg>
+                            <StyledBoxBookIcon>
+                                <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                            </StyledBoxBookIcon>
+                        </StyledStackImg>
+                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light + DVD</HeadingH4>
+                        <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
+                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
+                        <Box sx={{mt:'20px'}}>
+                            <BookDetails title='Printed Book + Audiobook'/>
+                        </Box>
+                        <Box sx={{mt:'30px'}}>
+                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                         </Box>
                     </StyledBoxListColumn>
                 </StyledStackList>

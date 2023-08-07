@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="/store" element={<MyStore />} />
-          <Route path="/storeItem" element={<MyStore />} />
+          <Route path="/storeAtomicOne" element={<MyStore />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
