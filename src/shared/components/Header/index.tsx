@@ -27,17 +27,17 @@ export const Header = () => {
                             </RouterLink>
                         </Box>
                         <StyledLogoItemBox>
-                                <Link href='https://uk-ua.facebook.com/' target='_blank'>
+                                <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
                                     <SquareMedium>
                                         <StyledFacebookIcon />
                                     </SquareMedium>
                                 </Link>
-                                <Link href='https://twitter.com/' target='_blank'>
+                                <Link href='https://twitter.com/' target='_blank' rel="noopener">
                                     <SquareMedium>
                                         <StyledTwitterIcon />
                                     </SquareMedium>
                                 </Link>
-                                <Link href='https://ua.linkedin.com/' target='_blank'>
+                                <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
                                     <SquareMedium>
                                         <StyledLinkedInIcon />
                                     </SquareMedium>

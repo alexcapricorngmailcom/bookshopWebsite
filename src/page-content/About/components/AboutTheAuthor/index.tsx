@@ -41,13 +41,13 @@ export const AboutTheAuthor = () => {
                                         <Paragraph>1991</Paragraph>
 
                                         <StyledBoxIcons>
-                                            <Link href='https://uk-ua.facebook.com/' target='_blank'>
+                                            <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
                                                 <StyledFacebookIcon />
                                             </Link>
-                                            <Link href='https://twitter.com/' target='_blank'>
+                                            <Link href='https://twitter.com/' target='_blank' rel="noopener">
                                                 <StyledTwitterIcon />
                                             </Link>
-                                            <Link href='https://ua.linkedin.com/' target='_blank'>
+                                            <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
                                                 <StyledLinkedInIcon />
                                             </Link>
                                         </StyledBoxIcons>

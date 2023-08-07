@@ -26,22 +26,22 @@ export const Footer = () => {
                             <PagesIcon fill={MAIN}/>
                         </RouterLink>
                         <StyledBoxLogo>
-                            <Link href='https://uk-ua.facebook.com/' target='_blank'>
+                            <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
                                 <SquareMediumOutlined>
                                     <StyledFacebookIcon />
                                 </SquareMediumOutlined>
                             </Link>
-                            <Link href='https://twitter.com/' target='_blank'>
+                            <Link href='https://twitter.com/' target='_blank' rel="noopener">
                                 <SquareMediumOutlined>
                                     <StyledTwitterIcon />
                                 </SquareMediumOutlined>
                             </Link>
-                            <Link href='https://ua.linkedin.com/' target='_blank'>
+                            <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
                                 <SquareMediumOutlined>
                                     <StyledLinkedInIcon />
                                 </SquareMediumOutlined>
                             </Link>
-                            <Link href='https://www.instagram.com/' target='_blank'>
+                            <Link href='https://www.instagram.com/' target='_blank' rel="noopener">
                                 <SquareMediumOutlined>
                                     <StyledInstagramIcon/>
                                 </SquareMediumOutlined>
