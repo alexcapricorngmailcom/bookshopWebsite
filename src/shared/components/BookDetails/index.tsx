@@ -22,6 +22,6 @@ export const BookDetails = ({title, paragraph, color}: BookDetailsProps) => {
 
 type BookDetailsProps = {
     title: string;
-    paragraph: string;
+    paragraph?: string;
     color?: string;
 };

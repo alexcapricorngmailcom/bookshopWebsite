@@ -2,22 +2,27 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 
-import { MAIN, WHITE } from '../../../../design-system/colors'
-import { HeadingH1, Paragraph } from '../../../../design-system/typography'
-import { LineLarge } from '../../../../design-system/geometry/lines'
+import { MAIN, PARAGRAPH_SECONDARY, WHITE } from '../../../design-system/colors'
+import { HeadingH1, Paragraph } from '../../../design-system/typography'
+import { LineLarge } from '../../../design-system/geometry/lines'
 
-export const Hero = () => {
+export const CommonHero = ({title, paragraph}:HeroProps) => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack alignItems='center'>
-                    <HeadingH1 sx={{color: WHITE}}>Contact Us</HeadingH1>
+                    <HeadingH1 sx={{color: WHITE}}>{title}</HeadingH1>
                     <LineLarge sx={{mt:'32px'}} />
-                    <StyledParagraph>There are many variations of passages of Lorem available, have suffered alteration in some form.</StyledParagraph>
+                    <StyledParagraph>{paragraph}</StyledParagraph>
                 </Stack>
             </Container>
         </StyledSection>
     )
+}
+
+type HeroProps = {
+    title: string;
+    paragraph: string;
 }
 
 const StyledSection = styled('section')`
@@ -30,5 +35,5 @@ const StyledParagraph = styled(Paragraph)`
     max-width: 600px; 
     margin-top: 35px;
     text-align: center; 
-    color: #B4C7E7;
+    color: ${PARAGRAPH_SECONDARY};
 `;

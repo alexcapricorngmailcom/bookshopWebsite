@@ -1,4 +1,4 @@
-import { Hero } from './components/Hero'
+import { CommonHero } from '../../shared/components'
 import { AboutTheAuthor } from './components/AboutTheAuthor'
 import { MyStory } from './components/MyStory'
 import { AuthorsBookIncludesSection } from './components/AuthorsBookIncludesSection'
@@ -8,7 +8,10 @@ import { ReadFreeChapterSection } from './components/ReadFreeChapterSection'
 export const About = () => {
     return (
         <main>
-            <Hero />
+            <CommonHero
+                title='About the Author'
+                paragraph='There are many variations of passages of Lorem Ipsum available, have suffered alteration in some form.'
+            />
             <AboutTheAuthor />
             <MyStory />
             <AuthorsBookIncludesSection />

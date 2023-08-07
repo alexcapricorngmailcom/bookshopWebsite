@@ -1,7 +1,8 @@
-import { Route, Routes, ScrollRestoration } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { Header } from "./shared/components/Header";
 import { Home } from "./page-content/Home";
+import { MyStore } from './page-content/MyStore';
 import { About } from './page-content/About';
 import { Contact } from './page-content/Contact';
 import { Error404 } from './page-content/Error404';
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="/store" element={<MyStore />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

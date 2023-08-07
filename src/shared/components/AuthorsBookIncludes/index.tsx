@@ -3,8 +3,8 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-import atomicOneSmall from './assets/atomicOneSmall.png'
-import theDarkLightSmall from './assets/theDarkLightSmall.png'
+import atomicOneSmall from '../../assets/img/atomicOneSmall.png'
+import theDarkLightSmall from '../../assets/img/theDarkLightSmall.png'
 
 import { HeadingH3, HeadingH4, Paragraph } from '../../../design-system/typography';
 import { LineLarge } from '../../../design-system/geometry/lines';

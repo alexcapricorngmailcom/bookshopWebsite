@@ -5,9 +5,9 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
-import { ReactComponent as FacebookIcon } from '../../../../shared/assets/icons/FacebookIcon.svg'
-import { ReactComponent as TwitterIcon } from '../../../../shared/assets/icons/TwitterIcon.svg'
-import { ReactComponent as LinkedInIcon } from '../../../../shared/assets/icons/LinkedInIcon.svg'
+import { ReactComponent as FacebookIcon } from '../../../../shared/assets/icons/facebookIcon.svg'
+import { ReactComponent as TwitterIcon } from '../../../../shared/assets/icons/twitterIcon.svg'
+import { ReactComponent as LinkedInIcon } from '../../../../shared/assets/icons/linkedInIcon.svg'
 import aboutTheAuthor from './assets/aboutTheAuthor.png'
 import { MAIN, SECONDARY, BACKGROUND, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';

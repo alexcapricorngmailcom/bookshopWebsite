@@ -7,10 +7,10 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link as RouterLink } from 'react-router-dom'
 
-import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
-import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
-import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/TwitterIcon.svg'
-import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/LinkedInIcon.svg'
+import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/pagesIcon.svg'
+import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/facebookIcon.svg'
+import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/twitterIcon.svg'
+import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/linkedInIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareMedium } from "../../../design-system/geometry/squares";
@@ -47,8 +47,8 @@ export const Header = () => {
                     <Stack flexDirection='row' alignItems='center'>
                         <StyledHeaderNavLinkBox>
                             <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/pages'>Pages</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to='/store'>My Store</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/contact'>Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>

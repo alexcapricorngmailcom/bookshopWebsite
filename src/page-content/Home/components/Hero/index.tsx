@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-import theDarkLightLarge from './assets/theDarkLightLarge.png';
+import theDarkLightLarge from '../../../../shared/assets//img/theDarkLightLarge.png';
 import { MAIN, PARAGRAPH_SECONDARY, WHITE } from '../../../../design-system/colors'
 import { HeadingH1, HeadingH5, Paragraph } from '../../../../design-system/typography'
 import { LineSmall } from '../../../../design-system/geometry/lines'
