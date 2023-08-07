@@ -22,9 +22,9 @@ export const Header = () => {
                 <StyledNav>
                     <Stack flexDirection='row' alignItems='center'>
                         <Box>
-                            <Link href='#'>
+                            <RouterLink to='/'>
                                 <PagesIcon fill={MAIN}/>
-                            </Link>
+                            </RouterLink>
                         </Box>
                         <StyledLogoItemBox>
                                 <Link href='https://uk-ua.facebook.com/' target='_blank'>

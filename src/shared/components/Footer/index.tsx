@@ -1,9 +1,11 @@
 import { styled } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom'
 import Container from "@mui/material/Container";
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+
 
 import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
 import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
@@ -20,9 +22,9 @@ export const Footer = () => {
             <Container maxWidth='lg'>
                 <Stack flexDirection='row' justifyContent='space-between' width='100%'>
                     <Box width='35%'>
-                        <Link href='#'>
+                        <RouterLink to='/'>
                             <PagesIcon fill={MAIN}/>
-                        </Link>
+                        </RouterLink>
                         <StyledBoxLogo>
                             <Link href='https://uk-ua.facebook.com/' target='_blank'>
                                 <SquareMediumOutlined>
