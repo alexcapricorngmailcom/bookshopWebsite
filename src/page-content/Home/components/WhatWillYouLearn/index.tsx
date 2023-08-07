@@ -2,13 +2,12 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 
 import whatWillYouLearnImg from './assets/whatWillYouLearnImg.png'
-import { BACKGROUND, WHITE } from '../../../../design-system/colors';
-import { HeadingH3, HeadingH5 } from '../../../../design-system/typography';
-import { CircleLarge } from '../../../../design-system/geometry/circles';
+import { WHITE } from '../../../../design-system/colors';
+import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
+import { WhatWillYouLearnItem } from './components/WhatWillYouLearnItem';
 
 export const WhatWillYouLearn = () => {
     return (
@@ -20,38 +19,22 @@ export const WhatWillYouLearn = () => {
                     <Grid container spacing={6} alignItems='center' marginTop='0px'>
                         <Grid item lg={6}>
                             <Grid container rowSpacing={4} columnSpacing={4}>
-                                <Grid item lg={6} md={6} sm={6}>
-                                    <Box sx={{padding:'40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge>
-                                            <HeadingH5>01</HeadingH5>
-                                        </CircleLarge>
-                                        <HeadingH5 sx={{mt:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
-                                    </Box>
-                                </Grid>
-                                <Grid item lg={6} md={6} sm={6}>
-                                    <Box sx={{padding:'40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge>
-                                            <HeadingH5>02</HeadingH5>
-                                        </CircleLarge>
-                                        <HeadingH5 sx={{mt:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
-                                    </Box>
-                                </Grid>
-                                <Grid item lg={6} md={6} sm={6}>
-                                    <Box sx={{padding:'40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge>
-                                            <HeadingH5>03</HeadingH5>
-                                        </CircleLarge>
-                                        <HeadingH5 sx={{mt:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
-                                    </Box>
-                                </Grid>
-                                <Grid item lg={6} md={6} sm={6}>
-                                    <Box sx={{padding:'40px 30px', backgroundColor: BACKGROUND}}>
-                                        <CircleLarge>
-                                            <HeadingH5>04</HeadingH5>
-                                        </CircleLarge>
-                                        <HeadingH5 sx={{mt:'30px'}}>Use HDFS & Map Reduce for storing & analyzing data at scale.</HeadingH5>
-                                    </Box>
-                                </Grid>
+                                <WhatWillYouLearnItem 
+                                    title='01'
+                                    paragraph='Use HDFS & Map Reduce for storing & analyzing data at scale.'
+                                />
+                                <WhatWillYouLearnItem 
+                                    title='02'
+                                    paragraph='Use HDFS & Map Reduce for storing & analyzing data at scale.'
+                                />
+                                <WhatWillYouLearnItem 
+                                    title='03'
+                                    paragraph='Use HDFS & Map Reduce for storing & analyzing data at scale.'
+                                />
+                                <WhatWillYouLearnItem 
+                                    title='04'
+                                    paragraph='Use HDFS & Map Reduce for storing & analyzing data at scale.'
+                                />
                             </Grid>
                         </Grid>
                         <Grid item lg={6}>
@@ -65,7 +48,6 @@ export const WhatWillYouLearn = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-top: 145px;
-    padding-bottom: 145px;
+    padding: 145px 0px;
     background-color: ${WHITE};
 `;

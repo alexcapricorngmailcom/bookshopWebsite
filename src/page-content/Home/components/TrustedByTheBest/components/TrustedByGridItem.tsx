@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-import { HeadingH5, Paragraph } from "../../../../../../design-system/typography";
+import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
 
 
 export const TrustedByGridItem = ({img, alt, title, paragraph}: BookDetailsProps) => {

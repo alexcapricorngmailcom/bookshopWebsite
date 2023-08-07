@@ -11,6 +11,8 @@ import { LineLarge } from '../../../design-system/geometry/lines';
 import { BookDetails } from '../../../shared/components/BookDetails';
 import { ButtonAction } from '../../../design-system/Button';
 
+// TODO make a component
+
 export const AuthorsBookIncludes = () => {
     return (
             <Container maxWidth='lg'>

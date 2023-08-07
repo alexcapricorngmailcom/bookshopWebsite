@@ -14,6 +14,6 @@ export const ReadFreeChapterSection = () => {
 }
 
 const StyledSection = styled('section')`
-    padding: 145px 0px;
+    padding-bottom: 145px;
     background-color: ${WHITE};
 `;

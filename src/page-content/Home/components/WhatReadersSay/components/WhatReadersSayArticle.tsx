@@ -5,8 +5,8 @@ import Rating from '@mui/material/Rating';
 import CircleIcon from '@mui/icons-material/Circle';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
-import { HeadingH5, HeadingH6, Paragraph } from "../../../../../../design-system/typography"
-import { MAIN, SECONDARY, PARAGRAPH_SECONDARY, WHITE } from '../../../../../../design-system/colors';
+import { HeadingH5, HeadingH6, Paragraph } from "../../../../../design-system/typography"
+import { MAIN, SECONDARY, PARAGRAPH_SECONDARY, WHITE } from '../../../../../design-system/colors';
 
 export const WhatReadersSayArticle = ({img, alt, userName, title, paragraph}:TestimonialArticleProps) => {
     return(

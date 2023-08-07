@@ -9,7 +9,7 @@ import articlesResourcesImg3 from './assets/articlesResourcesImg3.png'
 import { BACKGROUND } from '../../../../design-system/colors';
 import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { ArticlesResourcesGridItem } from './components';
+import { ArticlesResourcesGridItem } from './components/ArticlesResourcesGridItem';
 
 export const ArticlesResources = () => {
     return (
@@ -48,7 +48,6 @@ export const ArticlesResources = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-top: 145px;
-    padding-bottom: 145px;
+    padding: 145px 0px;
     background-color: ${BACKGROUND};
 `;

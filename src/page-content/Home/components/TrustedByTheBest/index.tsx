@@ -10,7 +10,7 @@ import urbanLib from './assets/urbanLib.png'
 import { WHITE } from '../../../../design-system/colors';
 import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TrustedByGridItem } from './components';
+import { TrustedByGridItem } from './components/TrustedByGridItem';
 
 export const TrustedByTheBest = () => {
     return (
@@ -52,7 +52,6 @@ export const TrustedByTheBest = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-top: 145px;
-    padding-bottom: 145px;
+    padding: 145px 0px;
     background-color: ${WHITE};
 `;

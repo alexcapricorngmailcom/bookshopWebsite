@@ -66,6 +66,6 @@ export const Hero = () => {
 
 const StyledSection = styled('section')`
     padding-top: 185px;
-    padding-bottom: 115px;
+    padding-bottom: 125px;
     background-color: ${MAIN};
 `;

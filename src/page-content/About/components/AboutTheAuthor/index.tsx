@@ -71,8 +71,7 @@ export const AboutTheAuthor = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 145px 0px;
     background-color: ${BACKGROUND};
 `;
 

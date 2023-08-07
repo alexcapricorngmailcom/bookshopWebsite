@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import { BACKGROUND } from '../../../../design-system/colors';
 import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { AccordionItem } from '../KeepInTouch/components/Accordion';
+import { AccordionItem } from './components/Accordion';
 
 export const FrequentQuestions = () => {
     return (

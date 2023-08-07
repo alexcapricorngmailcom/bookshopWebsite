@@ -2,9 +2,9 @@ import { styled } from '@mui/material/styles';
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-import { WHITE } from "../../../../../../design-system/colors";
-import { HeadingH5, Paragraph } from "../../../../../../design-system/typography";
-import { TheChapterBookDetails } from '../TheChapterBookDetails';
+import { WHITE } from "../../../../../design-system/colors";
+import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
+import { TheChapterBookDetails } from './TheChapterBookDetails';
 
 export const TheChapterGridItem = ({title, paragraph}: TheChapterGridItemProps) => {
     return (

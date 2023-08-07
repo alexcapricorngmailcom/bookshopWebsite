@@ -4,8 +4,8 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
 
-import { HeadingH5, Paragraph } from "../../../../../../design-system/typography";
-import { MAIN, WHITE } from "../../../../../../design-system/colors";
+import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
+import { MAIN, WHITE } from "../../../../../design-system/colors";
 
 export const ArticlesResourcesGridItem = ({title, paragraph, author, img, alt}:BlogGridItemProps) => {
     return(

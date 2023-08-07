@@ -8,7 +8,7 @@ import Link from '@mui/material/Link';
 import { MAIN, BACKGROUND } from '../../../../design-system/colors';
 import { HeadingH3, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { TheChapterGridItem } from './components';
+import { TheChapterGridItem } from './components/TheChapterGridItem';
 import { ButtonAction } from '../../../../design-system/Button';
 
 export const TheChapterIncludes = () => {

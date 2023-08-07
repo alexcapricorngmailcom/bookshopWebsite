@@ -33,7 +33,6 @@ export const GetBookCopyToday = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0px;
     background-color: ${MAIN};
 `;

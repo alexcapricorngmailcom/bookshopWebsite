@@ -6,13 +6,14 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import atomicOneSmall from '../../../../shared/assets/img/atomicOneSmall.png'
 import theDarkLightSmall from '../../../../shared/assets/img/theDarkLightSmall.png'
-import audioImg from '../../../../shared/assets/img/audioImg.png'
-
+import audioIcon from '../../../../shared/assets/img/audioIcon.png'
+import dvdIcon from '../../../../shared/assets/img/dvdIcon.png'
 import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { BookDetails } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
 
+// TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
 export const AuthorsBooks = () => {
     return (
@@ -22,9 +23,9 @@ export const AuthorsBooks = () => {
                     <StyledBoxListColumn>
                         <Box>
                             <StyledStackImg>
-                                <StyledBoxImg>
-                                    <img src={atomicOneSmall} alt="" />
-                                </StyledBoxImg>
+                                <StyledBoxBookCoverImg>
+                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
+                                </StyledBoxBookCoverImg>
                             </StyledStackImg>
                             <HeadingH4 sx={{mt:'20px'}}>Atomic One’s</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
@@ -41,9 +42,12 @@ export const AuthorsBooks = () => {
                     <StyledBoxListColumn>
                         <Box>
                             <StyledStackImg>
-                                <StyledBoxImg>
-                                    <img src={atomicOneSmall} alt="" />
-                                </StyledBoxImg>
+                                <StyledBoxBookCoverImg>
+                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
+                                </StyledBoxBookCoverImg>
+                                <StyledBoxBookIcon>
+                                    <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                                </StyledBoxBookIcon>
                             </StyledStackImg>
                             <HeadingH4 sx={{mt:'20px'}}>Atomic One’s (Audio)</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
@@ -60,9 +64,12 @@ export const AuthorsBooks = () => {
                     <StyledBoxListColumn>
                         <Box>
                             <StyledStackImg>
-                                <StyledBoxImg>
-                                    <img src={atomicOneSmall} alt="" />
-                                </StyledBoxImg>
+                                <StyledBoxBookCoverImg>
+                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
+                                </StyledBoxBookCoverImg>
+                                <StyledBoxBookIcon>
+                                    <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                                </StyledBoxBookIcon>
                             </StyledStackImg>
                             <HeadingH4 sx={{mt:'20px'}}>Atomic One’s + DVD</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
@@ -79,9 +86,9 @@ export const AuthorsBooks = () => {
                     <StyledBoxListColumn>
                         <Box>
                             <StyledStackImg>
-                                <StyledBoxImg>
-                                    <img src={theDarkLightSmall} alt="" />
-                                </StyledBoxImg>
+                                <StyledBoxBookCoverImg>
+                                    <img src={theDarkLightSmall} alt="the dark light book cover" />
+                                </StyledBoxBookCoverImg>
                             </StyledStackImg>
                             <HeadingH4 sx={{mt:'20px'}}>The Dark Light</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
@@ -98,9 +105,12 @@ export const AuthorsBooks = () => {
                     <StyledBoxListColumn>
                         <Box>
                             <StyledStackImg>
-                                <StyledBoxImg>
-                                    <img src={theDarkLightSmall} alt="" />
-                                </StyledBoxImg>
+                                <StyledBoxBookCoverImg>
+                                    <img src={theDarkLightSmall} alt="the dark light book cover" />
+                                </StyledBoxBookCoverImg>
+                                <StyledBoxBookIcon>
+                                    <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                                </StyledBoxBookIcon>
                             </StyledStackImg>
                             <HeadingH4 sx={{mt:'20px'}}>The Dark Light (Audio)</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
@@ -117,12 +127,12 @@ export const AuthorsBooks = () => {
                     <StyledBoxListColumn>
                         <Box>
                             <StyledStackImg>
-                                <StyledBoxImg>
-                                    <img src={theDarkLightSmall} alt="" />
-                                    <Box sx={{position:'absolute', top: '0', left:'0'}}>
-                                        <img src={audioImg} alt="" />
-                                    </Box>
-                                </StyledBoxImg>
+                                <StyledBoxBookCoverImg>
+                                    <img src={theDarkLightSmall} alt="the dark light book cover" />
+                                </StyledBoxBookCoverImg>
+                                <StyledBoxBookIcon>
+                                    <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
+                                </StyledBoxBookIcon>
                             </StyledStackImg>
                             <HeadingH4 sx={{mt:'20px'}}>The Dark Light + DVD</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
@@ -135,17 +145,15 @@ export const AuthorsBooks = () => {
                             </Box>
                         </Box>
                     </StyledBoxListColumn>
-                    
                 </StyledStackList>
-
             </Container>
         </StyledSection>
     );
 }
 
 const StyledSection = styled('section')`
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 145px;
+    padding-bottom: 145px;
     background-color: ${WHITE};
 `;
 
@@ -161,16 +169,23 @@ const StyledBoxListColumn = styled(Box)`
 `;
 
 const StyledStackImg = styled(Stack)`
-    flex-direction: row;
+    position: relative;
     justify-content: center;
     align-items: center;
     background-color: ${BACKGROUND};
 `;
 
-const StyledBoxImg = styled(Box)`
-    position: relative;
+const StyledBoxBookCoverImg = styled(Box)`
     padding: 28.65px 0px; 
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
+`;
+
+const StyledBoxBookIcon = styled(Box)`
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 80px;
+    height: 80px;
 `;
 
 const StyledParagraph = styled(Stack)`
@@ -178,4 +193,3 @@ const StyledParagraph = styled(Stack)`
     font-weight: 700;
     color: ${SECONDARY};
 `;
-
