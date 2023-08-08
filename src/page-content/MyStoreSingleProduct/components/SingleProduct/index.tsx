@@ -75,7 +75,7 @@ export const SingleProduct = () => {
                     <Grid container spacing={11} sx={{mt:'32px'}}>
                         <Grid item lg={6}>
                             <HeadingH4 sx={{textAlign:'center'}}>Do you offer discounts for education?</HeadingH4>
-                            <Paragraph sx={{mt:'10px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, bypassed injected humour, or randomised words which don't look even slightly believable.</Paragraph>                
+                            <Paragraph sx={{mt:'10px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, bypassed injected humour, or randomized words which don't look even slightly believable.</Paragraph>                
                         </Grid>
                         <Grid item lg={6}>
                             <HeadingH4 sx={{textAlign:'center'}}>Is this book for me?</HeadingH4>
