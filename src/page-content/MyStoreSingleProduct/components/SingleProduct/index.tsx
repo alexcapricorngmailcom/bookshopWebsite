@@ -1,17 +1,14 @@
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { Link as RouterLink } from 'react-router-dom'
 
-import atomicOneSmall from '../../../../shared/assets/img/atomicOneSmall.png'
-import theDarkLightSmall from '../../../../shared/assets/img/theDarkLightSmall.png'
-import audioIcon from '../../../../shared/assets/img/audioIcon.png'
-import dvdIcon from '../../../../shared/assets/img/dvdIcon.png'
-import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
+import atomicOneMedium from '../../../../shared/assets/img/atomicOneMedium.png'
+import { BACKGROUND, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
-import { BookDetails } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
@@ -20,123 +17,53 @@ export const SingleProduct = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <StyledStackList>
-                    <StyledBoxListColumn>
-                        <RouterLink to={'/storeItem1'}>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                                </StyledBoxBookCoverImg>
-                            </StyledStackImg>
-                        </RouterLink>
-                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s</HeadingH4>
+                <Grid container spacing={11} alignItems='center'>
+                    <Grid item lg={5}>
+                        <StyledStackImg>
+                            <StyledBoxBookCoverImg>
+                                <img src={atomicOneMedium} alt="atomic one’s book cover" />
+                            </StyledBoxBookCoverImg>
+                        </StyledStackImg>
+                    </Grid>
+                    <Grid item lg={7}>
+                        <HeadingH4>The Atomic One’s</HeadingH4>
                         <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book'/>
+                        <Paragraph sx={{mt:'10px'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum.</Paragraph>
+                        <Stack flexDirection='row' sx={{mt:'20px'}}>
+                            <StyledBox>
+                                <Paragraph>Publisher:</Paragraph>
+                                <Paragraph>Language:</Paragraph>
+                                <Paragraph>Paperback:</Paragraph>
+                                <Paragraph>ISBN-10:</Paragraph>
+                                <Paragraph>Dimensions:</Paragraph>
+                            </StyledBox>
+                            <StyledBox sx={{ml:'40px'}}>
+                                <Paragraph>Learning Private Limited (1 January 2021)</Paragraph>
+                                <Paragraph>English</Paragraph>
+                                <Paragraph>212 pages</Paragraph>
+                                <Paragraph>9788120345799</Paragraph>
+                                <Paragraph>20 x 14 x 4 cm</Paragraph>
+                            </StyledBox>
+                        </Stack>
+                        <Box component='form' sx={{mt:'30px'}}>
+                            <Stack flexDirection='row' justifyContent='space-between' width='100%'>
+                                <Box width='20%'>
+                                    <StyledTextField
+                                        id="outlined-number"
+                                        type="number"
+                                        defaultValue={1}
+                                        InputLabelProps={{
+                                            shrink: true,
+                                        }}
+                                    />
+                                </Box>
+                                <Box width='77%'>
+                                    <ButtonAction size='large' width='100%' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
+                                </Box>
+                            </Stack>
                         </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s (Audio)</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s + DVD</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book + Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={theDarkLightSmall} alt="the dark light book cover" />
-                            </StyledBoxBookCoverImg>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={theDarkLightSmall} alt="the dark light book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light (Audio)</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={theDarkLightSmall} alt="the dark light book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light + DVD</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book + Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                </StyledStackList>
+                    </Grid>
+                </Grid>
             </Container>
         </StyledSection>
     );
@@ -148,17 +75,6 @@ const StyledSection = styled('section')`
     background-color: ${WHITE};
 `;
 
-const StyledStackList = styled(Stack)`
-    flex-direction: row;
-    flex-wrap: wrap; 
-    margin: -20px;
-`;
-
-const StyledBoxListColumn = styled(Box)`
-    width: calc(100%/3);
-    padding: 20px;
-`;
-
 const StyledStackImg = styled(Stack)`
     position: relative;
     justify-content: center;
@@ -167,20 +83,33 @@ const StyledStackImg = styled(Stack)`
 `;
 
 const StyledBoxBookCoverImg = styled(Box)`
-    padding: 28.65px 0px; 
+    padding: 26.5px 0px; 
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
 `;
 
-const StyledBoxBookIcon = styled(Box)`
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 80px;
-    height: 80px;
-`;
-
 const StyledParagraph = styled(Stack)`
-    font-size: 22px;
+    display: inline-block;
+    font-size: 30px;
     font-weight: 700;
     color: ${SECONDARY};
 `;
+
+const StyledBox = styled(Box)`
+    p + p {
+        margin-top: 10px;
+    }
+`;
+
+const StyledTextField = styled(TextField)`
+    
+    & .MuiOutlinedInput-root {
+        height: 65px;
+    }
+
+    & .MuiOutlinedInput-notchedOutline {
+        border-radius: 0px;
+        border: 1px solid ${SECONDARY};
+    }
+    
+`;
+
