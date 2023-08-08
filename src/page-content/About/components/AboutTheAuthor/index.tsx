@@ -41,15 +41,15 @@ export const AboutTheAuthor = () => {
                                         <Paragraph>1991</Paragraph>
 
                                         <StyledBoxIcons>
-                                            <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
+                                            <StyledLink href='https://uk-ua.facebook.com/' >
                                                 <StyledFacebookIcon />
-                                            </Link>
-                                            <Link href='https://twitter.com/' target='_blank' rel="noopener">
+                                            </StyledLink>
+                                            <StyledLink href='https://twitter.com/' target='_blank' rel="noopener">
                                                 <StyledTwitterIcon />
-                                            </Link>
-                                            <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
+                                            </StyledLink>
+                                            <StyledLink href='https://ua.linkedin.com/' target='_blank' rel="noopener">
                                                 <StyledLinkedInIcon />
-                                            </Link>
+                                            </StyledLink>
                                         </StyledBoxIcons>
                                     </StyledBox>
                                 </Stack>
@@ -90,18 +90,23 @@ const StyledBox = styled(Box)`
 const StyledBoxIcons = styled(Box)`
     flex-direction: row;
     margin-top: 20px;
-
+    margin-left: -10px;
+    
     a + a {
-        margin-left: 25px;
+        margin-left: 15px;
     }
+`;
+
+const StyledLink = styled(Link)`
+    padding: 10px;
+
+    &:hover * {
+    fill: ${SECONDARY};
+}
 `;
 
 const StyledFacebookIcon = styled(FacebookIcon)`
     fill: ${MAIN};
-
-    &:hover {
-        fill: ${SECONDARY};
-    }
 `;
 
 const StyledTwitterIcon = styled(TwitterIcon)`

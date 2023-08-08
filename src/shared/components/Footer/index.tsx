@@ -14,7 +14,7 @@ import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/lin
 import { ReactComponent as InstagramIcon } from '../../../shared/assets/icons/instagramIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { HeadingH5, Paragraph } from '../../../design-system/typography';
-import { SquareSmallOutlined } from '../../../design-system/geometry/squares';
+import { SquareSmall } from '../../../design-system/geometry/squares';
 
 export const Footer = () => {
     return(
@@ -27,24 +27,24 @@ export const Footer = () => {
                         </RouterLink>
                         <StyledBoxLogo>
                             <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
-                                <SquareSmallOutlined>
-                                    <StyledFacebookIcon />
-                                </SquareSmallOutlined>
+                                <StyledSquareSmall>
+                                    <StyledFacebookIcon height='18px'/>
+                                </StyledSquareSmall>
                             </Link>
                             <Link href='https://twitter.com/' target='_blank' rel="noopener">
-                                <SquareSmallOutlined>
-                                    <StyledTwitterIcon />
-                                </SquareSmallOutlined>
+                                <StyledSquareSmall>
+                                    <StyledTwitterIcon height='18px' />
+                                </StyledSquareSmall>
                             </Link>
                             <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
-                                <SquareSmallOutlined>
-                                    <StyledLinkedInIcon />
-                                </SquareSmallOutlined>
+                                <StyledSquareSmall>
+                                    <StyledLinkedInIcon height='18px' />
+                                </StyledSquareSmall>
                             </Link>
                             <Link href='https://www.instagram.com/' target='_blank' rel="noopener">
-                                <SquareSmallOutlined>
-                                    <StyledInstagramIcon/>
-                                </SquareSmallOutlined>
+                                <StyledSquareSmall>
+                                    <StyledInstagramIcon height='18px' />
+                                </StyledSquareSmall>
                             </Link>
                         </StyledBoxLogo>
                     </Box>
@@ -176,34 +176,27 @@ const StyledBox = styled(Box)`
     background-color: ${WHITE};
 `;
 
-const StyledFacebookIcon = styled(FacebookIcon)`
-    fill: ${WHITE};
+const StyledSquareSmall = styled(SquareSmall)`
+    background-color: transparent;
+    border: 1px solid ${SECONDARY};
 
-    &:hover {
+    &:hover * {
         fill: ${SECONDARY};
     }
+`;
+
+const StyledFacebookIcon = styled(FacebookIcon)`
+    fill: ${WHITE};
 `;
 
 const StyledTwitterIcon = styled(TwitterIcon)`
     fill: ${WHITE};
-
-    &:hover {
-        fill: ${SECONDARY};
-    }
 `;
 
 const StyledLinkedInIcon = styled(LinkedInIcon)`
     fill: ${WHITE};
-
-    &:hover {
-        fill: ${SECONDARY};
-    }
 `;
 
 const StyledInstagramIcon = styled(InstagramIcon)`
     fill: ${WHITE};
-
-    &:hover {
-        fill: ${SECONDARY};
-    }
 `;

@@ -28,19 +28,19 @@ export const Header = () => {
                         </Box>
                         <StyledLogoItemBox>
                                 <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
-                                    <SquareSmall>
-                                        <StyledFacebookIcon />
-                                    </SquareSmall>
+                                    <StyledSquareSmall>
+                                        <StyledFacebookIcon height='18px' />
+                                    </StyledSquareSmall>
                                 </Link>
                                 <Link href='https://twitter.com/' target='_blank' rel="noopener">
-                                    <SquareSmall>
-                                        <StyledTwitterIcon />
-                                    </SquareSmall>
+                                    <StyledSquareSmall>
+                                        <StyledTwitterIcon height='18px' />
+                                    </StyledSquareSmall>
                                 </Link>
                                 <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
-                                    <SquareSmall>
-                                        <StyledLinkedInIcon />
-                                    </SquareSmall>
+                                    <StyledSquareSmall>
+                                        <StyledLinkedInIcon height='18px' />
+                                    </StyledSquareSmall>
                                 </Link>
                         </StyledLogoItemBox>
                     </Stack>
@@ -124,27 +124,22 @@ const StyledBadge = styled(Badge)`
     }
 `;
 
-const StyledFacebookIcon = styled(FacebookIcon)`
-    fill: ${MAIN};
+const StyledSquareSmall = styled(SquareSmall)`
 
-    &:hover {
+    &:hover * {
         fill: ${SECONDARY};
     }
+`;
+
+const StyledFacebookIcon = styled(FacebookIcon)`
+    fill: ${MAIN};
 `;
 
 const StyledTwitterIcon = styled(TwitterIcon)`
     fill: ${MAIN};
-
-    &:hover {
-        fill: ${SECONDARY};
-    }
 `;
 
 const StyledLinkedInIcon = styled(LinkedInIcon)`
     fill: ${MAIN};
-
-    &:hover {
-        fill: ${SECONDARY};
-    }
 `;
 
