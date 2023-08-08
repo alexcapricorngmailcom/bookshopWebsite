@@ -14,7 +14,7 @@ import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/lin
 import { ReactComponent as InstagramIcon } from '../../../shared/assets/icons/instagramIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { HeadingH5, Paragraph } from '../../../design-system/typography';
-import { SquareMediumOutlined } from '../../../design-system/geometry/squares';
+import { SquareSmallOutlined } from '../../../design-system/geometry/squares';
 
 export const Footer = () => {
     return(
@@ -27,24 +27,24 @@ export const Footer = () => {
                         </RouterLink>
                         <StyledBoxLogo>
                             <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
-                                <SquareMediumOutlined>
+                                <SquareSmallOutlined>
                                     <StyledFacebookIcon />
-                                </SquareMediumOutlined>
+                                </SquareSmallOutlined>
                             </Link>
                             <Link href='https://twitter.com/' target='_blank' rel="noopener">
-                                <SquareMediumOutlined>
+                                <SquareSmallOutlined>
                                     <StyledTwitterIcon />
-                                </SquareMediumOutlined>
+                                </SquareSmallOutlined>
                             </Link>
                             <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
-                                <SquareMediumOutlined>
+                                <SquareSmallOutlined>
                                     <StyledLinkedInIcon />
-                                </SquareMediumOutlined>
+                                </SquareSmallOutlined>
                             </Link>
                             <Link href='https://www.instagram.com/' target='_blank' rel="noopener">
-                                <SquareMediumOutlined>
+                                <SquareSmallOutlined>
                                     <StyledInstagramIcon/>
-                                </SquareMediumOutlined>
+                                </SquareSmallOutlined>
                             </Link>
                         </StyledBoxLogo>
                     </Box>

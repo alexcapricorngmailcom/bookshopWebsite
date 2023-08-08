@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { SECONDARY, WHITE } from '../../colors'
 
-export const SquareMedium = styled('div')`
+export const SquareSmall = styled('div')`
     width: 45px;
     height: 45px;
     display: flex;
@@ -10,7 +10,7 @@ export const SquareMedium = styled('div')`
     background-color: ${WHITE};
 `;
 
-export const SquareMediumOutlined = styled('div')`
+export const SquareSmallOutlined = styled('div')`
     width: 45px;
     height: 45px;
     display: flex;
@@ -20,9 +20,18 @@ export const SquareMediumOutlined = styled('div')`
     border: 1px solid ${SECONDARY};
 `;
 
-export const SquareLarge= styled('div')`
+export const SquareMedium = styled('div')`
     width: 65px;
     height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${SECONDARY};
+`;
+
+export const SquareLarge = styled('div')`
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;

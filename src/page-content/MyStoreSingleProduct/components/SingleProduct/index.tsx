@@ -16,13 +16,13 @@ import { ButtonAction } from '../../../../design-system/Button';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
-export const AuthorsBooks = () => {
+export const SingleProduct = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
                 <StyledStackList>
                     <StyledBoxListColumn>
-                        <RouterLink to={'/singleproduct'}>
+                        <RouterLink to={'/storeItem1'}>
                             <StyledStackImg>
                                 <StyledBoxBookCoverImg>
                                     <img src={atomicOneSmall} alt="atomic one’s book cover" />

@@ -13,7 +13,7 @@ import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/twit
 import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/linkedInIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
-import { SquareMedium } from "../../../design-system/geometry/squares";
+import { SquareSmall } from "../../../design-system/geometry/squares";
 
 export const Header = () => {
     return(
@@ -28,19 +28,19 @@ export const Header = () => {
                         </Box>
                         <StyledLogoItemBox>
                                 <Link href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
-                                    <SquareMedium>
+                                    <SquareSmall>
                                         <StyledFacebookIcon />
-                                    </SquareMedium>
+                                    </SquareSmall>
                                 </Link>
                                 <Link href='https://twitter.com/' target='_blank' rel="noopener">
-                                    <SquareMedium>
+                                    <SquareSmall>
                                         <StyledTwitterIcon />
-                                    </SquareMedium>
+                                    </SquareSmall>
                                 </Link>
                                 <Link href='https://ua.linkedin.com/' target='_blank' rel="noopener">
-                                    <SquareMedium>
+                                    <SquareSmall>
                                         <StyledLinkedInIcon />
-                                    </SquareMedium>
+                                    </SquareSmall>
                                 </Link>
                         </StyledLogoItemBox>
                     </Stack>
@@ -48,7 +48,7 @@ export const Header = () => {
                         <StyledHeaderNavLinkBox>
                             <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/store'>My Store</StyledHeaderNavLink>
+                            <StyledHeaderNavLink to='/mystore'>My Store</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/contact'>Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>

@@ -8,7 +8,7 @@ import myStory from './assets/myStory.png'
 import { WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { SquareLarge } from '../../../../design-system/geometry/squares';
+import { SquareMedium } from '../../../../design-system/geometry/squares';
 
 export const MyStory = () => {
     return (
@@ -22,9 +22,9 @@ export const MyStory = () => {
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row'>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareLarge>
+                                    <SquareMedium>
                                         <HeadingH5>01</HeadingH5>
-                                    </SquareLarge>
+                                    </SquareMedium>
                                 </Box>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>Great Author Awards - 1996 & 2000</HeadingH5>
@@ -33,9 +33,9 @@ export const MyStory = () => {
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'35px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareLarge>
+                                    <SquareMedium>
                                         <HeadingH5>02</HeadingH5>
-                                    </SquareLarge>
+                                    </SquareMedium>
                                 </Box>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>10 times NYT &#174; Best Seller</HeadingH5>
@@ -44,9 +44,9 @@ export const MyStory = () => {
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'35px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareLarge>
+                                    <SquareMedium>
                                         <HeadingH5>03</HeadingH5>
-                                    </SquareLarge>
+                                    </SquareMedium>
                                 </Box>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>Writer of Hack Productivity</HeadingH5>

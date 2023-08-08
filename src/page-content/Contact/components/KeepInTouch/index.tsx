@@ -10,7 +10,7 @@ import { ReactComponent as PhoneIcon } from './assets/phoneIcon.svg'
 import { MAIN, WHITE } from '../../../../design-system/colors';
 import { HeadingH3, HeadingH5, Paragraph } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
-import { SquareLarge } from '../../../../design-system/geometry/squares';
+import { SquareMedium } from '../../../../design-system/geometry/squares';
 import { Form } from '../../../../design-system/Form';
 
 export const KeepInTouch = () => {
@@ -25,9 +25,9 @@ export const KeepInTouch = () => {
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row' >
                                 <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareLarge>
+                                    <SquareMedium>
                                         <HomeIcon stroke={MAIN} />
-                                    </SquareLarge>
+                                    </SquareMedium>
                                 </Box>
                                 <Box>
                                     <HeadingH5>Visit Us :</HeadingH5>
@@ -36,9 +36,9 @@ export const KeepInTouch = () => {
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'22px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareLarge>
+                                    <SquareMedium>
                                         <EmailIcon stroke={MAIN} />
-                                    </SquareLarge>
+                                    </SquareMedium>
                                 </Box>
                                 <Box>
                                     <HeadingH5>Drop Us :</HeadingH5>
@@ -47,9 +47,9 @@ export const KeepInTouch = () => {
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'22px'}}>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareLarge>
+                                    <SquareMedium>
                                         <PhoneIcon stroke={MAIN} />
-                                    </SquareLarge>
+                                    </SquareMedium>
                                 </Box>
                                 <Box>
                                     <HeadingH5>Call Us :</HeadingH5>
