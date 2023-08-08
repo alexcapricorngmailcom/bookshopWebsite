@@ -56,6 +56,14 @@ export const SingleProduct = () => {
                                             defaultValue={1}
                                             inputProps={{
                                                 min: 1,
+                                                style: { 
+                                                    fontFamily: 'Inter, sans-serif',
+                                                    fontSize: '19px',
+                                                    fontWeight: '500',
+                                                    lineHeight: '170%',
+                                                    letterSpacing: '-0.01em',
+                                                    color: MAIN
+                                                }
                                             }}
                                             InputLabelProps={{
                                                 shrink: true,
@@ -122,17 +130,18 @@ const StyledBox = styled(Box)`
 
 const StyledTextField = styled(TextField)`
 
+
+    .MuiOutlinedInput-notchedOutline {
+        border-radius: 0px;
+        border: 1px solid ${SECONDARY};
+    }
+
     .MuiOutlinedInput-root {
         height: 65px;
 
         &:hover fieldset {
             border-color: ${MAIN} ;
         }
-    }
-
-    .MuiOutlinedInput-notchedOutline {
-        border-radius: 0px;
-        border: 1px solid ${SECONDARY};
     }
     
     .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
