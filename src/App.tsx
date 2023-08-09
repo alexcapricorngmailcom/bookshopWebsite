@@ -10,6 +10,9 @@ import { Contact } from './page-content/Contact';
 import { Error404 } from './page-content/Error404';
 import { Footer } from "./shared/components/Footer";
 
+// test
+import { SingleArticle } from './page-content/SingleArticle';
+
 function App() {
   return (
       <div className="App">
@@ -19,7 +22,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="/myStore" element={<MyStore />} />
           <Route path="/singleProduct" element={<MyStoreSingleProduct />} />
-          <Route path="/articles" element={<Articles />} />
+          {/* <Route path="/articles" element={<Articles />} /> */}
+          <Route path="/singleArticle" element={<SingleArticle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

@@ -10,7 +10,7 @@ export const CommonHero = ({title, paragraph}:HeroProps) => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Stack alignItems='center'>
+                <Stack alignItems='center' textAlign='center'>
                     <HeadingH1 sx={{color: WHITE}}>{title}</HeadingH1>
                     <LineLarge sx={{mt:'32px'}} />
                     <StyledParagraph>{paragraph}</StyledParagraph>
@@ -34,6 +34,5 @@ const StyledSection = styled('section')`
 const StyledParagraph = styled(Paragraph)`
     max-width: 600px; 
     margin-top: 35px;
-    text-align: center; 
     color: ${PARAGRAPH_SECONDARY};
 `;

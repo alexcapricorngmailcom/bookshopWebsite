@@ -49,7 +49,8 @@ export const Header = () => {
                             <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/myStore'>My Store</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/articles'>Articles</StyledHeaderNavLink>
+                            {/* <StyledHeaderNavLink to='/articles'>Articles</StyledHeaderNavLink> */}
+                            <StyledHeaderNavLink to='/singleArticle'>Articles</StyledHeaderNavLink>
                             <StyledHeaderNavLink to='/contact'>Contact</StyledHeaderNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
