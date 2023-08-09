@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
+import { WHITE } from '../../../../design-system/colors';
 import { Article } from '../../../../shared/components/Article/Article';
 import articlesAndResourcesImg1 from '../../../Home/components/ArticlesAndResources/assets/articlesAndResourcesImg1.png'
 
