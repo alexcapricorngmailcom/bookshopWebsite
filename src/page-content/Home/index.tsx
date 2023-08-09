@@ -6,7 +6,7 @@ import { GetBookCopyToday } from "./components/GetBookCopyToday"
 import { WhatWillYouLearn } from "./components/WhatWillYouLearn"
 import { TheChapterIncludes } from "./components/TheChapterIncludes"
 import { WhatReadersSay } from "./components/WhatReadersSay"
-import { ArticlesResources } from "./components/ArticlesResources"
+import { ArticlesAndResources } from "./components/ArticlesAndResources"
 import { ReadFreeChapterSection } from "./components/ReadFreeChapterSection"
 
 export const Home = () => {
@@ -20,7 +20,7 @@ export const Home = () => {
             <WhatWillYouLearn />
             <TheChapterIncludes />
             <WhatReadersSay />
-            <ArticlesResources />
+            <ArticlesAndResources />
             <ReadFreeChapterSection />
         </main>
     )

@@ -22,7 +22,7 @@ export const AuthorsBooks = () => {
             <Container maxWidth='lg'>
                 <StyledStackList>
                     <StyledBoxListColumn>
-                        <RouterLink to={'/singleproduct'}>
+                        <RouterLink to={'/singleProduct'}>
                             <StyledStackImg>
                                 <StyledBoxBookCoverImg>
                                     <img src={atomicOneSmall} alt="atomic one’s book cover" />
