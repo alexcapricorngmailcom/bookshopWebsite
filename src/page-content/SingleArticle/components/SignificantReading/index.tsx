@@ -23,7 +23,7 @@ export const SignificantReading = () => {
             <Container maxWidth='lg'>
                 <article>
                     <Box sx={{width:'100%'}}>
-                        <img src={significantReading} style={{width:'100%', height:'100%', objectFit:'contain'}} alt="" />
+                        <img src={significantReading} style={{width:'100%', height:'100%', objectFit:'contain', borderRadius:'5px'}} alt="" />
                     </Box>
                     <HeadingH5 sx={{mt:'15px'}}>October 6, 2021 / Classics</HeadingH5>
                     <Paragraph sx={{mt:'30px'}}>There are many variations of passages of Lorem Ipsum available, but the major it have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, need to be sure there isn't anything embarrassing hidden in the middle of text. All thLorem Ipsum generators on the Internet tend.</Paragraph>
@@ -57,9 +57,43 @@ export const SignificantReading = () => {
                                 </Stack>
                             </li>
                         </ul>
+                    </Box>
+                    
+                    <Box sx={{mt:'40px'}}>
                         <Quote>“Crowdsource term sheet freemium beta stealth responsive web design niche market rock star channels.”</Quote>
                     </Box>
 
+                    <HeadingH4 sx={{mt:'40px'}}>The perfect book for all</HeadingH4>
+                    <Paragraph sx={{mt:'30px'}}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has less normal distribution of letters, as opposed.</Paragraph>
+
+                    <Box sx={{mt:'20px'}}>
+                        <ul>
+                            <li>
+                                <Stack flexDirection='row' alignItems='center'>
+                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
+                                    <Paragraph sx={{ml:'15px', color: MAIN}}>It has roots in a piece of classical Latin literature from 45 BC</Paragraph>
+                                </Stack>
+                            </li>
+                            <li>
+                                <Stack flexDirection='row' alignItems='center'>
+                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
+                                    <Paragraph sx={{ml:'15px', color: MAIN}}>To generate Lorem Ipsum which looks reasonable</Paragraph>
+                                </Stack>
+                            </li>
+                            <li>
+                                <Stack flexDirection='row' alignItems='center'>
+                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
+                                    <Paragraph sx={{ml:'15px', color: MAIN}}>The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet</Paragraph>
+                                </Stack>
+                            </li>
+                            <li>
+                                <Stack flexDirection='row' alignItems='center'>
+                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
+                                    <Paragraph sx={{ml:'15px', color: MAIN}}>Be standard chunk of Lorem used since the 1500s</Paragraph>
+                                </Stack>
+                            </li>
+                        </ul>
+                    </Box>
                 </article>
             </Container>
         </StyledSection>

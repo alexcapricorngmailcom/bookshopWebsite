@@ -32,5 +32,5 @@ const StyledStack = styled(Stack)`
 const StyledQuoteIcon = styled(QuoteIcon)`
     position: absolute;
     top: 0;
-    left: 25px;
+    left: 3%;
 `;
