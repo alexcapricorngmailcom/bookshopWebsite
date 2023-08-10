@@ -1,30 +1,25 @@
-import { styled } from '@mui/material/styles';
-
-import { MAIN } from '../../colors';
+import { MAIN, SECONDARY } from '../../colors';
 import { Paragraph } from '../../typography';
-import { ReactNode } from 'react';
+import { Stack } from '@mui/material';
+import { list } from '../../../page-content/SingleArticle/components/SignificantReading';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-const people = [
-    '1',
-    '2',
-    '3'
-];
+// TODO discuss with polimouse export [] and index
 
-const listItems = people.map(person =>
-    <li>{person}</li>
-);
+// const listItems = list.map((person) =>
+//     <li>
+//         <Stack flexDirection='row' alignItems='center'>
+//             <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
+//             <Paragraph sx={{ml:'15px', color: MAIN}}>{person}</Paragraph>
+//         </Stack>
+//     </li>
+// );
+// {listItems}
 
-export const UnorderedList = ({children}:UnorderedListProps) => {
-    return (
-        <ul>
-            <li><Paragraph sx={{color: MAIN}}>{children}</Paragraph></li>
-            <li><Paragraph sx={{color: MAIN}}>{children}</Paragraph></li>
-            <li><Paragraph sx={{color: MAIN}}>{children}</Paragraph></li>
-            <li><Paragraph sx={{color: MAIN}}>{children}</Paragraph></li>
-        </ul>
-    );
-}
-
-type UnorderedListProps = {
-    children: ReactNode;
-}
+// export const UnorderedList = () => {
+//     return (
+//         <ul>
+//             {listItems}
+//         </ul>
+//     );
+// }
