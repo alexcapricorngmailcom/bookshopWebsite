@@ -47,15 +47,15 @@ export const Header = () => {
                     <Stack flexDirection='row' alignItems='center'>
                         <StyledHeaderNavLinkBox>
                             <StyledNavLink
-                                    to="/"
-                                    style={({ isActive }) => {
-                                        return {
-                                            color: isActive ? SECONDARY : WHITE,
-                                        };
-                                    }}
-                                >
-                                Home
-                                </StyledNavLink>
+                                to="/"
+                                style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? SECONDARY : WHITE,
+                                    };
+                                }}
+                            >
+                            Home
+                            </StyledNavLink>
                             <StyledNavLink
                                 to="/about"
                                 style={({ isActive }) => {
@@ -120,15 +120,6 @@ export const Header = () => {
     );
 }
 
-const StyledNavLink = styled(NavLink)`
-    font-family: Inter, sans-serif;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 170%;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-`;
-
 const StyledHeader = styled('header')`
     position: absolute;
     top: 40px;
@@ -152,24 +143,25 @@ const StyledLogoItemBox = styled(Box)`
     }
 `;
 
+// TODO discuss important with polimouse 
+
 const StyledHeaderNavLinkBox = styled(Box)`
     a + a {
         margin-left: 30px;
     }
 
     & > a:hover {
-        color: ${SECONDARY};
+        color: ${SECONDARY} !important;
     }
 `;
 
-const StyledHeaderNavLink = styled(RouterLink)`
+const StyledNavLink = styled(NavLink)`
     font-family: Inter, sans-serif;
     font-size: 17px;
     font-weight: 500;
     line-height: 170%;
     letter-spacing: -0.01em;
     text-decoration: none;
-    color: ${WHITE};
 `;
 
 const StyledBadge = styled(Badge)`
