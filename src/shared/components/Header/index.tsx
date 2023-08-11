@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import Link from '@mui/material/Link';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { Link as RouterLink } from 'react-router-dom'
+import { NavLink, Link as RouterLink } from 'react-router-dom'
 
 import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/pagesIcon.svg'
 import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/facebookIcon.svg'
@@ -46,12 +46,66 @@ export const Header = () => {
                     </Stack>
                     <Stack flexDirection='row' alignItems='center'>
                         <StyledHeaderNavLinkBox>
-                            <StyledHeaderNavLink to="/">Home</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/about'>About</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/myStore'>My Store</StyledHeaderNavLink>
-                            {/* <StyledHeaderNavLink to='/articles'>Articles</StyledHeaderNavLink> */}
-                            <StyledHeaderNavLink to='/singleArticle'>Articles</StyledHeaderNavLink>
-                            <StyledHeaderNavLink to='/contact'>Contact</StyledHeaderNavLink>
+                            <StyledNavLink
+                                    to="/"
+                                    style={({ isActive }) => {
+                                        return {
+                                            color: isActive ? SECONDARY : WHITE,
+                                        };
+                                    }}
+                                >
+                                Home
+                                </StyledNavLink>
+                            <StyledNavLink
+                                to="/about"
+                                style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? SECONDARY : WHITE,
+                                    };
+                                }}
+                            >
+                            About
+                            </StyledNavLink>
+                            <StyledNavLink
+                                to="/myStore"
+                                style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? SECONDARY : WHITE,
+                                    };
+                                }}
+                            >
+                            My Store
+                            </StyledNavLink>
+                            {/* <StyledNavLink
+                                to="/articles"
+                                style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? SECONDARY : WHITE,
+                                    };
+                                }}
+                            >
+                            Articles
+                            </StyledNavLink> */}
+                            <StyledNavLink
+                                to="/singleArticle"
+                                style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? SECONDARY : WHITE,
+                                    };
+                                }}
+                            >
+                            Articles
+                            </StyledNavLink>
+                            <StyledNavLink
+                                to="/contact"
+                                style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? SECONDARY : WHITE,
+                                    };
+                                }}
+                            >
+                            Contact
+                            </StyledNavLink>
                         </StyledHeaderNavLinkBox>
                         <StyledBadge badgeContent={1} color='error'>
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
@@ -65,6 +119,15 @@ export const Header = () => {
         </StyledHeader>
     );
 }
+
+const StyledNavLink = styled(NavLink)`
+    font-family: Inter, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+`;
 
 const StyledHeader = styled('header')`
     position: absolute;
@@ -93,6 +156,10 @@ const StyledHeaderNavLinkBox = styled(Box)`
     a + a {
         margin-left: 30px;
     }
+
+    & > a:hover {
+        color: ${SECONDARY};
+    }
 `;
 
 const StyledHeaderNavLink = styled(RouterLink)`
@@ -103,14 +170,6 @@ const StyledHeaderNavLink = styled(RouterLink)`
     letter-spacing: -0.01em;
     text-decoration: none;
     color: ${WHITE};
-    
-    & > a + a {
-        margin-left: 10px;
-    }
-
-    &:hover, &:active {
-        color: ${SECONDARY};
-    }
 `;
 
 const StyledBadge = styled(Badge)`
@@ -127,7 +186,6 @@ const StyledBadge = styled(Badge)`
 `;
 
 const StyledSquareSmall = styled(SquareSmall)`
-
     &:hover * {
         fill: ${SECONDARY};
     }
