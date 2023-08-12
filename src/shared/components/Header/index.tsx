@@ -14,6 +14,7 @@ import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/lin
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareSmall } from "../../../design-system/geometry/squares";
+import { BasicModal } from "../../functions/BasicModal";
 
 
 const setActive = ({ isActive }:any) => {
@@ -90,9 +91,10 @@ export const Header = () => {
                             Contact
                             </StyledNavLink>
                         </StyledHeaderNavLinkBox>
-                        <StyledBadge badgeContent={1} color='error'>
+                        {BasicModal()}
+                        {/* <StyledBadge badgeContent={1} color='error'>
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
-                        </StyledBadge>
+                        </StyledBadge> */}
                         <Box ml='30px'>
                             <ButtonAction size="small" width ='160px' height="50px" variant="contained">Order Today</ButtonAction>
                         </Box>
@@ -149,6 +151,7 @@ const StyledNavLink = styled(NavLink)`
 
 const StyledBadge = styled(Badge)`
     margin-Left: 30px;
+    cursor: pointer;
 
     & .MuiBadge-badge {
         color: ${MAIN};
@@ -156,7 +159,6 @@ const StyledBadge = styled(Badge)`
         font-family: Inter, sans-serif;
         font-size: 12px;
         font-weight: 700;
-        cursor: pointer;
     }
 `;
 
