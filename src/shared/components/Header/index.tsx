@@ -15,6 +15,13 @@ import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareSmall } from "../../../design-system/geometry/squares";
 
+
+const setActive = ({ isActive }:any) => {
+    return {
+        color: isActive ? SECONDARY : WHITE,
+    };
+};
+
 export const Header = () => {
     return(
         <StyledHeader>
@@ -48,61 +55,37 @@ export const Header = () => {
                         <StyledHeaderNavLinkBox>
                             <StyledNavLink
                                 to="/"
-                                style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? SECONDARY : WHITE,
-                                    };
-                                }}
+                                style={setActive}
                             >
                             Home
                             </StyledNavLink>
                             <StyledNavLink
                                 to="/about"
-                                style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? SECONDARY : WHITE,
-                                    };
-                                }}
+                                style={setActive}
                             >
                             About
                             </StyledNavLink>
                             <StyledNavLink
                                 to="/myStore"
-                                style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? SECONDARY : WHITE,
-                                    };
-                                }}
+                                style={setActive}
                             >
                             My Store
                             </StyledNavLink>
                             {/* <StyledNavLink
                                 to="/articles"
-                                style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? SECONDARY : WHITE,
-                                    };
-                                }}
+                                style={setActive}
                             >
                             Articles
                             </StyledNavLink> */}
                             <StyledNavLink
                                 to="/singleArticle"
-                                style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? SECONDARY : WHITE,
-                                    };
-                                }}
+                                style={setActive}
                             >
                             Articles
                             </StyledNavLink>
                             <StyledNavLink
                                 to="/contact"
-                                style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? SECONDARY : WHITE,
-                                    };
-                                }}
+                                style={setActive}
                             >
                             Contact
                             </StyledNavLink>
