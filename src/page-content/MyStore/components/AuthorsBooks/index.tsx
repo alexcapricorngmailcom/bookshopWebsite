@@ -14,6 +14,8 @@ import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { BookDetails } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
 
+import mockedDataprodutcs from '../../../../mockedDataprodutcs.json'
+
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
 export const AuthorsBooks = () => {

@@ -1,0 +1,28 @@
+{
+    "books": [
+        {
+            "id":"qwerty",
+            "mainImg": "https:",
+            "mainalt": "atomic one’s book cover",
+            "header": "Atomic One’s (Audio)",
+            "price": "$14.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Printed Book",
+            "secondaryImg": null,
+            "secondaryalt": null
+        },
+        {   
+            "id":"qwerty2",
+            "mainImg": "https:",
+            "mainalt": "atomic one’s book cover",
+            "header": "Atomic One’s (Audio)",
+            "price": "$14.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Printed Book",
+            "secondaryImg": "https:",
+            "secondaryalt": "atomic one’s book cover"
+        }
+    
+    
+    ]
+}
