@@ -72,14 +72,8 @@ export const Header = () => {
                             >
                             My Store
                             </StyledNavLink>
-                            {/* <StyledNavLink
-                                to="/articles"
-                                style={setActive}
-                            >
-                            Articles
-                            </StyledNavLink> */}
                             <StyledNavLink
-                                to="/singleArticle"
+                                to="/articles"
                                 style={setActive}
                             >
                             Articles

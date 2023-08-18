@@ -25,11 +25,11 @@ export const Article = ({title, paragraph, author, img, alt}:ArticleProps) => {
 }
 
 type ArticleProps = {
-    title: string,
+    title: string
     paragraph: string
     author: string
     img: string | undefined
-    alt: string
+    alt: string | undefined
 }
 
 const StyledParagraphLink = styled(Paragraph)`

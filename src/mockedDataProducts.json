@@ -1,0 +1,79 @@
+{
+    "storeItems": [
+        {
+            "id": 1,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneSmall.png?raw=true",
+            "mainImgAlt": "atomic one’s book cover",
+            "title": "Atomic One’s",
+            "price": "$24.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Printed Book",
+            "positionedIcon": false,
+            "secondaryImgSrc": "",
+            "secondaryImgAlt": ""
+        },
+        {   
+            "id": 2,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneSmall.png?raw=true",
+            "mainImgAlt": "atomic one’s book cover",
+            "title": "Atomic One’s (Audio)",
+            "price": "$14.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Audiobook",
+            "positionedIcon": true,
+            "secondaryImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/audioIcon.png?raw=true",
+            "secondaryImgAlt": "audio icon"
+        },
+        {   
+            "id": 3,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneSmall.png?raw=true",
+            "mainImgAlt": "atomic one’s book cover",
+            "title": "Atomic One’s + DVD",
+            "price": "$34.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Printed Book + Audiobook",
+            "positionedIcon": true,
+            "secondaryImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/dvdIcon.png?raw=true",
+            "secondaryImgAlt": "dvd icon"
+        },
+        {
+            "id": 4,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/theDarkLightSmall.png?raw=true",
+            "mainImgAlt": "the dark light book cover",
+            "title": "The Dark Light",
+            "price": "$24.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Printed Book",
+            "positionedIcon": false,
+            "secondaryImgSrc": "",
+            "secondaryImgAlt": ""
+        },
+        {   
+            "id": 5,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/theDarkLightSmall.png?raw=true",
+            "mainImgAlt": "the dark light book cover",
+            "title": "The Dark Light (Audio)",
+            "price": "$14.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Audiobook",
+            "positionedIcon": true,
+            "secondaryImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/audioIcon.png?raw=true",
+            "secondaryImgAlt": "audio icon"
+        },
+        {   
+            "id": 6,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/theDarkLightSmall.png?raw=true",
+            "mainImgAlt": "the dark light book cover",
+            "title": "The Dark Light + DVD",
+            "price": "$34.99",
+            "description": "Many variations of passages of Lorem willing araise alteration in some form.",
+            "type": "Printed Book + Audiobook",
+            "positionedIcon": true,
+            "secondaryImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/dvdIcon.png?raw=true",
+            "secondaryImgAlt": "dvd icon"
+        }
+        
+        
+    
+    ]
+}

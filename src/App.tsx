@@ -21,9 +21,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="/myStore" element={<MyStore />} />
-          <Route path="/singleProduct" element={<MyStoreSingleProduct />} />
-          {/* <Route path="/articles" element={<Articles />} /> */}
-          <Route path="/singleArticle" element={<SingleArticle />} />
+          <Route path="/singleProduct1" element={<MyStoreSingleProduct />} />
+          <Route path="/articles" element={<Articles />} />
+          {/* <Route path="/singleArticle" element={<SingleArticle />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

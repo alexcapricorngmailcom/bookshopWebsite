@@ -1,0 +1,76 @@
+{
+    "articlesItems": [
+        {
+            "id": 1,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article001.png?raw=true",
+            "mainImgAlt": "girl in kitchen",
+            "title": "Significant reading has more info number",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 2,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article002.png?raw=true",
+            "mainImgAlt": "thinking fast and slow book cover",
+            "title": "Release of Letraset sheets tools containing  passages",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 3,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article003.png?raw=true",
+            "mainImgAlt": "girl reading a book",
+            "title": "The energy efficiency offers hydrotherapy or swim",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 4,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article004.png?raw=true",
+            "mainImgAlt": "books on shelves",
+            "title": "The energy efficiency offers hydrotherapy or swim",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 5,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article005.png?raw=true",
+            "mainImgAlt": "love skip jump book cover",
+            "title": "Significant reading has more info number",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 6,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article006.png?raw=true",
+            "mainImgAlt": "woman reading",
+            "title": "Release of Letraset sheets tools containing  passages",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 7,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article007.png?raw=true",
+            "mainImgAlt": "flying booksheets",
+            "title": "Release of Letraset sheets tools containing  passages",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 8,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article008.png?raw=true",
+            "mainImgAlt": "do what your love book cover",
+            "title": "The energy efficiency offers hydrotherapy or swim",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        },
+        {
+            "id": 9,
+            "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Article/article009.png?raw=true",
+            "mainImgAlt": "girl reading with dog",
+            "title": "Significant reading has more info number",
+            "description": "The point of using Lorem hiter of that using making it look like others readable will get end.",
+            "date": "Author - 23.05.2022"
+        }
+    ]
+}

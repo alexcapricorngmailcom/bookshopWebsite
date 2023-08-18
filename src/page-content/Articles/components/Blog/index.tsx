@@ -5,49 +5,26 @@ import Box from '@mui/material/Box';
 
 import { WHITE } from '../../../../design-system/colors';
 import { Article } from '../../../../shared/components/Article/Article';
-import articlesAndResourcesImg1 from '../../../Home/components/ArticlesAndResources/assets/articlesAndResourcesImg1.png'
+
+import mockedDataArticles from '../../../../mockedDataArticles.json'
 
 export const Blog = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
                 <StyledStackList>
-                    <StyledBoxListColumn>
-                        <Article
-                            title='The energy efficiency offers hydrotherapy or swim'
-                            paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                            author='Author - 23.05.2022'
-                            img={articlesAndResourcesImg1}
-                            alt='blog image 1'
-                        />
-                    </StyledBoxListColumn>
-                    <StyledBoxListColumn>
-                        <Article
-                            title='The energy efficiency offers hydrotherapy or swim'
-                            paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                            author='Author - 23.05.2022'
-                            img={articlesAndResourcesImg1}
-                            alt='blog image 1'
-                        />
-                    </StyledBoxListColumn>
-                    <StyledBoxListColumn>
-                        <Article
-                            title='The energy efficiency offers hydrotherapy or swim'
-                            paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                            author='Author - 23.05.2022'
-                            img={articlesAndResourcesImg1}
-                            alt='blog image 1'
-                        />
-                    </StyledBoxListColumn>
-                    <StyledBoxListColumn>
-                        <Article
-                            title='The energy efficiency offers hydrotherapy or swim'
-                            paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                            author='Author - 23.05.2022'
-                            img={articlesAndResourcesImg1}
-                            alt='blog image 1'
-                        />
-                    </StyledBoxListColumn>
+                    {mockedDataArticles.articlesItems.map(article => (
+                        <StyledBoxListColumn>
+                            <Article
+                                title={article.title}
+                                paragraph={article.description}
+                                author={article.date}
+                                img={article.mainImgSrc}
+                                alt={article.mainImgAlt}
+                            />
+                        </StyledBoxListColumn>
+                        ))
+                    }
                 </StyledStackList>
             </Container>
         </StyledSection>

@@ -1,54 +1,33 @@
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 
-import articlesAndResourcesImg1 from './assets/articlesAndResourcesImg1.png'
-import articlesAndResourcesImg2 from './assets/articlesAndResourcesImg2.png'
-import articlesAndResourcesImg3 from './assets/articlesAndResourcesImg3.png'
 import { BACKGROUND } from '../../../../design-system/colors';
-import { HeadingH3 } from '../../../../design-system/typography';
-import { LineLarge } from '../../../../design-system/geometry/lines';
 import { Article } from '../../../../shared/components/Article/Article';
 
+import mockedDataArticles from '../../../../mockedDataArticles.json'
+
+const slicedMockedDataArticles = mockedDataArticles.articlesItems.slice(0,3);
 
 export const ArticlesAndResources = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Stack flexDirection='column' alignItems='center'>
-                    <HeadingH3>Articles & Resources</HeadingH3>
-                    <LineLarge sx={{mt:'22px'}} />
-                    <Grid container spacing={4} mt='16px'>
-                        <Grid item lg={4}>
+                <StyledStackList>
+                    {slicedMockedDataArticles.map(article => (
+                        <StyledBoxListColumn>
                             <Article
-                                title='The energy efficiency offers hydrotherapy or swim'
-                                paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                                author='Author - 23.05.2022'
-                                img={articlesAndResourcesImg1}
-                                alt='blog image 1'
+                                title={article.title}
+                                paragraph={article.description}
+                                author={article.date}
+                                img={article.mainImgSrc}
+                                alt={article.mainImgAlt}
                             />
-                        </Grid>
-                        <Grid item lg={4}>
-                            <Article
-                                title='Release of Letraset sheets tools containing  passages'
-                                paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                                author='Author - 23.05.2022'
-                                img={articlesAndResourcesImg2}
-                                alt='blog image 2'
-                            />
-                        </Grid>
-                        <Grid item lg={4}>
-                            <Article
-                                title='The energy efficiency offers hydrotherapy or swim'
-                                paragraph='The point of using Lorem hiter of that using making it look like others readable will get end.'
-                                author='Author - 23.05.2022'
-                                img={articlesAndResourcesImg3}
-                                alt='blog image 3'
-                            />
-                        </Grid>
-                    </Grid>
-                </Stack>
+                        </StyledBoxListColumn>
+                        ))
+                    }
+                </StyledStackList>
             </Container>
         </StyledSection>
     );
@@ -57,4 +36,15 @@ export const ArticlesAndResources = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${BACKGROUND};
+`;
+
+const StyledStackList = styled(Stack)`
+    flex-direction: row;
+    flex-wrap: wrap; 
+    margin: -20px;
+`;
+
+const StyledBoxListColumn = styled(Box)`
+    width: calc(100%/3);
+    padding: 20px;
 `;

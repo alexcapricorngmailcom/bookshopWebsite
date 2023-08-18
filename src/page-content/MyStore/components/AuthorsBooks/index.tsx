@@ -5,16 +5,13 @@ import Box from '@mui/material/Box';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link as RouterLink } from 'react-router-dom'
 
-import atomicOneSmall from '../../../../shared/assets/img/atomicOneSmall.png'
-import theDarkLightSmall from '../../../../shared/assets/img/theDarkLightSmall.png'
-import audioIcon from '../../../../shared/assets/img/audioIcon.png'
-import dvdIcon from '../../../../shared/assets/img/dvdIcon.png'
 import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { BookDetails } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
+import { PositionedIcon } from './components/PositionedIcon';
 
-import mockedDataprodutcs from '../../../../mockedDataprodutcs.json'
+import mockedDataProducts from '../../../../mockedDataProducts.json';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
@@ -23,121 +20,28 @@ export const AuthorsBooks = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <StyledStackList>
-                    <StyledBoxListColumn>
-                        <RouterLink to={'/singleProduct'}>
-                            <StyledStackImg>
-                                <StyledBoxBookCoverImg>
-                                    <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                                </StyledBoxBookCoverImg>
-                            </StyledStackImg>
-                        </RouterLink>
-                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s (Audio)</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={atomicOneSmall} alt="atomic one’s book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>Atomic One’s + DVD</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book + Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={theDarkLightSmall} alt="the dark light book cover" />
-                            </StyledBoxBookCoverImg>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={theDarkLightSmall} alt="the dark light book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={audioIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light (Audio)</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$14.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
-                    
-                    <StyledBoxListColumn>
-                        <StyledStackImg>
-                            <StyledBoxBookCoverImg>
-                                <img src={theDarkLightSmall} alt="the dark light book cover" />
-                            </StyledBoxBookCoverImg>
-                            <StyledBoxBookIcon>
-                                <img src={dvdIcon} style={{width:'100%', height:'100%', objectFit:'cover'}} alt="audio icon" />
-                            </StyledBoxBookIcon>
-                        </StyledStackImg>
-                        <HeadingH4 sx={{mt:'20px'}}>The Dark Light + DVD</HeadingH4>
-                        <StyledParagraph sx={{mt:'10px'}}>$34.99</StyledParagraph>
-                        <Paragraph sx={{mt:'10px'}}>Many variations of passages of Lorem willing araise alteration in some form.</Paragraph>
-                        <Box sx={{mt:'20px'}}>
-                            <BookDetails title='Printed Book + Audiobook'/>
-                        </Box>
-                        <Box sx={{mt:'30px'}}>
-                            <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                        </Box>
-                    </StyledBoxListColumn>
+                    {mockedDataProducts.storeItems.map(store => (
+                        <StyledBoxListColumn key={store.id}>
+                            <RouterLink to={`/singleProduct${store.id}`}>
+                                <StyledStackImg>
+                                    <StyledBoxBookCoverImg>
+                                        <img src={store.mainImgSrc} alt={store.mainImgSrc} />
+                                    </StyledBoxBookCoverImg>
+                                    {store.positionedIcon && <PositionedIcon src={store.secondaryImgSrc} alt={store.secondaryImgAlt} />}
+                                </StyledStackImg>
+                            </RouterLink>
+                            <HeadingH4 sx={{mt:'20px'}}>{store.title}</HeadingH4>
+                            <StyledParagraph sx={{mt:'10px'}}>{store.price}</StyledParagraph>
+                            <Paragraph sx={{mt:'10px'}}>{store.description}</Paragraph>
+                            <Box sx={{mt:'20px'}}>
+                                <BookDetails title={store.type} />
+                            </Box>
+                            <Box sx={{mt:'30px'}}>
+                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
+                            </Box>
+                        </StyledBoxListColumn>
+                        ))
+                    }
                 </StyledStackList>
             </Container>
         </StyledSection>
@@ -171,14 +75,6 @@ const StyledStackImg = styled(Stack)`
 const StyledBoxBookCoverImg = styled(Box)`
     padding: 28.65px 0px; 
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
-`;
-
-const StyledBoxBookIcon = styled(Box)`
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 80px;
-    height: 80px;
 `;
 
 const StyledParagraph = styled(Stack)`
