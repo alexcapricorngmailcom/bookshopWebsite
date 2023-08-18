@@ -7,25 +7,37 @@ import { BACKGROUND } from '../../../../design-system/colors';
 import { Article } from '../../../../shared/components/Article/Article';
 
 import mockedDataArticles from '../../../../mockedDataArticles.json'
-
-const slicedMockedDataArticles = mockedDataArticles.articlesItems.slice(0,3);
+import { HeadingH3 } from '../../../../design-system/typography';
+import { LineLarge } from '../../../../design-system/geometry/lines';
 
 export const ArticlesAndResources = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
+                <Stack flexDirection='column' alignItems='center'>
+                    <HeadingH3>Articles & Resources</HeadingH3>
+                    <LineLarge sx={{mt:'22px'}} />
+                </Stack>
                 <StyledStackList>
-                    {slicedMockedDataArticles.map(article => (
-                        <StyledBoxListColumn>
-                            <Article
-                                title={article.title}
-                                paragraph={article.description}
-                                author={article.date}
-                                img={article.mainImgSrc}
-                                alt={article.mainImgAlt}
-                            />
-                        </StyledBoxListColumn>
-                        ))
+                    {mockedDataArticles.articlesItems.map( (article, index) => {
+                        
+                        if(index > 2) {
+                            return <></>
+                        }
+
+                        return (
+                            <StyledBoxListColumn sx={{mt:'50px'}}>
+                                <Article
+                                    title={article.title}
+                                    paragraph={article.description}
+                                    author={article.date}
+                                    img={article.mainImgSrc}
+                                    alt={article.mainImgAlt}
+                                />
+                            </StyledBoxListColumn>
+                            )
+                    }   )
+                    
                     }
                 </StyledStackList>
             </Container>
