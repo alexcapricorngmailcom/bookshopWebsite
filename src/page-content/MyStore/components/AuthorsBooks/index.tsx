@@ -22,7 +22,7 @@ export const AuthorsBooks = () => {
                 <StyledStackList>
                     {mockedDataProducts.storeItems.map(store => (
                         <StyledBoxListColumn key={store.id}>
-                            <RouterLink to={`/singleProduct${store.id}`}>
+                            <RouterLink to={`/singleProduct/${store.id}`}>
                                 <StyledStackImg>
                                     <StyledBoxBookCoverImg>
                                         <img src={store.mainImgSrc} alt={store.mainImgSrc} />

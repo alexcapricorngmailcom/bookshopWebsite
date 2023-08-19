@@ -6,9 +6,10 @@ import Box from '@mui/material/Box';
 import { BACKGROUND } from '../../../../design-system/colors';
 import { Article } from '../../../../shared/components/Article/Article';
 
-import mockedDataArticles from '../../../../mockedDataArticles.json'
 import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
+
+import mockedDataArticles from '../../../../mockedDataArticles.json'
 
 export const ArticlesAndResources = () => {
     return (

@@ -1,7 +1,7 @@
 {
     "storeItems": [
         {
-            "id": 1,
+            "id": "93bc319a-e031-4e4a-819a-3560a275957d",
             "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneSmall.png?raw=true",
             "mainImgAlt": "atomic one’s book cover",
             "title": "Atomic One’s",
@@ -13,7 +13,7 @@
             "secondaryImgAlt": ""
         },
         {   
-            "id": 2,
+            "id": "bb1b9731-f537-451d-94ef-5025c4a45fab",
             "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneSmall.png?raw=true",
             "mainImgAlt": "atomic one’s book cover",
             "title": "Atomic One’s (Audio)",
@@ -25,7 +25,7 @@
             "secondaryImgAlt": "audio icon"
         },
         {   
-            "id": 3,
+            "id": "f2ce86c9-4a8d-4b0d-8073-852ba2b3e24f",
             "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneSmall.png?raw=true",
             "mainImgAlt": "atomic one’s book cover",
             "title": "Atomic One’s + DVD",
@@ -37,7 +37,7 @@
             "secondaryImgAlt": "dvd icon"
         },
         {
-            "id": 4,
+            "id": "446c5ac0-f307-428d-8246-284447d005ff",
             "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/theDarkLightSmall.png?raw=true",
             "mainImgAlt": "the dark light book cover",
             "title": "The Dark Light",
@@ -49,7 +49,7 @@
             "secondaryImgAlt": ""
         },
         {   
-            "id": 5,
+            "id": "5b73d75d-e9c7-4ab3-82ec-20c293ab1024",
             "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/theDarkLightSmall.png?raw=true",
             "mainImgAlt": "the dark light book cover",
             "title": "The Dark Light (Audio)",
@@ -61,7 +61,7 @@
             "secondaryImgAlt": "audio icon"
         },
         {   
-            "id": 6,
+            "id": "4717b978-dce9-4255-9317-377075bf17bb",
             "mainImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/theDarkLightSmall.png?raw=true",
             "mainImgAlt": "the dark light book cover",
             "title": "The Dark Light + DVD",
