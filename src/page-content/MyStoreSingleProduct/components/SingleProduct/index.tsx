@@ -69,7 +69,7 @@ export const SingleProduct = () => {
                                         </>
                                     }
                                 </StyledBox>
-                                <StyledBox sx={{ml:'40px'}}>
+                                <StyledBox sx={{ml:'30px'}}>
                                     <Paragraph>{filteredMockedDataProducts.publisher}</Paragraph>
                                     <Paragraph>{filteredMockedDataProducts.language}</Paragraph>
                                     <Paragraph>{filteredMockedDataProducts.type}</Paragraph>

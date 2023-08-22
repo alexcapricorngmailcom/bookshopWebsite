@@ -76,7 +76,7 @@ const StyledBoxBookCoverImg = styled(Box)`
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
 `;
 
-const StyledParagraph = styled(Stack)`
+const StyledParagraph = styled(Paragraph)`
     font-size: 22px;
     font-weight: 700;
     color: ${SECONDARY};

@@ -6,7 +6,7 @@
             "myStoreSingleProductImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneMedium.png?raw=true",
             "myStoreAlt": "atomic one’s book cover",
             "title": "Atomic One’s",
-            "price": "$20.99",
+            "price": "$19.99",
             "mainDescription": "Many variations of passages of Lorem willing araise alteration in some form.",
             "singleDescription": "Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum.",
             "type": "Printed book",
@@ -28,7 +28,7 @@
             "myStoreSingleProductImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneMedium.png?raw=true",
             "myStoreAlt": "atomic one’s book cover",
             "title": "Atomic One’s (Audio)",
-            "price": "$10.99",
+            "price": "$9.99",
             "mainDescription": "Many variations of passages of Lorem willing araise alteration in some form.",
             "singleDescription": "Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum.",
             "type": "Audiobook",
@@ -50,7 +50,7 @@
             "myStoreSingleProductImgSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/atomicOneMedium.png?raw=true",
             "myStoreAlt": "atomic one’s book cover",
             "title": "Atomic One’s + DVD",
-            "price": "$30.99",
+            "price": "$29.99",
             "mainDescription": "Many variations of passages of Lorem willing araise alteration in some form.",
             "singleDescription": "Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum.",
             "type": "Printed book + Audiobook",
@@ -98,10 +98,10 @@
             "mainDescription": "Many variations of passages of Lorem willing araise alteration in some form.",
             "singleDescription": "Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum.",
             "type": "Audiobook",
-            "length": "10 hours",
             "publisher": "Macmillan Publishers",
             "isAudio": true,
             "isDVD": false,
+            "length": "10 hours",
             "format": "mp3",
             "language": "English, French, German, Spanish, Italian, Polish",
             "paperback": "",
@@ -132,8 +132,5 @@
             "positionedIconSrc": "https://github.com/alexcapricorngmailcom/bookshopImgStorage/blob/main/img/Mystore/dvdIcon.png?raw=true",
             "positionedIconAlt": "dvd icon"
         }
-        
-        
-    
     ]
 }
