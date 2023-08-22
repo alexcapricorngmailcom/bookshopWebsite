@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -6,15 +7,25 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import atomicOneMedium from '../../../../shared/assets/img/atomicOneMedium.png'
+import mockedDataProducts from '../../../../mockedDataProducts.json'
 import { BACKGROUND, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { ButtonAction } from '../../../../design-system/Button';
+import { PositionedIcon } from '../../../../shared/components';
+
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 // TODO discuss Continue shopping button. it disabled
 
+// TODO check Paperback / Length
+
 export const SingleProduct = () => {
+    
+    const location = useLocation();
+    const locationId = location.pathname.slice(location.pathname.lastIndexOf('/') + 1);
+
+    const filteredMockedDataProducts = mockedDataProducts.storeItems.filter(item => (item.id === locationId))[0];
+
     return (
         <StyledSection>
             <Container maxWidth='lg'>
@@ -23,28 +34,63 @@ export const SingleProduct = () => {
                         <Grid item lg={5}>
                             <StyledStackImg>
                                 <StyledBoxBookCoverImg>
-                                    <img src={atomicOneMedium} alt="atomic one’s book cover" />
+                                    <img src={filteredMockedDataProducts.myStoreSingleProductImgSrc} alt={filteredMockedDataProducts.myStoreAlt} />
                                 </StyledBoxBookCoverImg>
+                                {filteredMockedDataProducts.isPositionedIcon && <PositionedIcon width='100px' height='100px' src={filteredMockedDataProducts.positionedIconSrc} alt={filteredMockedDataProducts.positionedIconAlt} />}
                             </StyledStackImg>
                         </Grid>
                         <Grid item lg={7}>
-                            <HeadingH4>The Atomic One’s</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>$24.99</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum.</Paragraph>
+                            <HeadingH4>{filteredMockedDataProducts.title}</HeadingH4>
+                            <StyledParagraph sx={{mt:'10px'}}>{filteredMockedDataProducts.price}</StyledParagraph>
+                            <Paragraph sx={{mt:'10px'}}>{filteredMockedDataProducts.singleDescription}</Paragraph>
                             <Stack flexDirection='row' sx={{mt:'20px'}}>
                                 <StyledBox>
                                     <Paragraph>Publisher:</Paragraph>
                                     <Paragraph>Language:</Paragraph>
-                                    <Paragraph>Paperback:</Paragraph>
-                                    <Paragraph>ISBN-10:</Paragraph>
-                                    <Paragraph>Dimensions:</Paragraph>
+                                    { filteredMockedDataProducts.isAudio 
+                                        ? 
+                                        <>
+                                            <Paragraph>Type:</Paragraph>
+                                            <Paragraph>Length:</Paragraph>
+                                            <Paragraph>Format:</Paragraph>
+                                        </>
+                                        : filteredMockedDataProducts.isDVD 
+                                        ? 
+                                        <>
+                                            <Paragraph>Type:</Paragraph>
+                                            <Paragraph>Paperback / Length:</Paragraph>
+                                            <Paragraph>Dimensions:</Paragraph>
+                                        </>
+                                        :
+                                        <>
+                                            <Paragraph>Type:</Paragraph>
+                                            <Paragraph>Paperback:</Paragraph>
+                                            <Paragraph>Dimensions:</Paragraph>
+                                        </>
+                                    }
                                 </StyledBox>
                                 <StyledBox sx={{ml:'40px'}}>
-                                    <Paragraph>Learning Private Limited (1 January 2021)</Paragraph>
-                                    <Paragraph>English</Paragraph>
-                                    <Paragraph>212 pages</Paragraph>
-                                    <Paragraph>9788120345799</Paragraph>
-                                    <Paragraph>20 x 14 x 4 cm</Paragraph>
+                                    <Paragraph>{filteredMockedDataProducts.publisher}</Paragraph>
+                                    <Paragraph>{filteredMockedDataProducts.language}</Paragraph>
+                                    <Paragraph>{filteredMockedDataProducts.type}</Paragraph>
+                                    { filteredMockedDataProducts.isAudio 
+                                        ? 
+                                        <>
+                                            <Paragraph>{filteredMockedDataProducts.length}</Paragraph>
+                                            <Paragraph>{filteredMockedDataProducts.format}</Paragraph>
+                                        </>
+                                        : filteredMockedDataProducts.isDVD 
+                                        ? 
+                                        <>
+                                            <Paragraph>{filteredMockedDataProducts.paperback} + {filteredMockedDataProducts.length} {filteredMockedDataProducts.format}</Paragraph>
+                                            <Paragraph>{filteredMockedDataProducts.dimensions}</Paragraph>
+                                        </>
+                                        :
+                                        <>
+                                            <Paragraph>{filteredMockedDataProducts.paperback}</Paragraph>
+                                            <Paragraph>{filteredMockedDataProducts.dimensions}</Paragraph>
+                                        </> 
+                                    }   
                                 </StyledBox>
                             </Stack>
                             <Box component='form' sx={{mt:'30px'}}>
@@ -115,7 +161,7 @@ const StyledBoxBookCoverImg = styled(Box)`
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
 `;
 
-const StyledParagraph = styled(Stack)`
+const StyledParagraph = styled(Paragraph)`
     display: inline-block;
     font-size: 30px;
     font-weight: 700;

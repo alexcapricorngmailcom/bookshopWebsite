@@ -5,13 +5,12 @@ import Box from '@mui/material/Box';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link as RouterLink } from 'react-router-dom'
 
+import mockedDataProducts from '../../../../mockedDataProducts.json';
 import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
-import { BookDetails } from '../../../../shared/components';
+import { BookDetails, PositionedIcon } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
-import { PositionedIcon } from './components/PositionedIcon';
 
-import mockedDataProducts from '../../../../mockedDataProducts.json';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
@@ -22,17 +21,17 @@ export const AuthorsBooks = () => {
                 <StyledStackList>
                     {mockedDataProducts.storeItems.map(store => (
                         <StyledBoxListColumn key={store.id}>
-                            <RouterLink to={`/singleProduct/${store.id}`}>
+                            <RouterLink to={`/myStore/singleProduct/${store.id}`}>
                                 <StyledStackImg>
                                     <StyledBoxBookCoverImg>
-                                        <img src={store.mainImgSrc} alt={store.mainImgSrc} />
+                                        <img src={store.myStoreImgSrc} alt={store.myStoreAlt} />
                                     </StyledBoxBookCoverImg>
-                                    {store.positionedIcon && <PositionedIcon src={store.secondaryImgSrc} alt={store.secondaryImgAlt} />}
+                                    {store.isPositionedIcon && <PositionedIcon src={store.positionedIconSrc} alt={store.positionedIconAlt} />}
                                 </StyledStackImg>
                             </RouterLink>
                             <HeadingH4 sx={{mt:'20px'}}>{store.title}</HeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>{store.price}</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>{store.description}</Paragraph>
+                            <Paragraph sx={{mt:'10px'}}>{store.mainDescription}</Paragraph>
                             <Box sx={{mt:'20px'}}>
                                 <BookDetails title={store.type} />
                             </Box>

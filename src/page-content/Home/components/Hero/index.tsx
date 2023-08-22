@@ -35,14 +35,14 @@ export const Hero = () => {
                             <Grid item md={3.5} sm={3.5}>
                                 <BookDetails
                                     title='Pages:'
-                                    paragraph='586pages'
+                                    paragraph='586 pages'
                                     color='#ffffff'
                                 />
                             </Grid>
                             <Grid item md={3.5} sm={3.5}>
                                 <BookDetails 
                                     title='Length:'
-                                    paragraph='10 Hours'
+                                    paragraph='10 hours'
                                     color='#ffffff'
                                 />
                             </Grid>

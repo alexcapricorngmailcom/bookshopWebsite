@@ -34,13 +34,13 @@ export const AuthorsBookIncludes = () => {
                                         <Grid item md={6} sm={6}>
                                             <BookDetails
                                                 title={'Pages:'}
-                                                paragraph={'586pages'}
+                                                paragraph={'472 pages'}
                                             />
                                         </Grid>
                                         <Grid item md={6} sm={6}>
                                             <BookDetails 
                                                 title={'Length:'}
-                                                paragraph={'10 Hours'}
+                                                paragraph={'8 hours'}
                                             />
                                         </Grid>
                                     </Grid>
@@ -65,13 +65,13 @@ export const AuthorsBookIncludes = () => {
                                         <Grid item md={6} sm={6}>
                                             <BookDetails
                                                 title={'Pages:'}
-                                                paragraph={'586pages'}
+                                                paragraph={'586 pages'}
                                             />
                                         </Grid>
                                         <Grid item md={6} sm={6}>
                                             <BookDetails 
                                                 title={'Length:'}
-                                                paragraph={'10 Hours'}
+                                                paragraph={'10 hours'}
                                             />
                                         </Grid>
                                     </Grid>

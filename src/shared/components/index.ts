@@ -6,3 +6,6 @@ export * from './CommonHero'
 export * from './AuthorsBookIncludes'
 export * from './BookDetails'
 export * from './ReadFreeChapter'
+export * from './ReadFreeChapter'
+export * from './PositionedIcon'
+
