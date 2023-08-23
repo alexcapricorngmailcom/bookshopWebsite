@@ -1,12 +1,13 @@
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import Link from "@mui/material/Link";
+
 
 import { HeadingH5, Paragraph } from "../../../design-system/typography";
 import { MAIN, WHITE } from "../../../design-system/colors";
 
-export const Article = ({title, paragraph, author, img, alt}:ArticleProps) => {
+export const Article = ({id, title, paragraph, author, img, alt}:ArticleProps) => {
     return(
         <article style={{filter: 'drop-shadow(0 35px 25px rgba(4, 11, 20, 0.05))', backgroundColor: WHITE}}>
             <Box width='100%' height='326px'>
@@ -16,7 +17,7 @@ export const Article = ({title, paragraph, author, img, alt}:ArticleProps) => {
                 <HeadingH5>{title}</HeadingH5>
                 <Paragraph sx={{mt:'14px'}}>{paragraph}</Paragraph>
                 <Stack sx={{flexDirection:'row', justifyContent:'space-between', mt:'27px'}}>
-                    <Link href="#" underline="none"><StyledParagraphLink sx={{}}>Read more</StyledParagraphLink></Link>
+                    <Link to={`/articles/singleArticle/${id}`}><StyledParagraphLink>Read more</StyledParagraphLink></Link>
                     <Paragraph sx={{fontSize:'18px', color: MAIN}}>{author}</Paragraph>
                 </Stack>
             </Box>
@@ -25,6 +26,7 @@ export const Article = ({title, paragraph, author, img, alt}:ArticleProps) => {
 }
 
 type ArticleProps = {
+    id: string
     title: string
     paragraph: string
     author: string

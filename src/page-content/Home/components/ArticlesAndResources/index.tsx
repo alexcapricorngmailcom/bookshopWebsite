@@ -3,13 +3,12 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
+import mockedDataArticles from '../../../../mockedDataArticles.json'
 import { BACKGROUND } from '../../../../design-system/colors';
 import { Article } from '../../../../shared/components/Article/Article';
-
 import { HeadingH3 } from '../../../../design-system/typography';
 import { LineLarge } from '../../../../design-system/geometry/lines';
 
-import mockedDataArticles from '../../../../mockedDataArticles.json'
 
 export const ArticlesAndResources = () => {
     return (
@@ -27,8 +26,9 @@ export const ArticlesAndResources = () => {
                         }
 
                         return (
-                            <StyledBoxListColumn>
+                            <StyledBoxListColumn key={article.id}>
                                 <Article
+                                    id={article.id}
                                     title={article.title}
                                     paragraph={article.description}
                                     author={article.date}

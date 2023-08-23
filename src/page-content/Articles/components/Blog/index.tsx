@@ -3,10 +3,9 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
+import mockedDataArticles from '../../../../mockedDataArticles.json'
 import { WHITE } from '../../../../design-system/colors';
 import { Article } from '../../../../shared/components/Article/Article';
-
-import mockedDataArticles from '../../../../mockedDataArticles.json'
 
 export const Blog = () => {
     return (
@@ -14,8 +13,9 @@ export const Blog = () => {
             <Container maxWidth='lg'>
                 <StyledStackList>
                     {mockedDataArticles.articlesItems.map(article => (
-                        <StyledBoxListColumn>
+                        <StyledBoxListColumn key={article.id}>
                             <Article
+                                id={article.id}
                                 title={article.title}
                                 paragraph={article.description}
                                 author={article.date}
