@@ -19,15 +19,15 @@ export const ArticlesAndResources = () => {
                     <HeadingH3>Articles & Resources</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                 </Stack>
-                <StyledStackList>
+                <StyledStackList sx={{mt:'50px'}}>
                     {mockedDataArticles.articlesItems.map( (article, index) => {
                         
-                        if(index > 2) {
+                        if (index > 2) {
                             return <></>
                         }
 
                         return (
-                            <StyledBoxListColumn sx={{mt:'50px'}}>
+                            <StyledBoxListColumn>
                                 <Article
                                     title={article.title}
                                     paragraph={article.description}

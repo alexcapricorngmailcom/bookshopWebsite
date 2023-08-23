@@ -11,7 +11,7 @@ import { Error404 } from './page-content/Error404';
 import { Footer } from "./shared/components/Footer";
 
 // test
-import { SingleArticle } from './page-content/SingleArticle';
+// import { SingleArticle } from './page-content/SingleArticle';
 
 function App() {
   return (
