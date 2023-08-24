@@ -1,55 +1,120 @@
-import React, { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { styled } from '@mui/material/styles';
-import { MAIN, SECONDARY, WHITE } from '../colors'
+import Button, {ButtonProps} from '@mui/material/Button';
+import { MAIN, SECONDARY, WHITE } from '../colors';
+import Box from '@mui/material/Box';
 
-// TODO rewrite to styled mui button with 3 variants
-
-export const ButtonAction = ({ size, onClick, outlined, children }: ButtonActionProps) => {
+export const ButtonAction = ({size ='small', width, height = '65px', variant = 'contained', children, component, to, startIcon}:ButtonActionProps) => {
     return (
-    <StyledButton 
-        outlined={outlined ? 'outlined' : undefined} 
-        size={size}
-        onClick={onClick}>
-        {children}
-    </StyledButton>
+        <Box>
+            <StyledButton size={size} width={width} height={height} variant={variant} component={component} to={to} startIcon={startIcon}>
+                {children}
+            </StyledButton>
+        </Box>
     );
-};
+}
 
-const StyledButton = styled('button')<ButtonProps>`
-    width: ${props => (props.size === 'small' ? '220px' : '300px')};
-    height: 65px;
+const StyledButton = styled(Button)<StyledButtonProps>`
+    width: ${props => {
+        if (props.size === 'small') return '220px';
+        if (props.size === 'medium') return '250px';
+        if (props.size === 'large') return '300px';
+    }};
+    width: ${props => (props.width)};
+    height: ${props => (props.height)};
     padding: 10px;
-    font-family: inherit;
+    border-radius: 0;
+    box-shadow: none;
+    text-transform: none;
+    font-family: Cardo, serif;
     font-size: 19px;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    transition: 0.2s;
-    cursor: pointer;
+    line-height: 130%;
+    letter-spacing: -0.015em;
 
-    /* TODO do it only for text buttons or better use separate prop for it! */
-    /* text-decoration: underline;
-    text-underline-offset: 10px; */
+    // text
+    color: ${props => (props.variant === 'text') ? WHITE : MAIN};
 
-    background-color: ${props => (props.outlined ? 'transparent' : SECONDARY)};
-    border: 1px solid ${props => (props.outlined ? SECONDARY : 'transparent')};
+    // contained
+    background-color: ${props => (props.variant === 'contained') ? SECONDARY : 'transparent'};
 
-    color: ${props => (props.outlined ? SECONDARY : MAIN )};
+    // outlined
+    border-color: ${props => {
+        if (props.variant === 'outlined') {
+            return SECONDARY;
+        }
+    }};
+
+    //mixed contained/medium
+    color: ${props => {
+            if (props.variant === 'contained' && props.size === 'medium') return WHITE;
+    }};
+
+    background-color: ${props => {
+            if (props.variant === 'contained' && props.size === 'medium') return MAIN;
+    }};
 
     &:hover, &:active {
-        
-    }
+
+        // text
+        color: ${props => {
+            if (props.variant === 'text') {
+                return SECONDARY;
+            }
+        }};
+
+        // contained
+        background-color: ${props => (props.variant === 'contained') ? WHITE : 'transparent'};
+
+        box-shadow: ${props => { 
+            if (props.variant === 'contained') return 'none'; 
+        }};
+
+        // contained
+        background-color: ${props => {
+            if (props.variant === 'outlined') return SECONDARY;
+        }};
+
+        border-color: ${props => {
+            if (props.variant === 'outlined') return SECONDARY;
+        }};
+
+        //mixed contained/medium
+        color: ${props => {
+                if (props.variant === 'contained' && props.size === 'medium') return SECONDARY;
+        }};
+
+        background-color: ${props => {
+                if (props.variant === 'contained' && props.size === 'medium') return MAIN;
+        }};
+
+        //mixed contained/large
+        color: ${props => {
+                if (props.variant === 'contained' && props.size === 'large') return WHITE;
+        }};
+
+        background-color: ${props => {
+                if (props.variant === 'contained' && props.size === 'large') return MAIN;
+        }};
+    }   
+
 `;
 
 type ButtonActionProps = {
-    size: 'small' | 'large';
-    onClick: () => void;
-    outlined?: boolean;
+    size?: 'small' | 'medium' | 'large';
+    width?: string | undefined;
+    height?: string | undefined;
+    variant?: "text" | "outlined" | "contained";
     children: ReactNode;
-};
+    component?: object | undefined;
+    to?: string | undefined;
+    startIcon?: any;
+}
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    outlined: string | undefined;
-    size: string | undefined;
+interface StyledButtonProps extends ButtonProps {
+    width: string | undefined;
+    height: string | undefined;
+    component: object | undefined;
+    to?: string | undefined;
+    startIcon?: any;
 }

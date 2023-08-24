@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles"
-import { MAIN } from "../colors";
+import { MAIN, PARAGRAPH_PRIMARY } from "../colors";
 
 export const HeadingH1 = styled('h1')`
     font-family: Cardo, serif;
@@ -65,5 +65,5 @@ export const Paragraph = styled('p')`
     font-weight: 400;
     line-height: 170%;
     letter-spacing: -0.01em;
-    color: #969AA0;
+    color: ${PARAGRAPH_PRIMARY};
 `;
