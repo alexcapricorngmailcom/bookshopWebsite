@@ -1,7 +1,10 @@
+import { useLocation } from 'react-router-dom';
+
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+
 import significantReading from './assets/significantReading.png'
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, HeadingH5, Paragraph } from '../../../../design-system/typography';
@@ -9,6 +12,7 @@ import { HeadingH4, HeadingH5, Paragraph } from '../../../../design-system/typog
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { Quote } from '../../../../design-system/Quote';
 
+import mockedDataArticles from "../../../../mockedDataArticles.json"
 
 export const list = [
     'It has roots in a piece of classical Latin literature from 45 BC', 
@@ -18,6 +22,11 @@ export const list = [
 ];
 
 export const SignificantReading = () => {
+
+    const location = useLocation();
+    const locationId = location.pathname.split('/')[3];
+    const filtredMockedDataArticles = mockedDataArticles.articlesItems.filter(item => item.id === locationId)[0];
+
     return (
         <StyledSection>
             <Container maxWidth='lg'>
