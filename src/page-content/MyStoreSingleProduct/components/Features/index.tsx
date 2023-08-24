@@ -2,7 +2,6 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 
 import { ReactComponent as ShieldIcon} from './assets/shieldIcon.svg'
 import { ReactComponent as CubeIcon} from './assets/cubeIcon.svg'

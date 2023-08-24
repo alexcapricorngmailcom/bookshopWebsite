@@ -7,11 +7,11 @@ import Box from '@mui/material/Box';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 
-import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/pagesIcon.svg'
-import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/facebookIcon.svg'
-import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/twitterIcon.svg'
-import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/linkedInIcon.svg'
-import { ReactComponent as InstagramIcon } from '../../../shared/assets/icons/instagramIcon.svg'
+import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
+import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
+import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/TwitterIcon.svg'
+import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/LinkedInIcon.svg'
+import { ReactComponent as InstagramIcon } from '../../../shared/assets/icons/InstagramIcon.svg'
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { HeadingH5, Paragraph } from '../../../design-system/typography';
 import { SquareSmall } from '../../../design-system/geometry/squares';

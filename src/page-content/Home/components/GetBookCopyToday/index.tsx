@@ -24,7 +24,7 @@ export const GetBookCopyToday = () => {
                         </Box>
                     </Grid>
                     <Grid item md={6} sm={12}>
-                        <img src={getBookCopyToday} style={{width:'100%', height:'100%'}} alt="callout image" />
+                        <img src={getBookCopyToday} style={{width:'100%', height:'100%'}} alt="callout" />
                     </Grid>
                 </Grid>
             </Container>

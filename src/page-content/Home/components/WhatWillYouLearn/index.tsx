@@ -38,7 +38,7 @@ export const WhatWillYouLearn = () => {
                             </Grid>
                         </Grid>
                         <Grid item lg={6}>
-                            <img src={whatWillYouLearnImg} style={{width:'100%', height:'100%'}} alt="what will you learn image" />
+                            <img src={whatWillYouLearnImg} style={{width:'100%', height:'100%'}} alt="what will you learn" />
                         </Grid>
                     </Grid>
                 </Stack>
