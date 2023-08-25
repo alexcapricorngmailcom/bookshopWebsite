@@ -19,8 +19,8 @@ export const Blog = () => {
                                 title={article.title}
                                 paragraph={article.description}
                                 author={article.date}
-                                img={article.mainImgSrc}
-                                alt={article.mainImgAlt}
+                                img={article.articleImgSrc}
+                                alt={article.articleImgAlt}
                             />
                         </StyledBoxListColumn>
                         ))

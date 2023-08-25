@@ -5,7 +5,6 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
-import significantReading from './assets/significantReading.png'
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, HeadingH5, Paragraph } from '../../../../design-system/typography';
 // import { UnorderedList } from '../../../../design-system/List';
@@ -21,6 +20,9 @@ export const list = [
     'Be standard chunk of Lorem used since the 1500s'
 ];
 
+let promise = fetch('https://mocki.io/v1/101b4c34-685e-4999-b3f7-e302e6a9f301');
+console.log(promise)
+
 export const SignificantReading = () => {
 
     const location = useLocation();
@@ -32,7 +34,7 @@ export const SignificantReading = () => {
             <Container maxWidth='lg'>
                 <article>
                     <Box sx={{width:'100%'}}>
-                        <img src={significantReading} style={{width:'100%', height:'100%', objectFit:'contain', borderRadius:'5px'}} alt="" />
+                        <img src={filtredMockedDataArticles.singleArticleImgSrc} style={{width:'100%', height:'100%', objectFit:'contain', borderRadius:'5px'}} alt={filtredMockedDataArticles.articleImgAlt} />
                     </Box>
                     <HeadingH5 sx={{mt:'15px'}}>October 6, 2021 / Classics</HeadingH5>
                     <Paragraph sx={{mt:'30px'}}>There are many variations of passages of Lorem Ipsum available, but the major it have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, need to be sure there isn't anything embarrassing hidden in the middle of text. All thLorem Ipsum generators on the Internet tend.</Paragraph>

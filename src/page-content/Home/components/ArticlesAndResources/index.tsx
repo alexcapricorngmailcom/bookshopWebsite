@@ -32,8 +32,8 @@ export const ArticlesAndResources = () => {
                                     title={article.title}
                                     paragraph={article.description}
                                     author={article.date}
-                                    img={article.mainImgSrc}
-                                    alt={article.mainImgAlt}
+                                    img={article.singleArticleImgSrc}
+                                    alt={article.articleImgAlt}
                                 />
                             </StyledBoxListColumn>
                             )
