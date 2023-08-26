@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
-
 import { HeadingH5, Paragraph } from "../../../design-system/typography";
 import { MAIN, WHITE } from "../../../design-system/colors";
 

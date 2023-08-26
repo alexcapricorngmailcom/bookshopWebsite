@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 
 import { HeadingH5, Paragraph } from "../../../../../design-system/typography";
 
-
 export const TrustedByGridItem = ({img, alt, title, paragraph}: BookDetailsProps) => {
     return (
         <Grid item lg={3} sm={6} xs={12} textAlign='center'>

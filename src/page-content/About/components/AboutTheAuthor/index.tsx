@@ -42,7 +42,7 @@ export const AboutTheAuthor = () => {
                                         <Paragraph>1991</Paragraph>
 
                                         <StyledBoxIcons>
-                                            <StyledLink href='https://uk-ua.facebook.com/' >
+                                            <StyledLink href='https://uk-ua.facebook.com/' target='_blank' rel="noopener">
                                                 <StyledFacebookIcon />
                                             </StyledLink>
                                             <StyledLink href='https://twitter.com/' target='_blank' rel="noopener">

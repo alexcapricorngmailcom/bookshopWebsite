@@ -1,6 +1,5 @@
-import { useLocation } from 'react-router-dom';
-
 import { styled } from '@mui/material/styles';
+import { useLocation } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -19,9 +18,6 @@ export const list = [
     'The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet', 
     'Be standard chunk of Lorem used since the 1500s'
 ];
-
-let promise = fetch('https://mocki.io/v1/101b4c34-685e-4999-b3f7-e302e6a9f301');
-console.log(promise)
 
 export const SignificantReading = () => {
 

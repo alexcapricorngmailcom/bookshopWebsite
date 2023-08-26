@@ -1,11 +1,11 @@
 import { styled } from "@mui/material/styles";
+import { NavLink, Link as RouterLink } from 'react-router-dom'
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Link from '@mui/material/Link';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { NavLink, Link as RouterLink } from 'react-router-dom'
 
 import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
 import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'

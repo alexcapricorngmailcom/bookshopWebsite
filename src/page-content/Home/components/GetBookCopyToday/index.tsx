@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -20,7 +20,7 @@ export const GetBookCopyToday = () => {
                         <LineLarge sx={{mt:'20px'}} />
                         <Paragraph sx={{mt:'20px', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Box mt='30px'>
-                            <ButtonAction component={Link} to='/myStore'>Order Today</ButtonAction> 
+                            <ButtonAction component={RouterLink} to='/myStore'>Order Today</ButtonAction> 
                         </Box>
                     </Grid>
                     <Grid item md={6} sm={12}>

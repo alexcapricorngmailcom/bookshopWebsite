@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -46,7 +46,7 @@ export const AuthorsBookIncludes = () => {
                                         </Grid>
                                     </Grid>
                                     <Box marginTop='30px'>
-                                        <ButtonAction variant='outlined' component={Link} to='/myStore'>Order Today</ButtonAction>
+                                        <ButtonAction variant='outlined' component={RouterLink} to='/myStore'>Order Today</ButtonAction>
                                     </Box>
                                 </Grid>
                             </Grid>
@@ -76,7 +76,7 @@ export const AuthorsBookIncludes = () => {
                                         </Grid>
                                     </Grid>
                                     <Box marginTop='30px'>
-                                        <ButtonAction variant='outlined' component={Link} to='/myStore'>Order Today</ButtonAction>
+                                        <ButtonAction variant='outlined' component={RouterLink} to='/myStore'>Order Today</ButtonAction>
                                     </Box>
                                 </Grid>
                             </Grid>

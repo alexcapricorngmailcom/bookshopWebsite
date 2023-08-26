@@ -15,9 +15,6 @@ import { PositionedIcon } from '../../../../shared/components';
 
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
-// TODO discuss Continue shopping button. it disabled
-
-// TODO check Paperback / Length
 
 export const SingleProduct = () => {
     
@@ -123,9 +120,6 @@ export const SingleProduct = () => {
                             </Box>
                         </Grid>
                     </Grid>
-                    {/* <Box sx={{mt:'30px'}}>
-                        <ButtonAction size='medium' width='490px'>Continue shopping</ButtonAction>
-                    </Box> */}
                     <Grid container spacing={11} sx={{mt:'32px'}}>
                         <Grid item lg={6}>
                             <HeadingH4 sx={{textAlign:'center'}}>Do you offer discounts for education?</HeadingH4>

@@ -1,9 +1,9 @@
 import { styled } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom'
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { Link as RouterLink } from 'react-router-dom'
 
 import mockedDataProducts from '../../../../mockedDataProducts.json';
 import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';

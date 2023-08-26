@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
@@ -41,7 +41,7 @@ export const TheChapterIncludes = ({scrollOnClick}:{scrollOnClick: () => void}) 
                     </Box>
                     <Paragraph sx={{mt:'30px'}}>Short description about each chapter</Paragraph>
                     <Stack flexDirection='row'>
-                        <Link to="/contact" ><StyledParagraphLink>Have any questions?</StyledParagraphLink></Link>
+                        <RouterLink to="/contact" ><StyledParagraphLink>Have any questions?</StyledParagraphLink></RouterLink>
                         <Paragraph sx={{ml:'5px'}}>Contact us</Paragraph>
                     </Stack>
                 </Stack>
