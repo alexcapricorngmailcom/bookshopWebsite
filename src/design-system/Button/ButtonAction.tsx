@@ -4,13 +4,14 @@ import Button, {ButtonProps} from '@mui/material/Button';
 import { MAIN, SECONDARY, WHITE } from '../colors';
 import Box from '@mui/material/Box';
 
-export const ButtonAction = ({size ='small', width, height = '65px', onClick, variant = 'contained', children, component, to, startIcon}:ButtonActionProps) => {
+export const ButtonAction = ({size ='small', width, height = '65px', type, onClick, variant = 'contained', children, component, to, startIcon}:ButtonActionProps) => {
     return (
         <Box>
             <StyledButton 
                 size={size} 
                 width={width} 
                 height={height}
+                type={type}
                 onClick={onClick} 
                 variant={variant} 
                 component={component} 
@@ -112,6 +113,7 @@ type ButtonActionProps = {
     size?: 'small' | 'medium' | 'large';
     width?: string | undefined;
     height?: string | undefined;
+    type?: 'submit' | 'reset' | 'button' | undefined;
     onClick?: () => void;
     variant?: "text" | "outlined" | "contained";
     children: ReactNode;
@@ -123,6 +125,7 @@ type ButtonActionProps = {
 interface StyledButtonProps extends ButtonProps {
     width: string | undefined;
     height: string | undefined;
+    type?: 'submit' | 'reset' | 'button' | undefined;
     component: object | undefined;
     to?: string | undefined;
     startIcon?: any;

@@ -13,17 +13,21 @@ import { BLACK } from '../colors';
 import { ButtonAction } from '../Button';
 
 export const Form = () => {
+
+    function mySubmitFunction(event:any) {
+        event.preventDefault();
+    }
     return (
-        <form>
+        <form onSubmit={mySubmitFunction}>
             <Stack>
                 <Stack flexDirection='row'>
                     <Box position='relative'>
-                        <StyledInput type="email" placeholder='Email' />
-                        <StyledImg src={userIcon} alt="user icon" />
-                    </Box>
-                    <Box sx={{position:'relative', ml:'10px'}}>
                         <StyledInput type="text" placeholder='Name' />
                         <StyledImg src={emailIcon} alt="email icon" />
+                    </Box>
+                    <Box sx={{position:'relative', ml:'10px'}}>
+                        <StyledInput type="email" placeholder='Email' />
+                        <StyledImg src={userIcon} alt="user icon" />
                     </Box>
                 </Stack>
                 <Box sx={{position:'relative', mt:'10px'}}>
@@ -38,7 +42,7 @@ export const Form = () => {
                     <FormControlLabel control={<StyledCheckbox />} label={<Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>} />
                 </Stack>
                 <Box sx={{mt:'15px'}}>
-                    <ButtonAction size='large' width='100%'>Send Message</ButtonAction>
+                    <ButtonAction size='large' width='100%' type='submit'>Send Message</ButtonAction>
                 </Box>
             </Stack>
         </form>

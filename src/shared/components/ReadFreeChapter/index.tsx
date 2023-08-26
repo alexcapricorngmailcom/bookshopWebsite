@@ -16,19 +16,22 @@ export const ReadFreeChapter = () => {
                         <HeadingH3>Read a free chapter</HeadingH3>
                         <LineLarge sx={{mt:'22px', backgroundColor: MAIN}} />
                         <Paragraph sx={{mt:'22px', textAlign:'center', color: MAIN}}>Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.</Paragraph>
-                        <StyledInputSectionStack>
-                            <StyledInput type="text" placeholder='Your Email id...' />
-                            <Box sx={{ml:'10px'}}>
-                                <ButtonAction size='medium'>Subscribe</ButtonAction> 
-                            </Box>
-                        </StyledInputSectionStack>
+                            
+                                <StyledInputSectionForm>
+                                    <StyledInput type="text" placeholder='Your Email id...' />
+                                    <Box sx={{ml:'10px'}}>
+                                        <ButtonAction size='medium' type='submit'>Subscribe</ButtonAction> 
+                                    </Box>
+                                </StyledInputSectionForm>
+                          
                     </Stack>
                 </Box>
             </Container>
     );
 }
 
-const StyledInputSectionStack = styled(Stack)`
+const StyledInputSectionForm = styled('form')`
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
