@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -11,9 +12,8 @@ import { LineSmall } from '../../../../design-system/geometry/lines'
 import { BookDetails } from '../../../../shared/components/BookDetails';
 import { ButtonAction } from '../../../../design-system/Button';
 
-// TODO props color fff
+export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
 
-export const Hero = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
@@ -26,31 +26,29 @@ export const Hero = () => {
                         <HeadingH1 sx={{mt:'16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</HeadingH1>
                         <Paragraph sx={{mt:'32px', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' mt='50px'>
-                            <ButtonAction>Order Today</ButtonAction> 
-                            <ButtonAction variant='text'><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>
-                            {/* <ButtonAction size={'small'} onClick={() =>{}}>Order Today</ButtonAction>
-                            <ButtonAction size={'small'} outlined onClick={() =>{}}>Read Free Demo</ButtonAction> */}
+                            <ButtonAction component={Link} to='/myStore'>Order Today</ButtonAction> 
+                            <ButtonAction variant='text' onClick={scrollOnClick}><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>
                         </Stack>
                         <Grid container marginTop='50px'>
                             <Grid item md={3.5} sm={3.5}>
                                 <BookDetails
                                     title='Pages:'
                                     paragraph='586 pages'
-                                    color='#ffffff'
+                                    color={WHITE}
                                 />
                             </Grid>
                             <Grid item md={3.5} sm={3.5}>
                                 <BookDetails 
                                     title='Length:'
                                     paragraph='10 hours'
-                                    color='#ffffff'
+                                    color={WHITE}
                                 />
                             </Grid>
                             <Grid item md={5} sm={5}>
                                 <BookDetails 
                                     title='Ratings:'
                                     paragraph='4.5/5 (305 ratings)'
-                                    color='#ffffff'
+                                    color={WHITE}
                                 />
                             </Grid>
                         </Grid>

@@ -2,12 +2,11 @@ import { styled } from '@mui/material/styles';
 
 import { WHITE } from '../../../../design-system/colors';
 import { ReadFreeChapter } from '../../../../shared/components';
+import { LegacyRef } from 'react';
 
-
-
-export const ReadFreeChapterSection = () => {
+export const ReadFreeChapterSection = ({readFreeDemo}:{readFreeDemo?: LegacyRef<HTMLElement>}) => {
     return (
-        <StyledSection>
+        <StyledSection ref={readFreeDemo}>
            <ReadFreeChapter />
         </StyledSection>
     );

@@ -90,7 +90,7 @@ export const Header = () => {
                             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
                         </StyledBadge> */}
                         <Box ml='30px'>
-                            <ButtonAction size="small" width ='160px' height="50px" variant="contained">Order Today</ButtonAction>
+                            <ButtonAction size="small" width ='160px' height="50px" variant="contained" component={RouterLink} to='/myStore'>Order Today</ButtonAction>
                         </Box>
                     </Stack>
                 </StyledNav>

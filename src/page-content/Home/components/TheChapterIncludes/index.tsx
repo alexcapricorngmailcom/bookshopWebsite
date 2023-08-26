@@ -1,9 +1,9 @@
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 
 import { MAIN, BACKGROUND } from '../../../../design-system/colors';
 import { HeadingH3, Paragraph } from '../../../../design-system/typography';
@@ -11,7 +11,7 @@ import { LineLarge } from '../../../../design-system/geometry/lines';
 import { TheChapterGridItem } from './components/TheChapterGridItem';
 import { ButtonAction } from '../../../../design-system/Button';
 
-export const TheChapterIncludes = () => {
+export const TheChapterIncludes = ({scrollOnClick}:{scrollOnClick: () => void}) => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
@@ -37,12 +37,11 @@ export const TheChapterIncludes = () => {
                         />
                     </Grid>
                     <Box sx={{mt:'80px'}}>
-                        <ButtonAction size='large'>Start a 15-Days Free Trail</ButtonAction>
-                        {/* <ButtonAction size='large' onClick={() => {}}>Start a 15-Days Free Trail</ButtonAction> */}
+                        <ButtonAction size='large' onClick={scrollOnClick}>Start a 15-Days Free Trail</ButtonAction>
                     </Box>
                     <Paragraph sx={{mt:'30px'}}>Short description about each chapter</Paragraph>
                     <Stack flexDirection='row'>
-                        <Link href="#" underline='none'><StyledParagraphLink>Have any questions?</StyledParagraphLink></Link>
+                        <Link to="/contact" ><StyledParagraphLink>Have any questions?</StyledParagraphLink></Link>
                         <Paragraph sx={{ml:'5px'}}>Contact us</Paragraph>
                     </Stack>
                 </Stack>

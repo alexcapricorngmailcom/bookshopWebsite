@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import { Link as RouterLink } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -60,7 +61,7 @@ export const AboutTheAuthor = () => {
                             <LineLarge sx={{mt:'22px'}} />
                             <Paragraph sx={{mt:'22px'}}>All the Lorem generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, that can combined with a handful of model sentence structures.</Paragraph>
                             <Box sx={{mt:'30px'}}>
-                                <ButtonAction size='large'>Contact now</ButtonAction>
+                                <ButtonAction size='large' component={RouterLink} to='/contact' >Contact now</ButtonAction>
                             </Box>
                         </Grid>
                     </Grid>

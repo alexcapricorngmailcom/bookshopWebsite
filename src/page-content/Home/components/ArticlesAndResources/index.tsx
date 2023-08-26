@@ -22,7 +22,7 @@ export const ArticlesAndResources = () => {
                     {mockedDataArticles.articlesItems.map( (article, index) => {
                         
                         if (index > 2) {
-                            return <></>
+                            return <div key={article.id}></div>
                         }
 
                         return (
