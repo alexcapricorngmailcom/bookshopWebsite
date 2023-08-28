@@ -41,7 +41,7 @@ export const Form = () => {
         setPhoneValue('');
         setMessageValue('');
         setMessageValue('');
-        setIsChecked(!isChecked);
+        setIsChecked(false);
     }
 
     return (
@@ -69,7 +69,8 @@ export const Form = () => {
                 </Stack>
                 <Box sx={{position:'relative', mt:'10px'}}>
                     <StyledInput 
-                        type="tel" 
+                        type="tel"
+                        pattern='[0-9]{10}'
                         placeholder='Phone'
                         value={phoneValue}
                         onChange={event => setPhoneValue(event.target.value)}
