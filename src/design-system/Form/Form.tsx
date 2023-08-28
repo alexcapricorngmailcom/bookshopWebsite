@@ -14,34 +14,29 @@ import { Paragraph } from '../typography';
 import { BLACK } from '../colors';
 import { ButtonAction } from '../Button';
 
+const defaultformValue = {
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    offers: false
+}
+
 export const Form = () => {
     
-    const [nameValue, setNameValue] = useState('');
-    const [emailValue, setEmailValue] = useState('');
-    const [phoneValue, setPhoneValue] = useState('');
-    const [messageValue, setMessageValue] = useState('');
-    const [isChecked, setIsChecked] = useState(false);
-
-    const formValue = {
-        name: {nameValue},
-        email: {emailValue},
-        phone: {phoneValue},
-        message: {messageValue},
-        offers: {isChecked}
-    }
+    const [userContactData, setUserContactData] = useState(defaultformValue);
 
     function checkHandler() {
-        setIsChecked(!isChecked);
+        setUserContactData((prevState) => ({...prevState, offers: !prevState.offers}))
     }
 
     function mySubmitFunction(event:any) {
         event.preventDefault();
-        setNameValue('');
-        setEmailValue('');
-        setPhoneValue('');
-        setMessageValue('');
-        setMessageValue('');
-        setIsChecked(false);
+        setUserContactData(defaultformValue);
+    }
+
+    const changeState = (value:string, key:string) => {
+        setUserContactData(prev => ({...prev, [key]: value}))
     }
 
     return (
@@ -51,9 +46,11 @@ export const Form = () => {
                     <Box position='relative'>
                         <StyledInput 
                             type="text"
+                            name='name'
                             placeholder='Name'
-                            value={nameValue}
-                            onChange={event => setNameValue(event.target.value)}
+                            value={userContactData.name}
+                            onChange={event => changeState(event.target.value, 'name')}
+                            required
                         />
                         <StyledImg src={emailIcon} alt="email icon" />
                     </Box>
@@ -61,8 +58,8 @@ export const Form = () => {
                         <StyledInput 
                             type="email" 
                             placeholder='Email'
-                            value={emailValue}
-                            onChange={event => setEmailValue(event.target.value)}
+                            value={userContactData.email}
+                            onChange={event => setUserContactData((prev) => ({...prev, email: event.target.value}))}
                         />
                         <StyledImg src={userIcon} alt="user icon" />
                     </Box>
@@ -72,8 +69,8 @@ export const Form = () => {
                         type="tel"
                         pattern='[0-9]{10}'
                         placeholder='Phone'
-                        value={phoneValue}
-                        onChange={event => setPhoneValue(event.target.value)}
+                        value={userContactData.phone}
+                        onChange={event => setUserContactData((prev) => ({...prev, phone: event.target.value}))}
                     />
                     <StyledImg src={phoneIcon} alt="phone icon" />
                 </Box>
@@ -82,14 +79,14 @@ export const Form = () => {
                         cols={1} 
                         rows={6} 
                         placeholder='Message'
-                        value={messageValue}
-                        onChange={event => setMessageValue(event.target.value)}
+                        value={userContactData.message}
+                        onChange={event => setUserContactData((prev) => ({...prev, message: event.target.value}))}
                     >
                     </StyledTextArea>
                     <StyledImg src={textareaIcon} alt="textarea icon" />
                 </Box>
                 <Stack flexDirection='row' alignItems='center' mt='10px'>
-                    <FormControlLabel checked={isChecked} onChange={checkHandler} control={<StyledCheckbox />} label={<Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>} />
+                    <FormControlLabel checked={userContactData.offers} onChange={checkHandler} control={<StyledCheckbox />} label={<Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>} />
                 </Stack>
                 <Box sx={{mt:'15px'}}>
                     <ButtonAction size='large' width='100%' type='submit'>Send Message</ButtonAction>
