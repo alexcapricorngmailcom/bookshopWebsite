@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -13,33 +15,80 @@ import { BLACK } from '../colors';
 import { ButtonAction } from '../Button';
 
 export const Form = () => {
+    
+    const [nameValue, setNameValue] = useState('');
+    const [emailValue, setEmailValue] = useState('');
+    const [phoneValue, setPhoneValue] = useState('');
+    const [messageValue, setMessageValue] = useState('');
+    const [isChecked, setIsChecked] = useState(false);
+
+    const formValue = {
+        name: {nameValue},
+        email: {emailValue},
+        phone: {phoneValue},
+        message: {messageValue},
+        offers: {isChecked}
+    }
+
+    function checkHandler() {
+        setIsChecked(!isChecked);
+    }
 
     function mySubmitFunction(event:any) {
         event.preventDefault();
+        setNameValue('');
+        setEmailValue('');
+        setPhoneValue('');
+        setMessageValue('');
+        setMessageValue('');
+        setIsChecked(!isChecked);
     }
+
     return (
         <form onSubmit={mySubmitFunction}>
             <Stack>
                 <Stack flexDirection='row'>
                     <Box position='relative'>
-                        <StyledInput type="text" placeholder='Name' />
+                        <StyledInput 
+                            type="text"
+                            placeholder='Name'
+                            value={nameValue}
+                            onChange={event => setNameValue(event.target.value)}
+                        />
                         <StyledImg src={emailIcon} alt="email icon" />
                     </Box>
                     <Box sx={{position:'relative', ml:'10px'}}>
-                        <StyledInput type="email" placeholder='Email' />
+                        <StyledInput 
+                            type="email" 
+                            placeholder='Email'
+                            value={emailValue}
+                            onChange={event => setEmailValue(event.target.value)}
+                        />
                         <StyledImg src={userIcon} alt="user icon" />
                     </Box>
                 </Stack>
                 <Box sx={{position:'relative', mt:'10px'}}>
-                    <StyledInput type="tel" placeholder='Phone' />
+                    <StyledInput 
+                        type="tel" 
+                        placeholder='Phone'
+                        value={phoneValue}
+                        onChange={event => setPhoneValue(event.target.value)}
+                    />
                     <StyledImg src={phoneIcon} alt="phone icon" />
                 </Box>
                 <Box sx={{position:'relative', mt:'10px'}}>
-                    <StyledTextArea name="" id="" cols={1} rows={6} placeholder='Message'></StyledTextArea>
+                    <StyledTextArea 
+                        cols={1} 
+                        rows={6} 
+                        placeholder='Message'
+                        value={messageValue}
+                        onChange={event => setMessageValue(event.target.value)}
+                    >
+                    </StyledTextArea>
                     <StyledImg src={textareaIcon} alt="textarea icon" />
                 </Box>
                 <Stack flexDirection='row' alignItems='center' mt='10px'>
-                    <FormControlLabel control={<StyledCheckbox />} label={<Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>} />
+                    <FormControlLabel checked={isChecked} onChange={checkHandler} control={<StyledCheckbox />} label={<Paragraph sx={{mt:'3px'}}>Keep me up to date with news and offers by email</Paragraph>} />
                 </Stack>
                 <Box sx={{mt:'15px'}}>
                     <ButtonAction size='large' width='100%' type='submit'>Send Message</ButtonAction>
