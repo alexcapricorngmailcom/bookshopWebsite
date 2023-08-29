@@ -30,17 +30,17 @@ export const Form = () => {
         setUserContactData((prevState) => ({...prevState, offers: !prevState.offers}))
     }
 
-    function mySubmitFunction(event:any) {
-        event.preventDefault();
-        setUserContactData(defaultformValue);
-    }
-
     const changeState = (value:string, key:string) => {
         setUserContactData(prev => ({...prev, [key]: value}))
     }
 
+    function customSubmit(event:any) {
+        event.preventDefault();
+        setUserContactData(defaultformValue);
+    }
+
     return (
-        <form onSubmit={mySubmitFunction}>
+        <form onSubmit={customSubmit}>
             <Stack>
                 <Stack flexDirection='row'>
                     <Box position='relative'>
@@ -56,10 +56,12 @@ export const Form = () => {
                     </Box>
                     <Box sx={{position:'relative', ml:'10px'}}>
                         <StyledInput 
-                            type="email" 
+                            type="email"
+                            name='email' 
                             placeholder='Email'
                             value={userContactData.email}
-                            onChange={event => setUserContactData((prev) => ({...prev, email: event.target.value}))}
+                            onChange={event => changeState(event.target.value, 'email')}
+                            required
                         />
                         <StyledImg src={userIcon} alt="user icon" />
                     </Box>
@@ -71,6 +73,7 @@ export const Form = () => {
                         placeholder='Phone'
                         value={userContactData.phone}
                         onChange={event => setUserContactData((prev) => ({...prev, phone: event.target.value}))}
+                        required
                     />
                     <StyledImg src={phoneIcon} alt="phone icon" />
                 </Box>
@@ -81,6 +84,7 @@ export const Form = () => {
                         placeholder='Message'
                         value={userContactData.message}
                         onChange={event => setUserContactData((prev) => ({...prev, message: event.target.value}))}
+                        required
                     >
                     </StyledTextArea>
                     <StyledImg src={textareaIcon} alt="textarea icon" />

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
@@ -8,7 +9,17 @@ import { HeadingH3, Paragraph } from '../../../design-system/typography';
 import { LineLarge } from '../../../design-system/geometry/lines';
 import { ButtonAction } from '../../../design-system/Button';
 
+const defaultformValue = '';
+
 export const ReadFreeChapter = () => {
+
+    const [userEmailValue, setUserEmailValue] = useState(defaultformValue);
+
+    function customSubmit(event:any) {
+        event.preventDefault();
+        setUserEmailValue(defaultformValue);
+    }
+
     return (
             <Container maxWidth='lg'>
                 <Box sx={{padding:'120px 230px',backgroundColor:SECONDARY}}>
@@ -16,14 +27,19 @@ export const ReadFreeChapter = () => {
                         <HeadingH3>Read a free chapter</HeadingH3>
                         <LineLarge sx={{mt:'22px', backgroundColor: MAIN}} />
                         <Paragraph sx={{mt:'22px', textAlign:'center', color: MAIN}}>Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.</Paragraph>
-                            
-                                <StyledInputSectionForm>
-                                    <StyledInput type="text" placeholder='Your Email id...' />
+                                <StyledInputSectionForm onSubmit={customSubmit}>
+                                    <StyledInput 
+                                        type="email"
+                                        name='email'
+                                        placeholder='Your Email id...'
+                                        value={userEmailValue}
+                                        onChange={event => (setUserEmailValue(event.target.value))}
+                                        required
+                                    />
                                     <Box sx={{ml:'10px'}}>
                                         <ButtonAction size='medium' type='submit'>Subscribe</ButtonAction> 
                                     </Box>
                                 </StyledInputSectionForm>
-                          
                     </Stack>
                 </Box>
             </Container>
