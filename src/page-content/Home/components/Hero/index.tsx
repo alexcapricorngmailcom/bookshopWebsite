@@ -12,6 +12,99 @@ import { LineSmall } from '../../../../design-system/geometry/lines'
 import { BookDetails } from '../../../../shared/components/BookDetails';
 import { ButtonAction } from '../../../../design-system/Button';
 
+export enum ProcedureStatusUuid {
+    OnshoreDraft = '89f1a721-d2d5-40dd-8764-aa844949257a',
+    OnshoreDraft2 = 'eaa15a3b-00c9-4de2-84c7-80ac1baf9447',
+    OffshoreDraft = '4507747a-6c3b-4698-ad0b-a7feb8d013b8',
+    FinalApproved = 'd49c1d47-45df-4fed-b81e-4e8c3d018030',
+    UnderApproval = 'acb889e7-a282-4756-9228-e9d9d1571a76',
+    Completed = '2e008916-0212-41fa-8e20-50c134501598',
+    Abandoned = '66d36d75-254f-4b12-8098-3ba9966df7b4',
+    UnderExecution = '952e8d19-732e-4207-a93c-21bc5f4602fb',
+    AAR = '0b93cc72-b362-4d98-af35-d854d672d4c8',
+    PausedExecution = '9e70fd6d-f7b3-4865-b204-11b3ef842b73',
+    Omitted = '062c3d1b-390e-4a56-ab51-06d981168f17',
+}
+
+const IntermediateStatuses = [
+    {
+     label: 'Onshore Draft',
+     id: ProcedureStatusUuid.OnshoreDraft,
+    },
+    {
+     label: 'Onshore Draft 2',
+     id: ProcedureStatusUuid.OnshoreDraft2,
+    },
+    {
+     label: 'Offshore Draft',
+     id: ProcedureStatusUuid.OffshoreDraft,
+    },
+    {
+     label: 'Under Approval',
+     id: ProcedureStatusUuid.UnderApproval,
+    },
+    {
+     label: 'Final Approved',
+     id: ProcedureStatusUuid.FinalApproved,
+    },
+    {
+     label: 'Under Execution',
+     id: ProcedureStatusUuid.UnderExecution,
+     subStatuses: [
+      {
+       label: 'Paused Execution',
+       id: ProcedureStatusUuid.PausedExecution,
+      },
+     ],
+    },
+    { 
+        label: 'AAR', 
+        id: ProcedureStatusUuid.AAR 
+    },
+];
+   
+const FinishStatuses = [
+    {
+     label: 'Completed',
+     id: ProcedureStatusUuid.Completed,
+    },
+    {
+     label: 'Abandoned',
+     id: ProcedureStatusUuid.Abandoned,
+    },
+    {
+     label: 'Omitted',
+     id: ProcedureStatusUuid.Omitted,
+    },
+];
+
+const arr = IntermediateStatuses.concat(FinishStatuses);
+
+
+function getProcedureStatusLabelByValue(value: ProcedureStatusUuid | string) {
+    
+    const newArr = arr.find((status:any) => (value === status.id || status.subStatuses?.find((substatus:any) => value === substatus.id ))
+
+    );
+    
+    if (newArr?.subStatuses) {
+        return newArr?.subStatuses.find((substatus:any) => value === substatus.id )?.label
+    } else {
+        return newArr?.label 
+    }
+    
+}
+
+
+
+console.log(getProcedureStatusLabelByValue('89f1a721-d2d5-40dd-8764-aa844949257a'))
+console.log(getProcedureStatusLabelByValue('9e70fd6d-f7b3-4865-b204-11b3ef842b73'))
+console.log(getProcedureStatusLabelByValue('062c3d1b-390e-4a56-ab51-06d981168f17'))
+
+
+
+
+
 export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
 
     return (
