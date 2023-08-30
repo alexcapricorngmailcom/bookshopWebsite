@@ -1,4 +1,5 @@
 import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import CloseIcon from '@mui/icons-material/Close';
@@ -10,12 +11,15 @@ import { BACKGROUND, MAIN, SECONDARY, WHITE } from "../../../design-system/color
 import { LineLarge } from "../../../design-system/geometry/lines";
 import { ButtonAction } from "../../../design-system/Button";
 
-export const Cart = () => {
+export const Cart = ({closeModal}:any) => {
+
     return (
         <>
         <StyledStack>
             <StyledHeadingH2>Your Cart</StyledHeadingH2>
-            <CloseIcon fontSize="large" sx={{color: MAIN}}/>
+                <Button onClick={closeModal}>
+                    <CloseIcon fontSize="large" sx={{color: MAIN}} />
+                </Button>
         </StyledStack>
         <StyledStack sx={{alignItems: 'flex-start', padding: '0px 70px', mt:'65px', backgroundColor: WHITE}}>
             <Box>

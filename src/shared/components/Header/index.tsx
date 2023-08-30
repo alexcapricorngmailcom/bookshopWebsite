@@ -14,7 +14,7 @@ import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/Lin
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareSmall } from "../../../design-system/geometry/squares";
-import { BasicModal } from "../../functions/BasicModal";
+import { BasicModal } from "./components/BasicModal";
 
 
 const setActive = ({ isActive }:any) => {

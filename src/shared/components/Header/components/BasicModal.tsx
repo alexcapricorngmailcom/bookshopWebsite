@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -6,10 +6,8 @@ import Modal from '@mui/material/Modal';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { MAIN, SECONDARY, WHITE } from '../../design-system/colors';
-import { Cart } from '../components/Cart';
-
-//TODO problem with body when modal is opened
+import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
+import { Cart } from '../../Cart';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -20,29 +18,31 @@ const style = {
   bgcolor: WHITE,
   outline: 'none',
   boxShadow: 24,
-  p: '0 !important'
 };
 
 export function BasicModal() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
       <Button onClick={handleOpen}>
-      <StyledBadge badgeContent={1} color='error'>
-          <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
-      </StyledBadge>
+        <StyledBadge badgeContent={1} color='error'>
+            <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
+        </StyledBadge>
       </Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        disableScrollLock
       >
         <Box sx={style}>
-          <Cart />
+          <Cart 
+            closeModal={handleClose}
+          />
         </Box>
       </Modal>
     </div>
