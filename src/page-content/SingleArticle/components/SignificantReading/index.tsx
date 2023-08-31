@@ -6,18 +6,10 @@ import Box from '@mui/material/Box';
 
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, HeadingH5, Paragraph } from '../../../../design-system/typography';
-// import { UnorderedList } from '../../../../design-system/List';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { Quote } from '../../../../design-system/Quote';
 
 import mockedDataArticles from "../../../../mockedDataArticles.json"
-
-export const list = [
-    'It has roots in a piece of classical Latin literature from 45 BC', 
-    'To generate Lorem Ipsum which looks reasonable', 
-    'The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet', 
-    'Be standard chunk of Lorem used since the 1500s'
-];
 
 export const SignificantReading = () => {
 
@@ -37,32 +29,16 @@ export const SignificantReading = () => {
                     <HeadingH4 sx={{mt:'40px'}}>The perfect book for all</HeadingH4>
                     <Paragraph sx={{mt:'30px'}}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has less normal distribution of letters, as opposed.</Paragraph>
 
-                    <Box sx={{mt:'20px'}}>
+                    <Box sx={{mt:'20px', ml:'40px'}}>
                         <ul>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>It has roots in a piece of classical Latin literature from 45 BC</Paragraph>
-                                </Stack>
-                            </li>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>To generate Lorem Ipsum which looks reasonable</Paragraph>
-                                </Stack>
-                            </li>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet</Paragraph>
-                                </Stack>
-                            </li>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>Be standard chunk of Lorem used since the 1500s</Paragraph>
-                                </Stack>
-                            </li>
+                            {mockedDataArticles.articlesItems.map(listItem => (
+                                <li key={listItem.id}>
+                                    <Stack flexDirection='row' alignItems='center'>
+                                        <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
+                                        <Paragraph sx={{ml:'15px', color: MAIN}}>{listItem.listItem}</Paragraph>
+                                    </Stack>
+                                </li>
+                            ))}
                         </ul>
                     </Box>
                     
@@ -73,33 +49,17 @@ export const SignificantReading = () => {
                     <HeadingH4 sx={{mt:'40px'}}>The perfect book for all</HeadingH4>
                     <Paragraph sx={{mt:'30px'}}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has less normal distribution of letters, as opposed.</Paragraph>
 
-                    <Box sx={{mt:'20px'}}>
-                        <ul>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>It has roots in a piece of classical Latin literature from 45 BC</Paragraph>
-                                </Stack>
-                            </li>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>To generate Lorem Ipsum which looks reasonable</Paragraph>
-                                </Stack>
-                            </li>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet</Paragraph>
-                                </Stack>
-                            </li>
-                            <li>
-                                <Stack flexDirection='row' alignItems='center'>
-                                    <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                    <Paragraph sx={{ml:'15px', color: MAIN}}>Be standard chunk of Lorem used since the 1500s</Paragraph>
-                                </Stack>
-                            </li>
-                        </ul>
+                    <Box sx={{mt:'20px', ml:'40px'}}>
+                        <ol>
+                            {mockedDataArticles.articlesItems.map((listItem, index) => (
+                                <li key={listItem.id}>
+                                    <Stack flexDirection='row' alignItems='center'>
+                                        <Paragraph sx={{color: SECONDARY}}>{index + 1}.</Paragraph>
+                                        <Paragraph sx={{ml:'15px', color: MAIN}}>{listItem.listItem}</Paragraph>
+                                    </Stack>
+                                </li>
+                            ))}
+                        </ol>
                     </Box>
                 </article>
             </Container>

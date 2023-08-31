@@ -54,27 +54,23 @@ export const Footer = () => {
                             
                             <Stack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Home</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/">Home</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">About Us</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/about">About Us</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Services</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/myStore">My Store</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Appointments</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/articles">Blog</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Blog</StyledFooterTextLink>
-                            </Stack>
-                            <Stack flexDirection='row' alignItems='center'>
-                                <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Contact Us</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/contact">Contact Us</StyledFooterTextRouterLink>
                             </Stack>
                         </Box>
 
@@ -83,27 +79,27 @@ export const Footer = () => {
                             
                             <Stack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Start here</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/">Start here</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Style guide</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/">Style guide</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">404 not found</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/Error404">404 not found</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Password protected</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/">Password protected</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Licenses</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/">Licenses</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextLink href="#">Changelog</StyledFooterTextLink>
+                                <StyledFooterTextRouterLink to="/">Changelog</StyledFooterTextRouterLink>
                             </Stack>
                         </Box>
 
@@ -155,6 +151,21 @@ const StyledBoxLogo = styled(Box)`
 `;
 
 const StyledFooterTextLink = styled(Link)`
+    margin-left: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 170%;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: #B4C7E7;
+    
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+`;
+
+const StyledFooterTextRouterLink = styled(RouterLink)`
     margin-left: 10px;
     font-family: Inter, sans-serif;
     font-size: 18px;
