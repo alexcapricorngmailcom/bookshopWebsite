@@ -9,6 +9,8 @@ import { About } from './page-content/About';
 import { Contact } from './page-content/Contact';
 import { Error404 } from './page-content/Error404';
 import { Footer } from "./shared/components/Footer";
+import { Changelog } from './page-content/Changelog';
+import { ProtectedPage } from './page-content/ProtectedPage';
 
 import { SingleArticle } from './page-content/SingleArticle';
 
@@ -24,7 +26,10 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/singleArticle/:id" element={<SingleArticle />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/protectedPage" element={<ProtectedPage />} />
           <Route path="*" element={<Error404 />} />
+
         </Routes>
         <Footer />
       </div>

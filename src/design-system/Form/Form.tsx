@@ -137,7 +137,6 @@ const StyledImg = styled('img')`
     position: absolute;
     top: 20px;
     left: 20px;
-
 `;
 
 const StyledCheckbox = styled(Checkbox)`

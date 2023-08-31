@@ -91,7 +91,7 @@ export const Footer = () => {
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextRouterLink to="/">Password protected</StyledFooterTextRouterLink>
+                                <StyledFooterTextRouterLink to="/protectedPage">Password protected</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
@@ -99,7 +99,7 @@ export const Footer = () => {
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextRouterLink to="/">Changelog</StyledFooterTextRouterLink>
+                                <StyledFooterTextRouterLink to="/changelog">Changelog</StyledFooterTextRouterLink>
                             </Stack>
                         </Box>
 

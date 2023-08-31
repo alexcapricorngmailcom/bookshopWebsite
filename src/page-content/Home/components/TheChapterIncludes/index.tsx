@@ -51,8 +51,7 @@ export const TheChapterIncludes = ({scrollOnClick}:{scrollOnClick: () => void}) 
 }
 
 const StyledSection = styled('section')`
-    padding-top: 145px;
-    padding-bottom: 145px;
+    padding: 145px 0px;
     background-color: ${BACKGROUND};
 `;
 
