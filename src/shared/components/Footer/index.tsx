@@ -95,7 +95,7 @@ export const Footer = () => {
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextRouterLink to="/">Licenses</StyledFooterTextRouterLink>
+                                <StyledFooterTextRouterLink to="/licenses">Licenses</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
@@ -108,15 +108,15 @@ export const Footer = () => {
                             
                             <Stack flexDirection='row' alignItems='flex-start' mt='40px'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Address: </HeadingH5>
-                                <StyledFooterTextLink href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank'>24A Kingston St, <br /> Los Vegas NC 28202, <br /> USA</StyledFooterTextLink>
+                                <StyledFooterTextLink href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank' rel="noopener">24A Kingston St, <br /> Los Vegas NC 28202, <br /> USA</StyledFooterTextLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Mail:</HeadingH5>
-                                <StyledFooterTextLink href="mailto:support@doctors.com">support@doctors.com</StyledFooterTextLink>
+                                <StyledFooterTextLink href="mailto:support@pages.com">support@pages.com</StyledFooterTextLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Phone:</HeadingH5>
-                                <StyledFooterTextLink href="tel: +221234567900">(+22) 123 - 4567 - 900</StyledFooterTextLink>
+                                <StyledFooterTextLink href="tel: +18001239999">1-800-123-9999</StyledFooterTextLink>
                             </Stack>
                         </Box>
                     </Stack>

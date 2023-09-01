@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
 import { ReactComponent as HomeIcon } from './assets/homeIcon.svg'
 import { ReactComponent as EmailIcon } from './assets/emailIcon.svg'
@@ -30,8 +31,8 @@ export const KeepInTouch = () => {
                                     </SquareMedium>
                                 </Box>
                                 <Box>
-                                    <HeadingH5>Visit Us :</HeadingH5>
-                                    <Paragraph sx={{mt:'0px'}}>No: 09a, Downtown, San Diego, USA.</Paragraph>
+                                    <HeadingH5>Visit Us:</HeadingH5>
+                                    <Link href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank' rel="noopener" underline='none'><Paragraph>24A Kingston St, Los Vegas NC 28202, USA</Paragraph></Link>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'22px'}}>
@@ -41,8 +42,8 @@ export const KeepInTouch = () => {
                                     </SquareMedium>
                                 </Box>
                                 <Box>
-                                    <HeadingH5>Drop Us :</HeadingH5>
-                                    <Paragraph sx={{mt:'0px'}}>support@pages.com</Paragraph>
+                                    <HeadingH5>Drop Us:</HeadingH5>
+                                    <Link href="mailto:support@pages.com" underline='none'><Paragraph>support@pages.com</Paragraph></Link>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'22px'}}>
@@ -52,8 +53,8 @@ export const KeepInTouch = () => {
                                     </SquareMedium>
                                 </Box>
                                 <Box>
-                                    <HeadingH5>Call Us :</HeadingH5>
-                                    <Paragraph sx={{mt:'0px'}}>Call: 1-800-123-9999</Paragraph>
+                                    <HeadingH5>Call Us:</HeadingH5>
+                                    <Link href="tel: +18001239999" underline='none'><Paragraph>1-800-123-9999</Paragraph></Link>
                                 </Box>
                             </Stack>
                         </Stack>

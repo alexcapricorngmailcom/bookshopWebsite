@@ -5,14 +5,15 @@ import { Home } from "./page-content/Home";
 import { MyStore } from './page-content/MyStore';
 import { MyStoreSingleProduct } from './page-content/MyStoreSingleProduct';
 import { Articles } from './page-content/Articles';
+import { SingleArticle } from './page-content/SingleArticle';
 import { About } from './page-content/About';
 import { Contact } from './page-content/Contact';
 import { Error404 } from './page-content/Error404';
 import { Footer } from "./shared/components/Footer";
 import { Changelog } from './page-content/Changelog';
 import { ProtectedPage } from './page-content/ProtectedPage';
+import { Licenses } from './page-content/Licenses';
 
-import { SingleArticle } from './page-content/SingleArticle';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/changelog" element={<Changelog />} />
           <Route path="/protectedPage" element={<ProtectedPage />} />
+          <Route path="/licenses" element={<Licenses />} />
           <Route path="*" element={<Error404 />} />
 
         </Routes>
