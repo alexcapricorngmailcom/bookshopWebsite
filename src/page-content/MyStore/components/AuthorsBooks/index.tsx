@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom'
 import Container from '@mui/material/Container';
@@ -10,11 +11,27 @@ import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { BookDetails, PositionedIcon } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
-
+import { storeItemType } from '../../../../types/storeItem';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
 export const AuthorsBooks = () => {
+
+    const [storeItem, setStoreItem] = useState<storeItemType>({
+        id: '',
+        title: '',
+        price: '',
+        myStoreImgSrc: '',
+        myStoreAlt: '',
+        quantity: 0
+    });
+
+    const changeState = (prev: any) => {
+        setStoreItem(prev => ({...prev, quantity: 1}))
+    }
+
+    console.log (storeItem)
+
     return (
         <StyledSection>
             <Container maxWidth='lg'>
@@ -36,7 +53,7 @@ export const AuthorsBooks = () => {
                                 <BookDetails title={store.type} />
                             </Box>
                             <Box sx={{mt:'30px'}}>
-                                <ButtonAction variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
+                                <ButtonAction onClick={() => changeState(storeItem)} variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                             </Box>
                         </StyledBoxListColumn>
                         ))
