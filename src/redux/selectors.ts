@@ -1,3 +1,3 @@
-import { RootStoreType } from "./rootStore";
+import { ReduxStoreType } from "./reduxStore";
 
-export const getStoresItems = (store: RootStoreType) => store.storesItems.storesItems;
+export const getCartItems = (store: ReduxStoreType) => store.cart.cartItems;

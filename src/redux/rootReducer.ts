@@ -1,6 +1,6 @@
-import { storesItemsSlice } from "./slices/storesItemsSlice";
+import { cartSlice } from "./slices/cartSlice";
 
 export const rootReducer = {
-    storesItems: storesItemsSlice.reducer,
+    cart: cartSlice.reducer,
 };
   

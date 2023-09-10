@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { getStoresItems } from "../../../redux/selectors";
-import { storeItemType } from "../../../types/storeItem";
+import { getCartItems } from "../../../redux/selectors";
+import { cartItemType } from "../../../types/cartItem";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
@@ -16,8 +16,8 @@ import { ButtonAction } from "../../../design-system/Button";
 
 export const Cart = ({closeModal}:any) => {
     
-    const storesItems: storeItemType[] = useSelector(getStoresItems);
-    console.log(storesItems);
+    const cartItems: cartItemType[] = useSelector(getCartItems);
+    console.log(cartItems);
     
     return (
         <>
