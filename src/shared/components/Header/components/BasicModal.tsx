@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { styled } from "@mui/material/styles";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,6 +9,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { Cart } from '../../Cart';
+import { getCartItems } from "../../../../redux/selectors";
+import { cartItemType } from "../../../../types/cartItem";
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -25,10 +28,12 @@ export function BasicModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const cartItems: cartItemType[] = useSelector(getCartItems);
+
   return (
     <div>
       <Button onClick={handleOpen}>
-        <StyledBadge badgeContent={1} color='error'>
+        <StyledBadge badgeContent={cartItems.length} color='error'>
             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
         </StyledBadge>
       </Button>
@@ -66,7 +71,7 @@ const StyledBadge = styled(Badge)`
       color: ${MAIN};
       background-color: ${SECONDARY};
       font-family: Inter, sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
     }
 `;

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom'
 import Container from '@mui/material/Container';
@@ -13,6 +12,7 @@ import { BookDetails, PositionedIcon } from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
 import { useDispatch } from 'react-redux';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
+import { storeItemType } from '../../../../types/storeItem';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
@@ -20,13 +20,16 @@ export const AuthorsBooks = () => {
     
     const dispatch = useDispatch();
 
-    const getCartItem = (store: any) => {
+    const getCartItem = (store: storeItemType) => {
         const cartItem = {
             id: store.id,
-            title: store.title,
-            price: store.price,
             myStoreImgSrc: store.myStoreImgSrc,
             myStoreAlt: store.myStoreAlt,
+            title: store.title,
+            price: store.price,
+            isPositionedIcon: store.isPositionedIcon,
+            positionedIconSrc: store.positionedIconSrc,
+            positionedIconAlt: store.positionedIconAlt,
             quantity: 1
         };
         dispatch(cartSlice.actions.addItem(cartItem));
@@ -47,7 +50,7 @@ export const AuthorsBooks = () => {
                                 </StyledStackImg>
                             </RouterLink>
                             <HeadingH4 sx={{mt:'20px'}}>{store.title}</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>{store.price}</StyledParagraph>
+                            <StyledParagraph sx={{mt:'10px'}}>${store.price}</StyledParagraph>
                             <Paragraph sx={{mt:'10px'}}>{store.mainDescription}</Paragraph>
                             <Box sx={{mt:'20px'}}>
                                 <BookDetails title={store.type} />

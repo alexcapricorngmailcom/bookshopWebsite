@@ -1,8 +1,11 @@
 export type cartItemType = {
-    id: string;
-    title: string;
-    price: string;
-    myStoreImgSrc: string;
-    myStoreAlt: string;
-    quantity: number;
-  };
+  id: string;
+  myStoreImgSrc: string;
+  myStoreAlt: string;
+  title: string;
+  price: number;
+  isPositionedIcon: boolean;
+  positionedIconSrc: string;
+  positionedIconAlt: string;
+  quantity: number;
+};

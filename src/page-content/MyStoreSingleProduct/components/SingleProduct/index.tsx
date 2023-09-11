@@ -38,7 +38,7 @@ export const SingleProduct = () => {
                         </Grid>
                         <Grid item lg={7}>
                             <HeadingH4>{filteredMockedDataProducts.title}</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>{filteredMockedDataProducts.price}</StyledParagraph>
+                            <StyledParagraph sx={{mt:'10px'}}>${filteredMockedDataProducts.price}</StyledParagraph>
                             <Paragraph sx={{mt:'10px'}}>{filteredMockedDataProducts.singleDescription}</Paragraph>
                             <Stack flexDirection='row' sx={{mt:'20px'}}>
                                 <StyledBox>
