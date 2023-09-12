@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { useState } from "react";
 import { getCartItems } from "../../../redux/selectors";
 import { cartItemType } from "../../../types/cartItem";
 import { styled } from "@mui/material/styles";
@@ -15,7 +14,7 @@ import { BACKGROUND, MAIN, SECONDARY, WHITE } from "../../../design-system/color
 import { LineLarge } from "../../../design-system/geometry/lines";
 import { ButtonAction } from "../../../design-system/Button";
 
-export const Cart = ({closeModal}:any) => {
+export const Cart = ({handleClose}:any) => {
     
     const cartItems: cartItemType[] = useSelector(getCartItems);
     console.log(cartItems);
@@ -27,10 +26,10 @@ export const Cart = ({closeModal}:any) => {
     ))
 
     return (
-        <>
+        <div>
             <StyledStack>
                 <StyledHeadingH2>Your Cart</StyledHeadingH2>
-                    <Button onClick={closeModal}>
+                    <Button onClick={handleClose}>
                         <CloseIcon fontSize="large" sx={{color: MAIN}} />
                     </Button>
             </StyledStack>
@@ -91,7 +90,7 @@ export const Cart = ({closeModal}:any) => {
             <Box sx={{mt:'60px', mb:'60px', padding: '0px 70px', backgroundColor: WHITE}}>
                 <ButtonAction size='large' width="100%">Continue to Checkout</ButtonAction>
             </Box>
-        </>
+        </div>
     );
 }
 

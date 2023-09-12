@@ -4,8 +4,6 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Link from '@mui/material/Link';
-import Badge from '@mui/material/Badge';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
 import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
@@ -15,6 +13,7 @@ import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareSmall } from "../../../design-system/geometry/squares";
 import { BasicModal } from "./components/BasicModal";
+import CartScrollDialog from "./components/CartScrollDialog";
 
 
 const setActive = ({ isActive }:any) => {
@@ -85,10 +84,7 @@ export const Header = () => {
                             Contact
                             </StyledNavLink>
                         </StyledHeaderNavLinkBox>
-                        {BasicModal()}
-                        {/* <StyledBadge badgeContent={1} color='error'>
-                            <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
-                        </StyledBadge> */}
+                            {CartScrollDialog()}
                         <Box ml='30px'>
                             <ButtonAction size="small" width ='160px' height="50px" variant="contained" component={RouterLink} to='/myStore'>Order Today</ButtonAction>
                         </Box>
@@ -122,8 +118,6 @@ const StyledLogoItemBox = styled(Box)`
     }
 `;
 
-// TODO discuss important with polimouse 
-
 const StyledHeaderNavLinkBox = styled(Box)`
     a + a {
         margin-left: 30px;
@@ -141,19 +135,6 @@ const StyledNavLink = styled(NavLink)`
     line-height: 170%;
     letter-spacing: -0.01em;
     text-decoration: none;
-`;
-
-const StyledBadge = styled(Badge)`
-    margin-Left: 30px;
-    cursor: pointer;
-
-    & .MuiBadge-badge {
-        color: ${MAIN};
-        background-color: ${SECONDARY};
-        font-family: Inter, sans-serif;
-        font-size: 12px;
-        font-weight: 700;
-    }
 `;
 
 const StyledSquareSmall = styled(SquareSmall)`

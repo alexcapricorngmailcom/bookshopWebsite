@@ -31,7 +31,6 @@ function App() {
           <Route path="/protectedPage" element={<ProtectedPage />} />
           <Route path="/licenses" element={<Licenses />} />
           <Route path="*" element={<Error404 />} />
-
         </Routes>
         <Footer />
       </div>
