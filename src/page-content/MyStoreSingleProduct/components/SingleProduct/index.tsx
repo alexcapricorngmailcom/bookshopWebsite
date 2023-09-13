@@ -11,8 +11,6 @@ import mockedDataProducts from '../../../../mockedDataProducts.json'
 import { BACKGROUND, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { ButtonAction } from '../../../../design-system/Button';
-import { PositionedIcon } from '../../../../shared/components';
-
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
@@ -33,7 +31,13 @@ export const SingleProduct = () => {
                                 <StyledBoxBookCoverImg>
                                     <img src={filteredMockedDataProducts.myStoreSingleProductImgSrc} alt={filteredMockedDataProducts.myStoreAlt} />
                                 </StyledBoxBookCoverImg>
-                                {filteredMockedDataProducts.isPositionedIcon && <PositionedIcon width='100px' height='100px' src={filteredMockedDataProducts.positionedIconSrc} alt={filteredMockedDataProducts.positionedIconAlt} />}
+                                {
+                                    filteredMockedDataProducts.isPositionedIcon 
+                                    && 
+                                    <StyledBoxBookIcon width='100px' height='100px'>
+                                        <img src={filteredMockedDataProducts.positionedIconSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={filteredMockedDataProducts.positionedIconAlt} />
+                                    </StyledBoxBookIcon>
+                                }
                             </StyledStackImg>
                         </Grid>
                         <Grid item lg={7}>
@@ -187,4 +191,10 @@ const StyledTextField = styled(TextField)`
     .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
         border: 1px solid ${MAIN} !important;
     }
+`;
+
+const StyledBoxBookIcon = styled(Box)`
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 `;

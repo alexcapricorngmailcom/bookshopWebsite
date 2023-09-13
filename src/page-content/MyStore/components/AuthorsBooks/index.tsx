@@ -8,7 +8,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import mockedDataProducts from '../../../../mockedDataProducts.json';
 import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
-import { BookDetails, PositionedIcon } from '../../../../shared/components';
+import { BookDetails} from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
 import { useDispatch } from 'react-redux';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
@@ -46,7 +46,13 @@ export const AuthorsBooks = () => {
                                     <StyledBoxBookCoverImg>
                                         <img src={store.myStoreImgSrc} alt={store.myStoreAlt} />
                                     </StyledBoxBookCoverImg>
-                                    {store.isPositionedIcon && <PositionedIcon src={store.positionedIconSrc} alt={store.positionedIconAlt} />}
+                                    {
+                                        store.isPositionedIcon 
+                                        &&
+                                        <StyledBoxBookIcon width='80px' height='80px'>
+                                            <img src={store.positionedIconSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={store.positionedIconAlt} />
+                                        </StyledBoxBookIcon> 
+                                    }
                                 </StyledStackImg>
                             </RouterLink>
                             <HeadingH4 sx={{mt:'20px'}}>{store.title}</HeadingH4>
@@ -100,4 +106,10 @@ const StyledParagraph = styled(Paragraph)`
     font-size: 22px;
     font-weight: 700;
     color: ${SECONDARY};
+`;
+
+const StyledBoxBookIcon = styled(Box)`
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 `;

@@ -12,9 +12,7 @@ import { ReactComponent as LinkedInIcon } from '../../../shared/assets/icons/Lin
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareSmall } from "../../../design-system/geometry/squares";
-import { BasicModal } from "./components/BasicModal";
 import CartScrollDialog from "./components/CartScrollDialog";
-
 
 const setActive = ({ isActive }:any) => {
     return {
@@ -84,7 +82,7 @@ export const Header = () => {
                             Contact
                             </StyledNavLink>
                         </StyledHeaderNavLinkBox>
-                            {CartScrollDialog()}
+                        <CartScrollDialog />
                         <Box ml='30px'>
                             <ButtonAction size="small" width ='160px' height="50px" variant="contained" component={RouterLink} to='/myStore'>Order Today</ButtonAction>
                         </Box>
