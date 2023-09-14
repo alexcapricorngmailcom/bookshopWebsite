@@ -1,19 +1,38 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getCartItems } from "../../../redux/selectors";
 import { cartItemType } from "../../../types/cartItem";
 import { styled } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import TextField from '@mui/material/TextField';
+import Button from "@mui/material/Button";
 
 import { HeadingH5, Paragraph } from "../../../design-system/typography";
 import { BACKGROUND, MAIN, SECONDARY, WHITE } from "../../../design-system/colors";
 import { LineLarge } from "../../../design-system/geometry/lines";
+import { cartSlice } from "../../../redux/slices/cartSlice";
 
 export const Cart = () => {
     
     const cartItems: cartItemType[] = useSelector(getCartItems);
     console.log(cartItems);
+
+    const dispatch = useDispatch();
+
+    const getCartItem = (store: cartItemType) => {
+        const cartItem = {
+            id: store.id,
+            myStoreImgSrc: store.myStoreImgSrc,
+            myStoreAlt: store.myStoreAlt,
+            title: store.title,
+            price: store.price,
+            isPositionedIcon: store.isPositionedIcon,
+            positionedIconSrc: store.positionedIconSrc,
+            positionedIconAlt: store.positionedIconAlt,
+            quantity: 1
+        };
+        dispatch(cartSlice.actions.removeItem(cartItem));
+    }
 
     return (
         <div>
@@ -40,9 +59,9 @@ export const Cart = () => {
                                             <HeadingH5>{cartItem.title}</HeadingH5>
                                             <Paragraph>${cartItem.price}</Paragraph>
                                         </Box>
-                                        <Box>
+                                        <StyledButton onClick={() => getCartItem(cartItem)}>
                                             <HeadingH5>Remove</HeadingH5>
-                                        </Box>
+                                        </StyledButton>
                                     </Stack>
                                 </Box>
                             </Stack>
@@ -124,3 +143,12 @@ const StyledBoxBookIcon = styled(Box)`
     right: 10px;
     bottom: 10px;
 `;
+
+const StyledButton = styled(Button)`
+    justify-content: flex-start;
+    max-width: max-content;
+    padding: 0px;
+    text-transform: none;
+    border-radius: 0px;
+`;
+
