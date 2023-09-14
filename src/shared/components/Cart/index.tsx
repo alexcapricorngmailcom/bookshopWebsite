@@ -20,7 +20,7 @@ export const Cart = () => {
 
     const dispatch = useDispatch();
 
-    const getCartItem = (store: cartItemIdType) => {
+    const getCartItemId = (store: cartItemIdType) => {
         const cartItem = {
             id: store.id,
         };
@@ -52,7 +52,7 @@ export const Cart = () => {
                                             <HeadingH5>{cartItem.title}</HeadingH5>
                                             <Paragraph>${cartItem.price}</Paragraph>
                                         </Box>
-                                        <StyledButton onClick={() => getCartItem(cartItem)}>
+                                        <StyledButton onClick={() => getCartItemId(cartItem)}>
                                             <HeadingH5>Remove</HeadingH5>
                                         </StyledButton>
                                     </Stack>
