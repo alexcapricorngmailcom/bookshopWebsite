@@ -11,6 +11,7 @@ import { HeadingH5, Paragraph } from "../../../design-system/typography";
 import { BACKGROUND, MAIN, SECONDARY, WHITE } from "../../../design-system/colors";
 import { LineLarge } from "../../../design-system/geometry/lines";
 import { cartSlice } from "../../../redux/slices/cartSlice";
+import { cartItemIdType } from "../../../types/cartItemId";
 
 export const Cart = () => {
     
@@ -19,17 +20,9 @@ export const Cart = () => {
 
     const dispatch = useDispatch();
 
-    const getCartItem = (store: cartItemType) => {
+    const getCartItem = (store: cartItemIdType) => {
         const cartItem = {
             id: store.id,
-            myStoreImgSrc: store.myStoreImgSrc,
-            myStoreAlt: store.myStoreAlt,
-            title: store.title,
-            price: store.price,
-            isPositionedIcon: store.isPositionedIcon,
-            positionedIconSrc: store.positionedIconSrc,
-            positionedIconAlt: store.positionedIconAlt,
-            quantity: 1
         };
         dispatch(cartSlice.actions.removeItem(cartItem));
     }
