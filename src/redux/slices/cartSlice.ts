@@ -12,12 +12,17 @@ export const cartSlice = createSlice({
     reducers: {
         addItem: (state, action: { type: string; payload: cartItemType }) => {
             // state.cartItems.push(action.payload);
-            state.cartItems = [...state.cartItems, action.payload];
+            const findCartItem = state.cartItems.find((cartItem) => (
+                cartItem.id === action.payload.id
+
+            ))
+            !findCartItem && (state.cartItems = [...state.cartItems, action.payload]) 
         },
         removeItem: (state, action: { type: string; payload: cartItemIdType }) => {
-            state.cartItems.find( (cartItem, index) => (
-                cartItem.id === action.payload.id && state.cartItems.splice(index, 1)
+            const filteredCartItems = state.cartItems.filter(cartItem => (
+                cartItem.id !== action.payload.id
             ))
+            state.cartItems = filteredCartItems;
         }
     }
 })

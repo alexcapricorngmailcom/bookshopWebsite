@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -11,6 +12,9 @@ import mockedDataProducts from '../../../../mockedDataProducts.json'
 import { BACKGROUND, MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { ButtonAction } from '../../../../design-system/Button';
+import { useState } from 'react';
+import { storeItemType } from '../../../../types/storeItem';
+import { cartSlice } from '../../../../redux/slices/cartSlice';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
 
@@ -20,6 +24,29 @@ export const SingleProduct = () => {
     const locationId = location.pathname.slice(location.pathname.lastIndexOf('/') + 1);
 
     const filteredMockedDataProducts = mockedDataProducts.storeItems.filter(item => (item.id === locationId))[0];
+
+    const [textFieldValue, setTextFieldValue] = useState(1);
+
+    console.log(textFieldValue)
+    
+    const dispatch = useDispatch();
+
+    const cartItem = {
+        id: filteredMockedDataProducts.id,
+        myStoreImgSrc: filteredMockedDataProducts.myStoreImgSrc,
+        myStoreAlt: filteredMockedDataProducts.myStoreAlt,
+        title: filteredMockedDataProducts.title,
+        price: filteredMockedDataProducts.price,
+        isPositionedIcon: filteredMockedDataProducts.isPositionedIcon,
+        positionedIconSrc: filteredMockedDataProducts.positionedIconSrc,
+        positionedIconAlt: filteredMockedDataProducts.positionedIconAlt,
+        quantity: textFieldValue
+    };
+
+    function customSubmit(event:any) {
+        event.preventDefault();
+        dispatch(cartSlice.actions.addItem(cartItem));
+    }
 
     return (
         <StyledSection>
@@ -94,13 +121,14 @@ export const SingleProduct = () => {
                                     }   
                                 </StyledBox>
                             </Stack>
-                            <Box component='form' sx={{mt:'30px'}}>
+                            <Box component='form' onSubmit={customSubmit} sx={{mt:'30px'}}>
                                 <Stack flexDirection='row' justifyContent='space-between' width='100%'>
                                     <Box width='20%'>
                                         <StyledTextField
                                             id="outlined-number"
                                             type="number"
-                                            defaultValue={1}
+                                            defaultValue={textFieldValue}
+                                            onChange={event => setTextFieldValue(Number(event.target.value))}
                                             inputProps={{
                                                 min: 1,
                                                 style: { 
@@ -118,7 +146,7 @@ export const SingleProduct = () => {
                                         />
                                     </Box>
                                     <Box width='77%'>
-                                        <ButtonAction size='large' width='100%' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
+                                        <ButtonAction type='submit' size='large' width='100%' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                                     </Box>
                                 </Stack>
                             </Box>
@@ -134,7 +162,6 @@ export const SingleProduct = () => {
                             <Paragraph sx={{mt:'10px'}}>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</Paragraph>                       
                         </Grid>
                     </Grid>
-                    
                 </Stack>
             </Container>
         </StyledSection>
