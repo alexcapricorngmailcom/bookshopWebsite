@@ -13,7 +13,6 @@ import { BACKGROUND, MAIN, SECONDARY, WHITE } from '../../../../design-system/co
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { ButtonAction } from '../../../../design-system/Button';
 import { useState } from 'react';
-import { storeItemType } from '../../../../types/storeItem';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
 
 // TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)

@@ -11,17 +11,19 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addItem: (state, action: { type: string; payload: cartItemType }) => {
-            // state.cartItems.push(action.payload);
             const findCartItem = state.cartItems.find((cartItem) => (
                 cartItem.id === action.payload.id
-
             ))
-            !findCartItem && (state.cartItems = [...state.cartItems, action.payload]) 
+            
+            if (!findCartItem) {
+                state.cartItems = [...state.cartItems, action.payload];
+            } else {
+                const index = state.cartItems.indexOf(findCartItem);
+                state.cartItems[index].quantity = findCartItem.quantity + action.payload.quantity;
+            }
         },
         removeItem: (state, action: { type: string; payload: cartItemIdType }) => {
-            const filteredCartItems = state.cartItems.filter(cartItem => (
-                cartItem.id !== action.payload.id
-            ))
+            const filteredCartItems = state.cartItems.filter(cartItem => cartItem.id !== action.payload.id)
             state.cartItems = filteredCartItems;
         }
     }
