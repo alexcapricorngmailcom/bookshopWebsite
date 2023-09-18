@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { cartItemType } from "../../types/cartItem";
-import { cartItemIdType } from "../../types/cartItemId";
 
 const initialState: CartStateType = {
     cartItems: [],
@@ -22,9 +21,8 @@ export const cartSlice = createSlice({
                 state.cartItems[index].quantity = findCartItem.quantity + action.payload.quantity;
             }
         },
-        removeItem: (state, action: { type: string; payload: cartItemIdType }) => {
-            const filteredCartItems = state.cartItems.filter(cartItem => cartItem.id !== action.payload.id)
-            state.cartItems = filteredCartItems;
+        removeItem: (state, action: { type: string; payload: string }) => {
+            state.cartItems = state.cartItems.filter(cartItem => cartItem.id !== action.payload)
         }
     }
 })

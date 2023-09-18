@@ -11,7 +11,6 @@ import { HeadingH5, Paragraph } from "../../../design-system/typography";
 import { BACKGROUND, MAIN, SECONDARY, WHITE } from "../../../design-system/colors";
 import { LineLarge } from "../../../design-system/geometry/lines";
 import { cartSlice } from "../../../redux/slices/cartSlice";
-import { cartItemIdType } from "../../../types/cartItemId";
 
 export const Cart = () => {
     
@@ -20,11 +19,8 @@ export const Cart = () => {
 
     const dispatch = useDispatch();
 
-    const getCartItemId = (store: cartItemIdType) => {
-        const cartItem = {
-            id: store.id,
-        };
-        dispatch(cartSlice.actions.removeItem(cartItem));
+    const getCartItemId = (id:string) => {
+        dispatch(cartSlice.actions.removeItem(id));
     }
 
     return (
@@ -52,7 +48,7 @@ export const Cart = () => {
                                             <HeadingH5>{cartItem.title}</HeadingH5>
                                             <Paragraph>${cartItem.price}</Paragraph>
                                         </Box>
-                                        <StyledButton onClick={() => getCartItemId(cartItem)}>
+                                        <StyledButton onClick={() => getCartItemId(cartItem.id)}>
                                             <HeadingH5>Remove</HeadingH5>
                                         </StyledButton>
                                     </Stack>
