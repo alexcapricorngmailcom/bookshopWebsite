@@ -14,6 +14,8 @@ import { cartSlice } from "../../../redux/slices/cartSlice";
 
 export const Cart = () => {
     
+    //TODO All types starts from Capital
+
     const cartItems: cartItemType[] = useSelector(getCartItems);
     console.log(cartItems);
 
@@ -21,6 +23,22 @@ export const Cart = () => {
 
     const getCartItemId = (id:string) => {
         dispatch(cartSlice.actions.removeItem(id));
+    }
+
+    const changeCartItemQuantity = (cartItem:cartItemType, event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const dataObj = {
+            id: cartItem.id,
+            myStoreImgSrc: cartItem.myStoreImgSrc,
+            myStoreAlt: cartItem.myStoreAlt,
+            title: cartItem.title,
+            price: cartItem.price,
+            isPositionedIcon: cartItem.isPositionedIcon,
+            positionedIconSrc: cartItem.positionedIconSrc,
+            positionedIconAlt: cartItem.positionedIconAlt,
+            quantity: Number(event.target.value)
+        }
+        dispatch(cartSlice.actions.updateItemQuantity(dataObj));
+
     }
 
     return (
@@ -60,6 +78,7 @@ export const Cart = () => {
                                 id="outlined-number"
                                 type="number"
                                 defaultValue={cartItem.quantity}
+                                onChange={event => changeCartItemQuantity(cartItem, event)}
                                 inputProps={{
                                     min: 1,
                                     style: { 

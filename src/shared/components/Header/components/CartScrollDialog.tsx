@@ -4,7 +4,6 @@ import { styled } from "@mui/material/styles";
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 import Box from "@mui/material/Box";
@@ -73,9 +72,7 @@ export default function CartScrollDialog() {
           </StyledStack>
         </DialogTitle>
           <DialogContent>
-            <DialogContentText>
               <Cart />
-            </DialogContentText>
           </DialogContent>
           <DialogActions>
             <StyledStack sx={{mt: '50px', backgroundColor: WHITE}} >
