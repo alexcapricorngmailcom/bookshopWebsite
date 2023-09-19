@@ -79,11 +79,7 @@ export const Footer = () => {
                             
                             <Stack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextRouterLink to="/">Start here</StyledFooterTextRouterLink>
-                            </Stack>
-                            <Stack flexDirection='row' alignItems='center'>
-                                <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextRouterLink to="/">Style guide</StyledFooterTextRouterLink>
+                                <StyledFooterTextRouterLink to="/styleGuide">Style guide</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />

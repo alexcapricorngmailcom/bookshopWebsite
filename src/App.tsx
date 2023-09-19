@@ -13,6 +13,7 @@ import { Footer } from "./shared/components/Footer";
 import { Changelog } from './page-content/Changelog';
 import { ProtectedPage } from './page-content/ProtectedPage';
 import { Licenses } from './page-content/Licenses';
+import { StyleGuide } from './page-content/StyleGuide';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/changelog" element={<Changelog />} />
           <Route path="/protectedPage" element={<ProtectedPage />} />
           <Route path="/licenses" element={<Licenses />} />
+          <Route path="/styleGuide" element={<StyleGuide />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />

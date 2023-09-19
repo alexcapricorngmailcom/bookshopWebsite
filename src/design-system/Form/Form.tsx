@@ -43,7 +43,7 @@ export const Form = () => {
         <form onSubmit={customSubmit}>
             <Stack>
                 <Stack flexDirection='row'>
-                    <Box position='relative'>
+                    <Box sx={{position:'relative', width: '100%'}}>
                         <StyledInput 
                             type="text"
                             name='name'
@@ -54,7 +54,7 @@ export const Form = () => {
                         />
                         <StyledImg src={emailIcon} alt="email icon" />
                     </Box>
-                    <Box sx={{position:'relative', ml:'10px'}}>
+                    <Box sx={{position:'relative', ml:'10px', width: '100%'}}>
                         <StyledInput 
                             type="email"
                             name='email' 
