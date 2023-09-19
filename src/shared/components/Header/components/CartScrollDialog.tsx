@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { styled } from "@mui/material/styles";
 import Dialog from '@mui/material/Dialog';
@@ -24,26 +24,38 @@ import { cartItemType } from "../../../../types/cartItem";
 export default function CartScrollDialog() {
   const cartItems: cartItemType[] = useSelector(getCartItems);
 
-  let subTotal = 0;
-  
-  cartItems.map(cartItem => (
-    subTotal = (Math.round( subTotal * 100 ) + Math.round( cartItem.price * 100 ))/100
-  ))
+  const getSubtotal = () => {
+    let subtotal = 0;
+    
+    cartItems.map(cartItem => (
+      subtotal = (Math.round( subtotal * 100 ) + Math.round( (cartItem.price * cartItem.quantity) * 100 ))/100
+    ))
+    return subtotal;
+  }
+
+  const getBadge = () => {
+    let badge = 0;
+    
+    cartItems.map(cartItem => (
+      badge = badge + cartItem.quantity
+    ))
+    return badge;
+  } 
   
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
-  };
+  }
 
   const handleClose = () => {
     setOpen(false);
-  };
+  }
 
   return (
     <div>
       <Button onClick={handleOpen} >
-        <StyledBadge badgeContent={cartItems.length}>
+        <StyledBadge badgeContent={getBadge()}>
             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
         </StyledBadge>
       </Button>
@@ -68,7 +80,7 @@ export default function CartScrollDialog() {
           <DialogActions>
             <StyledStack sx={{mt: '50px', backgroundColor: WHITE}} >
                   <HeadingH5>Sub-Total</HeadingH5>
-                  <Paragraph sx={{fontSize:'20px', fontWeight:'700', color: MAIN}}>${subTotal}</Paragraph>
+                  <Paragraph sx={{fontSize:'20px', fontWeight:'700', color: MAIN}}>${getSubtotal()}</Paragraph>
             </StyledStack>
             <Box sx={{mt: '25px', mb: '60px', backgroundColor: WHITE}}>
                 <ButtonAction size='large' width="100%">Continue to Checkout</ButtonAction>
