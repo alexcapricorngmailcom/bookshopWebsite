@@ -53,11 +53,11 @@ export default function CartScrollDialog() {
 
   return (
     <div>
-      <Button onClick={handleOpen} >
+      <StyledButton onClick={handleOpen} >
         <StyledBadge badgeContent={getBadge()}>
             <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
         </StyledBadge>
-      </Button>
+      </StyledButton>
       <StyledDialog
         open={open}
         onClose={handleClose}
@@ -89,7 +89,6 @@ export default function CartScrollDialog() {
 }
 
 const StyledBadge = styled(Badge)`
-    margin-Left: 30px;
     cursor: pointer;
 
     &:hover > .MuiBadge-badge  {
@@ -142,3 +141,12 @@ const StyledHeadingH2 = styled(HeadingH2)`
     font-size: 50px;
 `;
 
+const StyledButton = styled(Button)`
+    margin-left: 30px;
+    min-width: max-content;
+    padding: 0px;
+    border-radius: 0px;
+    @media (max-width: 1199px) { 
+      margin-left: 25px;
+    }
+`;

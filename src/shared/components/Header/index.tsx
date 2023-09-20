@@ -83,9 +83,9 @@ export const Header = () => {
                             </StyledNavLink>
                         </StyledHeaderNavLinkBox>
                         <CartScrollDialog />
-                        <Box ml='30px'>
+                        <StyledBox ml='30px'>
                             <ButtonAction size="small" width ='160px' height="50px" variant="contained" component={RouterLink} to='/myStore'>Order Today</ButtonAction>
-                        </Box>
+                        </StyledBox>
                     </Stack>
                 </StyledNav>
             </Container>
@@ -124,6 +124,16 @@ const StyledHeaderNavLinkBox = styled(Box)`
     & > a:hover {
         color: ${SECONDARY} !important;
     }
+
+    @media (max-width: 1199px) { 
+        a + a {
+        margin-left: 25px;
+        }
+    }
+    
+    /* @media (max-width: 899px) { 
+        display: none;
+    } */
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -151,5 +161,11 @@ const StyledTwitterIcon = styled(TwitterIcon)`
 
 const StyledLinkedInIcon = styled(LinkedInIcon)`
     fill: ${MAIN};
+`;
+
+const StyledBox = styled(Box)`
+    @media (max-width: 1199px) { 
+        display: none;
+    }
 `;
 
