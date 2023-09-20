@@ -14,8 +14,6 @@ import { useDispatch } from 'react-redux';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
 import { storeItemType } from '../../../../types/storeItem';
 
-// TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
-
 export const AuthorsBooks = () => {
     
     const dispatch = useDispatch();
@@ -40,7 +38,7 @@ export const AuthorsBooks = () => {
             <Container maxWidth='lg'>
                 <StyledStackList>
                     {mockedDataProducts.storeItems.map(store => (
-                        <StyledBoxListColumn key={store.id}>
+                        <StyledStackListColumn key={store.id}>
                             <RouterLink to={`/myStore/singleProduct/${store.id}`}>
                                 <StyledStackImg>
                                     <StyledBoxBookCoverImg>
@@ -56,15 +54,15 @@ export const AuthorsBooks = () => {
                                 </StyledStackImg>
                             </RouterLink>
                             <HeadingH4 sx={{mt:'20px'}}>{store.title}</HeadingH4>
-                            <StyledParagraph sx={{mt:'10px'}}>${store.price}</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>{store.mainDescription}</Paragraph>
+                            <StyledParagraphPrice sx={{mt:'10px'}}>${store.price}</StyledParagraphPrice>
+                            <StyledParagraphDescription sx={{mt:'10px'}}>{store.mainDescription}</StyledParagraphDescription>
                             <Box sx={{mt:'20px'}}>
                                 <BookDetails title={store.type} />
                             </Box>
                             <Box sx={{mt:'30px'}}>
                                 <ButtonAction onClick={() => getCartItem(store)} variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
                             </Box>
-                        </StyledBoxListColumn>
+                        </StyledStackListColumn>
                         ))
                     }
                 </StyledStackList>
@@ -85,16 +83,24 @@ const StyledStackList = styled(Stack)`
     margin: -20px;
 `;
 
-const StyledBoxListColumn = styled(Box)`
+const StyledStackListColumn = styled(Stack)`
     width: calc(100%/3);
     padding: 20px;
+    
+    @media (max-width: 1199px) {
+        width: calc(100%/2);
+        align-items: center;
+    }
 `;
 
 const StyledStackImg = styled(Stack)`
+    width: 357px;
+    height: 463px;
     position: relative;
     justify-content: center;
     align-items: center;
     background-color: ${BACKGROUND};
+
 `;
 
 const StyledBoxBookCoverImg = styled(Box)`
@@ -102,10 +108,16 @@ const StyledBoxBookCoverImg = styled(Box)`
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
 `;
 
-const StyledParagraph = styled(Paragraph)`
+const StyledParagraphPrice = styled(Paragraph)`
     font-size: 22px;
     font-weight: 700;
     color: ${SECONDARY};
+`;
+
+const StyledParagraphDescription = styled(Paragraph)`
+    @media (max-width: 1199px) {
+        text-align: center;
+    }
 `;
 
 const StyledBoxBookIcon = styled(Box)`
