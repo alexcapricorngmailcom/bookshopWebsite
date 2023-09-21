@@ -81,6 +81,10 @@ const StyledStackList = styled(Stack)`
     flex-direction: row;
     flex-wrap: wrap; 
     margin: -20px;
+
+    @media (max-width: 899px) {
+        margin: 0px;
+    }
 `;
 
 const StyledStackListColumn = styled(Stack)`
@@ -95,6 +99,7 @@ const StyledStackListColumn = styled(Stack)`
     @media (max-width: 899px) {
         width: calc(100%);
         align-items: center;
+        padding: 20px 0px;
     }
 `;
 
