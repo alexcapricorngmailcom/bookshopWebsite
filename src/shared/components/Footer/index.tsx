@@ -150,6 +150,11 @@ const StyledBox = styled(Box)`
         align-items: center;
     }
 
+    @media (max-width: 599px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 `;
 
 const StyledBoxLogo = styled(Box)`
@@ -164,6 +169,11 @@ const StyledBoxLogo = styled(Box)`
         margin-top: 0px;
         margin-left: 40px;
     }
+
+    @media (max-width: 1199px) {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
 `;
 
 const StyledStack = styled(Stack)`
@@ -177,7 +187,6 @@ const StyledStack = styled(Stack)`
     @media (max-width: 1199px) {
         margin-top: 45px;
     }
-
 
     @media (max-width: 899px) {
         flex-wrap: wrap;

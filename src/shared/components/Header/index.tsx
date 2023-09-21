@@ -130,10 +130,6 @@ const StyledHeaderNavLinkBox = styled(Box)`
         margin-left: 25px;
         }
     }
-    
-    /* @media (max-width: 899px) { 
-        display: none;
-    } */
 `;
 
 const StyledNavLink = styled(NavLink)`
