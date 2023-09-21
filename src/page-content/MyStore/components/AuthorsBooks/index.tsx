@@ -91,6 +91,11 @@ const StyledStackListColumn = styled(Stack)`
         width: calc(100%/2);
         align-items: center;
     }
+
+    @media (max-width: 899px) {
+        width: calc(100%);
+        align-items: center;
+    }
 `;
 
 const StyledStackImg = styled(Stack)`
