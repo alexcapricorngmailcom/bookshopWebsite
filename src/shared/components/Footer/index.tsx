@@ -20,8 +20,8 @@ export const Footer = () => {
     return(
         <StyledFooter>
             <Container maxWidth='lg'>
-                <Stack flexDirection='row' justifyContent='space-between' width='100%'>
-                    <Box width='35%'>
+                <StyledContentStack flexDirection='row' justifyContent='space-between'>
+                    <StyledBox>
                         <RouterLink to='/'>
                             <PagesIcon fill={MAIN}/>
                         </RouterLink>
@@ -47,15 +47,15 @@ export const Footer = () => {
                                 </StyledSquareSmall>
                             </Link>
                         </StyledBoxLogo>
-                    </Box>
-                    <Stack flexDirection='row' justifyContent='space-between' width='65%'>
+                    </StyledBox>
+                    <StyledStack>
                         <Box>
-                            <HeadingH5 sx={{color: WHITE}}>Explore</HeadingH5>
+                            <StyledHeadingH5 sx={{color: WHITE}}>Explore</StyledHeadingH5>
                             
-                            <Stack flexDirection='row' alignItems='center' mt='40px'>
+                            <StyledFirstItemStack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/">Home</StyledFooterTextRouterLink>
-                            </Stack>
+                            </StyledFirstItemStack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/about">About Us</StyledFooterTextRouterLink>
@@ -75,12 +75,12 @@ export const Footer = () => {
                         </Box>
 
                         <Box>
-                            <HeadingH5 sx={{color: WHITE}}>Utility Pages</HeadingH5>
+                            <StyledHeadingH5 sx={{color: WHITE}}>Utility Pages</StyledHeadingH5>
                             
-                            <Stack flexDirection='row' alignItems='center' mt='40px'>
+                            <StyledFirstItemStack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/styleGuide">Style guide</StyledFooterTextRouterLink>
-                            </Stack>
+                            </StyledFirstItemStack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/Error404">404 not found</StyledFooterTextRouterLink>
@@ -100,12 +100,12 @@ export const Footer = () => {
                         </Box>
 
                         <Box>
-                            <HeadingH5 sx={{color: WHITE}}>Keep in Touch</HeadingH5>
+                            <StyledHeadingH5 sx={{color: WHITE}}>Keep in Touch</StyledHeadingH5>
                             
-                            <Stack flexDirection='row' alignItems='flex-start' mt='40px'>
+                            <StyledFirstItemStack flexDirection='row' alignItems='flex-start' mt='40px'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Address: </HeadingH5>
                                 <StyledFooterTextLink href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank' rel="noopener">24A Kingston St, <br /> Los Vegas NC 28202, <br /> USA</StyledFooterTextLink>
-                            </Stack>
+                            </StyledFirstItemStack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Mail:</HeadingH5>
                                 <StyledFooterTextLink href="mailto:support@pages.com">support@pages.com</StyledFooterTextLink>
@@ -115,16 +115,15 @@ export const Footer = () => {
                                 <StyledFooterTextLink href="tel: +18001239999">1-800-123-9999</StyledFooterTextLink>
                             </Stack>
                         </Box>
-                    </Stack>
-                </Stack>
-                <StyledBox></StyledBox>
+                    </StyledStack>
+                </StyledContentStack>
+                <StyledLineBox></StyledLineBox>
                 <Box sx={{mt: "25px", textAlign: 'center'}}>
                     <Paragraph sx={{display:'inline', color: '#B4C7E7'}}>&#169; Drafted by </Paragraph>  
                     <Paragraph sx={{display:'inline', color:WHITE}}>Victorflow </Paragraph> 
                     <Paragraph sx={{display:'inline', color: '#B4C7E7'}}>- Powered by </Paragraph>  
                     <Paragraph sx={{display:'inline', color:WHITE}}>Webflow</Paragraph>
                 </Box>
-
             </Container>
         </StyledFooter>
         
@@ -137,12 +136,70 @@ const StyledFooter = styled('footer')`
     background-color: ${MAIN};
 `;
 
+const StyledContentStack = styled(Stack)`
+    @media (max-width: 1199px) {
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const StyledBox = styled(Box)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+`;
+
 const StyledBoxLogo = styled(Box)`
     display: flex;
     margin-top: 30px;
 
     & > a + a {
         margin-left: 10px;
+    }
+
+    @media (max-width: 1199px) {
+        margin-top: 0px;
+        margin-left: 40px;
+    }
+`;
+
+const StyledStack = styled(Stack)`
+    flex-direction: row; 
+    justify-content: space-between; 
+    width: 65%;
+    
+    @media (max-width: 1199px) {
+        margin-top: 40px;
+        width: 85%;
+    }
+    @media (max-width: 1199px) {
+        margin-top: 0px;
+    }
+
+
+    @media (max-width: 899px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+    }
+`;
+
+const StyledHeadingH5 = styled(HeadingH5)`
+
+    @media (max-width: 899px) {
+        text-align: center;
+        margin-top: 40px;
+    }
+`;
+
+const StyledFirstItemStack = styled(Stack)`
+
+    @media (max-width: 899px) {
+        margin-top: 30px;
     }
 `;
 
@@ -176,7 +233,7 @@ const StyledFooterTextRouterLink = styled(RouterLink)`
     }
 `;
 
-const StyledBox = styled(Box)`
+const StyledLineBox = styled(Box)`
     width: 100%;
     height: 1px;
     margin-top: 75px;
