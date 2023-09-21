@@ -13,16 +13,19 @@ export const Blog = () => {
             <Container maxWidth='lg'>
                 <StyledStackList>
                     {mockedDataArticles.articlesItems.map(article => (
-                        <StyledBoxListColumn key={article.id}>
-                            <Article
-                                id={article.id}
-                                title={article.title}
-                                paragraph={article.description}
-                                author={article.date}
-                                img={article.articleImgSrc}
-                                alt={article.articleImgAlt}
-                            />
-                        </StyledBoxListColumn>
+                        <StyledStackListColumn key={article.id}>
+                            <StyledBox>
+                                <Article
+                                    id={article.id}
+                                    title={article.title}
+                                    paragraph={article.description}
+                                    author={article.date}
+                                    img={article.articleImgSrc}
+                                    alt={article.articleImgAlt}
+                                />
+                            </StyledBox>
+                            
+                        </StyledStackListColumn>
                         ))
                     }
                 </StyledStackList>
@@ -41,9 +44,34 @@ const StyledStackList = styled(Stack)`
     flex-direction: row;
     flex-wrap: wrap; 
     margin: -20px;
+    justify-content: center;
+
+    @media (max-width: 899px) {
+        margin: 0px;
+    }
 `;
 
-const StyledBoxListColumn = styled(Box)`
+const StyledStackListColumn = styled(Stack)`
     width: calc(100%/3);
     padding: 20px;
+    align-items: center;
+
+
+    @media (max-width: 1199px) {
+        width: calc(100%/2);
+    }
+
+    @media (max-width: 899px) {
+        width: calc(100%);
+        padding: 20px 0px;
+    }
 `;
+
+const StyledBox = styled(Box)`
+
+    @media (max-width: 1199px) {
+        width: 392px;
+        height: 651px;
+    }
+`;
+

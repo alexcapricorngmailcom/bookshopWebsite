@@ -6,7 +6,6 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-
 import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
 import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
 import { ReactComponent as TwitterIcon } from '../../../shared/assets/icons/TwitterIcon.svg'
@@ -150,11 +149,10 @@ const StyledBox = styled(Box)`
         align-items: center;
     }
 
-    @media (max-width: 599px) {
+    @media (max-width: 899px) {
         flex-direction: column;
         align-items: center;
     }
-
 `;
 
 const StyledBoxLogo = styled(Box)`
@@ -170,7 +168,7 @@ const StyledBoxLogo = styled(Box)`
         margin-left: 40px;
     }
 
-    @media (max-width: 1199px) {
+    @media (max-width: 899px) {
         margin-top: 30px;
         margin-left: 0px;
     }
