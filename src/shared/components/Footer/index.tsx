@@ -172,11 +172,10 @@ const StyledStack = styled(Stack)`
     width: 65%;
     
     @media (max-width: 1199px) {
-        margin-top: 40px;
         width: 85%;
     }
     @media (max-width: 1199px) {
-        margin-top: 0px;
+        margin-top: 45px;
     }
 
 
@@ -185,6 +184,7 @@ const StyledStack = styled(Stack)`
         justify-content: center;
         align-items: center;
         width: 40%;
+        margin-top: 0px;
     }
 `;
 
@@ -192,7 +192,7 @@ const StyledHeadingH5 = styled(HeadingH5)`
 
     @media (max-width: 899px) {
         text-align: center;
-        margin-top: 40px;
+        margin-top: 35px;
     }
 `;
 
