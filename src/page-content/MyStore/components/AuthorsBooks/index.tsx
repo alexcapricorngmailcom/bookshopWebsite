@@ -42,12 +42,12 @@ export const AuthorsBooks = () => {
                             <RouterLink to={`/myStore/singleProduct/${store.id}`}>
                                 <StyledStackImg>
                                     <StyledBoxBookCoverImg>
-                                        <img src={store.myStoreImgSrc} alt={store.myStoreAlt} />
+                                        <img src={store.myStoreImgSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={store.myStoreAlt} />
                                     </StyledBoxBookCoverImg>
                                     {
                                         store.isPositionedIcon 
                                         &&
-                                        <StyledBoxBookIcon width='80px' height='80px'>
+                                        <StyledBoxBookIcon >
                                             <img src={store.positionedIconSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={store.positionedIconAlt} />
                                         </StyledBoxBookIcon> 
                                     }
@@ -82,7 +82,12 @@ const StyledStackList = styled(Stack)`
     flex-wrap: wrap; 
     margin: -20px;
 
-    @media (max-width: 899px) {
+    @media (max-width: 1199px) {
+        justify-content: center;
+    }
+
+
+    @media (max-width: 599px) {
         margin: 0px;
     }
 `;
@@ -92,30 +97,36 @@ const StyledStackListColumn = styled(Stack)`
     padding: 20px;
     
     @media (max-width: 1199px) {
-        width: calc(100%/2);
         align-items: center;
+        width: 430px;
     }
 
-    @media (max-width: 899px) {
-        width: calc(100%);
+    @media (max-width: 599px) {
+        width: 100%;
         align-items: center;
-        padding: 20px 0px;
+        padding: 20px 20px;
     }
 `;
 
 const StyledStackImg = styled(Stack)`
-    width: 357px;
-    height: 463px;
+
     position: relative;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 20px 20px;
     background-color: ${BACKGROUND};
+    
+    @media (max-width: 899px) {
+        
+        
+    }
 
 `;
 
 const StyledBoxBookCoverImg = styled(Box)`
-    padding: 28.65px 0px; 
-    filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
+    filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1))
+
 `;
 
 const StyledParagraphPrice = styled(Paragraph)`
@@ -134,4 +145,6 @@ const StyledBoxBookIcon = styled(Box)`
     position: absolute;
     right: 10px;
     bottom: 10px;
+    width: 80px; 
+    height: 80px;
 `;

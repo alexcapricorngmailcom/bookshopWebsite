@@ -147,11 +147,11 @@ const StyledBox = styled(Box)`
         display: flex;
         flex-direction: row;
         align-items: center;
+        
     }
 
-    @media (max-width: 899px) {
+    @media (max-width: 599px) {
         flex-direction: column;
-        align-items: center;
     }
 `;
 
@@ -168,7 +168,7 @@ const StyledBoxLogo = styled(Box)`
         margin-left: 40px;
     }
 
-    @media (max-width: 899px) {
+    @media (max-width: 599px) {
         margin-top: 30px;
         margin-left: 0px;
     }
@@ -189,25 +189,45 @@ const StyledStack = styled(Stack)`
     @media (max-width: 899px) {
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        width: 40%;
-        margin-top: 0px;
+        
+        & > :nth-child(2) {
+            margin-left: 55px;
+        }
+
+        & > :nth-child(3) {
+            margin-left: 55px;
+            padding-right: 25px;
+            margin-top: 45px;
+        }
+    }
+
+    @media (max-width: 599px) {
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        & > :nth-child(2) {
+            margin-top: 45px;
+            margin-left: 25px;
+            padding-right: 25px;
+        }
+
+        & > :nth-child(3) {
+            margin-left: 0px;
+            padding-right: 0px;
+        }
     }
 `;
 
 const StyledHeadingH5 = styled(HeadingH5)`
-
-    @media (max-width: 899px) {
-        text-align: center;
-        margin-top: 35px;
-    }
+    text-align: center;
 `;
 
 const StyledFirstItemStack = styled(Stack)`
 
-    @media (max-width: 899px) {
+    /* @media (max-width: 899px) {
         margin-top: 30px;
-    }
+    } */
 `;
 
 const StyledFooterTextLink = styled(Link)`
