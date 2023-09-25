@@ -24,8 +24,8 @@ export const AboutTheAuthor = () => {
                         <img src={aboutTheAuthor} style={{width: '100%', height: '100%'}} alt="about the author" />
                     </Box>
     
-                    <Grid container spacing={10} alignItems='center' sx={{mt:'0px'}}>
-                        <Grid item md={5.5} sm={12}>
+                    <StyledGridContainer container spacing={10} alignItems='center' sx={{mt:'0px'}}>
+                        <StyledGridItem1 item lg={5.5} md={12} sm={12} order={{ lg: 1, md: 2, sm: 2, xs: 2 }}>
                             <StyledBackgroundBox>
                                 <Stack flexDirection='row' justifyContent='space-between'>
                                     <StyledBox>
@@ -33,7 +33,7 @@ export const AboutTheAuthor = () => {
                                         <HeadingH5>Language :</HeadingH5>
                                         <HeadingH5>Genre :</HeadingH5>
                                         <HeadingH5>Publication date :</HeadingH5>
-                                        <HeadingH5>Share us on:</HeadingH5>
+                                        <HeadingH5>Share us on :</HeadingH5>
                                     </StyledBox>
                                     <StyledBox>
                                         <Paragraph>United Kingdom</Paragraph>
@@ -55,16 +55,16 @@ export const AboutTheAuthor = () => {
                                     </StyledBox>
                                 </Stack>
                             </StyledBackgroundBox>
-                        </Grid>
-                        <Grid item md={6.5} sm={12}>
+                        </StyledGridItem1>
+                        <StyledGridItem2 item lg={5.5} md={12} sm={12} order={{ lg: 2, md: 1, sm: 1, xs: 1 }}>
                             <HeadingH3>About Dr. John Abraham</HeadingH3>
                             <LineLarge sx={{mt:'22px'}} />
-                            <Paragraph sx={{mt:'22px'}}>All the Lorem generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, that can combined with a handful of model sentence structures.</Paragraph>
+                            <StyledParagraph sx={{mt:'22px'}}>All the Lorem generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, that can combined with a handful of model sentence structures.</StyledParagraph>
                             <Box sx={{mt:'30px'}}>
                                 <ButtonAction size='large' component={RouterLink} to='/contact' >Contact now</ButtonAction>
                             </Box>
-                        </Grid>
-                    </Grid>
+                        </StyledGridItem2>
+                    </StyledGridContainer>
                 </Stack>
             </Container>
         </StyledSection>
@@ -103,6 +103,33 @@ const StyledLink = styled(Link)`
 
     &:hover * {
     fill: ${SECONDARY};
+}
+`;
+
+const StyledGridContainer = styled(Grid)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+    }
+`;
+
+const StyledGridItem1 = styled(Grid)`
+    @media (max-width: 1199px) {
+        width: 550px;
+    }
+`;
+
+const StyledGridItem2 = styled(Grid)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+@media (max-width: 1199px) {
+    text-align: center;
 }
 `;
 
