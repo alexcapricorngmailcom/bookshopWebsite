@@ -14,11 +14,11 @@ export const MyStory = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Grid container spacing={12} alignItems='center'>
-                    <Grid item md={6} sm={12}> 
+                <StyledGridContainer container spacing={12} alignItems='center'>
+                    <StyledGridItem1 item lg={6} md={12} sm={12}> 
                         <HeadingH3>My Story</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <Paragraph sx={{mt:'22px'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</Paragraph>
+                        <StyledParagraph sx={{mt:'22px'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</StyledParagraph>
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row'>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
@@ -54,13 +54,13 @@ export const MyStory = () => {
                                 </Box>
                             </Stack>
                         </Stack>
-                    </Grid>
-                    <Grid item md={6} sm={12}>
-                        <Box sx={{filter: 'drop-shadow(0 35px 45px rgba(4, 11, 20, 0.15))'}}>
+                    </StyledGridItem1>
+                    <Grid item lg={6} md={12} sm={12}>
+                        <StyledImageBox sx={{filter: 'drop-shadow(0 35px 45px rgba(4, 11, 20, 0.15))'}}>
                             <img src={myStory} style={{width: '100%', height: '100%'}} alt="about author" />
-                        </Box>
+                        </StyledImageBox>
                     </Grid>
-                </Grid>
+                </StyledGridContainer>
             </Container>
         </StyledSection>
     );
@@ -69,4 +69,32 @@ export const MyStory = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+`;
+
+const StyledImageBox = styled(Box)`
+    @media (max-width: 1199px) {
+        max-width: 520px;
+    }
+`;
+
+const StyledGridContainer = styled(Grid)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const StyledGridItem1 = styled(Grid)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+    @media (max-width: 1199px) {
+        text-align: center;
+    }
 `;

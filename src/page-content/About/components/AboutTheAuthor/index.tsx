@@ -56,7 +56,7 @@ export const AboutTheAuthor = () => {
                                 </Stack>
                             </StyledBackgroundBox>
                         </StyledGridItem1>
-                        <StyledGridItem2 item lg={5.5} md={12} sm={12} order={{ lg: 2, md: 1, sm: 1, xs: 1 }}>
+                        <StyledGridItem2 item lg={6.5} md={12} sm={12} order={{ lg: 2, md: 1, sm: 1, xs: 1 }}>
                             <HeadingH3>About Dr. John Abraham</HeadingH3>
                             <LineLarge sx={{mt:'22px'}} />
                             <StyledParagraph sx={{mt:'22px'}}>All the Lorem generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, that can combined with a handful of model sentence structures.</StyledParagraph>
@@ -115,7 +115,7 @@ const StyledGridContainer = styled(Grid)`
 
 const StyledGridItem1 = styled(Grid)`
     @media (max-width: 1199px) {
-        width: 550px;
+        width: 564px;
     }
 `;
 
