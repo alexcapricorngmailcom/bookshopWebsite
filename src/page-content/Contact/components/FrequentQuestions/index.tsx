@@ -16,7 +16,7 @@ export const FrequentQuestions = () => {
                     <HeadingH3>Frequent Questions?</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                     <Grid container spacing={10} flexDirection='row' mt='-65px'>
-                        <Grid item lg={6}>
+                        <Grid item lg={6} md={6}>
                             <AccordionItem
                                 title='Do you offer discounts for education?'
                             />
@@ -30,10 +30,10 @@ export const FrequentQuestions = () => {
                                 title='Where can I get Hack Productivity book?'
                             />
                             <AccordionItem
-                                title='Do you offer discounts for education?'
+                                title='What is Hack Productivity book about?'
                             />
                         </Grid>
-                        <Grid item lg={6}>
+                        <StyledGridItem2 item lg={6} md={6}>
                             <AccordionItem
                                 title='Do you offer discounts for education?'
                             />
@@ -47,9 +47,9 @@ export const FrequentQuestions = () => {
                                 title='Where can I get Hack Productivity book?'
                             />
                             <AccordionItem
-                                title='Do you offer discounts for education?'
+                                title='What is Hack Productivity book about?'
                             />
-                        </Grid>
+                        </StyledGridItem2>
                     </Grid>
                 </Stack>
             </Container>
@@ -61,4 +61,10 @@ const StyledSection = styled('section')`
     padding-top: 145px;
     padding-bottom: 145px;
     background-color: ${BACKGROUND};
+`;
+
+const StyledGridItem2 = styled(Grid)`
+    @media (max-width: 899px) {
+        padding-top: 0px !important;
+    }
 `;

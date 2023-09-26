@@ -38,7 +38,7 @@ export const AccordionItem = ({title}:AccordionItemProps) => {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
             >
-            <HeadingH6 sx={{ml:'16px'}}>{title}</HeadingH6>
+            <StyledHeadingH6 sx={{ml:'16px'}}>{title}</StyledHeadingH6>
             </StyledAccordionSummary>
             <AccordionDetails sx={{padding: 0}}>
                 <Paragraph sx={{pl:'32px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.</Paragraph>
@@ -50,6 +50,16 @@ export const AccordionItem = ({title}:AccordionItemProps) => {
 
 const StyledAccordionSummary = styled(AccordionSummary)`
     flex-direction: row-reverse;
+`;
+
+const StyledHeadingH6 = styled(HeadingH6)`
+    @media (max-width: 949px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 899px) {
+        font-size: 22px;
+    }
 `;
 
 type AccordionItemProps = {
