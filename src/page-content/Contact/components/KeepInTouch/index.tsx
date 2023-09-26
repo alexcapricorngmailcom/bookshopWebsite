@@ -19,10 +19,10 @@ export const KeepInTouch = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
-                    <Grid item md={6} sm={12}> 
+                    <StyledGridItem1 item lg={6} md={12} sm={12} xs={12}> 
                         <HeadingH3>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <Paragraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</Paragraph>
+                        <StyledParagraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</StyledParagraph>
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row' >
                                 <Box sx={{pl:'35px', pr:'35px'}}>
@@ -58,10 +58,10 @@ export const KeepInTouch = () => {
                                 </Box>
                             </Stack>
                         </Stack>
-                    </Grid>
-                    <Grid item md={6} sm={12}>
+                    </StyledGridItem1>
+                    <StyledGridItem2 item lg={6} md={12} sm={12} xs={12}>
                         <Form />
-                    </Grid>
+                    </StyledGridItem2>
                 </Grid>
             </Container>
         </StyledSection>
@@ -71,4 +71,25 @@ export const KeepInTouch = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+`;
+
+const StyledGridItem1 = styled(Grid)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+    text-align: justify;
+`;
+
+const StyledGridItem2 = styled(Grid)`
+    @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px !important;
+    }
 `;
