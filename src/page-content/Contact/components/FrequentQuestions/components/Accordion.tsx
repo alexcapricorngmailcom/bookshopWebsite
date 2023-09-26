@@ -18,6 +18,12 @@ const Accordion = styled((props: AccordionProps) => (
     '&:last-child': {
       borderBottom: 0,
     },
+
+    '@media (max-width: 899px)': {
+        '&:last-child': {
+            borderBottom: '1px solid #969AA0',
+        },
+    },
     
     '&:before': {
       display: 'none',

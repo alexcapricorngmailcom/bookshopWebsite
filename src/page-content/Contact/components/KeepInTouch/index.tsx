@@ -22,42 +22,44 @@ export const KeepInTouch = () => {
                     <StyledGridItem1 item lg={6} md={12} sm={12} xs={12}> 
                         <HeadingH3>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <StyledParagraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</StyledParagraph>
-                        <Stack sx={{mt:'40px'}}>
-                            <Stack flexDirection='row' >
-                                <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareMedium>
-                                        <HomeIcon stroke={MAIN} />
-                                    </SquareMedium>
-                                </Box>
-                                <Box>
-                                    <HeadingH5>Visit Us:</HeadingH5>
-                                    <Link href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank' rel="noopener" underline='none'><Paragraph>24A Kingston St, Los Vegas NC 28202, USA</Paragraph></Link>
-                                </Box>
+                        <StyledStack>
+                            <StyledParagraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</StyledParagraph>
+                            <Stack sx={{mt:'40px'}}>
+                                <Stack flexDirection='row' >
+                                    <Box sx={{pl:'35px', pr:'35px'}}>
+                                        <SquareMedium>
+                                            <HomeIcon stroke={MAIN} />
+                                        </SquareMedium>
+                                    </Box>
+                                    <Box>
+                                        <HeadingH5>Visit Us:</HeadingH5>
+                                        <Link href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank' rel="noopener" underline='none'><Paragraph>24A Kingston St, Los Vegas NC 28202, USA</Paragraph></Link>
+                                    </Box>
+                                </Stack>
+                                <Stack flexDirection='row' sx={{mt:'22px'}}>
+                                    <Box sx={{pl:'35px', pr:'35px'}}>
+                                        <SquareMedium>
+                                            <EmailIcon stroke={MAIN} />
+                                        </SquareMedium>
+                                    </Box>
+                                    <Box>
+                                        <HeadingH5>Drop Us:</HeadingH5>
+                                        <Link href="mailto:support@pages.com" underline='none'><Paragraph>support@pages.com</Paragraph></Link>
+                                    </Box>
+                                </Stack>
+                                <Stack flexDirection='row' sx={{mt:'22px'}}>
+                                    <Box sx={{pl:'35px', pr:'35px'}}>
+                                        <SquareMedium>
+                                            <PhoneIcon stroke={MAIN} />
+                                        </SquareMedium>
+                                    </Box>
+                                    <Box>
+                                        <HeadingH5>Call Us:</HeadingH5>
+                                        <Link href="tel: +18001239999" underline='none'><Paragraph>1-800-123-9999</Paragraph></Link>
+                                    </Box>
+                                </Stack>
                             </Stack>
-                            <Stack flexDirection='row' sx={{mt:'22px'}}>
-                                <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareMedium>
-                                        <EmailIcon stroke={MAIN} />
-                                    </SquareMedium>
-                                </Box>
-                                <Box>
-                                    <HeadingH5>Drop Us:</HeadingH5>
-                                    <Link href="mailto:support@pages.com" underline='none'><Paragraph>support@pages.com</Paragraph></Link>
-                                </Box>
-                            </Stack>
-                            <Stack flexDirection='row' sx={{mt:'22px'}}>
-                                <Box sx={{pl:'35px', pr:'35px'}}>
-                                    <SquareMedium>
-                                        <PhoneIcon stroke={MAIN} />
-                                    </SquareMedium>
-                                </Box>
-                                <Box>
-                                    <HeadingH5>Call Us:</HeadingH5>
-                                    <Link href="tel: +18001239999" underline='none'><Paragraph>1-800-123-9999</Paragraph></Link>
-                                </Box>
-                            </Stack>
-                        </Stack>
+                        </StyledStack>
                     </StyledGridItem1>
                     <StyledGridItem2 item lg={6} md={12} sm={12} xs={12}>
                         <Form />
@@ -73,6 +75,16 @@ const StyledSection = styled('section')`
     background-color: ${WHITE};
 `;
 
+const StyledStack = styled(Stack)`
+    @media (max-width: 1199px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        order: 1;
+    }
+    
+`;
+
 const StyledGridItem1 = styled(Grid)`
     @media (max-width: 1199px) {
         display: flex;
@@ -83,6 +95,10 @@ const StyledGridItem1 = styled(Grid)`
 
 const StyledParagraph = styled(Paragraph)`
     text-align: justify;
+    @media (max-width: 1199px) {
+        width: 50%;
+        order: 2;
+    }
 `;
 
 const StyledGridItem2 = styled(Grid)`

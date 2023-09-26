@@ -67,4 +67,8 @@ const StyledGridItem2 = styled(Grid)`
     @media (max-width: 899px) {
         padding-top: 0px !important;
     }
+
+    & > :last-child {
+        border: none
+    }
 `;
