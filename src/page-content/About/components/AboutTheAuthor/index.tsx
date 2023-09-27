@@ -59,7 +59,7 @@ export const AboutTheAuthor = () => {
                         <StyledGridItem2 item lg={6.5} md={12} sm={12} order={{ lg: 2, md: 1, sm: 1, xs: 1 }}>
                             <HeadingH3>About Dr. John Abraham</HeadingH3>
                             <LineLarge sx={{mt:'22px'}} />
-                            <StyledParagraph sx={{mt:'22px'}}>All the Lorem generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, that can combined with a handful of model sentence structures.</StyledParagraph>
+                            <StyledParagraph sx={{mt:'22px', textAlign:'justify'}}>All the Lorem generators tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, that can combined with a handful of model sentence structures.</StyledParagraph>
                             <Box sx={{mt:'30px'}}>
                                 <ButtonAction size='large' component={RouterLink} to='/contact' >Contact now</ButtonAction>
                             </Box>
@@ -128,9 +128,9 @@ const StyledGridItem2 = styled(Grid)`
 `;
 
 const StyledParagraph = styled(Paragraph)`
-@media (max-width: 1199px) {
-    text-align: center;
-}
+    @media (max-width: 1199px) {
+        text-align: center;
+    }
 `;
 
 const StyledFacebookIcon = styled(FacebookIcon)`

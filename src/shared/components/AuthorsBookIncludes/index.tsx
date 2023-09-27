@@ -29,7 +29,7 @@ export const AuthorsBookIncludes = () => {
                                 </StyledGridItemImg>
                                 <StyledGridItemDescription item md={6} sm={12} xs={12}>
                                     <HeadingH4>Atomic One’s</HeadingH4>
-                                    <Paragraph sx={{mt:'14px'}}>Many variations of passages of Lorem Ipsum willing araise alteration in some form.</Paragraph>
+                                    <Paragraph sx={{mt:'14px', textAlign:'justify'}}>Many variations of passages of Lorem Ipsum willing araise alteration in some form.</Paragraph>
                                     <Grid container mt='30px'>
                                         <StyledGridItemBookDetailsLeft item md={6} sm={6} xs={12}>
                                             <BookDetails
@@ -59,7 +59,7 @@ export const AuthorsBookIncludes = () => {
                                 </StyledGridItemImg>
                                 <StyledGridItemDescription item md={6} sm={12} xs={12}>
                                     <HeadingH4>The Dark Light</HeadingH4>
-                                    <Paragraph sx={{mt:'14px'}}>Many variations of passages of Lorem Ipsum willing araise alteration in some form.</Paragraph>
+                                    <Paragraph sx={{mt:'14px', textAlign:'justify'}}>Many variations of passages of Lorem Ipsum willing araise alteration in some form.</Paragraph>
                                     <Grid container mt='30px'>
                                         <StyledGridItemBookDetailsLeft item md={6} sm={6} xs={12}>
                                             <BookDetails
@@ -127,11 +127,8 @@ const StyledGridItemBookDetailsRight = styled(Grid)`
 
 `;
 
-
-
 const StyledImgBox = styled(Box)`
     width: 260px; 
-    height: 346px;
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1))
 `;
 

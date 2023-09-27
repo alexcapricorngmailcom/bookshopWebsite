@@ -1,7 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 
 import mockedDataArticles from '../../../../mockedDataArticles.json'
 import { WHITE } from '../../../../design-system/colors';
@@ -14,7 +13,6 @@ export const Blog = () => {
                 <StyledStackList>
                     {mockedDataArticles.articlesItems.map(article => (
                         <StyledStackListColumn key={article.id}>
-                            <StyledBox>
                                 <Article
                                     id={article.id}
                                     title={article.title}
@@ -23,8 +21,6 @@ export const Blog = () => {
                                     img={article.articleImgSrc}
                                     alt={article.articleImgAlt}
                                 />
-                            </StyledBox>
-                            
                         </StyledStackListColumn>
                         ))
                     }
@@ -54,24 +50,15 @@ const StyledStackList = styled(Stack)`
 const StyledStackListColumn = styled(Stack)`
     width: calc(100%/3);
     padding: 20px;
-    align-items: center;
-
 
     @media (max-width: 1199px) {
-        width: calc(100%/2);
+        align-items: center;
+        width: 400px;
     }
-
-    @media (max-width: 899px) {
-        width: calc(100%);
-        padding: 20px 0px;
-    }
+/* 
+    @media (max-width: 599px) {
+        width: 100%;
+        align-items: center;
+        padding: 20px 20px;
+    } */
 `;
-
-const StyledBox = styled(Box)`
-
-    @media (max-width: 1199px) {
-        width: 392px;
-        height: 651px;
-    }
-`;
-

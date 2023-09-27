@@ -18,7 +18,7 @@ export const GetBookCopyToday = () => {
                     <Grid item md={6} sm={12}>
                         <HeadingH3 sx={{color: WHITE}}>Get Book Copy Today!</HeadingH3>
                         <LineLarge sx={{mt:'20px'}} />
-                        <Paragraph sx={{mt:'20px', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
+                        <Paragraph sx={{mt:'20px', textAlign:'justify', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Box mt='30px'>
                             <ButtonAction component={RouterLink} to='/myStore'>Order Today</ButtonAction> 
                         </Box>

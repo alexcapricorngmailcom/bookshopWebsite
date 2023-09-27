@@ -86,7 +86,6 @@ const StyledStackList = styled(Stack)`
         justify-content: center;
     }
 
-
     @media (max-width: 599px) {
         margin: 0px;
     }

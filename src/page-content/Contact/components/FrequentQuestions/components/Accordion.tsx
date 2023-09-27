@@ -47,8 +47,8 @@ export const AccordionItem = ({title}:AccordionItemProps) => {
             <StyledHeadingH6 sx={{ml:'16px'}}>{title}</StyledHeadingH6>
             </StyledAccordionSummary>
             <AccordionDetails sx={{padding: 0}}>
-                <Paragraph sx={{pl:'32px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.</Paragraph>
-                <Paragraph sx={{pl:'32px'}}>There are many variations of of Lorem Ipsum available.</Paragraph>
+                <Paragraph sx={{pl:'32px', textAlign:'justify'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.</Paragraph>
+                <Paragraph sx={{pl:'32px', textAlign:'justify'}}>There are many variations of of Lorem Ipsum available.</Paragraph>
             </AccordionDetails>
         </Accordion>
     );

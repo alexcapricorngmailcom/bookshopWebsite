@@ -30,7 +30,7 @@ export const WhatReadersSayArticle = ({img, alt, userName, title, paragraph}:Tes
                 </Box>
             </Stack>
             <HeadingH6 sx={{mt:'22px', color: WHITE}}>{title}</HeadingH6>
-            <Paragraph sx={{mt:'12px', color: PARAGRAPH_SECONDARY}}>{paragraph}</Paragraph>
+            <Paragraph sx={{mt:'12px', textAlign:'justify', color: PARAGRAPH_SECONDARY}}>{paragraph}</Paragraph>
         </article>
     );
 }

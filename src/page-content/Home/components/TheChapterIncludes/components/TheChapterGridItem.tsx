@@ -11,7 +11,7 @@ export const TheChapterGridItem = ({title, paragraph}: TheChapterGridItemProps) 
         <Grid item lg={6} md={6} sm={6}>
             <StyledBox>
                 <HeadingH5>{title}</HeadingH5>
-                <Paragraph sx={{mt:'14px'}}>{paragraph}</Paragraph>
+                <Paragraph sx={{mt:'14px', textAlign:'justify'}}>{paragraph}</Paragraph>
                 <Grid container mt='25px'>
                     <Grid item md={6} sm={6}>
                         <TheChapterBookDetails

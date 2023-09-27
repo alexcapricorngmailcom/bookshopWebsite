@@ -26,7 +26,7 @@ export const WhatReadersSay = () => {
                         <Grid item lg={3.5}>
                             <HeadingH3>What Readers Say About the Book</HeadingH3>
                             <LineLarge sx={{mt:'25px'}} />
-                            <Paragraph sx={{mt:'25px'}}>If you are going to use a passage of Lorem, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem generators.</Paragraph>
+                            <Paragraph sx={{mt:'25px', textAlign:'justify'}}>If you are going to use a passage of Lorem, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem generators.</Paragraph>
                             <Stack spacing={1} flexDirection='row' alignItems='center' mt='50px'>
                                 <Rating
                                     icon={<CircleIcon fontSize="inherit" sx={{color: SECONDARY}} />} 
@@ -48,7 +48,7 @@ export const WhatReadersSay = () => {
                                                 img={whatReadersSayUser1}
                                                 alt='testimonial user 1'
                                                 userName='Martin Philips'
-                                                title='“ Awesome Impact ”'
+                                                title='“Awesome Impact”'
                                                 paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                             />
                                         </Box>
@@ -57,7 +57,7 @@ export const WhatReadersSay = () => {
                                                     img={whatReadersSayUser2}
                                                     alt='testimonial user 2'
                                                     userName='James Anderson'
-                                                    title='“ Mind Blowing Words ”'
+                                                    title='“Mind Blowing Words”'
                                                     paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                                 />
                                             </Box>
@@ -68,7 +68,7 @@ export const WhatReadersSay = () => {
                                             img={whatReadersSayUser3}
                                             alt='testimonial user 3'
                                             userName='Christina Louis'
-                                            title='“ Great Books Collections ”'
+                                            title='“Great Books Collections”'
                                             paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                         />
                                     </Box> 

@@ -23,7 +23,7 @@ export const AboutAuthor = () => {
                     <Grid item md={6} sm={12}> 
                         <HeadingH3>About Author</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <Paragraph sx={{mt: '22px'}}>All the Lorem generators on the Internet tend to repeated predefined chunks as necessary, making this the first true value generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</Paragraph>
+                        <Paragraph sx={{mt: '22px', textAlign:'justify'}}>All the Lorem generators on the Internet tend to repeated predefined chunks as necessary, making this the first true value generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful.</Paragraph>
                         <Grid container mt='20px'>
                             <Grid item lg={4}>
                                 <HeadingH2>02</HeadingH2>

@@ -117,7 +117,7 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
                             <HeadingH5 sx={{ml:'15px', color: WHITE}}>Welcome to Pages</HeadingH5>
                         </Stack>
                         <HeadingH1 sx={{mt:'16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</HeadingH1>
-                        <Paragraph sx={{mt:'32px', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
+                        <Paragraph sx={{mt:'32px', textAlign:'justify', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
                         <Stack flexDirection='row' alignItems='center' mt='50px'>
                             <ButtonAction component={RouterLink} to='/myStore'>Order Today</ButtonAction> 
                             <ButtonAction variant='text' onClick={scrollOnClick}><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>

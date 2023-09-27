@@ -18,7 +18,7 @@ export const MyStory = () => {
                     <StyledGridItem1 item lg={6} md={12} sm={12}> 
                         <HeadingH3>My Story</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <StyledParagraph sx={{mt:'22px'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</StyledParagraph>
+                        <StyledParagraph sx={{mt:'22px', textAlign:'justify'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</StyledParagraph>
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row'>
                                 <Box sx={{pl:'35px', pr:'35px'}}>
@@ -28,7 +28,7 @@ export const MyStory = () => {
                                 </Box>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>Great Author Awards - 1996 & 2000</HeadingH5>
-                                    <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
+                                    <Paragraph sx={{mt:'17px', textAlign:'justify'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'35px'}}>
@@ -39,7 +39,7 @@ export const MyStory = () => {
                                 </Box>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>10 times NYT &#174; Best Seller</HeadingH5>
-                                    <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
+                                    <Paragraph sx={{mt:'17px', textAlign:'justify'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'35px'}}>
@@ -50,7 +50,7 @@ export const MyStory = () => {
                                 </Box>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>Writer of Hack Productivity</HeadingH5>
-                                    <Paragraph sx={{mt:'17px'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
+                                    <Paragraph sx={{mt:'17px', textAlign:'justify'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
                         </Stack>
