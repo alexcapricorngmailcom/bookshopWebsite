@@ -17,7 +17,7 @@ export const TrustedByTheBest = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
-                    <HeadingH3>Trusted by the Best</HeadingH3>
+                    <HeadingH3 sx={{textAlign:'center'}}>Trusted by the Best</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                     <Grid container spacing={5} mt='0px'>
                         <TrustedByGridItem 

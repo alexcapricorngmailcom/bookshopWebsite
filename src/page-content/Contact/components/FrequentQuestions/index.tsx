@@ -13,7 +13,7 @@ export const FrequentQuestions = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
-                    <HeadingH3>Frequent Questions?</HeadingH3>
+                    <HeadingH3 sx={{textAlign:'center'}}>Frequent Questions?</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                     <Grid container spacing={10} flexDirection='row' mt='-65px'>
                         <Grid item lg={6} md={6}>

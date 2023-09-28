@@ -20,9 +20,9 @@ export const KeepInTouch = () => {
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <StyledGridItem1 item lg={6} md={12} sm={12} xs={12}> 
-                        <HeadingH3>Keep in Touch</HeadingH3>
+                        <HeadingH3 sx={{textAlign:'center'}}>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
-                        <StyledStack>
+                        <StyledStackContainer>
                             <StyledParagraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</StyledParagraph>
                             <Stack sx={{mt:'40px'}}>
                                 <Stack flexDirection='row' >
@@ -59,7 +59,7 @@ export const KeepInTouch = () => {
                                     </Box>
                                 </Stack>
                             </Stack>
-                        </StyledStack>
+                        </StyledStackContainer>
                     </StyledGridItem1>
                     <StyledGridItem2 item lg={6} md={12} sm={12} xs={12}>
                         <Form />
@@ -75,14 +75,16 @@ const StyledSection = styled('section')`
     background-color: ${WHITE};
 `;
 
-const StyledStack = styled(Stack)`
+const StyledStackContainer = styled(Stack)`
     @media (max-width: 1199px) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        order: 1;
     }
-    
+    @media (max-width: 899px) {
+        flex-direction: column;
+
+    }
 `;
 
 const StyledGridItem1 = styled(Grid)`
@@ -97,7 +99,11 @@ const StyledParagraph = styled(Paragraph)`
     text-align: justify;
     @media (max-width: 1199px) {
         width: 50%;
-        order: 2;
+        order: 1;
+    }
+    @media (max-width: 899px) {
+        width: 100%;
+        order: 0;
     }
 `;
 

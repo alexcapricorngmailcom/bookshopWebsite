@@ -21,33 +21,33 @@ export const MyStory = () => {
                         <StyledParagraph sx={{mt:'22px', textAlign:'justify'}}>Making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</StyledParagraph>
                         <Stack sx={{mt:'40px'}}>
                             <Stack flexDirection='row'>
-                                <Box sx={{pl:'35px', pr:'35px'}}>
+                                <StyledBox>
                                     <SquareMedium>
                                         <HeadingH5>01</HeadingH5>
                                     </SquareMedium>
-                                </Box>
+                                </StyledBox>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>Great Author Awards - 1996 & 2000</HeadingH5>
                                     <Paragraph sx={{mt:'17px', textAlign:'justify'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'35px'}}>
-                                <Box sx={{pl:'35px', pr:'35px'}}>
+                                <StyledBox>
                                     <SquareMedium>
                                         <HeadingH5>02</HeadingH5>
                                     </SquareMedium>
-                                </Box>
+                                </StyledBox>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>10 times NYT &#174; Best Seller</HeadingH5>
                                     <Paragraph sx={{mt:'17px', textAlign:'justify'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
                                 </Box>
                             </Stack>
                             <Stack flexDirection='row' sx={{mt:'35px'}}>
-                                <Box sx={{pl:'35px', pr:'35px'}}>
+                                <StyledBox>
                                     <SquareMedium>
                                         <HeadingH5>03</HeadingH5>
                                     </SquareMedium>
-                                </Box>
+                                </StyledBox>
                                 <Box>
                                     <HeadingH5 sx={{lineHeight:'95%'}}>Writer of Hack Productivity</HeadingH5>
                                     <Paragraph sx={{mt:'17px', textAlign:'justify'}}>How to navigate around the interface and toggle on/off the panels you wish to use.</Paragraph>
@@ -96,5 +96,14 @@ const StyledGridItem1 = styled(Grid)`
 const StyledParagraph = styled(Paragraph)`
     @media (max-width: 1199px) {
         text-align: center;
+    }
+`;
+
+const StyledBox = styled(Box)`
+    padding: 0px 35px;
+    
+
+    @media (max-width: 449px) {
+        padding-left: 0px; 
     }
 `;
