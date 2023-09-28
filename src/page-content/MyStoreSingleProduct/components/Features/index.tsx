@@ -14,35 +14,35 @@ export const Features = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Grid container spacing={11}>
-                    <Grid item md={4}>
+                <StyledGridContainer container spacing={11}>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
                         <Stack alignItems='center' textAlign='center'>
                             <SquareLarge sx={{backgroundColor: MAIN}}>
                                 <ShieldIcon stroke={WHITE} width='36px' height='36px' />
                             </SquareLarge> 
-                            <HeadingH4 sx={{mt:'20px'}}>Secure Payments</HeadingH4>
+                            <StyledHeadingH4 sx={{mt:'20px'}}>Secure Payments</StyledHeadingH4>
                             <Paragraph sx={{mt:'20px', color: MAIN}}>There are many variations of passages of alteration in some form.</Paragraph>
                         </Stack>
                     </Grid>
-                    <Grid item md={4}>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
                         <Stack alignItems='center' textAlign='center'>
                             <SquareLarge sx={{backgroundColor: MAIN}}>
                                 <CubeIcon stroke={WHITE} width='36px' height='36px' />
                             </SquareLarge>
-                            <HeadingH4 sx={{mt:'20px'}}>Free Shipping</HeadingH4>
+                            <StyledHeadingH4 sx={{mt:'20px'}}>Free Shipping</StyledHeadingH4>
                             <Paragraph sx={{mt:'20px', color: MAIN}}>There are many variations of passages of alteration in some form.</Paragraph>
                         </Stack>
                     </Grid>
-                    <Grid item md={4} textAlign='center'>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
                         <Stack alignItems='center' textAlign='center'>
                             <SquareLarge sx={{backgroundColor: MAIN}}>
                                 <LightningIcon stroke={WHITE} width='36px' height='36px' />
                             </SquareLarge>
-                            <HeadingH4 sx={{mt:'20px'}}>100% Satisfactions</HeadingH4>
+                            <StyledHeadingH4 sx={{mt:'20px'}}>100% Satisfactions</StyledHeadingH4>
                             <Paragraph sx={{mt:'20px', color: MAIN}}>There are many variations of passages of alteration in some form.</Paragraph>
                         </Stack>
                     </Grid>
-                </Grid>
+                </StyledGridContainer>
             </Container>
         </StyledSection>
     )
@@ -52,3 +52,20 @@ const StyledSection = styled('section')`
     padding: 85px 0px;
     background-color: ${SECONDARY};
 `;
+
+const StyledGridContainer = styled(Grid)`
+    @media (max-width: 899px) {
+        display: flex;
+        justify-content: center;
+    }
+`;
+
+const StyledHeadingH4 = styled(HeadingH4)`
+    @media (max-width: 624px) {
+        font-size: 30px;
+    }
+    @media (max-width: 599px) {
+        font-size: 32px;
+    }
+`;
+

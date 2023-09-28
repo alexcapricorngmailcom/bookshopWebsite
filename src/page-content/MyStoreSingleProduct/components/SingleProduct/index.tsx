@@ -226,9 +226,15 @@ const StyledGridItem2 = styled(Grid)`
         max-width: 800px;
         margin: 0 auto;
     }
+    
     @media (max-width: 899px) {
-        max-width: 650px;
+        max-width: 750px;
     }
+
+    @media (max-width: 694px) {
+        max-width: 100%;
+    }
+    
 `;
 
 const StyledTextField = styled(TextField)`
@@ -255,6 +261,8 @@ const StyledBoxBookIcon = styled(Box)`
     position: absolute;
     right: 10px;
     bottom: 10px;
+    width: 100px; 
+    height: 100px;
 
     @media (max-width: 1199px) {
         width: 80px; 
