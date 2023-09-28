@@ -108,24 +108,16 @@ const StyledStackListColumn = styled(Stack)`
 `;
 
 const StyledStackImg = styled(Stack)`
-
     position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px 20px;
     background-color: ${BACKGROUND};
-    
-    @media (max-width: 899px) {
-        
-        
-    }
-
 `;
 
 const StyledBoxBookCoverImg = styled(Box)`
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1))
-
 `;
 
 const StyledParagraphPrice = styled(Paragraph)`

@@ -52,24 +52,24 @@ export const SingleProduct = () => {
             <Container maxWidth='lg'>
                 <Stack alignItems='center'>
                     <Grid container spacing={11} alignItems='center'>
-                        <Grid item lg={5}>
+                        <StyledGridItem1 item lg={5} md={12} sm={12}>
                             <StyledStackImg>
                                 <StyledBoxBookCoverImg>
-                                    <img src={filteredMockedDataProducts.myStoreSingleProductImgSrc} alt={filteredMockedDataProducts.myStoreAlt} />
+                                    <img src={filteredMockedDataProducts.myStoreSingleProductImgSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={filteredMockedDataProducts.myStoreAlt} />
                                 </StyledBoxBookCoverImg>
                                 {
                                     filteredMockedDataProducts.isPositionedIcon 
                                     && 
-                                    <StyledBoxBookIcon width='100px' height='100px'>
+                                    <StyledBoxBookIcon>
                                         <img src={filteredMockedDataProducts.positionedIconSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={filteredMockedDataProducts.positionedIconAlt} />
                                     </StyledBoxBookIcon>
                                 }
                             </StyledStackImg>
-                        </Grid>
-                        <Grid item lg={7}>
-                            <HeadingH4>{filteredMockedDataProducts.title}</HeadingH4>
+                        </StyledGridItem1>
+                        <StyledGridItem2 item lg={7} md={12} sm={12}>
+                            <StyledHeadingH4>{filteredMockedDataProducts.title}</StyledHeadingH4>
                             <StyledParagraph sx={{mt:'10px'}}>${filteredMockedDataProducts.price}</StyledParagraph>
-                            <Paragraph sx={{mt:'10px'}}>{filteredMockedDataProducts.singleDescription}</Paragraph>
+                            <Paragraph sx={{mt:'10px', textAlign:'justify'}}>{filteredMockedDataProducts.singleDescription}</Paragraph>
                             <Stack flexDirection='row' sx={{mt:'20px'}}>
                                 <StyledBox>
                                     <Paragraph>Publisher:</Paragraph>
@@ -149,16 +149,16 @@ export const SingleProduct = () => {
                                     </Box>
                                 </Stack>
                             </Box>
-                        </Grid>
+                        </StyledGridItem2>
                     </Grid>
                     <Grid container spacing={11} sx={{mt:'32px'}}>
                         <Grid item lg={6}>
                             <HeadingH4 sx={{textAlign:'center'}}>Do you offer discounts for education?</HeadingH4>
-                            <Paragraph sx={{mt:'10px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, bypassed injected humour, or randomized words which don't look even slightly believable.</Paragraph>                
+                            <Paragraph sx={{mt:'10px', textAlign:'justify'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, bypassed injected humour, or randomized words which don't look even slightly believable.</Paragraph>                
                         </Grid>
                         <Grid item lg={6}>
                             <HeadingH4 sx={{textAlign:'center'}}>Is this book for me?</HeadingH4>
-                            <Paragraph sx={{mt:'10px'}}>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</Paragraph>                       
+                            <Paragraph sx={{mt:'10px', textAlign:'justify'}}>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</Paragraph>                       
                         </Grid>
                     </Grid>
                 </Stack>
@@ -177,6 +177,8 @@ const StyledStackImg = styled(Stack)`
     position: relative;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 0px 20px;
     background-color: ${BACKGROUND};
 `;
 
@@ -185,11 +187,21 @@ const StyledBoxBookCoverImg = styled(Box)`
     filter: drop-shadow(0 20px 25px rgba(4, 11, 20, 0.1));
 `;
 
+const StyledHeadingH4 = styled(HeadingH4)`
+    @media (max-width: 1199px) {
+        /* text-align: center; */
+    }
+`;
+
 const StyledParagraph = styled(Paragraph)`
-    display: inline-block;
+    display: block;
     font-size: 30px;
     font-weight: 700;
     color: ${SECONDARY};
+
+    @media (max-width: 1199px) {
+        /* text-align: center; */
+    }
 `;
 
 const StyledBox = styled(Box)`
@@ -198,8 +210,28 @@ const StyledBox = styled(Box)`
     }
 `;
 
-const StyledTextField = styled(TextField)`
+const StyledGridItem1 = styled(Grid)`
+    @media (max-width: 1199px) {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    @media (max-width: 899px) {
+        max-width: 430px;
+    }
+`;
 
+const StyledGridItem2 = styled(Grid)`
+    @media (max-width: 1199px) {
+
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    @media (max-width: 899px) {
+        max-width: 650px;
+    }
+`;
+
+const StyledTextField = styled(TextField)`
 
     .MuiOutlinedInput-notchedOutline {
         border-radius: 0px;
@@ -223,4 +255,9 @@ const StyledBoxBookIcon = styled(Box)`
     position: absolute;
     right: 10px;
     bottom: 10px;
+
+    @media (max-width: 1199px) {
+        width: 80px; 
+        height: 80px;
+    }
 `;
