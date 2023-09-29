@@ -23,11 +23,11 @@ export const WhatReadersSay = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                     <Grid container justifyContent='space-between' alignItems='center'>
-                        <Grid item lg={3.5}>
+                        <StyledGridItem1 item lg={3.5}>
                             <HeadingH3>What Readers Say About the Book</HeadingH3>
                             <LineLarge sx={{mt:'25px'}} />
-                            <Paragraph sx={{mt:'25px', textAlign:'justify'}}>If you are going to use a passage of Lorem, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem generators.</Paragraph>
-                            <Stack spacing={1} flexDirection='row' alignItems='center' mt='50px'>
+                            <StyledParagraph>If you are going to use a passage of Lorem, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem generators.</StyledParagraph>
+                            <SlyledRatingStack spacing={1}>
                                 <Rating
                                     icon={<CircleIcon fontSize="inherit" sx={{color: SECONDARY}} />} 
                                     emptyIcon={<CircleOutlinedIcon fontSize="inherit" sx={{color: SECONDARY}} />} 
@@ -37,10 +37,10 @@ export const WhatReadersSay = () => {
                                     readOnly 
                                 />
                                 <HeadingH6 sx={{mt:'0px !important', ml:'10px !important'}}>(4.8/5)</HeadingH6>
-                            </Stack>
+                            </SlyledRatingStack>
                             <Paragraph sx={{mt:'10px', color: MAIN}}>Overall Customer Ratings</Paragraph>
-                        </Grid>
-                        <Grid item lg={7.5} margin='-15px'>
+                        </StyledGridItem1>
+                        <StyledGridItem2 item lg={7.5} margin='-15px'>
                             <Stack flexDirection='row' alignItems='center' width='100%'>
                                 <Stack justifyContent='space-between' width='50%'>
                                         <Box padding='15px'>
@@ -74,7 +74,7 @@ export const WhatReadersSay = () => {
                                     </Box> 
                                 </Box>
                             </Stack>
-                        </Grid>
+                        </StyledGridItem2>
                     </Grid>
             </Container>
         </StyledSection>
@@ -85,3 +85,34 @@ const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
 `;
+
+const StyledGridItem1 = styled(Grid)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+    margin-top: 25px;
+    text-align: justify;
+
+    @media (max-width: 1199px) {
+        text-align: center;
+    }
+`;
+
+const SlyledRatingStack = styled(Stack)`
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+
+    @media (max-width: 1199px) {
+        margin-top: 20px;
+    }
+`;
+
+const StyledGridItem2 = styled(Grid)`
+    margin: 10px;
+`;
+
+
