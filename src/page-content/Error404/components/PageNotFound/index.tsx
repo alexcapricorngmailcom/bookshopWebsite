@@ -29,11 +29,16 @@ export const PageNotFound = () => {
 }
 
 const StyledSection = styled('section')`
-    padding-bottom: 300px;
     padding-top: 300px;
+    padding-bottom: 300px;
     background-image: url(${backgroundImg});
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 599px) {
+        padding-top: 125px;
+        padding-bottom: 85px;
+    }
 `;
 
 const StyledParagraph = styled(Paragraph)`

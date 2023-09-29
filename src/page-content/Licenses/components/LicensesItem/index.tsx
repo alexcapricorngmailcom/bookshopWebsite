@@ -24,4 +24,8 @@ export const LicensesItem = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+
+    @media (max-width: 599px) {
+        padding: 125px 0px;
+    }
 `;

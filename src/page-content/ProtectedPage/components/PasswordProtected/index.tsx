@@ -11,8 +11,6 @@ import { useState } from 'react';
 
 const defaultPasswordValue = '';
 
-
-
 export const PasswordProtected = () => {
 
     const [userPasswordData, setUserPasswordData] = useState(defaultPasswordValue);
@@ -26,8 +24,8 @@ export const PasswordProtected = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack alignItems='center'>
-                    <Stack alignItems='center' sx={{ width: '850px', padding: '120px 170px', backgroundColor: BACKGROUND }}>
-                        <HeadingH3>Password Protected</HeadingH3>
+                    <StyledStackItem>
+                        <HeadingH3 sx={{textAlign:'center'}}>Password Protected</HeadingH3>
                         <Paragraph sx={{mt:'20px', textAlign:'center'}}>This page is password protected. If you are the website admin, or have access to this page, please type your password below.</Paragraph>
                         <StyledForm onSubmit={customSubmit}>
                             <Box position='relative'>
@@ -45,7 +43,7 @@ export const PasswordProtected = () => {
                                 <ButtonAction size='large' width='100%' type='submit'>Submit</ButtonAction>
                             </Box>
                         </StyledForm>
-                    </Stack>
+                    </StyledStackItem>
                 </Stack>
             </Container>
         </StyledSection>
@@ -55,7 +53,43 @@ export const PasswordProtected = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+
+    @media (max-width: 599px) {
+        padding: 125px 0px;
+    }
 `;
+
+const StyledStackItem = styled(Stack)`
+    align-items: center; 
+    width: 850px; 
+    padding: 120px 170px; 
+    background-color: ${BACKGROUND};
+
+    @media (max-width: 899px) {
+        width: 100%;
+        padding: 120px 150px;
+    }
+
+    @media (max-width: 799px) {
+        width: 100%;
+        padding: 120px 120px;
+    }
+
+    @media (max-width: 749px) {
+        width: 100%;
+        padding: 120px 100px;
+    }
+
+    @media (max-width: 649px) {
+        width: 100%;
+        padding: 100px 75px;
+    }
+    @media (max-width: 599px) {
+        width: 100%;
+        padding: 80px 20px;
+    }
+`;
+
 
 const StyledForm = styled('form')`
     width: 100%;
