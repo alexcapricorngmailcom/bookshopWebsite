@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -42,7 +41,7 @@ export const Form = () => {
     return (
         <form onSubmit={customSubmit}>
             <Stack>
-                <Stack flexDirection='row'>
+                <SlyledStack>
                     <Box sx={{position:'relative', width: '100%'}}>
                         <StyledInput 
                             type="text"
@@ -54,7 +53,7 @@ export const Form = () => {
                         />
                         <StyledImg src={emailIcon} alt="email icon" />
                     </Box>
-                    <Box sx={{position:'relative', ml:'10px', width: '100%'}}>
+                    <StyledBox sx={{position:'relative', width: '100%'}}>
                         <StyledInput 
                             type="email"
                             name='email' 
@@ -64,8 +63,8 @@ export const Form = () => {
                             required
                         />
                         <StyledImg src={userIcon} alt="user icon" />
-                    </Box>
-                </Stack>
+                    </StyledBox>
+                </SlyledStack>
                 <Box sx={{position:'relative', mt:'10px'}}>
                     <StyledInput 
                         type="tel"
@@ -99,6 +98,23 @@ export const Form = () => {
         </form>
     );
 }
+
+const SlyledStack = styled(Stack)`
+    flex-direction: row;
+
+    @media (max-width: 699px) {
+        flex-direction: column;
+    }
+`;
+
+const StyledBox = styled(Stack)`
+    margin-left: 10px;
+
+    @media (max-width: 699px) {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+`;
 
 const StyledInput = styled('input')`
     width: 100%;

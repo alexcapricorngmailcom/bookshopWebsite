@@ -10,9 +10,9 @@ export const Quote = ({children}:QuoteProps) => {
     return (
         <StyledStack>
             <StyledQuoteIcon />
-            <Paragraph sx={{padding:'40px 110px', color: WHITE}}>
+            <StyledParagraph>
                 {children}
-            </Paragraph>
+            </StyledParagraph>
         </StyledStack>
     );
 }
@@ -27,6 +27,15 @@ const StyledStack = styled(Stack)`
     border-radius: 5px;
     text-align: center;
     background-color: ${MAIN};
+`;
+
+const StyledParagraph = styled(Paragraph)`
+    padding: 40px 110px;
+    color: WHITE;
+
+    @media (max-width: 599px) {
+        padding: 40px 80px;
+    }
 `;
 
 const StyledQuoteIcon = styled(QuoteIcon)`

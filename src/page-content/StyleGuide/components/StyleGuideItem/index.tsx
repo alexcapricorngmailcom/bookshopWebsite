@@ -18,64 +18,64 @@ export const StyleGuideItem = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <HeadingH5>Colors</HeadingH5>
-                <Stack flexDirection='row' mt='15px'>
+                <StyledStackContainer mt='15px'>
                     <Stack alignItems='center'>
-                        <SquareTheLargest sx={{backgroundColor: MAIN}} />
+                        <StyledSquareTheLargest sx={{backgroundColor: MAIN}} />
                         <HeadingH6 sx={{mt: '15px'}}>#1B3764</HeadingH6>
                     </Stack>
                     <Stack alignItems='center' ml='40px'>
-                        <SquareTheLargest />
+                        <StyledSquareTheLargest />
                         <HeadingH6 sx={{mt: '15px'}}>#FFCA42</HeadingH6>
                     </Stack>
                     <Stack alignItems='center' ml='40px'>
-                        <SquareTheLargest sx={{backgroundColor: BACKGROUND}} />
+                        <StyledSquareTheLargest sx={{backgroundColor: BACKGROUND}} />
                         <HeadingH6 sx={{mt: '15px'}}>#F6F8FC</HeadingH6>
                     </Stack>
-                </Stack>
+                </StyledStackContainer>
 
-                <HeadingH5 sx={{mt: '145px'}}>Paragraph</HeadingH5>
+                <StyledHeadingH5>Paragraph</StyledHeadingH5>
                 <Stack flexDirection='row' mt='15px'>
                     <Paragraph>
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
                     </Paragraph>
                 </Stack>
 
-                <HeadingH5 sx={{mt: '145px'}}>Button</HeadingH5>
-                <Stack flexDirection='row' mt='15px'>
+                <StyledHeadingH5>Button</StyledHeadingH5>
+                <StyledButtonStack mt='15px'>
                     <ButtonAction>Button Text</ButtonAction>
-                    <Box ml='40px'>
+                    <StyledButtonBox>
                         <ButtonAction variant='outlined'>Button Text</ButtonAction>
-                    </Box>
-                </Stack>
-                <Stack flexDirection='row' mt='15px'>
+                    </StyledButtonBox>
+                </StyledButtonStack>
+                <StyledButtonStack mt='15px'>
                     <ButtonAction size='medium'>Button Text</ButtonAction>
-                    <Box ml='40px'>
+                    <StyledButtonBox>
                         <ButtonAction size='large' variant='contained'>Button Text</ButtonAction>
-                    </Box>
-                </Stack>
-                <Stack flexDirection='row' mt='15px'>
+                    </StyledButtonBox>
+                </StyledButtonStack>
+                <StyledButtonStack mt='15px'>
                     <Box width='100%'>
                         <ButtonAction width='100%'>Button Text</ButtonAction>
                     </Box>
-                </Stack>
+                </StyledButtonStack>
 
-                <HeadingH5 sx={{mt: '145px'}}>Title</HeadingH5>
+                <StyledHeadingH5>Title</StyledHeadingH5>
                 <Box>
-                    <HeadingH1>Heading H1 Title</HeadingH1>
-                    <HeadingH2>Heading H2 Title</HeadingH2>
-                    <HeadingH3>Heading H3 Title</HeadingH3>
+                    <StyledHeadingH1>Heading H1 Title</StyledHeadingH1>
+                    <StyledHeadingH2>Heading H2 Title</StyledHeadingH2>
+                    <StyledHeadingH3>Heading H3 Title</StyledHeadingH3>
                     <HeadingH4 sx={{mt: '5px'}}>Heading H4 Title</HeadingH4>
                     <HeadingH5 sx={{mt: '10px'}}>Heading H5 Title</HeadingH5>
                     <HeadingH6 sx={{mt: '15px'}}>Heading H6 Title</HeadingH6>
                 </Box>
 
-                <HeadingH5 sx={{mt: '145px'}}>List</HeadingH5>
+                <StyledHeadingH5>List</StyledHeadingH5>
                 <ul style={{marginTop:'15px'}}>
                     {mockedDataArticles.articlesItems.map(listItem => (
                         <li key={listItem.id}>
                             <Stack flexDirection='row' alignItems='center'>
                                 <FiberManualRecordIcon fontSize='inherit' sx={{color: SECONDARY}}/>
-                                <Paragraph sx={{ml:'15px', color: MAIN}}>{listItem.listItem}</Paragraph>
+                                <StyledParagraph sx={{ml:'15px', color: MAIN}}>{listItem.listItem}</StyledParagraph>
                             </Stack>
                         </li>
                     ))}
@@ -85,13 +85,13 @@ export const StyleGuideItem = () => {
                         <li key={listItem.id}>
                             <Stack flexDirection='row' alignItems='center'>
                                 <Paragraph sx={{color: SECONDARY}}>{index + 1}.</Paragraph>
-                                <Paragraph sx={{ml:'15px', color: MAIN}}>{listItem.listItem}</Paragraph>
+                                <StyledParagraph sx={{ml:'15px', color: MAIN}}>{listItem.listItem}</StyledParagraph>
                             </Stack>
                         </li>
                     ))}
                 </ol>
 
-                <HeadingH5 sx={{mt: '145px'}}>Block Quote</HeadingH5>
+                <StyledHeadingH5>Block Quote</StyledHeadingH5>
                 <Box sx={{mt: '15px'}}>
                     <Quote>
                         “We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers. new writers, where children get hooked on the thrill of reading that can last a lifetime.”
@@ -110,4 +110,111 @@ export const StyleGuideItem = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+
+    @media (max-width: 599px) {
+        padding: 85px 0px;
+    }
 `;
+
+const StyledStackContainer = styled(Stack)`
+    flex-direction: row;
+
+    @media (max-width: 599px) {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        & > * {
+            margin-left: 0px;
+        }
+    }
+`;
+
+const StyledSquareTheLargest = styled(SquareTheLargest)`
+
+    @media (max-width: 1099px) {
+        width: 170px;
+        height: 170px;   
+    }
+
+    @media (max-width: 899px) {
+        width: 150px;
+        height: 150px;   
+    }
+`;
+
+const StyledButtonStack = styled(Stack)`
+    flex-direction: row;
+
+    @media (max-width: 654px) {
+        flex-direction: column;
+    }
+`;
+
+const StyledButtonBox = styled(Box)`
+    margin-left: 40px;
+
+    @media (max-width: 654px) {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+`;
+
+const StyledHeadingH1 = styled(HeadingH1)`
+
+    @media (max-width: 489px) {
+        font-size: 52px;    
+    }
+
+    @media (max-width: 455px) {
+        font-size: 48px;    
+    }
+
+    @media (max-width: 425px) {
+        font-size: 46px;    
+    }
+`;
+
+const StyledHeadingH2 = styled(HeadingH2)`
+
+    @media (max-width: 489px) {
+        font-size: 48px;    
+    }
+
+    @media (max-width: 455px) {
+        font-size: 44px;    
+    }
+
+    @media (max-width: 425px) {
+        font-size: 42px;    
+    }
+`;
+const StyledHeadingH3 = styled(HeadingH3)`
+
+    @media (max-width: 489px) {
+        font-size: 42px;    
+    }
+
+    @media (max-width: 455px) {
+        font-size: 38px;    
+    }
+
+    @media (max-width: 425px) {
+        font-size: 36px;    
+    }
+`;
+
+const StyledHeadingH5 = styled(HeadingH5)`
+    margin-top: 145px;
+
+    @media (max-width: 599px) {
+        margin-top: 85px;
+    }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+
+    @media (max-width: 624px) {
+        font-size: 18px;
+    }
+`;
+
