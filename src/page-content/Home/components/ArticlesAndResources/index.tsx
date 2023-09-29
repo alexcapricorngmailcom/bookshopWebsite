@@ -1,7 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 
 import mockedDataArticles from '../../../../mockedDataArticles.json'
 import { BACKGROUND } from '../../../../design-system/colors';
@@ -15,7 +14,7 @@ export const ArticlesAndResources = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
-                    <HeadingH3>Articles & Resources</HeadingH3>
+                    <HeadingH3 sx={{textAlign:'center'}}>Articles & Resources</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                 </Stack>
                 <StyledStackList sx={{mt:'50px'}}>
@@ -26,19 +25,18 @@ export const ArticlesAndResources = () => {
                         }
 
                         return (
-                            <StyledBoxListColumn key={article.id}>
+                            <StyledStackListColumn key={article.id}>
                                 <Article
                                     id={article.id}
                                     title={article.title}
                                     paragraph={article.description}
                                     author={article.date}
-                                    img={article.singleArticleImgSrc}
+                                    img={article.articleImgSrc}
                                     alt={article.articleImgAlt}
                                 />
-                            </StyledBoxListColumn>
+                            </StyledStackListColumn>
                             )
-                    }   )
-                    
+                    })
                     }
                 </StyledStackList>
             </Container>
@@ -55,9 +53,25 @@ const StyledStackList = styled(Stack)`
     flex-direction: row;
     flex-wrap: wrap; 
     margin: -20px;
+    justify-content: center;
+
+    @media (max-width: 899px) {
+        margin: 0px;
+    }
 `;
 
-const StyledBoxListColumn = styled(Box)`
+const StyledStackListColumn = styled(Stack)`
     width: calc(100%/3);
     padding: 20px;
+
+    @media (max-width: 1199px) {
+        align-items: center;
+        width: 400px;
+    }
+/* 
+    @media (max-width: 599px) {
+        width: 100%;
+        align-items: center;
+        padding: 20px 20px;
+    } */
 `;
