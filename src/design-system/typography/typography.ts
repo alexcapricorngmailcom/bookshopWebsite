@@ -9,7 +9,7 @@ export const HeadingH1 = styled('h1')`
     letter-spacing: -0.015em;
     color: ${MAIN};
 
-    @media (max-width: 900px) {
+    @media (max-width: 899px) {
         font-size: 56px;
     }
 `;

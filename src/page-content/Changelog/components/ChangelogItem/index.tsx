@@ -11,12 +11,12 @@ export const ChangelogItem = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack alignItems='center'>
-                    <Stack alignItems='center' sx={{ width: '600px', padding: '50px', backgroundColor: BACKGROUND }}>
+                    <StyledStackItem>
                         <CircleLarge>
                             <HeadingH4 sx={{mt:'7px'}}>V.1</HeadingH4>
                         </CircleLarge>
-                        <Paragraph sx={{mt:'20px'}}>Initial Pages Webflow Template Release</Paragraph>
-                    </Stack>
+                        <Paragraph sx={{mt:'20px', textAlign:'center'}}>Initial Pages Webflow Template Release</Paragraph>
+                    </StyledStackItem>
                 </Stack>
             </Container>
         </StyledSection>
@@ -26,4 +26,19 @@ export const ChangelogItem = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+
+    @media (max-width: 599px) {
+        padding: 125px 0px;
+    }
+`;
+
+const StyledStackItem = styled(Stack)`
+    align-items: center; 
+    width: 600px; 
+    padding: 50px 20px; 
+    background-color: ${BACKGROUND};
+
+    @media (max-width: 649px) {
+        width: 100%; 
+    }
 `;

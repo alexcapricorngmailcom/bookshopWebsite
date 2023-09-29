@@ -84,12 +84,12 @@ const StyledStackItem = styled(Stack)`
         width: 100%;
         padding: 100px 75px;
     }
+
     @media (max-width: 599px) {
         width: 100%;
         padding: 80px 20px;
     }
 `;
-
 
 const StyledForm = styled('form')`
     width: 100%;
