@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 
 import whatWillYouLearnImg from './assets/whatWillYouLearnImg.png'
 import { WHITE } from '../../../../design-system/colors';
@@ -54,7 +55,7 @@ const StyledSection = styled('section')`
     background-color: ${WHITE};
 `;
 
-const StyledImageBox = styled(Grid)`
+const StyledImageBox = styled(Box)`
     @media (max-width: 1199px) {
         max-width: 540px;
         margin: 0 auto;
