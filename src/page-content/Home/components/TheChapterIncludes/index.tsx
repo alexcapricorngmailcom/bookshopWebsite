@@ -66,12 +66,12 @@ const StyledParagraphLink = styled(Paragraph)`
 `;
 
 const StyledGrid = styled(Grid)`
-    justify-content: center;
     margin-top: 16px;
 
     @media (max-width: 1199px) {
         & > * {
             max-width: 585px;
+            margin: 0 auto;
         }
     }
 `;
