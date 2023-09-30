@@ -8,7 +8,7 @@ import { TheChapterBookDetails } from './TheChapterBookDetails';
 
 export const TheChapterGridItem = ({title, paragraph}: TheChapterGridItemProps) => {
     return (
-        <Grid item lg={6} md={6} sm={6}>
+        <Grid item lg={6} md={12} sm={12}>
             <StyledBox>
                 <HeadingH5>{title}</HeadingH5>
                 <Paragraph sx={{mt:'14px', textAlign:'justify'}}>{paragraph}</Paragraph>

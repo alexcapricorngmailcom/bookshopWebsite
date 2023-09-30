@@ -16,10 +16,10 @@ export const TheChapterIncludes = ({scrollOnClick}:{scrollOnClick: () => void}) 
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
-                    <HeadingH3>The Chapter Includes</HeadingH3>
+                    <HeadingH3 sx={{textAlign:'center'}}>The Chapter Includes</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
-                    <Grid container rowSpacing={4} columnSpacing={4} mt={'16px'}>
-                        <TheChapterGridItem
+                    <StyledGrid container rowSpacing={4} columnSpacing={4}>
+                        <TheChapterGridItem 
                             title='Chapter-01 Get Started Intro'
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />
@@ -35,7 +35,7 @@ export const TheChapterIncludes = ({scrollOnClick}:{scrollOnClick: () => void}) 
                             title='Chapter-04 The Conclusion'
                             paragraph='Making this the first true value generator on the Internet. It of over 200 Latin words, combined with a handful.'
                         />
-                    </Grid>
+                    </StyledGrid>
                     <Box sx={{mt:'80px'}}>
                         <ButtonAction size='large' onClick={scrollOnClick}>Start a 15-Days Free Trail</ButtonAction>
                     </Box>
@@ -64,4 +64,15 @@ const StyledParagraphLink = styled(Paragraph)`
         text-decoration: none; 
     }
 
+`;
+
+const StyledGrid = styled(Grid)`
+    justify-content: center;
+    margin-top: 16px;
+
+    @media (max-width: 1199px) {
+        & > * {
+            max-width: 585px;
+        }
+    }
 `;
