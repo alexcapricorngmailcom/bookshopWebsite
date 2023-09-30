@@ -22,12 +22,12 @@ export const WhatReadersSay = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                    <Grid container justifyContent='space-between' alignItems='center'>
+                    <StyledGridContainer container justifyContent='space-between' alignItems='center'>
                         <StyledGridItem1 item lg={3.5}>
-                            <HeadingH3>What Readers Say About the Book</HeadingH3>
+                            <HeadingH3 sx={{textAlign:'center'}}>What Readers Say About the Book</HeadingH3>
                             <LineLarge sx={{mt:'25px'}} />
                             <StyledParagraph>If you are going to use a passage of Lorem, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem generators.</StyledParagraph>
-                            <SlyledRatingStack spacing={1}>
+                            <StyledRatingStack spacing={1}>
                                 <Rating
                                     icon={<CircleIcon fontSize="inherit" sx={{color: SECONDARY}} />} 
                                     emptyIcon={<CircleOutlinedIcon fontSize="inherit" sx={{color: SECONDARY}} />} 
@@ -37,32 +37,32 @@ export const WhatReadersSay = () => {
                                     readOnly 
                                 />
                                 <HeadingH6 sx={{mt:'0px !important', ml:'10px !important'}}>(4.8/5)</HeadingH6>
-                            </SlyledRatingStack>
+                            </StyledRatingStack>
                             <Paragraph sx={{mt:'10px', color: MAIN}}>Overall Customer Ratings</Paragraph>
                         </StyledGridItem1>
                         <StyledGridItem2 item lg={7.5} margin='-15px'>
-                            <Stack flexDirection='row' alignItems='center' width='100%'>
-                                <Stack justifyContent='space-between' width='50%'>
-                                        <Box padding='15px'>
-                                            <WhatReadersSayArticle
-                                                img={whatReadersSayUser1}
-                                                alt='testimonial user 1'
-                                                userName='Martin Philips'
-                                                title='“Awesome Impact”'
-                                                paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
-                                            />
-                                        </Box>
-                                        <Box padding='15px'>
-                                            <WhatReadersSayArticle 
-                                                    img={whatReadersSayUser2}
-                                                    alt='testimonial user 2'
-                                                    userName='James Anderson'
-                                                    title='“Mind Blowing Words”'
-                                                    paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
-                                                />
-                                            </Box>
-                                </Stack>
-                                <Box width='50%'>
+                            <StyledStackContainer>
+                                <StyledStackItem>
+                                    <Box padding='15px'>
+                                        <WhatReadersSayArticle
+                                            img={whatReadersSayUser1}
+                                            alt='testimonial user 1'
+                                            userName='Martin Philips'
+                                            title='“Awesome Impact”'
+                                            paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
+                                        />
+                                    </Box>
+                                    <Box padding='15px'>
+                                        <WhatReadersSayArticle 
+                                            img={whatReadersSayUser2}
+                                            alt='testimonial user 2'
+                                            userName='James Anderson'
+                                            title='“Mind Blowing Words”'
+                                            paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
+                                        />
+                                    </Box>
+                                </StyledStackItem>
+                                <StyledStackItem>
                                     <Box padding='15px'>
                                         <WhatReadersSayArticle 
                                             img={whatReadersSayUser3}
@@ -72,10 +72,10 @@ export const WhatReadersSay = () => {
                                             paragraph='All the Lorem generators on the Internet tend to repeat willings predefined chunks value.'
                                         />
                                     </Box> 
-                                </Box>
-                            </Stack>
+                                </StyledStackItem>
+                            </StyledStackContainer>
                         </StyledGridItem2>
-                    </Grid>
+                    </StyledGridContainer>
             </Container>
         </StyledSection>
     );
@@ -84,6 +84,13 @@ export const WhatReadersSay = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+`;
+
+
+const StyledGridContainer = styled(Grid)`
+    @media (max-width: 799px) {
+        justify-content: center;
+    }
 `;
 
 const StyledGridItem1 = styled(Grid)`
@@ -101,7 +108,7 @@ const StyledParagraph = styled(Paragraph)`
     }
 `;
 
-const SlyledRatingStack = styled(Stack)`
+const StyledRatingStack = styled(Stack)`
     flex-direction: row;
     align-items: center;
     margin-top: 50px;
@@ -115,4 +122,20 @@ const StyledGridItem2 = styled(Grid)`
     margin: 10px;
 `;
 
+const StyledStackContainer = styled(Stack)`
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    
+    @media (max-width: 799px) {
+        flex-direction: column;
+    }
+`;
 
+const StyledStackItem = styled(Stack)`
+    width: 50%;
+    
+    @media (max-width: 799px) {
+        width: 375px;
+    }
+`;
