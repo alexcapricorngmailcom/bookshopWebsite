@@ -63,7 +63,6 @@ const StyledParagraphLink = styled(Paragraph)`
     &:hover {
         text-decoration: none; 
     }
-
 `;
 
 const StyledGrid = styled(Grid)`

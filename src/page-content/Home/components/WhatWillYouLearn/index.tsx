@@ -14,10 +14,10 @@ export const WhatWillYouLearn = () => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
-                    <HeadingH3>What will you learn?</HeadingH3>
+                    <HeadingH3 sx={{textAlign:'center'}}>What will you learn?</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                     <Grid container spacing={6} alignItems='center' marginTop='0px'>
-                        <Grid item lg={6}>
+                        <Grid item lg={6} md={12} sm={12} xs={12}>
                             <Grid container rowSpacing={4} columnSpacing={4}>
                                 <WhatWillYouLearnItem 
                                     title='01'
@@ -37,8 +37,10 @@ export const WhatWillYouLearn = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid item lg={6}>
-                            <img src={whatWillYouLearnImg} style={{width:'100%', height:'100%'}} alt="what will you learn" />
+                        <Grid item lg={6} md={12} sm={12} xs={12}>
+                            <StyledImageBox>
+                                <img src={whatWillYouLearnImg} style={{width:'100%', height:'100%'}} alt="what will you learn" />
+                            </StyledImageBox>
                         </Grid>
                     </Grid>
                 </Stack>
@@ -50,4 +52,11 @@ export const WhatWillYouLearn = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+`;
+
+const StyledImageBox = styled(Grid)`
+    @media (max-width: 1199px) {
+        max-width: 540px;
+        margin: 0 auto;
+    }
 `;

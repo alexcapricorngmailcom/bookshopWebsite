@@ -7,7 +7,7 @@ import { CircleMedium } from '../../../../../design-system/geometry/circles';
 
 export const WhatWillYouLearnItem = ({title, paragraph }: WhatWillYouLearnItemProps) => {
     return (
-        <Grid item lg={6} md={6} sm={6}>
+        <Grid item lg={6} md={6} sm={6} xs={12}>
             <Box sx={{padding:'40px 30px', backgroundColor: BACKGROUND}}>
                 <CircleMedium>
                     <HeadingH5>{title}</HeadingH5>
