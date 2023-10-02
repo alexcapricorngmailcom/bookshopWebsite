@@ -22,9 +22,9 @@ export const Home = () => {
 
     return (
         <main>
-            {/* <Hero
+            <Hero
                 scrollOnClick={scrollOnClick} 
-            /> */}
+            />
             <AuthorsBookIncludesSection />
             <AboutAuthor />
             <TrustedByTheBest />

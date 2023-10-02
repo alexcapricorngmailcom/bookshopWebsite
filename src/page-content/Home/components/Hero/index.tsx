@@ -111,7 +111,7 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
         <StyledSection>
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
-                    <Grid item md={6} sm={12}>
+                    <Grid item lg={6} md={12} sm={12} xs={12}>
                         <Stack flexDirection='row' alignItems='center'>
                             <LineSmall />
                             <HeadingH5 sx={{ml:'15px', color: WHITE}}>Welcome to Pages</HeadingH5>
@@ -146,8 +146,10 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item md={6} sm={12}>
-                        <img src={theDarkLightLarge} style={{width: '100%', height: '100%'}} alt="the dark light book cover" />
+                    <Grid item lg={6} md={12} sm={12} xs={12}>
+                        <StyledImageBox>
+                            <img src={theDarkLightLarge} style={{width: '100%', height: '100%'}} alt="the dark light book cover" />
+                        </StyledImageBox>
                     </Grid>
                 </Grid>
             </Container>
@@ -159,4 +161,11 @@ const StyledSection = styled('section')`
     padding-top: 185px;
     padding-bottom: 125px;
     background-color: ${MAIN};
+`;
+
+const StyledImageBox = styled(Box)`
+    @media (max-width: 1199px) {
+        max-width: 540px;
+        margin: 0 auto;
+    }
 `;
