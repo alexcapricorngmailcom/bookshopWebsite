@@ -27,9 +27,6 @@ const StyledBox = styled(Box)`
         flex-direction: column; 
         align-items: center;
     }
-    @media (max-width: 599px) {
-
-    }
 `;
 
 type BookDetailsProps = {

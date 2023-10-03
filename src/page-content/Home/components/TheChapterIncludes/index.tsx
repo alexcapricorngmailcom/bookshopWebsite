@@ -66,7 +66,7 @@ const StyledParagraphLink = styled(Paragraph)`
 `;
 
 const StyledGrid = styled(Grid)`
-    margin-top: 16px;
+    margin-top: 10px;
 
     @media (max-width: 1199px) {
         & > * {

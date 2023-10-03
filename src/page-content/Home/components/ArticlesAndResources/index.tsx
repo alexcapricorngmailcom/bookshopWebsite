@@ -17,7 +17,7 @@ export const ArticlesAndResources = () => {
                     <HeadingH3 sx={{textAlign:'center'}}>Articles & Resources</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
                 </Stack>
-                <StyledStackList sx={{mt:'50px'}}>
+                <StyledStackList sx={{mt:'22px'}}>
                     {mockedDataArticles.articlesItems.map( (article, index) => {
                         
                         if (index > 2) {

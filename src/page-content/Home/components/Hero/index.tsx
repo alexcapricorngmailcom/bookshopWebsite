@@ -95,12 +95,9 @@ function getProcedureStatusLabelByValue(value: ProcedureStatusUuid | string) {
     
 }
 
-
-
 console.log(getProcedureStatusLabelByValue('89f1a721-d2d5-40dd-8764-aa844949257a'))
 console.log(getProcedureStatusLabelByValue('9e70fd6d-f7b3-4865-b204-11b3ef842b73'))
 console.log(getProcedureStatusLabelByValue('062c3d1b-390e-4a56-ab51-06d981168f17'))
-
 
 
 
@@ -112,45 +109,45 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <Grid item lg={6} md={12} sm={12} xs={12}>
-                        <Stack flexDirection='row' alignItems='center'>
+                        <StyledStackHeadingH5 flexDirection='row' alignItems='center'>
                             <LineSmall />
                             <HeadingH5 sx={{ml:'15px', color: WHITE}}>Welcome to Pages</HeadingH5>
-                        </Stack>
-                        <HeadingH1 sx={{mt:'16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</HeadingH1>
-                        <Paragraph sx={{mt:'32px', textAlign:'justify', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</Paragraph>
-                        <Stack flexDirection='row' alignItems='center' mt='50px'>
+                        </StyledStackHeadingH5>
+                        <StyledHeadingH1 sx={{mt:'16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</StyledHeadingH1>
+                        <StyledParagraph sx={{mt:'32px', textAlign:'justify', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</StyledParagraph>
+                        <StyledStackButton>
                             <ButtonAction component={RouterLink} to='/myStore'>Order Today</ButtonAction> 
                             <ButtonAction variant='text' onClick={scrollOnClick}><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>
-                        </Stack>
-                        <Grid container marginTop='50px'>
-                            <Grid item md={3.5} sm={3.5}>
+                        </StyledStackButton>
+                        <StyledGridSubContainer container>
+                            <StyledGridSubItem item lg={3.5} md={3.5} sm={3.5} xs={6}>
                                 <BookDetails
                                     title='Pages:'
                                     paragraph='586 pages'
                                     color={WHITE}
                                 />
-                            </Grid>
-                            <Grid item md={3.5} sm={3.5}>
+                            </StyledGridSubItem>
+                            <StyledGridSubItem item lg={3.5} md={3.5} sm={3.5} xs={6}>
                                 <BookDetails 
                                     title='Length:'
                                     paragraph='10 hours'
                                     color={WHITE}
                                 />
-                            </Grid>
-                            <Grid item md={5} sm={5}>
+                            </StyledGridSubItem>
+                            <StyledGridSubItem item lg={5} md={5} sm={5} xs={12}>
                                 <BookDetails 
                                     title='Ratings:'
                                     paragraph='4.5/5 (305 ratings)'
                                     color={WHITE}
                                 />
-                            </Grid>
-                        </Grid>
+                            </StyledGridSubItem>
+                        </StyledGridSubContainer>
                     </Grid>
-                    <Grid item lg={6} md={12} sm={12} xs={12}>
+                    <StyledGridItem2 item lg={6} md={12} sm={12} xs={12}>
                         <StyledImageBox>
                             <img src={theDarkLightLarge} style={{width: '100%', height: '100%'}} alt="the dark light book cover" />
                         </StyledImageBox>
-                    </Grid>
+                    </StyledGridItem2>
                 </Grid>
             </Container>
         </StyledSection>
@@ -163,6 +160,67 @@ const StyledSection = styled('section')`
     background-color: ${MAIN};
 `;
 
+const StyledStackHeadingH5 = styled(Stack)`
+    @media (max-width: 599px) {
+        justify-content: center;
+    }
+`;
+
+const StyledStackButton = styled(Stack)`
+    flex-direction: row;
+    align-items: center; 
+    margin-top: 50px;
+    
+    @media (max-width: 1199px) {
+        justify-content: center;
+    }
+    @media (max-width: 499px) {
+        flex-direction: column;
+
+        & > :last-child {
+            margin-top: 30px;
+        }
+    }
+`;
+
+const StyledHeadingH1 = styled(HeadingH1)`
+    @media (max-width: 599px) {
+        text-align: center;
+    }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+    @media (max-width: 599px) {
+        text-align: center;
+    }
+`;
+
+const StyledGridSubContainer = styled(Grid)`
+    margin-top: 50px;
+
+    @media (max-width: 599px) {
+        margin-top: 30px;
+    }
+`;
+
+const StyledGridSubItem = styled(Grid)`
+
+    @media (max-width: 1199px) {
+        text-align: center;
+    }
+
+    @media (max-width: 1199px) {
+        & > div > div {
+            justify-content: center;
+        }
+    }
+`;
+
+const StyledGridItem2 = styled(Grid)`
+    @media (max-width: 1199px) {
+        padding-top: 50px !important;
+    }
+`;
 const StyledImageBox = styled(Box)`
     @media (max-width: 1199px) {
         max-width: 540px;
