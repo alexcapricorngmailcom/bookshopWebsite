@@ -20,7 +20,7 @@ export const KeepInTouch = () => {
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <StyledGridItem1 item lg={6} md={12} sm={12} xs={12}> 
-                        <HeadingH3 sx={{textAlign:'center'}}>Keep in Touch</HeadingH3>
+                        <HeadingH3>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
                         <StyledStackContainer>
                             <StyledParagraph sx={{mt:'22px'}}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</StyledParagraph>

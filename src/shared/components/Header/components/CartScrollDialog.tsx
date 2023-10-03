@@ -102,7 +102,7 @@ const StyledBadge = styled(Badge)`
 
     &:hover > .MuiBadge-badge  {
       background-color: ${WHITE};
-    } 
+    }
 
     & .MuiBadge-badge {
       color: ${MAIN};
