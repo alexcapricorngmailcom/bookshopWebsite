@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from 'react-redux';
 import { styled } from "@mui/material/styles";
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -19,8 +20,11 @@ import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { Cart } from '../../Cart';
 import { getCartItems } from "../../../../redux/selectors";
 import { CartItemType } from "../../../../types/cartItem";
+import { cartSlice } from '../../../../redux/slices/cartSlice';
 
 export default function CartScrollDialog() {
+  const dispatch = useDispatch();
+
   const cartItems: CartItemType[] = useSelector(getCartItems);
 
   const getSubtotal = () => {
@@ -49,6 +53,11 @@ export default function CartScrollDialog() {
 
   const handleClose = () => {
     setOpen(false);
+  }
+  
+  const clearCart = () => {
+    dispatch(cartSlice.actions.clearCart());
+    handleClose();
   }
 
   return (
@@ -80,7 +89,7 @@ export default function CartScrollDialog() {
                   <Paragraph sx={{fontSize:'20px', fontWeight:'700', color: MAIN}}>${getSubtotal()}</Paragraph>
             </StyledStack>
             <Box sx={{mt: '25px', mb: '60px', backgroundColor: WHITE}}>
-                <ButtonAction size='large' width="100%">Continue to Checkout</ButtonAction>
+                <ButtonAction onClick={clearCart} size='large' width="100%">Continue to Checkout</ButtonAction>
             </Box>
           </DialogActions>
       </StyledDialog>
