@@ -15,7 +15,7 @@ export const ArticlesAndResources = () => {
             <Container maxWidth='lg'>
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3 sx={{textAlign:'center'}}>Articles & Resources</HeadingH3>
-                    <LineLarge sx={{mt:'22px'}} />
+                    <LineLarge sx={{mt:'25px'}} />
                 </Stack>
                 <StyledStackList sx={{mt:'22px'}}>
                     {mockedDataArticles.articlesItems.map( (article, index) => {
@@ -56,7 +56,7 @@ const StyledStackList = styled(Stack)`
     justify-content: center;
 
     @media (max-width: 899px) {
-        margin: 0px;
+        margin: 20px 0px 0px;
     }
 `;
 
