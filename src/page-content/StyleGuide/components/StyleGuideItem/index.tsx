@@ -123,7 +123,7 @@ const StyledStackContainer = styled(Stack)`
         flex-direction: column;
         align-items: flex-start;
         
-        & > * {
+        & > div {
             margin-left: 0px;
         }
     }
