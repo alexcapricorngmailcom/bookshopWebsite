@@ -15,9 +15,6 @@ import { HeadingH3, HeadingH6, Paragraph } from '../../../../design-system/typog
 import { LineLarge } from '../../../../design-system/geometry/lines';
 import { WhatReadersSayArticle } from './components/WhatReadersSayArticle';
 
-
-// TODO What a hell is going on with HeadingH6
-
 export const WhatReadersSay = () => {
     return (
         <StyledSection>

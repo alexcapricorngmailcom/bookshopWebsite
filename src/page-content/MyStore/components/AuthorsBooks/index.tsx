@@ -12,13 +12,13 @@ import { BookDetails} from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
 import { useDispatch } from 'react-redux';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
-import { storeItemType } from '../../../../types/storeItem';
+import { StoreItemType } from '../../../../types/storeItem';
 
 export const AuthorsBooks = () => {
     
     const dispatch = useDispatch();
 
-    const getCartItem = (store: storeItemType) => {
+    const getCartItem = (store: StoreItemType) => {
         const cartItem = {
             id: store.id,
             myStoreImgSrc: store.myStoreImgSrc,

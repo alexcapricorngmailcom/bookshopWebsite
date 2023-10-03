@@ -15,8 +15,6 @@ import { ButtonAction } from '../../../../design-system/Button';
 import { useState } from 'react';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
 
-// TODO what are hell is going on with space under the pictures (switch off padding in StyledBoxBookCoverImg for demonstration)
-
 export const SingleProduct = () => {
     
     const location = useLocation();
@@ -26,8 +24,6 @@ export const SingleProduct = () => {
 
     const [textFieldValue, setTextFieldValue] = useState(1);
 
-    console.log(textFieldValue)
-    
     const dispatch = useDispatch();
 
     const cartItem = {

@@ -18,10 +18,10 @@ import { HeadingH2, HeadingH5, Paragraph } from "../../../../design-system/typog
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { Cart } from '../../Cart';
 import { getCartItems } from "../../../../redux/selectors";
-import { cartItemType } from "../../../../types/cartItem";
+import { CartItemType } from "../../../../types/cartItem";
 
 export default function CartScrollDialog() {
-  const cartItems: cartItemType[] = useSelector(getCartItems);
+  const cartItems: CartItemType[] = useSelector(getCartItems);
 
   const getSubtotal = () => {
     let subtotal = 0;

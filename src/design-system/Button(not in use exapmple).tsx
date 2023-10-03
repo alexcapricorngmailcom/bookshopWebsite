@@ -2,8 +2,6 @@ import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import { styled } from '@mui/material/styles';
 import { MAIN, SECONDARY, WHITE } from './colors/colors'
 
-// TODO rewrite to styled mui button with 3 variants
-
 export const ButtonAction = ({ size, onClick, outlined, children }: ButtonActionProps) => {
     return (
         <StyledButton 
@@ -28,7 +26,6 @@ const StyledButton = styled('button')<ButtonProps>`
     transition: 0.2s;
     cursor: pointer;
 
-    /* TODO do it only for text buttons or better use separate prop for it! */
     /* text-decoration: underline;
     text-underline-offset: 10px; */
 

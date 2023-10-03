@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getCartItems } from "../../../redux/selectors";
-import { cartItemType } from "../../../types/cartItem";
+import { CartItemType } from "../../../types/cartItem";
 import { styled } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
@@ -14,10 +14,7 @@ import { cartSlice } from "../../../redux/slices/cartSlice";
 
 export const Cart = () => {
     
-    //TODO All types starts from Capital
-
-    const cartItems: cartItemType[] = useSelector(getCartItems);
-    console.log(cartItems);
+    const cartItems: CartItemType[] = useSelector(getCartItems);
 
     const dispatch = useDispatch();
 
@@ -25,7 +22,7 @@ export const Cart = () => {
         dispatch(cartSlice.actions.removeItem(id));
     }
 
-    const changeCartItemQuantity = (cartItem:cartItemType, event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const changeCartItemQuantity = (cartItem:CartItemType, event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const dataObj = {
             id: cartItem.id,
             myStoreImgSrc: cartItem.myStoreImgSrc,
@@ -38,7 +35,6 @@ export const Cart = () => {
             quantity: Number(event.target.value)
         }
         dispatch(cartSlice.actions.updateItemQuantity(dataObj));
-
     }
 
     return (

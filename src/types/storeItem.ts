@@ -1,4 +1,4 @@
-export type storeItemType = {
+export type StoreItemType = {
   id: string;
   myStoreImgSrc: string;
   myStoreSingleProductImgSrc: string;

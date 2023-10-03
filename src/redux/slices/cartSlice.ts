@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { cartItemType } from "../../types/cartItem";
+import { CartItemType } from "../../types/cartItem";
 
 const initialState: CartStateType = {
     cartItems: [],
@@ -9,7 +9,7 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
-        addItem: (state, action: { type: string; payload: cartItemType }) => {
+        addItem: (state, action: { type: string; payload: CartItemType }) => {
             const findCartItem = state.cartItems.find((cartItem) => (
                 cartItem.id === action.payload.id
             ))
@@ -21,7 +21,7 @@ export const cartSlice = createSlice({
                 state.cartItems[index].quantity = findCartItem.quantity + action.payload.quantity;
             }
         },
-        updateItemQuantity: (state, action: { type: string; payload: cartItemType }) => {
+        updateItemQuantity: (state, action: { type: string; payload: CartItemType }) => {
             const index = state.cartItems.findIndex((cartItem) => (
                 cartItem.id === action.payload.id
             ))
@@ -35,5 +35,5 @@ export const cartSlice = createSlice({
 })
 
 type CartStateType = {
-    cartItems: cartItemType[]
+    cartItems: CartItemType[]
 }
