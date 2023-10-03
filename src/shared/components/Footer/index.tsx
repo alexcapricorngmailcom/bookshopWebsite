@@ -51,10 +51,10 @@ export const Footer = () => {
                         <Box>
                             <StyledHeadingH5 sx={{color: WHITE}}>Explore</StyledHeadingH5>
                             
-                            <StyledFirstItemStack flexDirection='row' alignItems='center' mt='40px'>
+                            <Stack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/">Home</StyledFooterTextRouterLink>
-                            </StyledFirstItemStack>
+                            </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/about">About Us</StyledFooterTextRouterLink>
@@ -73,13 +73,13 @@ export const Footer = () => {
                             </Stack>
                         </Box>
 
-                        <Box>
+                        <StyledBoxItem2>
                             <StyledHeadingH5 sx={{color: WHITE}}>Utility Pages</StyledHeadingH5>
                             
-                            <StyledFirstItemStack flexDirection='row' alignItems='center' mt='40px'>
+                            <Stack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/styleGuide">Style guide</StyledFooterTextRouterLink>
-                            </StyledFirstItemStack>
+                            </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/Error404">404 not found</StyledFooterTextRouterLink>
@@ -96,15 +96,15 @@ export const Footer = () => {
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
                                 <StyledFooterTextRouterLink to="/changelog">Changelog</StyledFooterTextRouterLink>
                             </Stack>
-                        </Box>
+                        </StyledBoxItem2>
 
-                        <Box>
+                        <StyledBoxItem3>
                             <StyledHeadingH5 sx={{color: WHITE}}>Keep in Touch</StyledHeadingH5>
                             
-                            <StyledFirstItemStack flexDirection='row' alignItems='flex-start' mt='40px'>
+                            <Stack flexDirection='row' alignItems='flex-start' mt='40px'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Address: </HeadingH5>
                                 <StyledFooterTextLink href="https://goo.gl/maps/dcZ6FuPiwY6LyBwL7" target='_blank' rel="noopener">24A Kingston St, <br /> Los Vegas NC 28202, <br /> USA</StyledFooterTextLink>
-                            </StyledFirstItemStack>
+                            </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Mail:</HeadingH5>
                                 <StyledFooterTextLink href="mailto:support@pages.com">support@pages.com</StyledFooterTextLink>
@@ -113,7 +113,7 @@ export const Footer = () => {
                                 <HeadingH5 sx={{fontSize:'18px', color: WHITE}}>Phone:</HeadingH5>
                                 <StyledFooterTextLink href="tel: +18001239999">1-800-123-9999</StyledFooterTextLink>
                             </Stack>
-                        </Box>
+                        </StyledBoxItem3>
                     </StyledStack>
                 </StyledContentStack>
                 <StyledLineBox></StyledLineBox>
@@ -189,45 +189,42 @@ const StyledStack = styled(Stack)`
     @media (max-width: 899px) {
         flex-wrap: wrap;
         justify-content: center;
-        
-        & > :nth-child(2) {
-            margin-left: 55px;
-        }
-
-        & > :nth-child(3) {
-            margin-left: 55px;
-            padding-right: 25px;
-            margin-top: 45px;
-        }
     }
 
     @media (max-width: 599px) {
         width: 70%;
         flex-wrap: wrap;
         justify-content: center;
-        
-        & > :nth-child(2) {
-            margin-top: 45px;
-            margin-left: 25px;
-            padding-right: 25px;
-        }
+    }
+`;
 
-        & > :nth-child(3) {
-            margin-left: 0px;
-            padding-right: 0px;
-        }
+const StyledBoxItem2 = styled(Box)`
+    @media (max-width: 899px) {
+        margin-left: 55px;
+    }
+
+    @media (max-width: 599px) {
+        margin-top: 45px;
+        margin-left: 25px;
+        padding-right: 25px;
+    }
+`;
+
+const StyledBoxItem3 = styled(Box)`
+    @media (max-width: 899px) {
+        margin-left: 55px;
+        padding-right: 25px;
+        margin-top: 45px;
+    }
+
+    @media (max-width: 599px) {
+        margin-left: 0px;
+        padding-right: 0px;
     }
 `;
 
 const StyledHeadingH5 = styled(HeadingH5)`
     text-align: center;
-`;
-
-const StyledFirstItemStack = styled(Stack)`
-
-    /* @media (max-width: 899px) {
-        margin-top: 30px;
-    } */
 `;
 
 const StyledFooterTextLink = styled(Link)`

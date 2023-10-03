@@ -200,6 +200,10 @@ const StyledGridSubContainer = styled(Grid)`
 
     @media (max-width: 599px) {
         margin-top: 30px;
+
+        & > :last-child {
+            margin-top: 30px;
+        }
     }
 `;
 

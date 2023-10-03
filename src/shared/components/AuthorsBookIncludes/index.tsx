@@ -37,7 +37,7 @@ export const AuthorsBookIncludes = () => {
                                                 paragraph={'472 pages'}
                                             />
                                         </Grid>
-                                        <Grid lg={6} md={6} sm={6} xs={6}>
+                                        <Grid item lg={6} md={6} sm={6} xs={6}>
                                             <BookDetails 
                                                 title={'Length:'}
                                                 paragraph={'8 hours'}
