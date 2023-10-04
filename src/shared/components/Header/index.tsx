@@ -121,6 +121,14 @@ const StyledLogoItemBox = styled(Box)`
     @media (max-width: 1199px) {
         margin-left: 24px;
     }
+
+    @media (max-width: 599px) {
+        margin-left: 16px;
+    }
+
+    @media (max-width: 499px) {
+        display: none;
+    }
 `;
 
 const StyledLabel = styled('label')`
@@ -172,8 +180,8 @@ const StyledHeaderNavLinkLabel = styled('label')`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         z-index: 100;
 
         background-color: rgba(27, 55, 100, 0.9);
@@ -203,6 +211,11 @@ const StyledNavLink = styled(NavLink)`
 const StyledSquareSmall = styled(SquareSmall)`
     &:hover * {
         fill: ${SECONDARY};
+    }
+
+    @media (max-width: 949px) { 
+        width: 40px;
+        height: 40px;
     }
 `;
 
