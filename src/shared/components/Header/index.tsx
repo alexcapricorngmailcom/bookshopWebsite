@@ -114,6 +114,10 @@ const StyledLogoItemBox = styled(Box)`
     a + a {
         margin-left: 10px;
     }
+
+    @media (max-width: 1199px) {
+        margin-left: 24px;
+    }
 `;
 
 const StyledHeaderNavLinkBox = styled(Box)`

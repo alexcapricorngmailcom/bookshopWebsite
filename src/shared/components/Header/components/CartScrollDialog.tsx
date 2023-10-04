@@ -64,7 +64,7 @@ export default function CartScrollDialog() {
     <div>
       <StyledButton onClick={handleOpen} >
         <StyledBadge badgeContent={getBadge()}>
-            <ShoppingCartOutlinedIcon sx={{color: WHITE}} />
+            <StyledShoppingCartOutlinedIcon />
         </StyledBadge>
       </StyledButton>
       <StyledDialog
@@ -97,12 +97,23 @@ export default function CartScrollDialog() {
   );
 }
 
+const StyledButton = styled(Button)`
+    margin-left: 30px;
+    min-width: max-content;
+    padding: 0px;
+    border-radius: 0px;
+
+    @media (max-width: 1199px) { 
+      margin-left: 25px;
+    }
+`;
+
 const StyledBadge = styled(Badge)`
     cursor: pointer;
 
-    &:hover > .MuiBadge-badge  {
+    /* &:hover > .MuiBadge-badge  {
       background-color: ${WHITE};
-    }
+    } */
 
     & .MuiBadge-badge {
       color: ${MAIN};
@@ -110,6 +121,14 @@ const StyledBadge = styled(Badge)`
       font-family: Inter, sans-serif;
       font-size: 11px;
       font-weight: 700;
+    }
+`;
+
+const StyledShoppingCartOutlinedIcon = styled(ShoppingCartOutlinedIcon)`
+    color: ${WHITE};
+
+    &:hover {
+      color: ${SECONDARY};
     }
 `;
 
@@ -150,12 +169,4 @@ const StyledHeadingH2 = styled(HeadingH2)`
     font-size: 50px;
 `;
 
-const StyledButton = styled(Button)`
-    margin-left: 30px;
-    min-width: max-content;
-    padding: 0px;
-    border-radius: 0px;
-    @media (max-width: 1199px) { 
-      margin-left: 25px;
-    }
-`;
+
