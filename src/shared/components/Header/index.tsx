@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Link from '@mui/material/Link';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import { ReactComponent as PagesIcon } from '../../../shared/assets/icons/PagesIcon.svg'
 import { ReactComponent as FacebookIcon } from '../../../shared/assets/icons/FacebookIcon.svg'
@@ -50,7 +51,9 @@ export const Header = () => {
                         </StyledLogoItemBox>
                     </Stack>
                     <Stack flexDirection='row' alignItems='center'>
-                        <StyledHeaderNavLinkBox>
+                        <StyledLabel htmlFor="navToogler"><MenuIcon fontSize="large" /></StyledLabel>
+                        <StyledInput type="checkbox" id="navToogler" />
+                        <StyledHeaderNavLinkLabel htmlFor="navToogler">
                             <StyledNavLink
                                 to="/"
                                 style={setActive}
@@ -81,7 +84,7 @@ export const Header = () => {
                             >
                             Contact
                             </StyledNavLink>
-                        </StyledHeaderNavLinkBox>
+                        </StyledHeaderNavLinkLabel>
                         <CartScrollDialog />
                         <StyledBox ml='30px'>
                             <ButtonAction size="small" width ='160px' height="50px" variant="contained" component={RouterLink} to='/myStore'>Order Today</ButtonAction>
@@ -120,7 +123,33 @@ const StyledLogoItemBox = styled(Box)`
     }
 `;
 
-const StyledHeaderNavLinkBox = styled(Box)`
+const StyledLabel = styled('label')`
+    display: none;
+    cursor: pointer;
+    color: ${WHITE};
+    height: 35px;
+    margin-top: 1px;
+    margin-left: 25px; 
+    order: 3;
+
+    &:hover {
+        color: ${SECONDARY};
+    }
+
+    @media (max-width: 899px) { 
+        display: block;
+    }
+`;
+
+const StyledInput = styled('input')`
+    display: none;
+
+    &:checked + label {
+        display: flex;
+    }
+`;
+
+const StyledHeaderNavLinkLabel = styled('label')`
     a + a {
         margin-left: 30px;
     }
@@ -131,7 +160,27 @@ const StyledHeaderNavLinkBox = styled(Box)`
 
     @media (max-width: 1199px) { 
         a + a {
-        margin-left: 25px;
+            margin-left: 25px;
+        }
+    }
+
+    @media (max-width: 899px) { 
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+
+        background-color: rgba(27, 55, 100, 0.9);
+        
+        a + a {
+            margin-left: 0px;
+            margin-top: 20px;
         }
     }
 `;
@@ -143,6 +192,12 @@ const StyledNavLink = styled(NavLink)`
     line-height: 170%;
     letter-spacing: -0.01em;
     text-decoration: none;
+
+    @media (max-width: 899px) { 
+        font-size: 30px;
+        padding: 15px;
+        text-transform: uppercase;
+    }
 `;
 
 const StyledSquareSmall = styled(SquareSmall)`
