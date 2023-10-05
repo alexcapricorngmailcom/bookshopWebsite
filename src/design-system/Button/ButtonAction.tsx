@@ -4,10 +4,11 @@ import Button, {ButtonProps} from '@mui/material/Button';
 import { MAIN, SECONDARY, WHITE } from '../colors';
 import Box from '@mui/material/Box';
 
-export const ButtonAction = ({size ='small', width, height = '65px', type, onClick, variant = 'contained', children, component, to, startIcon}:ButtonActionProps) => {
+export const ButtonAction = ({size ='small', width, height = '65px', type, onClick, variant = 'contained', children, disabled, component, to, startIcon}:ButtonActionProps) => {
     return (
         <Box>
-            <StyledButton 
+            <StyledButton
+                disabled={disabled}
                 size={size} 
                 width={width} 
                 height={height}
@@ -120,6 +121,7 @@ type ButtonActionProps = {
     component?: object | undefined;
     to?: string | undefined;
     startIcon?: any;
+    disabled?: any
 }
 
 interface StyledButtonProps extends ButtonProps {
@@ -129,4 +131,5 @@ interface StyledButtonProps extends ButtonProps {
     component: object | undefined;
     to?: string | undefined;
     startIcon?: any;
+    disabled?: any
 }

@@ -28,10 +28,10 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/singleArticle/:id" element={<SingleArticle />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/styleGuide" element={<StyleGuide />} />
           <Route path="/protectedPage" element={<ProtectedPage />} />
           <Route path="/licenses" element={<Licenses />} />
-          <Route path="/styleGuide" element={<StyleGuide />} />
+          <Route path="/changelog" element={<Changelog />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />

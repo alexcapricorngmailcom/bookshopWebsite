@@ -10,11 +10,14 @@ import { BACKGROUND, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { HeadingH4, Paragraph } from '../../../../design-system/typography';
 import { BookDetails} from '../../../../shared/components';
 import { ButtonAction } from '../../../../design-system/Button';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { cartSlice } from '../../../../redux/slices/cartSlice';
 import { StoreItemType } from '../../../../types/storeItem';
+import { getCartItems } from '../../../../redux/selectors';
+import { CartItemType } from '../../../../types/cartItem';
 
 export const AuthorsBooks = () => {
+    const cartItems: CartItemType[] = useSelector(getCartItems);
     
     const dispatch = useDispatch();
 
@@ -32,6 +35,20 @@ export const AuthorsBooks = () => {
         };
         dispatch(cartSlice.actions.addItem(cartItem));
     }
+
+    const compareId = (id:string) => {
+        const cartItemsId = cartItems.map(item => item.id);
+        
+        const coincidence = cartItemsId.find(item => item === id)
+        
+        if (coincidence) {
+            return true
+        } else {
+            return false 
+        } 
+         
+    }
+    
 
     return (
         <StyledSection>
@@ -59,9 +76,17 @@ export const AuthorsBooks = () => {
                             <Box sx={{mt:'20px'}}>
                                 <BookDetails title={store.type} />
                             </Box>
-                            <Box sx={{mt:'30px'}}>
-                                <ButtonAction onClick={() => getCartItem(store)} variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
-                            </Box>
+                            {
+                                compareId(store.id)
+                                ?
+                                <Box sx={{mt:'30px'}}>
+                                    <ButtonAction startIcon={<ShoppingCartOutlinedIcon />} disabled>Already in Cart</ButtonAction>
+                                </Box>
+                                :
+                                <Box sx={{mt:'30px'}}>
+                                    <ButtonAction onClick={() => getCartItem(store)} variant='outlined' startIcon={<ShoppingCartOutlinedIcon />}>Add to Cart</ButtonAction>
+                                </Box>
+                            }
                         </StyledStackListColumn>
                         ))
                     }
