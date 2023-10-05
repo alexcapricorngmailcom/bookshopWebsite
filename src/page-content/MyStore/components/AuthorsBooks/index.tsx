@@ -37,16 +37,10 @@ export const AuthorsBooks = () => {
     }
 
     const compareId = (id:string) => {
-        const cartItemsId = cartItems.map(item => item.id);
         
-        const coincidence = cartItemsId.find(item => item === id)
+        const coincidence = cartItems.find(item => item.id === id);
         
-        if (coincidence) {
-            return true
-        } else {
-            return false 
-        } 
-         
+        return !!coincidence
     }
     
 
