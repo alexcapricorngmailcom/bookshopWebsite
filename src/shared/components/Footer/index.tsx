@@ -14,14 +14,16 @@ import { ReactComponent as InstagramIcon } from '../../../shared/assets/icons/In
 import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { HeadingH5, Paragraph } from '../../../design-system/typography';
 import { SquareSmall } from '../../../design-system/geometry/squares';
+import { ScrollToTopLocal } from '../ScrollToTopLocal';
 
 export const Footer = () => {
+
     return(
         <StyledFooter>
             <Container maxWidth='lg'>
                 <StyledContentStack flexDirection='row' justifyContent='space-between'>
                     <StyledBox>
-                        <RouterLink to='/'>
+                        <RouterLink to='/' onClick={ScrollToTopLocal}>
                             <PagesIcon fill={MAIN}/>
                         </RouterLink>
                         <StyledBoxLogo>
@@ -53,7 +55,7 @@ export const Footer = () => {
                             
                             <Stack flexDirection='row' alignItems='center' mt='40px'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />
-                                <StyledFooterTextRouterLink to="/">Home</StyledFooterTextRouterLink>
+                                <StyledFooterTextRouterLink to="/" onClick={ScrollToTopLocal}>Home</StyledFooterTextRouterLink>
                             </Stack>
                             <Stack flexDirection='row' alignItems='center'>
                                 <MoreHorizIcon fontSize='large' sx={{color: SECONDARY}} />

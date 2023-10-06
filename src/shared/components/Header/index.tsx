@@ -14,6 +14,7 @@ import { MAIN, SECONDARY, WHITE } from '../../../design-system/colors';
 import { ButtonAction } from "../../../design-system/Button";
 import { SquareSmall } from "../../../design-system/geometry/squares";
 import CartScrollDialog from "./components/CartScrollDialog";
+import { ScrollToTopLocal } from "../ScrollToTopLocal";
 
 const setActive = ({ isActive }:any) => {
     return {
@@ -28,7 +29,7 @@ export const Header = () => {
                 <StyledNav>
                     <Stack flexDirection='row' alignItems='center'>
                         <Box>
-                            <RouterLink to='/'>
+                            <RouterLink to='/' onClick={ScrollToTopLocal}>
                                 <PagesIcon fill={MAIN}/>
                             </RouterLink>
                         </Box>
@@ -57,6 +58,7 @@ export const Header = () => {
                             <StyledNavLink
                                 to="/"
                                 style={setActive}
+                                onClick={ScrollToTopLocal}
                             >
                             Home
                             </StyledNavLink>
