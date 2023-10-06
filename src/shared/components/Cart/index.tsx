@@ -41,58 +41,52 @@ export const Cart = () => {
         <div>
             {cartItems.map(cartItem => (
                 <div key={cartItem.id}>
-                    <StyledStack sx={{mt:'60px', backgroundColor: WHITE}}>
-                        <Box>
-                            <Stack flexDirection='row'>
-                                <StyledStackImg>
-                                    <StyledBoxBookCoverImg>
-                                        <img src={cartItem.myStoreImgSrc} style={{width: '100%', height: '100%'}} alt={cartItem.myStoreAlt} />
-                                    </StyledBoxBookCoverImg>
-                                    {   
-                                        cartItem.isPositionedIcon 
-                                        && 
-                                        <StyledBoxBookIcon width='50px' height='50px'>
-                                            <img src={cartItem.positionedIconSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={cartItem.positionedIconAlt} />
-                                        </StyledBoxBookIcon>
-                                    }
-                                </StyledStackImg>
-                                <Box>
-                                    <Stack height='100%' justifyContent='space-between' sx={{ml:'40px'}}>
-                                        <Box>
-                                            <HeadingH5>{cartItem.title}</HeadingH5>
-                                            <Paragraph>${cartItem.price}</Paragraph>
-                                        </Box>
-                                        <StyledButton onClick={() => getCartItemId(cartItem.id)}>
-                                            <HeadingH5>Remove</HeadingH5>
-                                        </StyledButton>
-                                    </Stack>
-                                </Box>
-                            </Stack>
-                        </Box>
-                        <Box width='20%'>
-                            <StyledTextField
-                                id="outlined-number"
-                                type="number"
-                                defaultValue={cartItem.quantity}
-                                onChange={event => changeCartItemQuantity(cartItem, event)}
-                                inputProps={{
-                                    min: 1,
-                                    style: { 
-                                        fontFamily: 'Inter, sans-serif',
-                                        fontSize: '19px',
-                                        fontWeight: '500',
-                                        lineHeight: '170%',
-                                        letterSpacing: '-0.01em',
-                                        color: MAIN
-                                    }
-                                }}
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                            />
-                        </Box>
+                    <StyledStack>
+                        <StyledStackImg flexShrink='0'>
+                            <StyledBoxBookCoverImg>
+                                <img src={cartItem.myStoreImgSrc} style={{width: '100%', height: '100%'}} alt={cartItem.myStoreAlt} />
+                            </StyledBoxBookCoverImg>
+                            {   
+                                cartItem.isPositionedIcon 
+                                && 
+                                <StyledBoxBookIcon width='50px' height='50px'>
+                                    <img src={cartItem.positionedIconSrc} style={{width:'100%', height:'100%', objectFit:'cover'}} alt={cartItem.positionedIconAlt} />
+                                </StyledBoxBookIcon>
+                            }
+                        </StyledStackImg>
+                        <StyledStackDescription>
+                            <Box>
+                                <HeadingH5>{cartItem.title}</HeadingH5>
+                                <Paragraph>${cartItem.price}</Paragraph>
+                            </Box>
+                            <SlyledBox>
+                                <StyledTextField
+                                    id="outlined-number"
+                                    type="number"
+                                    defaultValue={cartItem.quantity}
+                                    onChange={event => changeCartItemQuantity(cartItem, event)}
+                                    inputProps={{
+                                        min: 1,
+                                        style: { 
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontSize: '19px',
+                                            fontWeight: '500',
+                                            lineHeight: '170%',
+                                            letterSpacing: '-0.01em',
+                                            color: MAIN
+                                        }
+                                    }}
+                                    InputLabelProps={{
+                                        shrink: true,
+                                    }}
+                                />
+                            </SlyledBox>
+                            <StyledButton onClick={() => getCartItemId(cartItem.id)}>
+                                <HeadingH5>Remove</HeadingH5>
+                            </StyledButton>
+                        </StyledStackDescription>
                     </StyledStack>
-                    <LineLarge sx={{width:'100%', mt:'60px', backgroundColor: BACKGROUND}}/>
+                    <LineLarge sx={{width:'100%', mt:'25px', backgroundColor: BACKGROUND}}/>
                 </div>
                 ))
             }
@@ -102,12 +96,25 @@ export const Cart = () => {
 
 const StyledStack = styled(Stack)`
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: ${SECONDARY};
+    margin-top: 25px;
+
+    @media (max-width: 599px) {
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+const SlyledBox = styled(Box)`
+    margin: 0 calc(100% - 80px);
+
+    @media (max-width: 599px) {
+        flex-direction: column;
+        margin: 0 calc(100% - 80px);
+    }
 `;
 
 const StyledTextField = styled(TextField)`
+    width: 80px;
 
     .MuiOutlinedInput-notchedOutline {
         border-radius: 0px;
@@ -135,6 +142,18 @@ const StyledStackImg = styled(Stack)`
     height: 218px;
     background-color: ${BACKGROUND};
 `;
+
+const StyledStackDescription = styled(Stack)`
+    justify-content: space-between;
+    width: 100%;  
+    margin-left: 40px;
+
+    @media (max-width: 599px) {
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+`;
+
 
 const StyledBoxBookCoverImg = styled(Box)`
     width: 133px;

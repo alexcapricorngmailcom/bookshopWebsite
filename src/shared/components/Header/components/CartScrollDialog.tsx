@@ -15,7 +15,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { ButtonAction } from "../../../../design-system/Button";
-import { HeadingH2, HeadingH5, Paragraph } from "../../../../design-system/typography";
+import { HeadingH3, HeadingH5, Paragraph } from "../../../../design-system/typography";
 import { MAIN, SECONDARY, WHITE } from '../../../../design-system/colors';
 import { Cart } from '../../Cart';
 import { getCartItems } from "../../../../redux/selectors";
@@ -73,22 +73,22 @@ export default function CartScrollDialog() {
         scroll={'paper'}
       >
         <DialogTitle>
-          <StyledStack sx={{p:'25px 70px'}}>
-              <StyledHeadingH2>Your Cart</StyledHeadingH2>
+          <StyledTitleStack>
+              <HeadingH3>Your Cart</HeadingH3>
                   <Button onClick={handleClose}>
                       <CloseIcon fontSize="large" sx={{color: MAIN}} />
                   </Button>
-          </StyledStack>
+          </StyledTitleStack>
         </DialogTitle>
           <DialogContent>
               <Cart />
           </DialogContent>
           <DialogActions>
-            <StyledStack sx={{mt: '50px', backgroundColor: WHITE}} >
+            <StyledStack sx={{mt: '20px', backgroundColor: WHITE}} >
                   <HeadingH5>Sub-Total</HeadingH5>
                   <Paragraph sx={{fontSize:'20px', fontWeight:'700', color: MAIN}}>${getSubtotal()}</Paragraph>
             </StyledStack>
-            <Box sx={{mt: '25px', mb: '60px', backgroundColor: WHITE}}>
+            <Box sx={{mt: '20px', mb: '25px', backgroundColor: WHITE}}>
                 <ButtonAction onClick={clearCart} size='large' width="100%">Continue to Checkout</ButtonAction>
             </Box>
           </DialogActions>
@@ -144,18 +144,38 @@ const StyledDialog = styled(Dialog)`
   }
 
   .MuiDialogContent-root {
-    padding: 0px 70px;
+    padding: 0px 50px;
+
+    @media (max-width: 899px) {
+      padding: 0px 25px;
+    }
   }
 
   .MuiDialogActions-root {
-    padding: 0px 70px;
+    padding: 0px 50px;
     flex-direction: column;
     align-items: unset;
+
+    @media (max-width: 899px) {
+      padding: 0px 25px;
+    }
   }
 
   .MuiDialogActions-root > :not(:first-of-type) {
     margin-left: 0px;
   }
+`;
+
+const StyledTitleStack = styled(Stack)`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: ${SECONDARY};
+
+    @media (max-width: 899px) {
+      padding: 20px 25px;
+    }
 `;
 
 const StyledStack = styled(Stack)`
@@ -164,9 +184,4 @@ const StyledStack = styled(Stack)`
     align-items: center;
     background-color: ${SECONDARY};
 `;
-
-const StyledHeadingH2 = styled(HeadingH2)`
-    font-size: 50px;
-`;
-
 
