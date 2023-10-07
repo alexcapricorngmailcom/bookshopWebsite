@@ -35,9 +35,12 @@ const StyledSection = styled('section')`
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media (max-width: 1199px) {
+        padding: 145px 0px;
+    }
+
     @media (max-width: 599px) {
-        padding-top: 125px;
-        padding-bottom: 85px;
+        padding: 85px 0px;
     }
 `;
 

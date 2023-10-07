@@ -42,7 +42,6 @@ export const AuthorsBooks = () => {
         
         return !!coincidence
     }
-    
 
     return (
         <StyledSection>
@@ -94,6 +93,15 @@ const StyledSection = styled('section')`
     padding-top: 145px;
     padding-bottom: 145px;
     background-color: ${WHITE};
+
+    @media (max-width: 1199px) {
+        padding: 125px 0px;
+    }
+
+    @media (max-width: 599px) {
+        padding: 65px 0px;
+    }
+    
 `;
 
 const StyledStackList = styled(Stack)`
@@ -122,7 +130,6 @@ const StyledStackListColumn = styled(Stack)`
     @media (max-width: 599px) {
         width: 100%;
         align-items: center;
-        padding: 20px 20px;
     }
 `;
 

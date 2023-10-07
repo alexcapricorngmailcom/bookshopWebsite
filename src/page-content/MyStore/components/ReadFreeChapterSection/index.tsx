@@ -16,4 +16,12 @@ export const ReadFreeChapterSection = () => {
 const StyledSection = styled('section')`
     padding-bottom: 145px;
     background-color: ${WHITE};
+
+    @media (max-width: 1199px) {
+        padding-bottom: 125px;
+    }
+
+    @media (max-width: 599px) {
+        padding-bottom: 85px;
+    }
 `;

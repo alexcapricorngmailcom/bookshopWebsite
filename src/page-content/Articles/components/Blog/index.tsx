@@ -34,6 +34,14 @@ const StyledSection = styled('section')`
     padding-top: 145px;
     padding-bottom: 145px;
     background-color: ${WHITE};
+
+    @media (max-width: 1199px) {
+        padding: 125px 0px;
+    }
+
+    @media (max-width: 599px) {
+        padding: 65px 0px;
+    }
 `;
 
 const StyledStackList = styled(Stack)`
@@ -42,7 +50,7 @@ const StyledStackList = styled(Stack)`
     margin: -20px;
     justify-content: center;
 
-    @media (max-width: 899px) {
+    @media (max-width: 599px) {
         margin: 0px;
     }
 `;
