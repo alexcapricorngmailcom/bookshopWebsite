@@ -118,7 +118,7 @@ export const Footer = () => {
                         </StyledBoxItem3>
                     </StyledStack>
                 </StyledContentStack>
-                <StyledLineBox></StyledLineBox>
+                <StyledLineBox />
                 <Box sx={{mt: "25px", textAlign: 'center'}}>
                     <Paragraph sx={{display:'inline', color: '#B4C7E7'}}>&#169; Drafted by </Paragraph>  
                     <Link href='https://www.victorflow.com/' target='_blank' rel="noopener" underline='none'> <Paragraph sx={{display:'inline', color: WHITE }}>Victorflow</Paragraph></Link>

@@ -19,12 +19,12 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
             <Container maxWidth='lg'>
                 <Grid container spacing={12} alignItems='center'>
                     <Grid item lg={6} md={12} sm={12} xs={12}>
-                        <StyledStackHeadingH5 flexDirection='row' alignItems='center'>
+                        <StyledStackHeadingH5>
                             <LineSmall />
                             <HeadingH5 sx={{ml:'15px', color: WHITE}}>Welcome to Pages</HeadingH5>
                         </StyledStackHeadingH5>
-                        <StyledHeadingH1 sx={{mt:'16px', lineHeight: '110%', color: WHITE}}>Books are uniquely portable magic</StyledHeadingH1>
-                        <StyledParagraph sx={{mt:'32px', textAlign:'justify', color: PARAGRAPH_SECONDARY}}>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</StyledParagraph>
+                        <StyledHeadingH1>Books are uniquely portable magic</StyledHeadingH1>
+                        <StyledParagraph>There are many variations of passages of Lorem available, but the majority have suffered alteration in some form.</StyledParagraph>
                         <StyledStackButton>
                             <ButtonAction component={RouterLink} to='/myStore'>Order Today</ButtonAction> 
                             <ButtonAction variant='text' onClick={scrollOnClick}><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>
@@ -66,13 +66,44 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
 
 const StyledSection = styled('section')`
     padding-top: 185px;
-    padding-bottom: 125px;
+    padding-bottom: 145px;
     background-color: ${MAIN};
+
+    @media (max-width: 1199px) {
+        padding-bottom: 125px;
+    }
+
+    @media (max-width: 599px) {
+        padding-bottom: 85px;
+    }
 `;
 
 const StyledStackHeadingH5 = styled(Stack)`
-    @media (max-width: 599px) {
+    flex-direction: row; 
+    align-items: center;
+
+    @media (max-width: 1199px) {
         justify-content: center;
+    }
+`;
+
+const StyledHeadingH1 = styled(HeadingH1)`
+    margin-top: 16px; 
+    line-height: 110%; 
+    color: WHITE;
+
+    @media (max-width: 1199px) {
+        text-align: center;
+    }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+    margin-top: 32px; 
+    text-align: justify; 
+    color: ${PARAGRAPH_SECONDARY};
+
+    @media (max-width: 1199px) {
+        text-align: center;
     }
 `;
 
@@ -90,18 +121,6 @@ const StyledStackButton = styled(Stack)`
         & > :last-child {
             margin-top: 30px;
         }
-    }
-`;
-
-const StyledHeadingH1 = styled(HeadingH1)`
-    @media (max-width: 599px) {
-        text-align: center;
-    }
-`;
-
-const StyledParagraph = styled(Paragraph)`
-    @media (max-width: 599px) {
-        text-align: center;
     }
 `;
 
@@ -137,7 +156,7 @@ const StyledGridItem2 = styled(Grid)`
 `;
 const StyledImageBox = styled(Box)`
     @media (max-width: 1199px) {
-        max-width: 540px;
+        max-width: 430px;
         margin: 0 auto;
     }
 `;

@@ -15,7 +15,7 @@ export const AboutAuthor = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Grid container spacing={12} alignItems='center'>
+                <Grid container spacing={{ lg: 12, md: 0, sm: 0, xs: 0 }} alignItems='center'>
                     <StyledGridItem1 item lg={6} md={12} sm={12} xs={12}>
                         <StyledMainImageBox>
                             <img src={aboutAuthor} style={{width: '100%', height: '100%'}} alt="about author" />
@@ -61,15 +61,25 @@ export const AboutAuthor = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${BACKGROUND};
+
+    @media (max-width: 1199px) {
+        padding: 125px 0px;
+    }
+
+    @media (max-width: 599px) {
+        padding: 85px 0px;
+    }
 `;
 
 const StyledGridItem1 = styled(Grid)`
     @media (max-width: 1199px) {
         order: 1;
+        margin-top: 80px;
     }
 `;
 
 const StyledGridItem2 = styled(Grid)`
+
     @media (max-width: 1199px) {
         order: 0;
         display: flex;
@@ -108,7 +118,6 @@ const StyledStackContainer = styled(Stack)`
         width: 100%;
         height: 100%;
     }
-
 `;
 
 const StyledStackItem = styled(Stack)`

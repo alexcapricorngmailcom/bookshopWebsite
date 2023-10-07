@@ -14,7 +14,7 @@ export const GetBookCopyToday = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Grid container spacing={12} alignItems='center'>
+                <Grid container spacing={{ lg: 10, md: 0, sm: 0, xs: 0 }}  alignItems='center'>
                     <StyledGriditem1 item lg={6} md={12} sm={12} xs={12}>
                         <HeadingH3 sx={{color: WHITE}}>Get Book Copy Today!</HeadingH3>
                         <LineLarge sx={{mt:'20px'}} />
@@ -35,11 +35,16 @@ export const GetBookCopyToday = () => {
 }
 
 const StyledSection = styled('section')`
-    padding: 40px 0px;
+    padding-top: 80px;
+    padding-bottom: 70px;
     background-color: ${MAIN};
 
     @media (max-width: 1199px) {
-        padding: 145px 0px;
+        padding: 125px 0px;
+    }
+
+    @media (max-width: 599px) {
+        padding: 85px 0px;
     }
 `;
 
@@ -64,7 +69,7 @@ const StyledParagraph = styled(Paragraph)`
 `;
 
 const StyledGriditem2 = styled(Grid)`
-    padding-top: 40px !important;
+    padding-top: 40px;
 `;
 
 const StyledImageBox = styled(Box)`
