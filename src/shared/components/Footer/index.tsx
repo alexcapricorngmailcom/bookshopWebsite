@@ -122,9 +122,8 @@ export const Footer = () => {
                 <Box sx={{mt: "25px", textAlign: 'center'}}>
                     <Paragraph sx={{display:'inline', color: '#B4C7E7'}}>&#169; Drafted by </Paragraph>  
                     <Link href='https://www.victorflow.com/' target='_blank' rel="noopener" underline='none'> <Paragraph sx={{display:'inline', color: WHITE }}>Victorflow</Paragraph></Link>
-                    <Paragraph sx={{display:'inline', color: '#B4C7E7'}}> - Powered by </Paragraph>  
-                    <Paragraph sx={{display:'inline', color:WHITE}}>Webflow</Paragraph>
-                    
+                    <Paragraph sx={{display:'inline', color: '#B4C7E7'}}> - Powered by </Paragraph>
+                    <Link href='https://webflow.com/' target='_blank' rel="noopener" underline='none'> <Paragraph sx={{display:'inline', color: WHITE }}>Webflow</Paragraph></Link>
                 </Box>
             </Container>
         </StyledFooter>
