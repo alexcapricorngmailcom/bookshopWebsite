@@ -15,7 +15,7 @@ export const FrequentQuestions = () => {
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3 sx={{textAlign:'center'}}>Frequent Questions?</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
-                    <Grid container spacing={10} flexDirection='row' mt='-65px'>
+                    <StyledGridContainer container spacing={{ lg: 10, md: 10, sm: 0, xs: 0 }}>
                         <Grid item lg={6} md={6}>
                             <AccordionItem
                                 title='Do you offer discounts for education?'
@@ -50,7 +50,7 @@ export const FrequentQuestions = () => {
                                 title='What is Hack Productivity book about?'
                             />
                         </StyledGridItem2>
-                    </Grid>
+                    </StyledGridContainer>
                 </Stack>
             </Container>
         </StyledSection>
@@ -61,6 +61,23 @@ const StyledSection = styled('section')`
     padding-top: 145px;
     padding-bottom: 145px;
     background-color: ${BACKGROUND};
+
+    @media (max-width: 1199px) {
+        padding: 125px 0px;
+    }
+
+    @media (max-width: 599px) {
+        padding: 85px 0px;
+    }
+`;
+
+const StyledGridContainer = styled(Grid)`
+    flex-direction: row;
+    margin-top: -65px;
+
+    @media (max-width: 899px) {
+        margin-top: 0px;
+    }
 `;
 
 const StyledGridItem2 = styled(Grid)`

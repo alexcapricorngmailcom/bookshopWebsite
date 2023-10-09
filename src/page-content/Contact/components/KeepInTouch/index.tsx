@@ -18,7 +18,7 @@ export const KeepInTouch = () => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Grid container spacing={12} alignItems='center'>
+                <Grid container spacing={{ lg: 12, md: 0, sm: 0, xs: 0 }} alignItems='center'>
                     <StyledGridItem1 item lg={6} md={12} sm={12} xs={12}> 
                         <HeadingH3>Keep in Touch</HeadingH3>
                         <LineLarge sx={{mt:'22px'}} />
@@ -73,6 +73,14 @@ export const KeepInTouch = () => {
 const StyledSection = styled('section')`
     padding: 145px 0px;
     background-color: ${WHITE};
+
+    @media (max-width: 1199px) {
+        padding: 125px 0px;
+    }
+
+    @media (max-width: 599px) {
+        padding: 85px 0px;
+    }
 `;
 
 const StyledStackContainer = styled(Stack)`
@@ -112,6 +120,6 @@ const StyledGridItem2 = styled(Grid)`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 40px !important;
+        margin-top: 50px;
     }
 `;
