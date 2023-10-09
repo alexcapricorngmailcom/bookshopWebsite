@@ -19,7 +19,7 @@ export const AuthorsBookIncludes = () => {
                 <Stack flexDirection='column' alignItems='center'>
                     <HeadingH3 sx={{textAlign:'center'}}>Author’s Book Includes</HeadingH3>
                     <LineLarge sx={{mt:'22px'}} />
-                    <Grid container spacing={6} mt='0px'>
+                    <Grid container spacing={6} mt='-13px'>
                         <StyledGridItem item lg={6} md={12} sm={12} xs={12}>
                             <Grid container spacing={4} alignItems='center'>
                                 <Grid item lg={6} md={6} sm={12} xs={12}>

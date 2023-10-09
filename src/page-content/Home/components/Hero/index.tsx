@@ -17,7 +17,7 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
     return (
         <StyledSection>
             <Container maxWidth='lg'>
-                <Grid container spacing={12} alignItems='center'>
+                <Grid container spacing={{ lg: 12, md: 0, sm: 0, xs: 0 }} alignItems='center'>
                     <Grid item lg={6} md={12} sm={12} xs={12}>
                         <StyledStackHeadingH5>
                             <LineSmall />
@@ -30,21 +30,21 @@ export const Hero = ({scrollOnClick}:{scrollOnClick: () => void}) => {
                             <ButtonAction variant='text' onClick={scrollOnClick}><Box sx={{textDecorationLine:'underline', textUnderlineOffset: '7px'}}>Read Free Demo</Box></ButtonAction>
                         </StyledStackButton>
                         <StyledGridSubContainer container>
-                            <StyledGridSubItem item lg={3.5} md={3.5} sm={3.5} xs={6}>
+                            <StyledGridSubItem item lg={3.5} md={4} sm={3.5} xs={6}>
                                 <BookDetails
                                     title='Pages:'
                                     paragraph='586 pages'
                                     color={WHITE}
                                 />
                             </StyledGridSubItem>
-                            <StyledGridSubItem item lg={3.5} md={3.5} sm={3.5} xs={6}>
+                            <StyledGridSubItem item lg={3.5} md={4} sm={3.5} xs={6}>
                                 <BookDetails 
                                     title='Length:'
                                     paragraph='10 hours'
                                     color={WHITE}
                                 />
                             </StyledGridSubItem>
-                            <StyledGridSubItem item lg={5} md={5} sm={5} xs={12}>
+                            <StyledGridSubItem item lg={5} md={4} sm={5} xs={12}>
                                 <BookDetails 
                                     title='Ratings:'
                                     paragraph='4.5/5 (305 ratings)'
@@ -151,7 +151,7 @@ const StyledGridSubItem = styled(Grid)`
 
 const StyledGridItem2 = styled(Grid)`
     @media (max-width: 1199px) {
-        padding-top: 50px !important;
+        margin-top: 50px;
     }
 `;
 const StyledImageBox = styled(Box)`
