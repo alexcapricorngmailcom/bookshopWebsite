@@ -74,7 +74,7 @@ export default function CartScrollDialog() {
       >
         <DialogTitle>
           <StyledTitleStack>
-              <HeadingH3>Your Cart</HeadingH3>
+              <StyledHeadingH3>Your Cart</StyledHeadingH3>
                   <Button onClick={handleClose}>
                       <CloseIcon fontSize="large" sx={{color: MAIN}} />
                   </Button>
@@ -149,6 +149,10 @@ const StyledDialog = styled(Dialog)`
     @media (max-width: 899px) {
       padding: 0px 25px;
     }
+
+    @media (max-height: 600px) {
+      overflow-y: unset;
+    }
   }
 
   .MuiDialogActions-root {
@@ -178,10 +182,15 @@ const StyledTitleStack = styled(Stack)`
     }
 `;
 
+const StyledHeadingH3 = styled(HeadingH3)`
+    @media (max-width: 449px) {
+      font-size: 40px;
+    }
+`;
+
 const StyledStack = styled(Stack)`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: ${SECONDARY};
 `;
-
