@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
 
 import { HeadingH5, Paragraph } from "../../../design-system/typography";
-import { BACKGROUND, MAIN, SECONDARY, WHITE } from "../../../design-system/colors";
+import { BACKGROUND, MAIN, SECONDARY } from "../../../design-system/colors";
 import { LineLarge } from "../../../design-system/geometry/lines";
 import { cartSlice } from "../../../redux/slices/cartSlice";
 
